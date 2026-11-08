@@ -1,0 +1,78 @@
+{
+  "schema": "awe.qa3.baseline-preservation/1",
+  "base_commit": "09f1a864e6fa26afa62ffac3249c6532a6116175",
+  "checked_at": "2026-11-08T03:08:20.204Z",
+  "files": [
+    {
+      "path": "E1/broker/schemas.mjs",
+      "source_sha256": "f1cc4272ba96c42bdf0c0a94c916bcd24b2d4ab283868ab0a0477a546846aacf",
+      "current_sha256": "f1cc4272ba96c42bdf0c0a94c916bcd24b2d4ab283868ab0a0477a546846aacf",
+      "unchanged": true
+    },
+    {
+      "path": "E1/broker/registry.mjs",
+      "source_sha256": "87f6a8cb7b66c8b76f2894ec770c0a20f8387a05fbefd9154ee5ee026e17b5d8",
+      "current_sha256": "87f6a8cb7b66c8b76f2894ec770c0a20f8387a05fbefd9154ee5ee026e17b5d8",
+      "unchanged": true
+    },
+    {
+      "path": "E1/broker/head.mjs",
+      "source_sha256": "d70266727d65dde48c512e2e818eb797831e028b7a8b33cea39f05b7c0b4fc13",
+      "current_sha256": "d70266727d65dde48c512e2e818eb797831e028b7a8b33cea39f05b7c0b4fc13",
+      "unchanged": true
+    },
+    {
+      "path": "E1/broker/model.mjs",
+      "source_sha256": "df1da574e40c89fb4a1da4d16fc54d9ba5b74b05e1dd8da869d3674adb59adc6",
+      "current_sha256": "df1da574e40c89fb4a1da4d16fc54d9ba5b74b05e1dd8da869d3674adb59adc6",
+      "unchanged": true
+    },
+    {
+      "path": "E1/broker/canary.mjs",
+      "source_sha256": "0e65ba971230ecf7acb6761cc0567b95fd03312f615e22b9f379adaed648636a",
+      "current_sha256": "0e65ba971230ecf7acb6761cc0567b95fd03312f615e22b9f379adaed648636a",
+      "unchanged": true
+    },
+    {
+      "path": "E1/broker/benchmark.mjs",
+      "source_sha256": "f7683c1415511ac23ac460f2edb5a9de5f1af320c8face0221c40582ae97d7b1",
+      "current_sha256": "f7683c1415511ac23ac460f2edb5a9de5f1af320c8face0221c40582ae97d7b1",
+      "unchanged": true
+    },
+    {
+      "path": "E1/broker/index.mjs",
+      "source_sha256": "168ac981514626d8c3fe170dbfe66d932b55fbd8d7c8ae1405be27b89fcb8e91",
+      "current_sha256": "168ac981514626d8c3fe170dbfe66d932b55fbd8d7c8ae1405be27b89fcb8e91",
+      "unchanged": true
+    },
+    {
+      "path": "E1/coordinator/migrations/0001-durable-runtime.sql",
+      "source_sha256": "d0708161fc480b1489a89a93e1e3d7c508fbf6aeecefb642df380a69e3c78472",
+      "current_sha256": "d0708161fc480b1489a89a93e1e3d7c508fbf6aeecefb642df380a69e3c78472",
+      "unchanged": true
+    },
+    {
+      "path": "E1/coordinator/migrations/0002-local-model-quiescence.sql",
+      "source_sha256": "379791e981bd5d0b40b28a60add314458c2b3837722aeb3e61fb74a36e1d5ee1",
+      "current_sha256": "379791e981bd5d0b40b28a60add314458c2b3837722aeb3e61fb74a36e1d5ee1",
+      "unchanged": true
+    },
+    {
+      "path": "E1/infra/config.mjs",
+      "source_sha256": "1f550e4a5fe530349a025693b2dbdb118d0fb508d39e643bf004de34e17a24c7",
+      "current_sha256": "1f550e4a5fe530349a025693b2dbdb118d0fb508d39e643bf004de34e17a24c7",
+      "unchanged": true
+    },
+    {
+      "path": "E1/host/staging.mjs",
+      "source_sha256": "93b53dada636072b3006280114e3faf6e5088a85014f06d16db236f0fccbcc90",
+      "current_sha256": "93b53dada636072b3006280114e3faf6e5088a85014f06d16db236f0fccbcc90",
+      "unchanged": true
+    }
+  ],
+  "e0_source_diff_paths": [],
+  "runtime_model_query": false,
+  "runtime_model_generation": false,
+  "cluster_operations": false,
+  "meaning": "Source preservation only. No fresh Ollama runtime or original-mission acceptance proof."
+}

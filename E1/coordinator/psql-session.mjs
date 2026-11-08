@@ -43,12 +43,13 @@ export async function createPsqlSession(descriptor, {role = 'coordinator', timeo
   }
   function queue(fn) { const result = chain.then(fn); chain = result.catch(() => {}); return result; }
   function parse(text) { const lines = text.split('\n').filter(Boolean); check(lines.length === 1, 'A2_DB_RESULT_FRAME'); try { return JSON.parse(lines[0]); } catch { throw new CoordinatorError('A2_DB_RESULT_JSON'); } }
-  async function command(op, value) { check(/^[a-z_]+$/.test(op), 'A2_DB_OPERATION'); const result = parse(await raw("SELECT awe_e1_runtime.command('" + op + "'," + sqlJson(value) + ');')); if (result?.error) throw new CoordinatorError(result.error); return result; }
+  async function command(op, value) { check(/^[a-z_]+$/.test(op), 'A2_DB_OPERATION'); const result = parse(await raw("SELECT awe_e1_runtime.cloud_command('" + op + "'," + sqlJson(value) + ');')); if (result?.error) throw new CoordinatorError(result.error); return result; }
   const session = {
     kind: 'NATIVE_POSTGRESQL_PSQL_SESSION', role, resource_id: invocation.resource.resource_id,
     query(sql) { check(typeof sql === 'string' && sql.length <= 2 * 1024 * 1024, 'A2_SQL_LIMIT'); return queue(() => raw(sql)); },
     command(op, value) { return queue(() => command(op, value)); },
     quiesceLocalModel(value) { return queue(async()=>{const result=parse(await raw('SELECT awe_e1_runtime.quiesce_local_model('+sqlJson(value)+');'));if(result?.error)throw new CoordinatorError(result.error);return result;}); },
+    provisionCloudBudget(value) { return queue(async()=>{const result=parse(await raw('SELECT awe_e1_runtime.provision_cloud_budget('+sqlJson(value)+');'));if(result?.error)throw new CoordinatorError(result.error);return result;}); },
     transaction(callback) { return queue(async () => {
       await raw('BEGIN;');
       try { const value = await callback({query: raw, command}); await raw('COMMIT;'); return value; }

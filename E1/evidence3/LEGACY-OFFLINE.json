@@ -1,0 +1,370 @@
+{
+  "schema": "awe.e1.staging-test-run/1",
+  "status": "PASS",
+  "mode": "offline",
+  "started_at": "2026-11-08T03:28:16.013Z",
+  "finished_at": "2026-11-08T03:28:59.652Z",
+  "node": "v24.21.0",
+  "platform": "win32",
+  "postgresql": "NOT_CONNECTED_BY_TEST_RUNNER",
+  "new_model_generation_requests": 0,
+  "external_effects": 0,
+  "source_stable": true,
+  "source_before": [
+    {
+      "file": "E1/coordinator/admission.mjs",
+      "sha256": "ce54554e9e611aac86ce8614b5be85c5b1cfdfdf1122a3ccb3a8fd44a1877fa1"
+    },
+    {
+      "file": "E1/coordinator/authority-server.mjs",
+      "sha256": "583d5e1d7f8bacd8862cb9df4e1dde1e326c3f7a3d49fa16d0c581a3e9a87e73"
+    },
+    {
+      "file": "E1/coordinator/cloud-policy.mjs",
+      "sha256": "e0c944a8185bd266d4ed5890579e785d698b429c9654cfe09e7defd74f813d3b"
+    },
+    {
+      "file": "E1/coordinator/coordinator.mjs",
+      "sha256": "f81b876c9467840ec3f72dfe7647d23a4460f05396acea4e2615917b9329b9c2"
+    },
+    {
+      "file": "E1/coordinator/errors.mjs",
+      "sha256": "f2911bffd56bd47a737f2d424d6982c0a43fc8825ea9666aacbc1fa91e50e668"
+    },
+    {
+      "file": "E1/coordinator/index.mjs",
+      "sha256": "fc451b94f4d105cfd3481d8a21797c235f7bdcb5d14e22423e6ff4b1dee90d5f"
+    },
+    {
+      "file": "E1/coordinator/leaf-worker.mjs",
+      "sha256": "af5f2ebd4b8bfc4eedaf0273c75b5fab92932d38686f5f8b648ecb89bb2dbebd"
+    },
+    {
+      "file": "E1/coordinator/migrate.mjs",
+      "sha256": "2a001739114847d66e25244b0643912bfb6fda32d512573c6be84b3a9f460284"
+    },
+    {
+      "file": "E1/coordinator/migrations/0001-durable-runtime.sql",
+      "sha256": "d0708161fc480b1489a89a93e1e3d7c508fbf6aeecefb642df380a69e3c78472"
+    },
+    {
+      "file": "E1/coordinator/migrations/0002-local-model-quiescence.sql",
+      "sha256": "379791e981bd5d0b40b28a60add314458c2b3837722aeb3e61fb74a36e1d5ee1"
+    },
+    {
+      "file": "E1/coordinator/migrations/0003-cloud-accounting.sql",
+      "sha256": "ed2f7e3f7aff2598e29f08caf60a262370836b598b588a1b20b192ab57994676"
+    },
+    {
+      "file": "E1/coordinator/operations/disable-cloud.sql",
+      "sha256": "e71d4882280b55717a613b7283214171a962a0c9ba70afab7bcc85afde225977"
+    },
+    {
+      "file": "E1/coordinator/psql-session.mjs",
+      "sha256": "249b2ca32c67c7ff7a64bd9f7cf44af543ccaf0dafef9a9b1e8729ff5844e7fe"
+    },
+    {
+      "file": "E1/coordinator/quiescence.mjs",
+      "sha256": "1df99ac57e04cbdbcdc150d3b1379b1eece187475f6805e6e527aed0a99d17a7"
+    },
+    {
+      "file": "E1/coordinator/resource.mjs",
+      "sha256": "99641f84b411685ed517d1fe092f15975f17134914daf46974748c8a186b5063"
+    },
+    {
+      "file": "E1/broker/benchmark.mjs",
+      "sha256": "f7683c1415511ac23ac460f2edb5a9de5f1af320c8face0221c40582ae97d7b1"
+    },
+    {
+      "file": "E1/broker/canary.mjs",
+      "sha256": "0e65ba971230ecf7acb6761cc0567b95fd03312f615e22b9f379adaed648636a"
+    },
+    {
+      "file": "E1/broker/head.mjs",
+      "sha256": "d70266727d65dde48c512e2e818eb797831e028b7a8b33cea39f05b7c0b4fc13"
+    },
+    {
+      "file": "E1/broker/index.mjs",
+      "sha256": "168ac981514626d8c3fe170dbfe66d932b55fbd8d7c8ae1405be27b89fcb8e91"
+    },
+    {
+      "file": "E1/broker/model.mjs",
+      "sha256": "df1da574e40c89fb4a1da4d16fc54d9ba5b74b05e1dd8da869d3674adb59adc6"
+    },
+    {
+      "file": "E1/broker/registry.mjs",
+      "sha256": "87f6a8cb7b66c8b76f2894ec770c0a20f8387a05fbefd9154ee5ee026e17b5d8"
+    },
+    {
+      "file": "E1/broker/schemas.mjs",
+      "sha256": "f1cc4272ba96c42bdf0c0a94c916bcd24b2d4ab283868ab0a0477a546846aacf"
+    },
+    {
+      "file": "E1/host/artifact-binding.mjs",
+      "sha256": "9e03c14e42fc7b5f087ca28de4534ed3b9fc1aab58563079e6c157aefaefd8dd"
+    },
+    {
+      "file": "E1/host/cold-readback.mjs",
+      "sha256": "e14799620d55f58fa99eed435622d6518353ec25ae670ca2cb19359a7a3396b2"
+    },
+    {
+      "file": "E1/host/maintenance-canary.mjs",
+      "sha256": "a8e9156cb0e4561a94a7d6358d4e882e9d54c15dfddce0f777e4849f56480ddd"
+    },
+    {
+      "file": "E1/host/migrate.mjs",
+      "sha256": "89a1b40c98e67e30fb064838284aacc2436caf39452490e40566daa230db6763"
+    },
+    {
+      "file": "E1/host/qa-leaf.mjs",
+      "sha256": "18d8d5033e96a306cb4e7abe04c030be4aa48749400f8d8b929461d372bb54bb"
+    },
+    {
+      "file": "E1/host/quiesce-local.mjs",
+      "sha256": "77de1f8d9955f2f01747af9fae74286ef37e3f2e9b738bd23bceb62d417568a8"
+    },
+    {
+      "file": "E1/host/router-cheap/host-policy.mjs",
+      "sha256": "b692993b2b79772da3bd88bfb1c9e1fef887ee6a1194452714dbe4d5290117ba"
+    },
+    {
+      "file": "E1/host/router-cheap/transport.mjs",
+      "sha256": "62a8ca0c0174c5bfaa5ca54d6bb292866f69cba31cbd24442871ed739add59e2"
+    },
+    {
+      "file": "E1/host/script-leaf.mjs",
+      "sha256": "eb6c2c0ad3f9248a31b71461eea70c7bffa53c4defb7703bffe3c9d8c5fb5a7b"
+    },
+    {
+      "file": "E1/host/staging.mjs",
+      "sha256": "93b53dada636072b3006280114e3faf6e5088a85014f06d16db236f0fccbcc90"
+    },
+    {
+      "file": "E1/executors/coding/contracts.mjs",
+      "sha256": "4aca90176a283de59e586de6e9c472d13268c158765856e3c0c90954951d295c"
+    },
+    {
+      "file": "E1/executors/coding/executor.mjs",
+      "sha256": "bf12ffc3c81de58d64cf81898c99492ba49998d8e0dedde847f1108c3c35307f"
+    },
+    {
+      "file": "E1/executors/coding/index.mjs",
+      "sha256": "a15cbfe006f2181f9a27522e53fd3f2b2164d6e1db3f1e46bd8dd052a731ad79"
+    },
+    {
+      "file": "E1/verification/staging.mjs",
+      "sha256": "7f46286759bbfe42b5d2cd521764b9c4f8a7aa6e1a80ea26c44144c339974e5c"
+    },
+    {
+      "file": "E1/verification/offline.mjs",
+      "sha256": "b0e7636513381c373b8deea6660b9665acd22997d6bfed352f13ae6b97de20b2"
+    }
+  ],
+  "source_after": [
+    {
+      "file": "E1/coordinator/admission.mjs",
+      "sha256": "ce54554e9e611aac86ce8614b5be85c5b1cfdfdf1122a3ccb3a8fd44a1877fa1"
+    },
+    {
+      "file": "E1/coordinator/authority-server.mjs",
+      "sha256": "583d5e1d7f8bacd8862cb9df4e1dde1e326c3f7a3d49fa16d0c581a3e9a87e73"
+    },
+    {
+      "file": "E1/coordinator/cloud-policy.mjs",
+      "sha256": "e0c944a8185bd266d4ed5890579e785d698b429c9654cfe09e7defd74f813d3b"
+    },
+    {
+      "file": "E1/coordinator/coordinator.mjs",
+      "sha256": "f81b876c9467840ec3f72dfe7647d23a4460f05396acea4e2615917b9329b9c2"
+    },
+    {
+      "file": "E1/coordinator/errors.mjs",
+      "sha256": "f2911bffd56bd47a737f2d424d6982c0a43fc8825ea9666aacbc1fa91e50e668"
+    },
+    {
+      "file": "E1/coordinator/index.mjs",
+      "sha256": "fc451b94f4d105cfd3481d8a21797c235f7bdcb5d14e22423e6ff4b1dee90d5f"
+    },
+    {
+      "file": "E1/coordinator/leaf-worker.mjs",
+      "sha256": "af5f2ebd4b8bfc4eedaf0273c75b5fab92932d38686f5f8b648ecb89bb2dbebd"
+    },
+    {
+      "file": "E1/coordinator/migrate.mjs",
+      "sha256": "2a001739114847d66e25244b0643912bfb6fda32d512573c6be84b3a9f460284"
+    },
+    {
+      "file": "E1/coordinator/migrations/0001-durable-runtime.sql",
+      "sha256": "d0708161fc480b1489a89a93e1e3d7c508fbf6aeecefb642df380a69e3c78472"
+    },
+    {
+      "file": "E1/coordinator/migrations/0002-local-model-quiescence.sql",
+      "sha256": "379791e981bd5d0b40b28a60add314458c2b3837722aeb3e61fb74a36e1d5ee1"
+    },
+    {
+      "file": "E1/coordinator/migrations/0003-cloud-accounting.sql",
+      "sha256": "ed2f7e3f7aff2598e29f08caf60a262370836b598b588a1b20b192ab57994676"
+    },
+    {
+      "file": "E1/coordinator/operations/disable-cloud.sql",
+      "sha256": "e71d4882280b55717a613b7283214171a962a0c9ba70afab7bcc85afde225977"
+    },
+    {
+      "file": "E1/coordinator/psql-session.mjs",
+      "sha256": "249b2ca32c67c7ff7a64bd9f7cf44af543ccaf0dafef9a9b1e8729ff5844e7fe"
+    },
+    {
+      "file": "E1/coordinator/quiescence.mjs",
+      "sha256": "1df99ac57e04cbdbcdc150d3b1379b1eece187475f6805e6e527aed0a99d17a7"
+    },
+    {
+      "file": "E1/coordinator/resource.mjs",
+      "sha256": "99641f84b411685ed517d1fe092f15975f17134914daf46974748c8a186b5063"
+    },
+    {
+      "file": "E1/broker/benchmark.mjs",
+      "sha256": "f7683c1415511ac23ac460f2edb5a9de5f1af320c8face0221c40582ae97d7b1"
+    },
+    {
+      "file": "E1/broker/canary.mjs",
+      "sha256": "0e65ba971230ecf7acb6761cc0567b95fd03312f615e22b9f379adaed648636a"
+    },
+    {
+      "file": "E1/broker/head.mjs",
+      "sha256": "d70266727d65dde48c512e2e818eb797831e028b7a8b33cea39f05b7c0b4fc13"
+    },
+    {
+      "file": "E1/broker/index.mjs",
+      "sha256": "168ac981514626d8c3fe170dbfe66d932b55fbd8d7c8ae1405be27b89fcb8e91"
+    },
+    {
+      "file": "E1/broker/model.mjs",
+      "sha256": "df1da574e40c89fb4a1da4d16fc54d9ba5b74b05e1dd8da869d3674adb59adc6"
+    },
+    {
+      "file": "E1/broker/registry.mjs",
+      "sha256": "87f6a8cb7b66c8b76f2894ec770c0a20f8387a05fbefd9154ee5ee026e17b5d8"
+    },
+    {
+      "file": "E1/broker/schemas.mjs",
+      "sha256": "f1cc4272ba96c42bdf0c0a94c916bcd24b2d4ab283868ab0a0477a546846aacf"
+    },
+    {
+      "file": "E1/host/artifact-binding.mjs",
+      "sha256": "9e03c14e42fc7b5f087ca28de4534ed3b9fc1aab58563079e6c157aefaefd8dd"
+    },
+    {
+      "file": "E1/host/cold-readback.mjs",
+      "sha256": "e14799620d55f58fa99eed435622d6518353ec25ae670ca2cb19359a7a3396b2"
+    },
+    {
+      "file": "E1/host/maintenance-canary.mjs",
+      "sha256": "a8e9156cb0e4561a94a7d6358d4e882e9d54c15dfddce0f777e4849f56480ddd"
+    },
+    {
+      "file": "E1/host/migrate.mjs",
+      "sha256": "89a1b40c98e67e30fb064838284aacc2436caf39452490e40566daa230db6763"
+    },
+    {
+      "file": "E1/host/qa-leaf.mjs",
+      "sha256": "18d8d5033e96a306cb4e7abe04c030be4aa48749400f8d8b929461d372bb54bb"
+    },
+    {
+      "file": "E1/host/quiesce-local.mjs",
+      "sha256": "77de1f8d9955f2f01747af9fae74286ef37e3f2e9b738bd23bceb62d417568a8"
+    },
+    {
+      "file": "E1/host/router-cheap/host-policy.mjs",
+      "sha256": "b692993b2b79772da3bd88bfb1c9e1fef887ee6a1194452714dbe4d5290117ba"
+    },
+    {
+      "file": "E1/host/router-cheap/transport.mjs",
+      "sha256": "62a8ca0c0174c5bfaa5ca54d6bb292866f69cba31cbd24442871ed739add59e2"
+    },
+    {
+      "file": "E1/host/script-leaf.mjs",
+      "sha256": "eb6c2c0ad3f9248a31b71461eea70c7bffa53c4defb7703bffe3c9d8c5fb5a7b"
+    },
+    {
+      "file": "E1/host/staging.mjs",
+      "sha256": "93b53dada636072b3006280114e3faf6e5088a85014f06d16db236f0fccbcc90"
+    },
+    {
+      "file": "E1/executors/coding/contracts.mjs",
+      "sha256": "4aca90176a283de59e586de6e9c472d13268c158765856e3c0c90954951d295c"
+    },
+    {
+      "file": "E1/executors/coding/executor.mjs",
+      "sha256": "bf12ffc3c81de58d64cf81898c99492ba49998d8e0dedde847f1108c3c35307f"
+    },
+    {
+      "file": "E1/executors/coding/index.mjs",
+      "sha256": "a15cbfe006f2181f9a27522e53fd3f2b2164d6e1db3f1e46bd8dd052a731ad79"
+    },
+    {
+      "file": "E1/verification/staging.mjs",
+      "sha256": "7f46286759bbfe42b5d2cd521764b9c4f8a7aa6e1a80ea26c44144c339974e5c"
+    },
+    {
+      "file": "E1/verification/offline.mjs",
+      "sha256": "b0e7636513381c373b8deea6660b9665acd22997d6bfed352f13ae6b97de20b2"
+    }
+  ],
+  "commands": [
+    {
+      "id": "baseline",
+      "command": [
+        "node",
+        "E1/verification/offline.mjs"
+      ],
+      "exit_status": 0,
+      "error": null,
+      "duration_ms": 33247,
+      "summary": {
+        "tests": 373,
+        "pass": 373,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      },
+      "stdout_sha256": "70bbad926eb844b0271f3a12776b1d4b4e652c3793fbac0336a53f193a6e5a6c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "e1-offline",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=tap",
+        "E1/tests/coordinator/quiescence.test.mjs",
+        "E1/tests/coordinator/resource.test.mjs",
+        "E1/tests/broker/broker.test.mjs",
+        "E1/tests/executors/coding.test.mjs",
+        "E1/tests/host/artifact-binding.test.mjs",
+        "E1/qa2/model-seams.test.mjs",
+        "E1/qa2/maintenance-oracle.test.mjs"
+      ],
+      "exit_status": 0,
+      "error": null,
+      "duration_ms": 10382,
+      "summary": {
+        "tests": 69,
+        "pass": 69,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "stdout_sha256": "db24d903a9323bf5790542d49c59d7367223b9f2f42efb5ba742781e297a510f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "totals": {
+    "tests": 442,
+    "pass": 442,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "accepted": false
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "awe.qa3.native-review/1",
+  "evidence_level": "NATIVE_E1_POSTGRESQL_WITH_EXPLICIT_SYNTHETIC_FUNDING_AND_FAKE_PROVIDER",
+  "actual_provider_calls": 0,
+  "key_access": false,
+  "ddl": false,
+  "cluster_lifecycle": false,
+  "project_namespace": "prj_qa3_*",
+  "evidence": [
+    {
+      "case": "UNFUNDED",
+      "project": "prj_qa3_a23de118537e",
+      "attempts": 0,
+      "quota": 0
+    },
+    {
+      "case": "COMBINED_BROKER_NATIVE",
+      "project": "prj_qa3_3febba2f768e",
+      "synthetic_transport_calls": 1,
+      "actual_provider_calls": 0,
+      "reserved": 150,
+      "charged": 4,
+      "input": 3,
+      "cached": 1,
+      "output": 2,
+      "budget_spent": 4,
+      "attempts_used": 1,
+      "acceptance": false
+    },
+    {
+      "case": "CROSS_PROJECT_CAP_RACE",
+      "projects": [
+        "prj_qa3_7b0532991e11",
+        "prj_qa3_61dec9c04561"
+      ],
+      "cap": 220,
+      "peak_reserved": 150,
+      "attempts_used": 1,
+      "accepted_reservations": 1,
+      "rejected_reservations": 1,
+      "after_cancel_reserved": 0
+    },
+    {
+      "case": "CAPS_DO_NOT_RESET",
+      "projects": [
+        "prj_qa3_e19a531686ef",
+        "prj_qa3_c0b929f3e151"
+      ],
+      "reserved": 0,
+      "attempts_used": 1,
+      "cap": 1
+    },
+    {
+      "case": "PERSISTENT_UNKNOWN",
+      "project": "prj_qa3_4f82f9c23730",
+      "reserved": 150,
+      "attempts_used": 1,
+      "quota": 1,
+      "state": "HOLD",
+      "provider_calls": 0,
+      "booked_confirmed_micros": "0",
+      "observed_held_charge_micros": "0",
+      "observed_overrun_micros": "0",
+      "unknown_charge_attempts": 1,
+      "unknown_charge_cost": "UNKNOWN_NOT_ZERO",
+      "actual_charged_micros": null
+    },
+    {
+      "case": "REVOCATION_AND_SCOPE",
+      "project": "prj_qa3_3516564c7f71",
+      "send_permitted": false,
+      "reserved": 0,
+      "quota": 0,
+      "attempts_used": 1
+    },
+    {
+      "case": "FROZEN_SETTLEMENT_EVIDENCE",
+      "project": "prj_qa3_8cab19bad300",
+      "rejected_substitutions": 4,
+      "charged_once": 4,
+      "attempts_used": 1
+    },
+    {
+      "case": "OVERCHARGE_HOLD",
+      "project": "prj_qa3_8b58aa51b8fb",
+      "synthetic_observed_charge": 151,
+      "reserved": 150,
+      "spent": 0,
+      "state": "HOLD",
+      "provider_calls": 0,
+      "booked_confirmed_micros": "0",
+      "observed_held_charge_micros": "151",
+      "observed_overrun_micros": "1",
+      "unknown_charge_attempts": 0,
+      "spent_semantics": "BOOKED_CONFIRMED_CHARGES_ONLY"
+    },
+    {
+      "case": "NATIVE_ACL",
+      "qa_fund": false,
+      "coord_old": false,
+      "worker_fund": false,
+      "worker_table": false,
+      "coord_wrapper": true,
+      "above_safe_integer_fraction_rounded": 2
+    }
+  ]
+}

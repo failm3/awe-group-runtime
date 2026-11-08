@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: QA3 unfunded key has zero limits and atomically rejects all ledger reservation writes
+ok 1 - QA3 unfunded key has zero limits and atomically rejects all ledger reservation writes
+  ---
+  duration_ms: 253.8719
+  type: 'test'
+  ...
+# Subtest: QA3 real native D09 and offline cloud broker compose one send, exact cache price and one synthetic settlement
+ok 2 - QA3 real native D09 and offline cloud broker compose one send, exact cache price and one synthetic settlement
+  ---
+  duration_ms: 312.9506
+  type: 'test'
+  ...
+# Subtest: QA3 concurrent projects and fresh native sessions share one key cap without quota or money overshoot
+ok 3 - QA3 concurrent projects and fresh native sessions share one key cap without quota or money overshoot
+  ---
+  duration_ms: 544.0115
+  type: 'test'
+  ...
+# Subtest: QA3 per-attempt and lifetime attempts caps deny atomically and release never resets attempts
+ok 4 - QA3 per-attempt and lifetime attempts caps deny atomically and release never resets attempts
+  ---
+  duration_ms: 719.7482
+  type: 'test'
+  ...
+# Subtest: QA3 UNKNOWN remains durable across cold sessions and denies refund or blind retry
+ok 5 - QA3 UNKNOWN remains durable across cold sessions and denies refund or blind retry
+  ---
+  duration_ms: 387.9554
+  type: 'test'
+  ...
+# Subtest: QA3 revoked mission and cross-project/fence substitutions cannot mark a model send
+ok 6 - QA3 revoked mission and cross-project/fence substitutions cannot mark a model send
+  ---
+  duration_ms: 462.5841
+  type: 'test'
+  ...
+# Subtest: QA3 frozen quote/source evidence substitutions reject before valid exact settlement
+ok 7 - QA3 frozen quote/source evidence substitutions reject before valid exact settlement
+  ---
+  duration_ms: 281.0909
+  type: 'test'
+  ...
+# Subtest: QA3 observed overcharge enters durable shared HOLD and preserves reserved exposure
+ok 8 - QA3 observed overcharge enters durable shared HOLD and preserves reserved exposure
+  ---
+  duration_ms: 343.0664
+  type: 'test'
+  ...
+# Subtest: QA3 native ACL rejects frozen bypass and exact SQL fractions preserve beyond-safe-integer precision
+ok 9 - QA3 native ACL rejects frozen bypass and exact SQL fractions preserve beyond-safe-integer precision
+  ---
+  duration_ms: 437.1202
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3979.1007

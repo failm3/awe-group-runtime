@@ -1,0 +1,53 @@
+{
+  "schema": "awe.e1.router-cheap.canary-plan/1",
+  "status": "BLOCKED_NOT_AUTHORIZED",
+  "spending_grant": "NOT_ISSUED",
+  "provider_generation_attempts_executed": 0,
+  "budget_proposal_only": {
+    "currency": "USD",
+    "total_cap_micros": "500000",
+    "per_attempt_cap_micros": "250000",
+    "max_attempts": 2
+  },
+  "tasks": [
+    {
+      "route_id": "router.cheap.chat.gpt-6-sol",
+      "model_id": "gpt-6-sol",
+      "route_version_proposal": "1.0.0",
+      "capability_id": "e1.code.review",
+      "data_label": "SYNTHETIC",
+      "instruction": "Review a supplied synthetic numerical-sort helper. Return only the fixed registered JSON output schema.",
+      "max_input_tokens_proposal": 4096,
+      "max_output_tokens_proposal": 256,
+      "max_wire_attempts": 1,
+      "automatic_retry": false
+    },
+    {
+      "route_id": "router.cheap.chat.claude-opus-4-8",
+      "model_id": "claude-opus-4-8",
+      "route_version_proposal": "1.0.0",
+      "capability_id": "e1.code.review",
+      "data_label": "SYNTHETIC",
+      "instruction": "Review the same supplied synthetic numerical-sort helper independently. Return only the fixed registered JSON output schema.",
+      "max_input_tokens_proposal": 4096,
+      "max_output_tokens_proposal": 256,
+      "max_wire_attempts": 1,
+      "automatic_retry": false
+    }
+  ],
+  "required_before_execution": [
+    "Authenticated explicit owner spending grant bound to the exact project, mission, catalogue, provider key and shared budget group.",
+    "Independent authenticated provider proof that hard limits bound actual charged dollars after every source coefficient, including concurrent requests and per-attempt caps.",
+    "Exact finite normalized USD prices for input, cached input and output for every eligible source; no evaluation of unknown tier expressions or inferred currency conversion.",
+    "Fresh confirmed source identities, coefficients, JSON schema support, usage accounting and actual-charge receipt fields.",
+    "Trusted host verification of the complete serialized input token bound, including the fixed schema and protocol wrapper.",
+    "Provisioned native A2 shared-key budget and quota with pinned route snapshots, authenticated funding, provider hard-cap evidence and no reset or parallel budget bypass."
+  ],
+  "outcome_policy": {
+    "known_charge_valid_output": "SETTLE_THEN_PROPOSE_FOR_INDEPENDENT_QA",
+    "known_charge_length_or_malformed_output": "SETTLE_THEN_REPAIR_WITHOUT_RETRY",
+    "unknown_charge_or_possible_send": "HOLD_RETAIN_RESERVE_AND_QUOTA",
+    "proven_pre_send_failure": "FAIL_BEFORE_SEND_THROUGH_SAME_A2_RESERVATION"
+  },
+  "acceptance": "NOT_SUBMITTED"
+}

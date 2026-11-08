@@ -1,0 +1,624 @@
+{
+  "schema": "awe.qa3.index-review/1",
+  "reviewed_at": "2026-11-08T03:39:40.301Z",
+  "result": "SAFE_TO_PUBLISH_SOURCE",
+  "paid_status": "NO_GO_PAID",
+  "scope": "FINAL_STAGED_INDEX_BEFORE_REVIEW_ARTIFACT_ADDITION",
+  "branch": "codex/e1-router-cheap-issue3-20261108",
+  "head_commit": "09f1a864e6fa26afa62ffac3249c6532a6116175",
+  "git_mutations_performed": false,
+  "new_test_runs": 0,
+  "key_file_read": false,
+  "provider_calls": 0,
+  "index": {
+    "all_index_entries_excluding_self": 610,
+    "all_index_inventory_sha256": "311c72b66ba5384db2170e6558cc82d3839c5302062d7eef4385acd4dfc063b8",
+    "all_index_inventory_encoding": "UTF8 concatenation of mode + space + Git blob OID + space + stage + TAB + path + NUL, in git ls-files --stage -z order, excluding review self.",
+    "raw_git_index_file_sha256_before_review": "cc4180e4de99bdac319cb7d08ac7e0981ca05683aeaddeeab0b72894daa4b13a",
+    "physical_index_hash_meaning": "Exact index bytes before this untracked review artifact was written. Adding only the review file changes the physical index but not the self-excluded inventory.",
+    "stable_during_review": true,
+    "changed_paths_excluding_self": 62,
+    "publication_path_inventory_sha256": "4eaf311c43752266e9dacae08b6b100a29942b616b3bee22604a82c2cc0f9990",
+    "publication_inventory_encoding": "SHA256 of UTF8 JSON.stringify(publication_path_inventory), path-sorted with fields path/mode/git_blob_oid/stage/bytes/sha256."
+  },
+  "source_manifest": {
+    "path": "release/ISSUE3-SOURCE.json",
+    "sha256": "c02722a1948a0632136f48449e8266a52e758df2d9e26224163f024f84cb6fad",
+    "listed_files": 61,
+    "all_indexed_bytes_and_sha256_match": true,
+    "omitted_changed_paths": 0,
+    "self_and_manifest_excluded_from_own_file_hashes": true
+  },
+  "source_validation": {
+    "source_pins": 38,
+    "source_pin_mismatches": 0,
+    "preserved_base_files": 11,
+    "e0_source_diff_paths": [],
+    "sql003_sha256": "ed2f7e3f7aff2598e29f08caf60a262370836b598b588a1b20b192ab57994676",
+    "worktree_index_differences": 0,
+    "staged_whitespace_check": "PASS"
+  },
+  "privacy": {
+    "all_index_entries_scanned": 610,
+    "changed_paths_manually_reviewed": 62,
+    "secret_material_findings": 0,
+    "non_synthetic_pii_findings": 0,
+    "prohibited_private_or_pgdata_paths": 0,
+    "binary_or_invalid_utf8_paths": 0,
+    "raw_provider_bodies_or_private_runtime_receipts_published": false,
+    "synthetic_reserved_domain_email_literals": 11,
+    "allowed_host_key_path_reference": "Explicit user-supplied custody locator in host source only; no key material.",
+    "baseline_pattern_exception": {
+      "path": "tests/execution_security/isolation.test.mjs",
+      "line": 36,
+      "classification": "UNCHANGED_EXPLICIT_SYNTHETIC_ISOLATION_TEST_CANARY",
+      "source_sha256": "cf91c8d38372192d2a6c7812eac2368132c5b808cf71af80e2f654a6f974a5f7",
+      "literal_value_omitted": true
+    }
+  },
+  "claims": {
+    "actual_paid_generation": "NOT_RUN",
+    "actual_cloud_mission": "NOT_RUN",
+    "owner_acceptance": "NOT_SUBMITTED",
+    "independent_offline": 29,
+    "public_only_replay": 29,
+    "synthetic_host": 7,
+    "independent_native": 9,
+    "legacy_offline": 442,
+    "legacy_native": 38,
+    "astra_m0_contract": 50,
+    "counts_are_scoped_and_overlapping_not_a_sum": true,
+    "native_provider_replies_and_charges": "EXPLICIT_SYNTHETIC_FAKE_PROVIDER",
+    "root_metadata_gets": "READ_ONLY_METADATA_ONLY_NOT_PAID_PROOF",
+    "real_authenticated_funding_rows": 0,
+    "real_spent": 0,
+    "real_reserved": 0,
+    "real_limits": [
+      0,
+      0,
+      0
+    ],
+    "paid_host_send": "DISABLED",
+    "paid_policy_minting": "DISABLED",
+    "provider_input_bound": "UNVERIFIED",
+    "future_host_native_accounting_binding": "BLOCKER",
+    "per_request_actual_charge_cap_transmitted": false
+  },
+  "financial_readback": {
+    "amount_encoding": "UNSIGNED_DECIMAL_STRING_USD_MICROS",
+    "spent_compatibility_semantics": "BOOKED_CONFIRMED_CHARGES_ONLY",
+    "unknown_case": {
+      "booked_confirmed_micros": "0",
+      "observed_held_charge_micros": "0",
+      "observed_overrun_micros": "0",
+      "unknown_charge_attempts": 1,
+      "actual_charged_micros": null,
+      "actual_charge_meaning": "UNKNOWN_NOT_ZERO"
+    },
+    "overcharge_case": {
+      "booked_confirmed_micros": "0",
+      "observed_held_charge_micros": "151",
+      "observed_overrun_micros": "1",
+      "unknown_charge_attempts": 0,
+      "state": "HOLD"
+    },
+    "provider_request_actual_charge_cap_transmitted": false
+  },
+  "host_log_publication": {
+    "original_capture_sha256": "54f03583d27602d1a3e8ec07e461167c5564908f9f52de5a7c9e7c7a764546a6",
+    "published_lf_log_sha256": "0b2eef73611738320ffb7b4f75aca12aa73b3e7a66ec5366def0d4cf18350a0e",
+    "normalization": "CRLF_TO_LF_ONLY",
+    "new_run": false,
+    "original_run_times_preserved": true
+  },
+  "publication_path_inventory": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "git_blob_oid": "8040ef88e55ed2e44516d1ffdd275375519be0e8",
+      "stage": 0,
+      "bytes": 135,
+      "sha256": "387cedf37a5c900196203b81ddc5dd372eb92b756a3ec3994623883633611520"
+    },
+    {
+      "path": "E1/README.md",
+      "mode": "100644",
+      "git_blob_oid": "a009b16052b2194925951e562f2084a21ed41476",
+      "stage": 0,
+      "bytes": 4930,
+      "sha256": "16578aeef6548869b1d88c658f5603d2b804f382e726dea1ff37ccb0bd6985b0"
+    },
+    {
+      "path": "E1/astra3/LEAD-HANDOFF.md",
+      "mode": "100644",
+      "git_blob_oid": "bd35d5622bc86a0663dd77f88faee04b263381af",
+      "stage": 0,
+      "bytes": 12779,
+      "sha256": "b457ee1c21e33580cb395c82dd6562a27570c5a0bff8d0229f7a797f3b64bce9"
+    },
+    {
+      "path": "E1/cloud/INTEGRATION-OUTCOME.md",
+      "mode": "100644",
+      "git_blob_oid": "a91f107b4272f84da9b49c64f7218333bcb277f4",
+      "stage": 0,
+      "bytes": 8685,
+      "sha256": "e267490853f437734064e89fa97d316e0a73987da392681847f3a15ed94e6871"
+    },
+    {
+      "path": "E1/cloud/REPORT.md",
+      "mode": "100644",
+      "git_blob_oid": "30ab9573b7d8a900d253163b6b4016329bc90c9c",
+      "stage": 0,
+      "bytes": 8044,
+      "sha256": "c46af6c34ea161799247397a7789f02b106c0a06f7de5c2925a49cb773662db4"
+    },
+    {
+      "path": "E1/cloud/broker.mjs",
+      "mode": "100644",
+      "git_blob_oid": "593fac43c8e2f7e06d0507fcfaec1cd165380469",
+      "stage": 0,
+      "bytes": 18212,
+      "sha256": "5de440b6a20eafd99601ff3b5613b365e8261542911f6a43cca4d98e611099dd"
+    },
+    {
+      "path": "E1/cloud/canary-plan.json",
+      "mode": "100644",
+      "git_blob_oid": "b2c95c981eda4003adf4c5f98e5483571e4c3a4c",
+      "stage": 0,
+      "bytes": 2661,
+      "sha256": "22538c6126cce47c51258fd4f4b7c0500d23ded0e86115f27bf2b0e5fc1d0df8"
+    },
+    {
+      "path": "E1/cloud/catalog-status.json",
+      "mode": "100644",
+      "git_blob_oid": "693b439e0c1a25f71bb10482186e286e040f75fd",
+      "stage": 0,
+      "bytes": 2582,
+      "sha256": "0ab9bf2cd5f1522b0297076b0ae27c08b023090d25d5c3a630cc50cfcf33c546"
+    },
+    {
+      "path": "E1/cloud/index.mjs",
+      "mode": "100644",
+      "git_blob_oid": "7342ea084f2c7a8560244c31e4599d7c019b7241",
+      "stage": 0,
+      "bytes": 283,
+      "sha256": "0dce514ffc87b0c49aeb494daa6d9a7730883da0ecea9689a5882216e392b950"
+    },
+    {
+      "path": "E1/cloud/pricing.mjs",
+      "mode": "100644",
+      "git_blob_oid": "fb04285432f7fd375c5160a71d895c09ec614d7a",
+      "stage": 0,
+      "bytes": 3797,
+      "sha256": "b7337620fc428ae5b6bb0cfae2bdff1caaf968e3f461d3397f8e7bced82b0e6c"
+    },
+    {
+      "path": "E1/cloud/registry.mjs",
+      "mode": "100644",
+      "git_blob_oid": "57f6622d99d70471d6e38ac44ea4788d2e05447f",
+      "stage": 0,
+      "bytes": 4843,
+      "sha256": "32ca6a8c4ed73d936a3d7bbeba800b2614086e6a7fff2fb79b127fa3022ee826"
+    },
+    {
+      "path": "E1/coordinator/CLOUD-ACCOUNTING-REPORT.md",
+      "mode": "100644",
+      "git_blob_oid": "09261912df3600cde7a5c9eeb8153bde836bf334",
+      "stage": 0,
+      "bytes": 9603,
+      "sha256": "ace8a5380395ff937feebb24c644140eac7dc01a14656c43f0b62ccc9fa88554"
+    },
+    {
+      "path": "E1/coordinator/admission.mjs",
+      "mode": "100644",
+      "git_blob_oid": "b4df6b5becf78a7fd2f0bc4ea587b98936c1da4d",
+      "stage": 0,
+      "bytes": 6028,
+      "sha256": "ce54554e9e611aac86ce8614b5be85c5b1cfdfdf1122a3ccb3a8fd44a1877fa1"
+    },
+    {
+      "path": "E1/coordinator/cloud-policy.mjs",
+      "mode": "100644",
+      "git_blob_oid": "6bbd9a1ce6bd80aeccc9131427d88b4af5499b90",
+      "stage": 0,
+      "bytes": 6156,
+      "sha256": "e0c944a8185bd266d4ed5890579e785d698b429c9654cfe09e7defd74f813d3b"
+    },
+    {
+      "path": "E1/coordinator/coordinator.mjs",
+      "mode": "100644",
+      "git_blob_oid": "e058289945870b3fb41935d6b3620c8611565117",
+      "stage": 0,
+      "bytes": 5319,
+      "sha256": "f81b876c9467840ec3f72dfe7647d23a4460f05396acea4e2615917b9329b9c2"
+    },
+    {
+      "path": "E1/coordinator/index.mjs",
+      "mode": "100644",
+      "git_blob_oid": "cf78768c0bc019e185e9c86ec7f31cd0971b725f",
+      "stage": 0,
+      "bytes": 701,
+      "sha256": "fc451b94f4d105cfd3481d8a21797c235f7bdcb5d14e22423e6ff4b1dee90d5f"
+    },
+    {
+      "path": "E1/coordinator/migrate.mjs",
+      "mode": "100644",
+      "git_blob_oid": "b6de21cc62e850cb7c3578d66514f08fd7d86106",
+      "stage": 0,
+      "bytes": 2150,
+      "sha256": "2a001739114847d66e25244b0643912bfb6fda32d512573c6be84b3a9f460284"
+    },
+    {
+      "path": "E1/coordinator/migrations/0003-cloud-accounting.sql",
+      "mode": "100644",
+      "git_blob_oid": "5d924d03c5c86c140fa0f444b9179c14ee1b2406",
+      "stage": 0,
+      "bytes": 33700,
+      "sha256": "ed2f7e3f7aff2598e29f08caf60a262370836b598b588a1b20b192ab57994676"
+    },
+    {
+      "path": "E1/coordinator/operations/disable-cloud.sql",
+      "mode": "100644",
+      "git_blob_oid": "1fbe6b3baae12e1142ee14c4d00e20ed4f536285",
+      "stage": 0,
+      "bytes": 1893,
+      "sha256": "e71d4882280b55717a613b7283214171a962a0c9ba70afab7bcc85afde225977"
+    },
+    {
+      "path": "E1/coordinator/psql-session.mjs",
+      "mode": "100644",
+      "git_blob_oid": "dee98f760fa96195471e0de703e6f68e60d74efa",
+      "stage": 0,
+      "bytes": 5765,
+      "sha256": "249b2ca32c67c7ff7a64bd9f7cf44af543ccaf0dafef9a9b1e8729ff5844e7fe"
+    },
+    {
+      "path": "E1/evidence3/LEGACY-NATIVE.json",
+      "mode": "100644",
+      "git_blob_oid": "65833145ce69f53cf23fbc5e2266c6c496584deb",
+      "stage": 0,
+      "bytes": 11926,
+      "sha256": "6207cc20c5f2efade5e2cc3f1a5124db97a94ce937b703ec005dfcdde0fcd31d"
+    },
+    {
+      "path": "E1/evidence3/LEGACY-OFFLINE.json",
+      "mode": "100644",
+      "git_blob_oid": "672c8f079a0116178a760125d790718ca711baff",
+      "stage": 0,
+      "bytes": 12502,
+      "sha256": "67e38a2107d23c7a1a2a3e3f8aeeba9d1ab44329cceb5c8fce211eddc7471298"
+    },
+    {
+      "path": "E1/evidence3/ORIGINAL-PRESERVATION.json",
+      "mode": "100644",
+      "git_blob_oid": "810d9a3f6254126e905d9a0a88160a6c9bfb9e59",
+      "stage": 0,
+      "bytes": 657,
+      "sha256": "3164643caee8bdd6bf3a134bc16cf4b12bfa36bfbe2886ab904dbfc7b661efa0"
+    },
+    {
+      "path": "E1/evidence3/READONLY-PREFLIGHT-FINAL.json",
+      "mode": "100644",
+      "git_blob_oid": "5067f186884f31b6f8caa66efae2bfa658512e2b",
+      "stage": 0,
+      "bytes": 55796,
+      "sha256": "a5569fb01ecaec1d96dd7345075b58d33f03a6ea3cfb34b4dbe8ff3b8ef16e24"
+    },
+    {
+      "path": "E1/evidence3/READONLY-PREFLIGHT.json",
+      "mode": "100644",
+      "git_blob_oid": "1aafdcec470ffc08008eee8b3f8f1bdd628ce7f2",
+      "stage": 0,
+      "bytes": 55584,
+      "sha256": "107ab94a6dfa7702f8bd9999e64c8fd9e08f3c7ce6ec795e8b4e4e8863a7bb48"
+    },
+    {
+      "path": "E1/evidence3/REAL-FUNDING-DISABLED.json",
+      "mode": "100644",
+      "git_blob_oid": "c62d086c880afe66f61e0c4bb9c39659a24112e7",
+      "stage": 0,
+      "bytes": 364,
+      "sha256": "d44bd3974b4202a6b110c3d700cb17bcae39f15e684e676a5b8e89cf5eb76ec2"
+    },
+    {
+      "path": "E1/host/router-cheap/host-policy.mjs",
+      "mode": "100644",
+      "git_blob_oid": "adec8ccacf947fdc9fe5a6456b9bd14e9f7b0d75",
+      "stage": 0,
+      "bytes": 1460,
+      "sha256": "b692993b2b79772da3bd88bfb1c9e1fef887ee6a1194452714dbe4d5290117ba"
+    },
+    {
+      "path": "E1/host/router-cheap/preflight.py",
+      "mode": "100644",
+      "git_blob_oid": "3694c1cfbe6816f54c3d4c90f631f5932b4ff1f8",
+      "stage": 0,
+      "bytes": 7697,
+      "sha256": "fc6ecd9ee4a93a042ed96da6409247fd89c2246f96c31a41574113581e06d1e3"
+    },
+    {
+      "path": "E1/host/router-cheap/transport.mjs",
+      "mode": "100644",
+      "git_blob_oid": "b9dcd8fe666763328711e6f6af89fd60edb8262f",
+      "stage": 0,
+      "bytes": 2044,
+      "sha256": "62a8ca0c0174c5bfaa5ca54d6bb292866f69cba31cbd24442871ed739add59e2"
+    },
+    {
+      "path": "E1/qa3/HOST-SYNTHETIC.log",
+      "mode": "100644",
+      "git_blob_oid": "f009846b693cf6fa995900558244d3b196649c3f",
+      "stage": 0,
+      "bytes": 1201,
+      "sha256": "0b2eef73611738320ffb7b4f75aca12aa73b3e7a66ec5366def0d4cf18350a0e"
+    },
+    {
+      "path": "E1/qa3/NATIVE-REVIEW.json",
+      "mode": "100644",
+      "git_blob_oid": "6c79296ec7c91a73d918eafd3bb8ce1112670f6d",
+      "stage": 0,
+      "bytes": 2742,
+      "sha256": "7bf05042f8ffe7cdd4ace33824a01c3e1470afcb2e5775257e54ad2aebd7d472"
+    },
+    {
+      "path": "E1/qa3/NATIVE.tap",
+      "mode": "100644",
+      "git_blob_oid": "3dd0a05ee233b975c4402031ca93d8645227198b",
+      "stage": 0,
+      "bytes": 2383,
+      "sha256": "6208a6885ebf5a389dddd5db5452a4505352ab225a2643aa8f44cba913132282"
+    },
+    {
+      "path": "E1/qa3/OFFLINE.tap",
+      "mode": "100644",
+      "git_blob_oid": "be216c8857db29bcbddd328d201b17603fef6d06",
+      "stage": 0,
+      "bytes": 6968,
+      "sha256": "0e9da9a7eed291464854890f33eb8ba0d7b0a4af7b9f3237feb5b29cc158374d"
+    },
+    {
+      "path": "E1/qa3/PRESERVATION.json",
+      "mode": "100644",
+      "git_blob_oid": "54a439c4c9d69072667c7f22f37eed0b423a1937",
+      "stage": 0,
+      "bytes": 3311,
+      "sha256": "6ac1eccf730fc35bc19ffcbc4a55cf4eee96d90d545f0adb43b2946e48073442"
+    },
+    {
+      "path": "E1/qa3/PUBLICATION-REVIEW.json",
+      "mode": "100644",
+      "git_blob_oid": "322e9dc649c9a37f9d7057858804a9d068ef309d",
+      "stage": 0,
+      "bytes": 1739,
+      "sha256": "0684617e2fe9582c75b5d37e8d323d9fca7933d0299ac7716af893db29129ff7"
+    },
+    {
+      "path": "E1/qa3/README.md",
+      "mode": "100644",
+      "git_blob_oid": "d28f6db084dd1afe83928f4a8e4607b76a85160a",
+      "stage": 0,
+      "bytes": 1603,
+      "sha256": "19d9f99f722cdcfcbb41413fff8dba611895d5c8bf7688f19681ca405b685224"
+    },
+    {
+      "path": "E1/qa3/REPORT.md",
+      "mode": "100644",
+      "git_blob_oid": "afde78cf700d8b0bdf0f1223b64d44d007f18c84",
+      "stage": 0,
+      "bytes": 11885,
+      "sha256": "5dd3297efe23dad84810d7b95c33afcb11157f3c108c3b68189d6165dd6f40b9"
+    },
+    {
+      "path": "E1/qa3/SOURCE-PINS.json",
+      "mode": "100644",
+      "git_blob_oid": "221f27ae0211aa152d1dc80ba2f4beb9939dc675",
+      "stage": 0,
+      "bytes": 5572,
+      "sha256": "6749ae2708c4344db3ce41c23fede43a75e6b6fae996b8b613394c032c9b0d70"
+    },
+    {
+      "path": "E1/qa3/SUMMARY.json",
+      "mode": "100644",
+      "git_blob_oid": "488cdd45f9c9eb86aa8200bfadc22087b439be37",
+      "stage": 0,
+      "bytes": 6729,
+      "sha256": "17aab9baecc9fbd6b3688ec80c97ea407029ebc2dcb86dcea42ac7fbc88fa723"
+    },
+    {
+      "path": "E1/qa3/broker-adversarial.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "cdcd67010bcf6d2469e0e708ac7f208914cf0ef5",
+      "stage": 0,
+      "bytes": 12194,
+      "sha256": "cc6d4d0655bd435c5c9aeec4a52a10c05eb7a27dfe04096899cd586f6e709c86"
+    },
+    {
+      "path": "E1/qa3/finalize-review.mjs",
+      "mode": "100644",
+      "git_blob_oid": "7ba409bcf9a8b0a51bbe3b4de157040b5becc572",
+      "stage": 0,
+      "bytes": 9439,
+      "sha256": "094c8049c4254e515a65ed8f07cbead42f50dbc19d0dfa70778850370cbe9c59"
+    },
+    {
+      "path": "E1/qa3/fixtures.mjs",
+      "mode": "100644",
+      "git_blob_oid": "e8a4ce673b021279079bd060ef7b70c4c2e1e45a",
+      "stage": 0,
+      "bytes": 1353,
+      "sha256": "a5fd78282d74929371a46249becfba019e4ea59b478cc61d845f27ab30602146"
+    },
+    {
+      "path": "E1/qa3/funding-adversarial.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "17a3c44c9d84bf2067b4ec68a097c46645e9c7ef",
+      "stage": 0,
+      "bytes": 4777,
+      "sha256": "1327659e7607955cd733f7e906e2528b450446d42f346baacb35d46607aab4e6"
+    },
+    {
+      "path": "E1/qa3/host-boundary.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "300ac018bdeba34153a26f15ad021b70ad6c530a",
+      "stage": 0,
+      "bytes": 1744,
+      "sha256": "e3d935db220cfd1e2a536b7217701add618f383849ddd060f3e42d5bcdd5645d"
+    },
+    {
+      "path": "E1/qa3/host-safety.test.py",
+      "mode": "100644",
+      "git_blob_oid": "bcf97554cc7be4eb046bdb3507c89ba102f1d562",
+      "stage": 0,
+      "bytes": 7904,
+      "sha256": "bb45c86265113f26573374c613fc5c86fa7fdf4aa3be69fbddc5184c0fc355a7"
+    },
+    {
+      "path": "E1/qa3/native-fixture.mjs",
+      "mode": "100644",
+      "git_blob_oid": "6617532ffd905ba237b72619b1714d75623b5b58",
+      "stage": 0,
+      "bytes": 8336,
+      "sha256": "1749bae09fc42137605dd7f7ca0d74ac30f2fd4c87955556477beec675224af6"
+    },
+    {
+      "path": "E1/qa3/native-guard.cjs",
+      "mode": "100644",
+      "git_blob_oid": "f799f70dbec80ab26d22b8d6e9d2916613b00a9a",
+      "stage": 0,
+      "bytes": 1883,
+      "sha256": "ee473388f81589523b79809ee58529c0e85d4d041fb0df5493e726518c8673da"
+    },
+    {
+      "path": "E1/qa3/native-integration.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "0f8811506d84fb2fdbb5d48803166bbf505efbdc",
+      "stage": 0,
+      "bytes": 16357,
+      "sha256": "906593cd8b5d1778185a7380554441817c5f032901deffdb553c8f5912c868a3"
+    },
+    {
+      "path": "E1/qa3/offline-guard.cjs",
+      "mode": "100644",
+      "git_blob_oid": "e2277138e78bf43d2d942d52455b34554a3eb81d",
+      "stage": 0,
+      "bytes": 932,
+      "sha256": "ad6c9a52a387c139bf2e95b3525e71be946a635a65d611d968a52971f4eefe69"
+    },
+    {
+      "path": "E1/qa3/pricing-adversarial.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "0d0eaec6cb04b87c0aed53836a9cbacd101b122f",
+      "stage": 0,
+      "bytes": 4710,
+      "sha256": "11b5f7acc8054194341c818e4846cfc28e84fe206e3b1317cd010500030675e6"
+    },
+    {
+      "path": "E1/qa3/run-host-synthetic.mjs",
+      "mode": "100644",
+      "git_blob_oid": "6ffa3369550da7d006f8586a85b5916fe72b4bc7",
+      "stage": 0,
+      "bytes": 2034,
+      "sha256": "36170769670dce3567e85c2c06535cabfdf25e496fb0d24a775a509c1368e681"
+    },
+    {
+      "path": "E1/qa3/run-native.mjs",
+      "mode": "100644",
+      "git_blob_oid": "720b7df9df55c095054b6c694a126d0d16581f30",
+      "stage": 0,
+      "bytes": 2508,
+      "sha256": "9b6ea7a7390e26c846c8508cb4ca26370a514ecefc62d37068044ebe8845d468"
+    },
+    {
+      "path": "E1/qa3/run-offline.mjs",
+      "mode": "100644",
+      "git_blob_oid": "d8fbde03371def2fcec9028316b78310b58b27de",
+      "stage": 0,
+      "bytes": 2562,
+      "sha256": "2f1acfe88c8647dc941aa6cc5e224b894a29d3ab1dff75350e49b4e26644c0f2"
+    },
+    {
+      "path": "E1/qa3/verify-portability.mjs",
+      "mode": "100644",
+      "git_blob_oid": "59706fef12a29a852cd6c65ecef694855ce3d436",
+      "stage": 0,
+      "bytes": 3981,
+      "sha256": "adb5febefc03c8162804be49d6cb17b2781218995cd5034595590255053e8cb5"
+    },
+    {
+      "path": "E1/qa3/verify-preservation.mjs",
+      "mode": "100644",
+      "git_blob_oid": "7f932ecfe9d3a1ebb1e70510ac97469ddeb61023",
+      "stage": 0,
+      "bytes": 1624,
+      "sha256": "6d2e6c375ba6088a4b168c12934df4591f767006e910aaeb11d2bc3ec17208cd"
+    },
+    {
+      "path": "E1/tests/cloud-ledger/fixtures.mjs",
+      "mode": "100644",
+      "git_blob_oid": "b2e3649051535ccf44a7dc1dd2fb8d530d43b7ca",
+      "stage": 0,
+      "bytes": 6159,
+      "sha256": "effacf82489088e98eb48032c64c710855747f302dd432ce0c9408b092e1ca53"
+    },
+    {
+      "path": "E1/tests/cloud-ledger/native.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "bc84138680149e7b3b711853718eea9c75efe7bc",
+      "stage": 0,
+      "bytes": 12863,
+      "sha256": "8a0ff2ad2e2d6fda786643436959904283d2a9a704cb549ae6ab07a24453d643"
+    },
+    {
+      "path": "E1/tests/cloud-ledger/policy.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "179e8232ed55fb6593bd9bc3f23eef0f78124fa4",
+      "stage": 0,
+      "bytes": 3188,
+      "sha256": "8f48d8fa568ceaa56b0d47c6302f2dbc63564563d1bf7994f2c5cda502f382c1"
+    },
+    {
+      "path": "E1/tests/cloud/broker.test.mjs",
+      "mode": "100644",
+      "git_blob_oid": "3e2f92008903e1a6dbcae7bec382fedebcd57652",
+      "stage": 0,
+      "bytes": 10391,
+      "sha256": "c38bec7ed45de4253b21582cc801eb7e37339723bccb4c547ab2286ee0d10502"
+    },
+    {
+      "path": "E1/tests/cloud/fixtures.mjs",
+      "mode": "100644",
+      "git_blob_oid": "d7a7a8812e24b35f3eae66ab90d10e770cb0be20",
+      "stage": 0,
+      "bytes": 5022,
+      "sha256": "304b10dfdb26d7862c604998ccf36f36409dce6b8d05935d64351c8544d07a17"
+    },
+    {
+      "path": "E1/verification/cloud-funding-readback.mjs",
+      "mode": "100644",
+      "git_blob_oid": "6c0006fac1566d9f63e9f2374071f042ef1bbd2d",
+      "stage": 0,
+      "bytes": 1344,
+      "sha256": "271d7afdaac63b8ad4902c42188cff268a2085e8fa67be5cc01ec1161fcc55f1"
+    },
+    {
+      "path": "release/ISSUE3-SOURCE.json",
+      "mode": "100644",
+      "git_blob_oid": "6fd209452c82d1f3be27771147ac65412af53ee9",
+      "stage": 0,
+      "bytes": 10482,
+      "sha256": "c02722a1948a0632136f48449e8266a52e758df2d9e26224163f024f84cb6fad"
+    }
+  ],
+  "self_exclusion": {
+    "path": "E1/qa3/INDEX-REVIEW.json",
+    "own_hash_included": false,
+    "included_in_inventory_hashes": false,
+    "root_may_add_only_this_review_file_after_review": true,
+    "source_manifest_already_names_review_path_but_excludes_its_hash": true
+  },
+  "limitations": [
+    "Source publication approval only; no paid activation, live cloud acceptance or original Career mission completion.",
+    "Provider post-coefficient actual-charge limits, charged ACK and full request token bound remain unverified.",
+    "The final review artifact is intentionally excluded from its own hashes and the source manifest file entries."
+  ]
+}

@@ -2,11 +2,12 @@ import {digest, canonicalize, validateBoundValue} from '../contracts/index.mjs';
 import {check, integer} from './errors.mjs';
 import {admissionPort} from './admission.mjs';
 import {validateLocalModelQuiescence} from './quiescence.mjs';
+import {cloudBudgetProvisionPort} from './cloud-policy.mjs';
 
 /** Project-scoped view of the one D03/D09 transaction domain. Only the authority
  * owns this object/session. Leaves receive an RPC client, never this DB port.
  */
-export function createCoordinator({db, admission, project_id}) {
+export function createCoordinator({db, admission, project_id, cloudBudgetAuthority}) {
   check(db?.kind === 'NATIVE_POSTGRESQL_PSQL_SESSION' && typeof db.command === 'function', 'A2_NATIVE_DB_REQUIRED');
   check(typeof project_id === 'string' && /^[a-z][a-z0-9_.-]{0,79}$/.test(project_id), 'A2_PROJECT_REQUIRED');
   const scope = request => { check(request && typeof request === 'object' && (!request.project_id || request.project_id === project_id), 'A2_PROJECT_SCOPE'); return {...request, project_id}; };
@@ -37,6 +38,8 @@ export function createCoordinator({db, admission, project_id}) {
     settle(request) { attempt(request); integer(request.actual_cost_micros,'A2_SETTLEMENT_LIMIT'); canonicalize(request.usage); check(Buffer.byteLength(JSON.stringify(request.usage)) <= 16384 && typeof request.provider_ref === 'string' && request.provider_ref.length <= 256,'A2_USAGE_LIMIT'); return invoke('settle',request); },
     unknown(request) { return invoke('unknown',attempt(request)); },
     failBeforeSend(request) { return invoke('fail_before_send',attempt(request)); },
+    async provisionCloudBudget(request, context) { check(['admin','coordinator'].includes(db.role),'A2_CLOUD_FUNDING_ROLE_DENIED'); const trusted=await cloudBudgetProvisionPort(cloudBudgetAuthority,request,context); return db.provisionCloudBudget(trusted); },
+    cloudBudget(key_binding_id) { check(typeof key_binding_id==='string' && /^[a-z][a-z0-9_.-]{0,79}$/.test(key_binding_id),'A2_CLOUD_KEY_BINDING'); return invoke('cloud_budget',{key_binding_id}); },
     quiesceLocalModel(request) { check(['admin','coordinator'].includes(db.role),'A2_QUIESCENCE_ROLE_DENIED');attempt(request);const scoped=scope(request);validateLocalModelQuiescence(scoped,project_id);return db.quiesceLocalModel(scoped); },
     markEffectSending(request) { return invoke('effect_sending',request); },
     confirmEffect(request) { return invoke('effect_confirm',request); },
