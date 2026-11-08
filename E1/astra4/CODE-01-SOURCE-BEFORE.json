@@ -1,0 +1,18 @@
+[
+  {
+    "file": "E1/recruit/coding/author.mjs",
+    "sha256": "13d48f809402e8dab8380948ee62dba8d0195acff14c499d0ae17a290024ba81"
+  },
+  {
+    "file": "E1/recruit/coding/mission.mjs",
+    "sha256": "3651a4b5d83ed4d00b85eee25e15d3f593b39f5ff920acb5a1765344c786e151"
+  },
+  {
+    "file": "E1/recruit/coding/sandbox.mjs",
+    "sha256": "0a123edf4fde4fe5ebae3a079c46af7f845dc7e8c065af22d203e393990bf2a5"
+  },
+  {
+    "file": "E1/recruit/coding/sandbox.py",
+    "sha256": "24c21ca3f00f12333e0c1b8802f3b440c126c33e46f86871b5325914d4240060"
+  }
+]

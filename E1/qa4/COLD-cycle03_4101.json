@@ -1,0 +1,178 @@
+{
+  "schema": "awe.qa4.independent-native-cold-review/1",
+  "started_at": "2026-11-08T04:27:21.479Z",
+  "finished_at": "2026-11-08T04:27:21.925Z",
+  "inspector_pid": 31644,
+  "independent_cold_reader_pid": 35624,
+  "qa_database_role": "awe_e1_qa",
+  "native_resource": "EXISTING_E1_5433",
+  "run_id": "cycle03_4101",
+  "mission_id": "mission_recruit_cycle03_4101",
+  "project_id": "prj_recruit_cycle03_4101",
+  "run_evidence_sha256": "f68d3364c9634496c58d9e9b17bf242ffab37776d465b55821703181c72f6d92",
+  "oracle_digest": "sha256:d9c5d27afa8d26bac88894e400977b4ab020eccfb2f65d3bf2f7c22d99147e64",
+  "mission_state": "COMPLETE",
+  "artifact_digest": "sha256:97a03da9447e1c568d7bb0cafc770b0c28822a7fd3d40cdf10b86681475abd69",
+  "task_bindings": [
+    {
+      "task_id": "draft",
+      "result_hash": "sha256:b592ade4e6c762f656e17b56ed7c8126db172bf8d19993c0aaebf29340af6609",
+      "artifact_digest": "sha256:5e7ef7ace57b3e49fb049a5d497baff41ab79a97a359bc733a4cc7f3970eba33",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "481",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "rank",
+      "result_hash": "sha256:399bec41e2c137ce0da8783583444da3bd9c8fba90b54d3cb49d63f88224732e",
+      "artifact_digest": "sha256:48f9dcd78c98641b77e355babc1a3d89bb9b718e263b21eb9a74e054faaaa739",
+      "state": "ACCEPTED",
+      "claims": 2,
+      "fence": "480",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_alpha",
+      "result_hash": "sha256:69d3fcc62efb9b225e5b6ce0a8f58baff4c5997772d8dab6c7c0518765b1cf3e",
+      "artifact_digest": "sha256:1de5ae205ea6c2e46a181e00f7654f9b2fcf66921a89b34ebe1447bb2a134c77",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "477",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_beta",
+      "result_hash": "sha256:87b1d92977f072125e84fe306653b6752a8172377e75fe7d4fdcbeb07de19eca",
+      "artifact_digest": "sha256:a287a0d2f70390768ade6e5bf30a668dd7a456992f817be3a2eedcc5101be357",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "478",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "review",
+      "result_hash": "sha256:910d3600f6c6500e460875bf1d340276468532d680349416c3a681d233a383a1",
+      "artifact_digest": "sha256:1441b38d2a3574ec34800e69c4aa280b3aee432725d1283db11fc98d2e51e4ad",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "482",
+      "producer_id": "e1_worker"
+    }
+  ],
+  "rank_recovery": {
+    "claim_fences": [
+      "479",
+      "480"
+    ],
+    "single_result_proposed": true,
+    "interrupted_start_pid": 33800,
+    "resume_pid": 30916,
+    "actual_killed_worker_pid": 32672
+  },
+  "project_counters": {
+    "booked_spent": 0,
+    "reserved": 0,
+    "quota_used": 1,
+    "live_leases": 0,
+    "effect_intents": 0,
+    "cloud_attempts": 0
+  },
+  "model_attempts": [
+    {
+      "attempt_id": "attempt_908438c6957424ec26eed3bb7e5ddda1c1a03625ee92a5609aac1d7e5df6ea45",
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "state": "CONFIRMED",
+      "actual_cost_micros": 0,
+      "input_tokens": 423,
+      "output_tokens": 25,
+      "wire_attempts": 1,
+      "model": "qwen3:4b-instruct",
+      "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0"
+    }
+  ],
+  "independent_verdict": {
+    "schema": "awe.qa4.run-verdict/1",
+    "status": "PARTIAL",
+    "pipeline_status": "PASS",
+    "recovery_status": "PROVEN",
+    "coding_status": "BLOCKED",
+    "unsafe_effects": 0,
+    "checks": [
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "model_origin",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_alpha",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_beta",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "rank",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "draft",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "persistence",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "recovery",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "coding_honesty",
+        "passed": true,
+        "reason": "PASS"
+      }
+    ],
+    "failures": [],
+    "accepted": false
+  },
+  "negative_control": {
+    "seed": "WRONG_RANK",
+    "caught": true,
+    "status": "FAIL"
+  },
+  "holdout_crosscheck": {
+    "actual_variant": "holdout",
+    "rejected_distinct_variant": "public",
+    "status": "FAIL",
+    "meaning": "An actual run cannot claim success under the distinct frozen variant. Holdout AWE execution is verified only when its own variant is the actual run."
+  },
+  "new_model_calls": 0,
+  "paid_calls": 0,
+  "external_effects": 0,
+  "key_access": false,
+  "resource_lifecycle": false,
+  "acceptance": false
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "awe.qa4.targeted-offline/1",
+  "evidence_level": "OFFLINE_ORACLE_TEST_DOUBLES_NOT_ACTUAL_AWE_EXECUTION",
+  "command": "node --require ./E1/qa3/offline-guard.cjs --test --test-concurrency=1 --test-reporter=tap E1/qa4/oracle.test.mjs",
+  "started_at": "2026-11-08T04:34:47.981Z",
+  "finished_at": "2026-11-08T04:34:48.442Z",
+  "node": "v24.21.0",
+  "exit_status": 0,
+  "error": null,
+  "totals": {
+    "tests": 17,
+    "pass": 17,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "source_stable": true,
+  "source_before": [
+    {
+      "path": "E1/qa4/fixtures.mjs",
+      "sha256": "d29b2466020d25c2c7c430153d7812db9d66c84261a56611f23c9649ee6cdf2d"
+    },
+    {
+      "path": "E1/qa4/oracle.mjs",
+      "sha256": "7ab8497a588857762e6bfb1919bf2eed158b652a2b34882123d58b7bd9209f45"
+    },
+    {
+      "path": "E1/qa4/leaf.mjs",
+      "sha256": "abc04d7bf35cfd5ab72a03f70b885b548c84d5d98e8cf3aa0c106566ac3bdf46"
+    },
+    {
+      "path": "E1/qa4/test-fixtures.mjs",
+      "sha256": "5745b34a42a852517940e0f119718464417cf15158997165602cd8e103cc38f5"
+    },
+    {
+      "path": "E1/qa4/oracle.test.mjs",
+      "sha256": "7bd6985cef1a2300b031ba762505301dda8ce2f52b006a8803d51442074073cb"
+    },
+    {
+      "path": "E1/qa4/FROZEN-ORACLE.json",
+      "sha256": "3e85df19334f545669f8ea483511136ced9bbd01d55538b40583c0b8ae0d086d"
+    },
+    {
+      "path": "E1/qa4/HOLDOUT-ORACLE.json",
+      "sha256": "d7fb4b37990db6c0fb8e678ca855c70d0b0532c1366959722de908166dd694a8"
+    },
+    {
+      "path": "E1/qa4/FIXTURE-PUBLIC.json",
+      "sha256": "81a08458475e02d7de2b583faec778bc48bef84ec63e7678e29350249b44d5a1"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "E1/qa4/fixtures.mjs",
+      "sha256": "d29b2466020d25c2c7c430153d7812db9d66c84261a56611f23c9649ee6cdf2d"
+    },
+    {
+      "path": "E1/qa4/oracle.mjs",
+      "sha256": "7ab8497a588857762e6bfb1919bf2eed158b652a2b34882123d58b7bd9209f45"
+    },
+    {
+      "path": "E1/qa4/leaf.mjs",
+      "sha256": "abc04d7bf35cfd5ab72a03f70b885b548c84d5d98e8cf3aa0c106566ac3bdf46"
+    },
+    {
+      "path": "E1/qa4/test-fixtures.mjs",
+      "sha256": "5745b34a42a852517940e0f119718464417cf15158997165602cd8e103cc38f5"
+    },
+    {
+      "path": "E1/qa4/oracle.test.mjs",
+      "sha256": "7bd6985cef1a2300b031ba762505301dda8ce2f52b006a8803d51442074073cb"
+    },
+    {
+      "path": "E1/qa4/FROZEN-ORACLE.json",
+      "sha256": "3e85df19334f545669f8ea483511136ced9bbd01d55538b40583c0b8ae0d086d"
+    },
+    {
+      "path": "E1/qa4/HOLDOUT-ORACLE.json",
+      "sha256": "d7fb4b37990db6c0fb8e678ca855c70d0b0532c1366959722de908166dd694a8"
+    },
+    {
+      "path": "E1/qa4/FIXTURE-PUBLIC.json",
+      "sha256": "81a08458475e02d7de2b583faec778bc48bef84ec63e7678e29350249b44d5a1"
+    }
+  ],
+  "output_sha256": "e741bfe7ff53d454a2c8febcf618a1d60d1d9dc92495200cae7c4b1a76f19d22",
+  "actual_awe_missions": 0,
+  "actual_model_calls": 0,
+  "provider_calls": 0,
+  "key_access": false,
+  "native_connections": 0,
+  "external_effects": 0
+}

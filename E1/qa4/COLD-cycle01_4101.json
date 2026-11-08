@@ -1,0 +1,177 @@
+{
+  "schema": "awe.qa4.independent-native-cold-review/1",
+  "started_at": "2026-11-08T04:17:32.809Z",
+  "finished_at": "2026-11-08T04:17:33.232Z",
+  "inspector_pid": 39388,
+  "independent_cold_reader_pid": 41848,
+  "qa_database_role": "awe_e1_qa",
+  "native_resource": "EXISTING_E1_5433",
+  "run_id": "cycle01_4101",
+  "mission_id": "mission_recruit_cycle01_4101",
+  "project_id": "prj_recruit_cycle01_4101",
+  "run_evidence_sha256": "8dcc2f8d254b5b6100d9a58918e0841518766418db783e7828961e2f25d50830",
+  "oracle_digest": "sha256:5073d1e38f82195abd194a865769d9397d19a3d61433d9a7be5852c4bf4ad619",
+  "mission_state": "COMPLETE",
+  "artifact_digest": "sha256:474b8f6848c503b4f64117f1443a6bd64e88257ae22167504d7787eb70e37029",
+  "task_bindings": [
+    {
+      "task_id": "draft",
+      "result_hash": "sha256:5e4e6aca106a53ad0aecee80092622d69c821615bed18864121afb3731156751",
+      "artifact_digest": "sha256:517e0b0ca1242fb914e493780e565c980e18809dfc9eeb4fd29b7865118d5339",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "466",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "rank",
+      "result_hash": "sha256:3f29bdf521f97ae063d9220fbe3aafb5e6018013c7e85f9eb89d06554d4b8467",
+      "artifact_digest": "sha256:b46ba1e78e68152da6fecca1ed6180e8e620c216812a725e96cddd9c8c2f83a4",
+      "state": "ACCEPTED",
+      "claims": 2,
+      "fence": "465",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_alpha",
+      "result_hash": "sha256:523a3482d4464cb9e5409c143539e1bd1c9f173d3e319b7247f060d1a51248d1",
+      "artifact_digest": "sha256:21f347eb9b6917ac2edefd46893318e4d8c432dd6fe01bc558510aa72cd9ddbf",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "462",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_beta",
+      "result_hash": "sha256:838cc68c308365bbb91508fbf25742380daa758b85ac6769d48b8c873b6cc2bb",
+      "artifact_digest": "sha256:dbbefbd51bd768e7246ab0becf5a6747bae013de9457e9f688a2fa167fb3e91a",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "463",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "review",
+      "result_hash": "sha256:234d966950d460f71e372777ed6d678b7bd17b175883946f1058392e77255f1e",
+      "artifact_digest": "sha256:d839b9de555626c379a4b346a83623df869bf533f2b639ab069bc366aabd6c8a",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "467",
+      "producer_id": "e1_worker"
+    }
+  ],
+  "rank_recovery": {
+    "claim_fences": [
+      "464",
+      "465"
+    ],
+    "single_result_proposed": true,
+    "interrupted_start_pid": 41584,
+    "resume_pid": 11520,
+    "actual_killed_worker_pid": 35516
+  },
+  "project_counters": {
+    "booked_spent": 0,
+    "reserved": 0,
+    "quota_used": 1,
+    "live_leases": 0,
+    "effect_intents": 0,
+    "cloud_attempts": 0
+  },
+  "model_attempts": [
+    {
+      "attempt_id": "attempt_3324166da8cc2f50bf5465b4b27637d1eb368057853c2bc763d2e24affcf6e23",
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "state": "CONFIRMED",
+      "actual_cost_micros": 0,
+      "input_tokens": 416,
+      "output_tokens": 27,
+      "wire_attempts": 1,
+      "model": "qwen3:4b-instruct",
+      "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0"
+    }
+  ],
+  "independent_verdict": {
+    "schema": "awe.qa4.run-verdict/1",
+    "status": "PARTIAL",
+    "pipeline_status": "PASS",
+    "recovery_status": "PROVEN",
+    "coding_status": "BLOCKED",
+    "unsafe_effects": 0,
+    "checks": [
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "model_origin",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_alpha",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_beta",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "rank",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "draft",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "persistence",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "recovery",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "coding_honesty",
+        "passed": true,
+        "reason": "PASS"
+      }
+    ],
+    "failures": [],
+    "accepted": false
+  },
+  "negative_control": {
+    "seed": "WRONG_RANK",
+    "caught": true,
+    "status": "FAIL"
+  },
+  "holdout_crosscheck": {
+    "public_run_is_not_holdout_success": true,
+    "status": "FAIL",
+    "meaning": "Expected rejection of original public-run data under distinct holdout oracle; actual holdout AWE execution remains separate."
+  },
+  "new_model_calls": 0,
+  "paid_calls": 0,
+  "external_effects": 0,
+  "key_access": false,
+  "resource_lifecycle": false,
+  "acceptance": false
+}

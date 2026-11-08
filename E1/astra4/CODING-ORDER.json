@@ -1,0 +1,25 @@
+{
+  "schema": "awe.sandbox-recruit.coding-test-order/1",
+  "case_id": "SANDBOX-RECRUIT-01-CODE",
+  "parent_acceptance_sha256": "c96003fc698f16fdca6b24e5c14deff52e475df9893079fdc0557a62c42aae8e",
+  "issued_by": "CODEX_ASTRA_TEST_LEAD",
+  "mode": "SYNTHETIC_E1_STAGING",
+  "input": "Implement a pure Python scoring helper for fictional vacancies. Normalize skill names by trimming whitespace and normalizing case; count distinct recognized skills. JavaScript contributes 5, SQL 3, testing 2; other skills contribute zero. Return the integer sum. No files, network, environment, dependencies or process operations in the generated code.",
+  "scope": {
+    "candidate": "one frozen score helper",
+    "accounting": "Bounded local Qwen only through existing native A3 accounting. Consume the shared local wire budget.",
+    "no_contact": true
+  },
+  "expected": [
+    "New scoped grant and ordinary A1/A2 admission, separate logical request for genuine AWE model-generated candidate. Log native reserve/settle/unknown and model pin; retain immutable initial proposed bytes.",
+    "Developer supplies sandbox/bindings, tests and input only. Save raw-response hash, candidate hash after any disclosed deterministic transport-only transformation, git base and resulting commit. Distinguish model-written algorithm from host serialization.",
+    "Run candidate in independently probed sandbox. Test permutations, repeated/mixed-case/whitespace skills, unknown and empty sets against independent holdout. Reject extra paths, forbidden syntax/side effects, escape attempts or mismatched commitment. Separate QA controls verdict.",
+    "Bind the tested digest into recruiting scoring execution for actual input records; record candidate digest, inputs/outputs, generated scores, canonical selection and draft/rank bindings. Independent QA and cold readback can verify the reused commitment.",
+    "State abilities separately: bounded script authored, existing executor used, dynamically created executors or specialists only if evidenced. An unknown/failed attempt remains attached to its actual mission without replay. Existing three runs keep their historical status."
+  ],
+  "terminal": {
+    "pass": "All expected checks verified in the new scoped case and independent QA. Original mission verdict is reported independently for each actual run.",
+    "partial": "Candidate exists or passes isolated tests but reuse/QA/cold binding or another required check is missing.",
+    "blocked": "No bounded authenticated path or an unresolved HOLD."
+  }
+}

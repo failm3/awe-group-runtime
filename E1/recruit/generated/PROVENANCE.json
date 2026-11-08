@@ -1,0 +1,23 @@
+{
+  "schema": "awe.recruit.generated-source-provenance/1",
+  "file": "score_helper.py",
+  "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+  "integration_action": "EXACT_BYTE_COPY_OF_NATIVE_QA_AWE_CANDIDATE",
+  "author_mission_id": "mission_recruit_score01_4101",
+  "author_project_id": "prj_recruit_score01_4101",
+  "author_result_hash": "sha256:50734cc40f59e0076d91eef5d1d0fcf171acf878a1d596edefa35a07beb69dee",
+  "model_id": "qwen3:4b-instruct",
+  "isolated_git": {
+    "base_sha": "e0f15dcd8a9afe5511388081e52fe406e29be6fa",
+    "head_sha": "d803d29299b4251e951b0f9ea43ae911a176368b",
+    "branch": "codex/score-score01_4101",
+    "path_allowlist": [
+      "score_helper.py"
+    ],
+    "main_unchanged": true,
+    "remotes": 0
+  },
+  "source_evidence": "../coding/evidence/score01_4101.json",
+  "consumption_evidence": "../evidence/cycle04_4101.json",
+  "generic_github_coding": "NOT_PROVEN"
+}

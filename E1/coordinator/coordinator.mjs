@@ -3,11 +3,13 @@ import {check, integer} from './errors.mjs';
 import {admissionPort} from './admission.mjs';
 import {validateLocalModelQuiescence} from './quiescence.mjs';
 import {cloudBudgetProvisionPort} from './cloud-policy.mjs';
+import {cloud4AuthorizationAdmission,cloud4CanaryAdmission} from '../cloud4/authority.mjs';
+import {sqlJson} from './psql-session.mjs';
 
 /** Project-scoped view of the one D03/D09 transaction domain. Only the authority
  * owns this object/session. Leaves receive an RPC client, never this DB port.
  */
-export function createCoordinator({db, admission, project_id, cloudBudgetAuthority}) {
+export function createCoordinator({db, admission, project_id, cloudBudgetAuthority, cloud4Authority}) {
   check(db?.kind === 'NATIVE_POSTGRESQL_PSQL_SESSION' && typeof db.command === 'function', 'A2_NATIVE_DB_REQUIRED');
   check(typeof project_id === 'string' && /^[a-z][a-z0-9_.-]{0,79}$/.test(project_id), 'A2_PROJECT_REQUIRED');
   const scope = request => { check(request && typeof request === 'object' && (!request.project_id || request.project_id === project_id), 'A2_PROJECT_SCOPE'); return {...request, project_id}; };
@@ -17,6 +19,7 @@ export function createCoordinator({db, admission, project_id, cloudBudgetAuthori
     integer(request.fence,'A2_FENCE'); check(BigInt(request.fence) > 0n, 'A2_FENCE'); return request;
   }
   async function snapshot() { return invoke('snapshot'); }
+  async function cloud4Invoke(name,request){check(typeof db.query==='function','A2_NATIVE_DB_REQUIRED');const value=JSON.parse(await db.query('SELECT awe_e1_runtime.'+name+'('+sqlJson(scope(request))+');'));check(!value.error,value.error);return value;}
   const api = {
     kind: 'AWE_E1_DURABLE_COORDINATOR', project_id,
     async admit(request, context) { const payload = await admissionPort(admission)(request, context); check(payload.project_id === project_id,'A2_PROJECT_SCOPE'); return invoke('admit',payload); },
@@ -40,6 +43,12 @@ export function createCoordinator({db, admission, project_id, cloudBudgetAuthori
     failBeforeSend(request) { return invoke('fail_before_send',attempt(request)); },
     async provisionCloudBudget(request, context) { check(['admin','coordinator'].includes(db.role),'A2_CLOUD_FUNDING_ROLE_DENIED'); const trusted=await cloudBudgetProvisionPort(cloudBudgetAuthority,request,context); return db.provisionCloudBudget(trusted); },
     cloudBudget(key_binding_id) { check(typeof key_binding_id==='string' && /^[a-z][a-z0-9_.-]{0,79}$/.test(key_binding_id),'A2_CLOUD_KEY_BINDING'); return invoke('cloud_budget',{key_binding_id}); },
+    async prepareCloud4Authorization(token,context){check(['admin','coordinator'].includes(db.role),'A2_CLOUD_FUNDING_ROLE_DENIED');const receipt=await cloud4AuthorizationAdmission(cloud4Authority,token,context);check(receipt.document.project_ids.includes(project_id),'A2_PROJECT_SCOPE');return cloud4Invoke('cloud4_install_authorization',{receipt,trusted_public_key_digest:receipt.public_key_digest});},
+    async amendCloud4Authorization(token,context){check(['admin','coordinator'].includes(db.role),'A2_CLOUD_FUNDING_ROLE_DENIED');const receipt=await cloud4AuthorizationAdmission(cloud4Authority,token,context);check(receipt.document.project_ids.includes(project_id),'A2_PROJECT_SCOPE');return cloud4Invoke('cloud4_amend_scope',{receipt,trusted_public_key_digest:receipt.public_key_digest});},
+    cloud4AuthorizationHistory(key_binding_id){check(typeof key_binding_id==='string'&&/^[a-z][a-z0-9_.-]{0,79}$/.test(key_binding_id),'A2_CLOUD_KEY_BINDING');return cloud4Invoke('cloud4_authorization_history_info',{key_binding_id});},
+    async activateCloud4Canary(token,funding_grant_digest,context){check(['admin','coordinator'].includes(db.role),'A2_CLOUD_FUNDING_ROLE_DENIED');const receipt=await cloud4AuthorizationAdmission(cloud4Authority,token,context);return cloud4Invoke('cloud4_activate_canary',{key_binding_id:receipt.document.key_binding_id,authorization_digest:receipt.document_digest,funding_grant_digest});},
+    async acceptCloud4Canary(token,context){check(['admin','coordinator'].includes(db.role),'A2_CLOUD_FUNDING_ROLE_DENIED');const receipt=await cloud4CanaryAdmission(cloud4Authority,token,context);return cloud4Invoke('cloud4_accept_canary',{receipt,trusted_public_key_digest:receipt.public_key_digest});},
+    cloud4Authorization(key_binding_id){check(typeof key_binding_id==='string'&&/^[a-z][a-z0-9_.-]{0,79}$/.test(key_binding_id),'A2_CLOUD_KEY_BINDING');return cloud4Invoke('cloud4_authorization_info',{key_binding_id});},
     quiesceLocalModel(request) { check(['admin','coordinator'].includes(db.role),'A2_QUIESCENCE_ROLE_DENIED');attempt(request);const scoped=scope(request);validateLocalModelQuiescence(scoped,project_id);return db.quiesceLocalModel(scoped); },
     markEffectSending(request) { return invoke('effect_sending',request); },
     confirmEffect(request) { return invoke('effect_confirm',request); },

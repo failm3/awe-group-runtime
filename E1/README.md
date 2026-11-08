@@ -1,5 +1,7 @@
 # AWE E1 local integration
 
+Current stage: **SANDBOX-RECRUIT-01 bounded synthetic mission PASS**, including one real AWE model-authored score function, actual bwrap execution and independent native/cold QA. Cloud owner authorization is **ISSUED**, technical state **PREPARED_PROVIDER_BLOCKED**; zero paid generations. [Outcome](SANDBOX-RECRUIT-REPORT.md) · [Resume](RESUME-SANDBOX-RECRUIT.md). Earlier Issue3 NOT_ISSUED entries describe the prior stage. E1 Pilot remains unaccepted.
+
 Issue 3 adds a separate, **paid-disabled** Router.Cheap adapter and native shared cloud accounting. [Current cloud outcome and blockers](cloud/INTEGRATION-OUTCOME.md) · [Astra test-lead handoff](astra3/LEAD-HANDOFF.md). A model listing and the nominal USD 10 key limit do not establish live cloud completion.
 
 This branch integrates the accepted offline A1 contracts with a native PostgreSQL coordinator (A2), a pinned local Ollama broker (A3), independent QA and a prepared Coding Executor. It is bounded local staging; E1 Pilot has not been accepted. See [A2](A2-REPORT.md), [A3](A3-REPORT.md), [independent QA](qa2/REPORT.md), [Coding Executor](CODING-EXECUTOR-REPORT.md) and [handoff](HANDOFF-A2-A3.md).

@@ -15,10 +15,28 @@ export async function applyCloudAccountingMigration(db) {
   await db.query(bytes.toString('utf8'));
   return {version:3,file,sha256:createHash('sha256').update(bytes).digest('hex')};
 }
+export async function applyCloudAuthorizationMigration(db) {
+  await verifyMigrationResource(db);
+  const file='0004-cloud-authorization.sql',bytes=fs.readFileSync(new URL('./migrations/'+file,import.meta.url));
+  await db.query(bytes.toString('utf8'));
+  return {version:4,file,sha256:createHash('sha256').update(bytes).digest('hex')};
+}
+export async function applyCloudScopeAmendmentMigration(db) {
+  await verifyMigrationResource(db);
+  const file='0005-cloud-scope-amendment.sql',bytes=fs.readFileSync(new URL('./migrations/'+file,import.meta.url));
+  await db.query(bytes.toString('utf8'));
+  return {version:5,file,sha256:createHash('sha256').update(bytes).digest('hex')};
+}
+export async function applyCloudScopeLockOrderMigration(db) {
+  await verifyMigrationResource(db);
+  const file='0006-cloud-scope-lock-order.sql',bytes=fs.readFileSync(new URL('./migrations/'+file,import.meta.url));
+  await db.query(bytes.toString('utf8'));
+  return {version:6,file,sha256:createHash('sha256').update(bytes).digest('hex')};
+}
 export async function applyCoordinatorMigrations(db) {
   await verifyMigrationResource(db);
   const results=[];
-  for(const [index,name] of ['0001-durable-runtime.sql','0002-local-model-quiescence.sql','0003-cloud-accounting.sql'].entries()) {
+  for(const [index,name] of ['0001-durable-runtime.sql','0002-local-model-quiescence.sql','0003-cloud-accounting.sql','0004-cloud-authorization.sql','0005-cloud-scope-amendment.sql','0006-cloud-scope-lock-order.sql'].entries()) {
     const bytes=fs.readFileSync(new URL('./migrations/'+name,import.meta.url));await db.query(bytes.toString('utf8'));
     results.push({version:index+1,file:name,sha256:createHash('sha256').update(bytes).digest('hex')});
   }

@@ -1,0 +1,45 @@
+{
+  "cycle": 1,
+  "supervisor": "CODEX_ASTRA",
+  "source_base": "3c22522c52cb6428757fd391e8630c912016b61b",
+  "oracle_sha256": "c96003fc698f16fdca6b24e5c14deff52e475df9893079fdc0557a62c42aae8e",
+  "start": {
+    "stdout": {
+      "status": "INTERRUPTED_UNFINISHED",
+      "mission_id": "mission_recruit_cycle01_4101",
+      "pid": 41584,
+      "killed_worker_pid": 35516,
+      "checkpoint": ".private/recruit-cycle01.json",
+      "paid_calls": 0,
+      "external_effects": 0
+    },
+    "exit": 0,
+    "stderr": "",
+    "command": "node E1/recruit/cli.mjs start .private/recruit-cycle01.json"
+  },
+  "resume": {
+    "stdout": {
+      "status": "PARTIAL",
+      "pipeline_status": "PASS",
+      "recovery_status": "PROVEN",
+      "coding_status": "BLOCKED",
+      "mission_id": "mission_recruit_cycle01_4101",
+      "run_id": "cycle01_4101",
+      "pid": 11520,
+      "cold_pid": 39184,
+      "model_calls": 1,
+      "paid_calls": 0,
+      "external_effects": 0,
+      "evidence": "E1/recruit/evidence/cycle01_4101.json"
+    },
+    "exit": 0,
+    "stderr": "",
+    "command": "node E1/recruit/cli.mjs resume .private/recruit-cycle01.json"
+  },
+  "source_files": 6,
+  "source_changed": 0,
+  "runtime_evidence_sha256": "8dcc2f8d254b5b6100d9a58918e0841518766418db783e7828961e2f25d50830",
+  "final_cold_digest": "sha256:474b8f6848c503b4f64117f1443a6bd64e88257ae22167504d7787eb70e37029",
+  "qa_accepted": false,
+  "next": "Independent QA cold audit and holdout on same oracle subject to cycle control"
+}

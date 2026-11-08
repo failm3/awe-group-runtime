@@ -1,0 +1,198 @@
+{
+  "schema": "awe.qa4.actual-sandbox-targeted/1",
+  "started_at": "2026-11-08T04:25:17.418Z",
+  "finished_at": "2026-11-08T04:25:21.001Z",
+  "source_stable": true,
+  "source_before": [
+    {
+      "path": "E1/recruit/coding/sandbox.py",
+      "sha256": "24c21ca3f00f12333e0c1b8802f3b440c126c33e46f86871b5325914d4240060"
+    },
+    {
+      "path": "E1/recruit/coding/sandbox.mjs",
+      "sha256": "0a123edf4fde4fe5ebae3a079c46af7f845dc7e8c065af22d203e393990bf2a5"
+    },
+    {
+      "path": "E1/qa4/score-oracle.mjs",
+      "sha256": "00dc0f2cb4b64a50678ba69d3c2e9c20d0df0b9149d5f90a7c29703940405e0b"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "E1/recruit/coding/sandbox.py",
+      "sha256": "24c21ca3f00f12333e0c1b8802f3b440c126c33e46f86871b5325914d4240060"
+    },
+    {
+      "path": "E1/recruit/coding/sandbox.mjs",
+      "sha256": "0a123edf4fde4fe5ebae3a079c46af7f845dc7e8c065af22d203e393990bf2a5"
+    },
+    {
+      "path": "E1/qa4/score-oracle.mjs",
+      "sha256": "00dc0f2cb4b64a50678ba69d3c2e9c20d0df0b9149d5f90a7c29703940405e0b"
+    }
+  ],
+  "evidence_level": "ACTUAL_WSL_BWRAP_EXECUTION_WITH_DEVELOPER_TEST_SNIPPETS_NOT_MODEL_AUTHORED_CODE",
+  "cases": 13,
+  "passed": 13,
+  "failed": 0,
+  "results": [
+    {
+      "case": "CORRECT_HIDDEN_CASES",
+      "passed": true,
+      "source_digest": "sha256:fc66ad7d5a7af6b828680057bc6788b88dc6d39fab5d2a4b42bb26611589cb98",
+      "case_count": 19,
+      "boundary": {
+        "home_absent": true,
+        "windows_absent": true,
+        "repository_absent": true,
+        "host_network_denied": true
+      }
+    },
+    {
+      "case": "SAFE_EVAL_ALIAS",
+      "passed": true,
+      "source_digest": "sha256:e3c9aeeaa5c74616c6b3becc5748372a14f310c8d1fe9d1a4fbc41007243bce5",
+      "independent_source_gate_denies": true
+    },
+    {
+      "case": "SAFE_EXEC_ALIAS",
+      "passed": true,
+      "source_digest": "sha256:1a6224110814e6bfe2281b4fc3f57600a52aafd3c6d8c6a4466ad627b7333572",
+      "independent_source_gate_denies": true
+    },
+    {
+      "case": "OPEN_REFERENCE",
+      "passed": true,
+      "source_digest": "sha256:2cf322273833d713b6f6660832925dcc326b4d98ce03b4eeff3c2d2613d82783",
+      "independent_source_gate_denies": true
+    },
+    {
+      "case": "BUILTIN_LOOP_REBIND",
+      "passed": true,
+      "source_digest": "sha256:5a5852b434fff7493f7099ffefeb6030cbc264bc919026958548adea8962aac1",
+      "independent_source_gate_denies": true
+    },
+    {
+      "case": "IMPORT",
+      "passed": true,
+      "source_digest": "sha256:a5194e95e7a5f86fbb86d39ddec86b834e04986faf8c4907945998317b72051a",
+      "independent_source_gate_denies": true
+    },
+    {
+      "case": "DUNDER",
+      "passed": true,
+      "source_digest": "sha256:d3678a6341b0f69e1a87507aa0e4e7e262d0585627e7e4571132a8bfcb14b46e",
+      "independent_source_gate_denies": true
+    },
+    {
+      "case": "NESTED_FUNCTION",
+      "passed": true,
+      "source_digest": "sha256:aaba3630ea2bb210624cfada5988e28e4a638afd7bbd42c8f5029a3bad204e6f",
+      "independent_source_gate_denies": true
+    },
+    {
+      "case": "WHILE",
+      "passed": true,
+      "source_digest": "sha256:1dd07f4b081b9e9de1d9768e93e26cd35d0dfcc7b966e01330af0715f4ebb418",
+      "independent_source_gate_denies": false
+    },
+    {
+      "case": "MUTATION",
+      "passed": true,
+      "source_digest": "sha256:f58541d2db8bff4b5ba4be85c927883c05e788f04183f91be246114a1548cd1f",
+      "independent_source_gate_denies": false
+    },
+    {
+      "case": "RECURSION",
+      "passed": true,
+      "source_digest": "sha256:b38f1ce29bc6ecccb672c557c255fb5370ee471f4811c09c1a13b14a55284524",
+      "independent_source_gate_denies": false
+    },
+    {
+      "case": "DUPLICATE_SUM",
+      "passed": true,
+      "source_digest": "sha256:159296ce5e7f0d608466701bf7aaa94f8032c2c352ef017421d295545a970871",
+      "meaning": "Incorrect pure code must fail independent holdout or bounded executor validation."
+    },
+    {
+      "case": "CASE_SENSITIVE",
+      "passed": true,
+      "source_digest": "sha256:e144296134c6723ccba74b388814eb3d35c6cc815810872543510b322e3f1192",
+      "meaning": "Incorrect pure code must fail independent holdout or bounded executor validation."
+    }
+  ],
+  "correct_receipt": {
+    "schema": "awe.recruit.score-sandbox/1",
+    "status": "EXECUTED",
+    "source_digest": "sha256:fc66ad7d5a7af6b828680057bc6788b88dc6d39fab5d2a4b42bb26611589cb98",
+    "scores": [
+      0,
+      5,
+      3,
+      2,
+      10,
+      10,
+      8,
+      0,
+      5,
+      3,
+      0,
+      7,
+      0,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "boundary": {
+      "home_absent": true,
+      "windows_absent": true,
+      "repository_absent": true,
+      "host_network_denied": true
+    },
+    "sandbox_enforced": true,
+    "network": "DENY",
+    "limits": {
+      "cpu_seconds": 3,
+      "address_space_bytes": 536870912,
+      "file_bytes": 1048576,
+      "open_fds": 64,
+      "processes": 64,
+      "wall_seconds": 8
+    },
+    "external_effects": 0
+  },
+  "holdout_verdict": {
+    "schema": "awe.qa4.score-verdict/1",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "check_id": "schema",
+        "passed": true
+      },
+      {
+        "check_id": "sources",
+        "passed": true
+      },
+      {
+        "check_id": "scope",
+        "passed": true
+      }
+    ],
+    "source_digest": "sha256:fc66ad7d5a7af6b828680057bc6788b88dc6d39fab5d2a4b42bb26611589cb98",
+    "holdout_digest": "sha256:3b428905c94b69e6cbb24f0189f6e98172fc0bdf888ebbe545f78824a2254f16",
+    "case_count": 19,
+    "expected_scores_digest": "sha256:42332c7982ecdf12204b8f121e2d63b6dc209a3bd5aa9a4569ab65fd8cdb682a",
+    "actual_scores_digest": "sha256:42332c7982ecdf12204b8f121e2d63b6dc209a3bd5aa9a4569ab65fd8cdb682a",
+    "accepted": false,
+    "bounded_capability": "PURE_SYNTHETIC_SCORE_FUNCTION_ONLY",
+    "generic_coding_executor": "NOT_PROVEN"
+  },
+  "new_model_calls": 0,
+  "provider_calls": 0,
+  "key_access": false,
+  "cluster_lifecycle": false,
+  "external_effects": 0
+}

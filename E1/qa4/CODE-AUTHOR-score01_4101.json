@@ -1,0 +1,133 @@
+{
+  "schema": "awe.qa4.verified-code-author/1",
+  "started_at": "2026-11-08T04:30:42.694Z",
+  "finished_at": "2026-11-08T04:30:43.088Z",
+  "qa_inspector_pid": 25620,
+  "qa_database_role": "awe_e1_qa",
+  "native_verified": true,
+  "author_run_id": "score01_4101",
+  "author_mission_id": "mission_recruit_score01_4101",
+  "author_project_id": "prj_recruit_score01_4101",
+  "author_result_hash": "sha256:50734cc40f59e0076d91eef5d1d0fcf171acf878a1d596edefa35a07beb69dee",
+  "author_plan_digest": "sha256:23fc5315ec28dfd7b13ce85e49ce692d3bed001a15b3c302423903a8b945cf61",
+  "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+  "artifact_digest": "sha256:c4419b4181b63f5c0e6770502421e023015baa43a6e41307d335b0d8441b9f90",
+  "artifact_file_sha256": "9adb5c7e4cafabcec19944c42f7d558955b993b00fc31ed8ac26d077dc00207e",
+  "independent_qa_digest": "sha256:ba617869a880831d0e10c632ff9167c1fac66bf0d33394cb53ec7a25d934c58d",
+  "output_artifact_digest": "sha256:f4d6350d1ecd594f5f87e1d95c1c3ab32fa131087994ee2f15c29c00cbf0b8ab",
+  "model": {
+    "attempt_id": "attempt_2bf9d74e1b0af3a0d52aac5180422602f219e8c6225409bebbb289d6d19bebb0",
+    "route_id": "ollama.local.qwen3-4b-instruct",
+    "model": "qwen3:4b-instruct",
+    "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "input_tokens": 221,
+    "output_tokens": 87,
+    "wire_attempts": 1,
+    "actual_cost_micros": 0
+  },
+  "sandbox": {
+    "schema": "awe.recruit.score-sandbox/1",
+    "status": "EXECUTED",
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "scores": [
+      0,
+      5,
+      3,
+      2,
+      10,
+      10,
+      8,
+      0,
+      5,
+      3,
+      0,
+      7,
+      0,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "boundary": {
+      "home_absent": true,
+      "windows_absent": true,
+      "repository_absent": true,
+      "host_network_denied": true
+    },
+    "sandbox_enforced": true,
+    "network": "DENY",
+    "limits": {
+      "cpu_seconds": 3,
+      "address_space_bytes": 536870912,
+      "file_bytes": 1048576,
+      "open_fds": 64,
+      "processes": 64,
+      "wall_seconds": 8
+    },
+    "external_effects": 0
+  },
+  "independent_holdout": {
+    "schema": "awe.qa4.score-verdict/1",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "check_id": "schema",
+        "passed": true
+      },
+      {
+        "check_id": "sources",
+        "passed": true
+      },
+      {
+        "check_id": "scope",
+        "passed": true
+      }
+    ],
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "holdout_digest": "sha256:3b428905c94b69e6cbb24f0189f6e98172fc0bdf888ebbe545f78824a2254f16",
+    "case_count": 19,
+    "expected_scores_digest": "sha256:42332c7982ecdf12204b8f121e2d63b6dc209a3bd5aa9a4569ab65fd8cdb682a",
+    "actual_scores_digest": "sha256:42332c7982ecdf12204b8f121e2d63b6dc209a3bd5aa9a4569ab65fd8cdb682a",
+    "accepted": false,
+    "bounded_capability": "PURE_SYNTHETIC_SCORE_FUNCTION_ONLY",
+    "generic_coding_executor": "NOT_PROVEN"
+  },
+  "isolated_git_metadata": {
+    "base_sha": "e0f15dcd8a9afe5511388081e52fe406e29be6fa",
+    "head_sha": "d803d29299b4251e951b0f9ea43ae911a176368b",
+    "branch": "codex/score-score01_4101",
+    "path_allowlist": [
+      "score_helper.py"
+    ],
+    "main_unchanged": true,
+    "remotes": 0
+  },
+  "isolated_git_metadata_independently_reexecuted": false,
+  "authoring": "ACTUAL_AWE_LOCAL_MODEL_CODE_ARTIFACT",
+  "bounded_capability": "PURE_SCORE_FUNCTION_ONLY",
+  "generic_coding_executor": "NOT_PROVEN",
+  "new_model_calls": 0,
+  "provider_calls": 0,
+  "key_access": false,
+  "external_effects": 0,
+  "acceptance": false,
+  "isolated_git_independently_verified": true,
+  "isolated_git_object_proof": {
+    "checked_at": "2026-11-08T04:38:56.793Z",
+    "read_only_raw_git_objects": true,
+    "git_commands": 0,
+    "git_mutations": 0,
+    "base_sha": "e0f15dcd8a9afe5511388081e52fe406e29be6fa",
+    "head_sha": "d803d29299b4251e951b0f9ea43ae911a176368b",
+    "source_blob_oid": "1ff6fe89510d5c9f75795c2b6a3a485cd36e9e74",
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "path_allowlist": [
+      "score_helper.py"
+    ],
+    "main_unchanged": true,
+    "worktree_bytes_match_committed_blob": true,
+    "meaning": "Actual loose commit/tree/blob and branch refs independently read; no Git command or index change performed."
+  }
+}
