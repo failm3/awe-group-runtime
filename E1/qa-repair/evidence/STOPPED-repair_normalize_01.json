@@ -1,0 +1,281 @@
+{
+  "schema": "awe.qa-repair.final-stopped/1",
+  "status": "STOPPED_CAP_EXHAUSTED",
+  "verified_at": "2026-11-08T11:02:06.756Z",
+  "source_digest": "sha256:60594b8e511e90b31376d5b01829547ab0e63cda416f637452f22fc3f1e9a7a7",
+  "qa_pid": 27300,
+  "run_id": "repair_normalize_01",
+  "project_id": "prj_coding_repair_normalize_01",
+  "mission_id": "mission_coding_repair_normalize_01",
+  "native_mission_state": "CANCELLED",
+  "outer_phase": "STOPPED",
+  "outer_revision": 11,
+  "remaining": 0,
+  "aggregate": {
+    "prior_wires": 1,
+    "head_wires": 1,
+    "repair_wires": 2,
+    "total_wires": 4,
+    "total_cap": 4,
+    "remaining": 0
+  },
+  "original_g1": {
+    "state": "FAILED",
+    "result_hash": "sha256:8ff06c08d5cd59359039da1c1d6dae00c89cbac972e9769952315b092b7eae79",
+    "source_head": "0e79374b60ab35e089ab36d6d9e6787dd63dc6e9",
+    "attempt": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+    "qa_fail_events": 1
+  },
+  "head": {
+    "verdict": "ACCEPTED_BOUNDED_PLAN_ONLY",
+    "result_hash": "sha256:2b0390e34a5ec0de6356cb51a79dfeed1bd556d1f9191c83d1e00194ab50a736",
+    "decision": {
+      "focus": "cli.py: line 6 - incorrect use of \\n in string literal; must escape backslash as \\\n to avoid syntax error during parsing. The line continuation character is not valid in a raw string or inline string without proper escaping.",
+      "reason": "The public failed test indicates a syntax error in cli.py due to an invalid line continuation character ('\\n' without proper escaping). The error occurs when attempting to strip a line and check for emptiness, where the backslash is not properly escaped in a string literal. This is a syntax-level issue in the CLI script, not a scope-level failure. The problem is isolated to the implementation of the CLI file and can be fixed by correcting the string literal syntax. Repairing this issue does not require re-đ",
+      "decision": "REPAIR",
+      "max_code_attempts": 2
+    }
+  },
+  "code_r02": {
+    "state": "FAILED",
+    "artifact_digest": "sha256:04d1894d228d73340d6bc1fca7b83ad1ab6f9ed05a99f016ad2a990c325ef78f",
+    "head_sha": "c63d6b1144b719788018f694acbbe83bb4ba3d02",
+    "tree_sha": "de327dece27145f68744ce8c495f48d9f7901bcd",
+    "result_hash": "sha256:88ccf2b0c5dcca3fdeb32719da2bedc22468d08592cc03b3ce491bb21dd17fd4",
+    "cache_ref": "sha256:45eecd4f20a6bb7b0549ce0b17742f977304b58ab9ec5855a481ab401ccb4b61",
+    "original_public_exit": 1,
+    "public_syntax_error": true,
+    "cold": {
+      "oracle_commitment": "sha256:a9596447c9f8e924a8bb4b62f292f1cc35f38824aa58fab91d4de01b2989510f",
+      "verdict": "FAIL",
+      "probes": [
+        {
+          "label": "public_base_reject",
+          "passed": true,
+          "matched": false,
+          "expected_to_match": false,
+          "tree_type": "REAL_GIT_SNAPSHOT",
+          "entrypoint": "cli.py",
+          "tested_head_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+          "tested_tree_sha": "fc2ba454d0c412716a81c611c8331abba54fe1fb",
+          "invocation_id": "qa_89cd6f2f3f26aa11208b6a976fdc8d4e",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "input_digest": "sha256:dc4a6e822170ca24ba9bd27635fae8341f86a5220347b83905f0c8ec81538a7b",
+          "output_digest": "sha256:d609593593aafe935c49947328823119ac76174441808c0f7d3ce97441fd6ccf",
+          "expected_digest": "sha256:ca1bddc27edc9b27bf034f1e25fcaa37412945d122cb7afdfa8496c3cdc21e3f",
+          "receipt_digest": "sha256:d4b3fcbf7788a1de796cc0e2681dd5ba42bfc0ee3c946858420566a852b48cd0",
+          "exit_code": 1
+        },
+        {
+          "label": "single_cli.py_reject",
+          "passed": true,
+          "matched": false,
+          "expected_to_match": false,
+          "tree_type": "QA_DERIVED_UNCOMMITTED",
+          "entrypoint": "cli.py",
+          "tested_head_sha": "8e1f3b143f183def3080f4dda81119ae4d639633",
+          "tested_tree_sha": "a905ae4b728dbdfa5917115977b55846b930a6c3",
+          "invocation_id": "qa_4c782ab44856efe563bf102eab1b5da1",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "input_digest": "sha256:dc4a6e822170ca24ba9bd27635fae8341f86a5220347b83905f0c8ec81538a7b",
+          "output_digest": "sha256:3f63bfb72c1710b6369212890a71704f3ba4dba8802214ea0d5a1f4a96de4ab7",
+          "expected_digest": "sha256:ca1bddc27edc9b27bf034f1e25fcaa37412945d122cb7afdfa8496c3cdc21e3f",
+          "receipt_digest": "sha256:b370674f42028434af9a6c061b05278ae9291d9f9c8012e63d3d7048a5423186",
+          "exit_code": 1
+        },
+        {
+          "label": "single_normalizer.py_reject",
+          "passed": true,
+          "matched": false,
+          "expected_to_match": false,
+          "tree_type": "QA_DERIVED_UNCOMMITTED",
+          "entrypoint": "cli.py",
+          "tested_head_sha": "b3c59577750d7eed95f8658bd3ba921e895ed28f",
+          "tested_tree_sha": "2c71f7f0202484cc2f95fc265c3f25363903b57a",
+          "invocation_id": "qa_300f58d91d8d0cb8da6c8bfcd3ce4749",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "input_digest": "sha256:dc4a6e822170ca24ba9bd27635fae8341f86a5220347b83905f0c8ec81538a7b",
+          "output_digest": "sha256:d609593593aafe935c49947328823119ac76174441808c0f7d3ce97441fd6ccf",
+          "expected_digest": "sha256:ca1bddc27edc9b27bf034f1e25fcaa37412945d122cb7afdfa8496c3cdc21e3f",
+          "receipt_digest": "sha256:38e1fff3ec949173b11e60acf5bc457c70205452a77a2c688b10f1f2748932e3",
+          "exit_code": 1
+        },
+        {
+          "label": "library",
+          "passed": true,
+          "matched": true,
+          "expected_to_match": true,
+          "tree_type": "REAL_GIT_SNAPSHOT",
+          "entrypoint": "library-probe.py",
+          "tested_head_sha": "c63d6b1144b719788018f694acbbe83bb4ba3d02",
+          "tested_tree_sha": "de327dece27145f68744ce8c495f48d9f7901bcd",
+          "invocation_id": "qa_33ca37171d819c98cf21bb97940d92b7",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "input_digest": "sha256:8740996f6b4ffc0bdf89cae4dc371be7801032525681d40a109adb01db40b65f",
+          "output_digest": "sha256:c096b75d42dc9e63c3902b71731af8c760cbaf90ae14dd6633c580b110806d09",
+          "expected_digest": "sha256:e0686ccc144b566e73104b8916c3ff171afc5c7994798f5e45ba5a96019d85e5",
+          "receipt_digest": "sha256:04eb7fa9de214a31194020e1879e35a7154407011033920db20ef7561f24c822",
+          "exit_code": 0
+        },
+        {
+          "label": "cli",
+          "passed": false,
+          "matched": false,
+          "expected_to_match": true,
+          "tree_type": "REAL_GIT_SNAPSHOT",
+          "entrypoint": "cli.py",
+          "tested_head_sha": "c63d6b1144b719788018f694acbbe83bb4ba3d02",
+          "tested_tree_sha": "de327dece27145f68744ce8c495f48d9f7901bcd",
+          "invocation_id": "qa_6bdf8cd6ab31d453beed00cfe285635a",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "input_digest": "sha256:dc4a6e822170ca24ba9bd27635fae8341f86a5220347b83905f0c8ec81538a7b",
+          "output_digest": "sha256:3f63bfb72c1710b6369212890a71704f3ba4dba8802214ea0d5a1f4a96de4ab7",
+          "expected_digest": "sha256:ca1bddc27edc9b27bf034f1e25fcaa37412945d122cb7afdfa8496c3cdc21e3f",
+          "receipt_digest": "sha256:2edcec4b3343c0c0e550e02f7e0d7bf4547627a8c263aa4a4e7811aeccde6a1d",
+          "exit_code": 1
+        },
+        {
+          "label": "empty",
+          "passed": false,
+          "matched": false,
+          "expected_to_match": true,
+          "tree_type": "REAL_GIT_SNAPSHOT",
+          "entrypoint": "cli.py",
+          "tested_head_sha": "c63d6b1144b719788018f694acbbe83bb4ba3d02",
+          "tested_tree_sha": "de327dece27145f68744ce8c495f48d9f7901bcd",
+          "invocation_id": "qa_5c18c775257090cced2e0461712d6bf5",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "input_digest": "sha256:eba60dee79c9c33d91844ac3aff9f885382ac621f2daf20fc48551100c3112a4",
+          "output_digest": "sha256:3f63bfb72c1710b6369212890a71704f3ba4dba8802214ea0d5a1f4a96de4ab7",
+          "expected_digest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "receipt_digest": "sha256:6e806cfeb75314ba85a57db222594016e5245776228c7cc9e76962f19ee5c4fa",
+          "exit_code": 1
+        },
+        {
+          "label": "cli_calls_library",
+          "passed": false,
+          "matched": false,
+          "expected_to_match": true,
+          "tree_type": "QA_DERIVED_UNCOMMITTED",
+          "entrypoint": "cli.py",
+          "tested_head_sha": "f46dcf690e05908f8a834e236edb90fa23a91b70",
+          "tested_tree_sha": "1570ed3e24bbfb0b3a676b90cff9e3d96a917d24",
+          "invocation_id": "qa_342a2ee80f5e8ec3e67584e4501a1e06",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "input_digest": "sha256:526bbb3317ac7fdb2beac45ca19a22a6d052ae0a6d8fc9b77bbe31462f459278",
+          "output_digest": "sha256:3f63bfb72c1710b6369212890a71704f3ba4dba8802214ea0d5a1f4a96de4ab7",
+          "expected_digest": "sha256:d8eb967e911f972c2d7f906d04a3514a9ba7e1a843f8023e89acdad4e87e08b2",
+          "receipt_digest": "sha256:9460a14a677c41299c7775fcda5292fc3611ba4a33a50ec36ba9f3b94d99485d",
+          "exit_code": 1
+        }
+      ]
+    }
+  },
+  "code_r03": {
+    "state": "CANCELLED_AFTER_REJECTION",
+    "reason": "CODING_NO_CHANGE",
+    "response_ref": "sha256:291537cfebf77799aa4f9c2cc5f2fc8a2e787cfc6dc82deb1637de8f3ffc5604",
+    "proposal_digest": "sha256:4348ebe625778df5e00f25d7ceafc0842cc0d61e755ed0f47489c8a17634077b",
+    "native_attempt": "attempt_a6a59e921e51bb6cacc7e5631b225af202e0ef3ad79cae730ef77e4e85825179",
+    "worktree_created": false,
+    "new_commit": false
+  },
+  "product_gate": {
+    "state": "CANCELLED",
+    "product_accepted": false
+  },
+  "new_native_usage": [
+    {
+      "task": "head_plan",
+      "id": "attempt_0fdf41ea4d5d5931695c86c0ff80978ff6dcc748ba6529eb5b702c8b05f2241d",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 27959,
+        "input_tokens": 837,
+        "output_tokens": 184,
+        "wire_attempts": 1,
+        "eval_duration_ns": 15345447000,
+        "load_duration_ns": 6463642400,
+        "total_duration_ns": 27951350100,
+        "prompt_eval_duration_ns": 6133840000
+      },
+      "cost": 0,
+      "reserved": 0,
+      "state": "CONFIRMED"
+    },
+    {
+      "task": "code_r02",
+      "id": "attempt_2d28c6773f368249ebac67be3bbe2390e235bc07efa728c017ccc82f951f837a",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 71816,
+        "input_tokens": 1647,
+        "output_tokens": 523,
+        "wire_attempts": 1,
+        "eval_duration_ns": 58912772000,
+        "load_duration_ns": 6160000,
+        "total_duration_ns": 71746224300,
+        "prompt_eval_duration_ns": 12772580000
+      },
+      "cost": 0,
+      "reserved": 0,
+      "state": "CONFIRMED"
+    },
+    {
+      "task": "code_r03",
+      "id": "attempt_a6a59e921e51bb6cacc7e5631b225af202e0ef3ad79cae730ef77e4e85825179",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 68002,
+        "input_tokens": 1478,
+        "output_tokens": 528,
+        "wire_attempts": 1,
+        "eval_duration_ns": 56825707000,
+        "load_duration_ns": 4934900,
+        "total_duration_ns": 67985768400,
+        "prompt_eval_duration_ns": 11016751000
+      },
+      "cost": 0,
+      "reserved": 0,
+      "state": "CONFIRMED"
+    }
+  ],
+  "scoped_process_recovery": {
+    "supervisor_pid": 29160,
+    "children": [
+      {
+        "pid": 39080,
+        "exit": 90,
+        "stage": "AFTER_MODEL_PERSISTED"
+      },
+      {
+        "pid": 40220,
+        "exit": 90,
+        "stage": "AFTER_NATIVE_COMPLETED"
+      },
+      {
+        "pid": 38288,
+        "exit": 1,
+        "stage": null
+      }
+    ],
+    "failure_points_exercised": 2,
+    "task_result_proposed_once": true,
+    "one_confirmed_r02_wire": true,
+    "operator_phase_commands_before_stop": 0,
+    "operator_post_stop_finalization": 1,
+    "observation": "Two automatic child restarts after controlled exits; component did not pass"
+  },
+  "editor_candidate_changes": 0,
+  "known_original_source_pins_verified": 66,
+  "model_calls_by_verifier": 0,
+  "new_paid_calls": 0,
+  "external_effects": 0,
+  "overall_component_pass": false,
+  "full_G2": "NOT_PROVEN",
+  "dynamic_agents": "NOT_TESTED",
+  "owner_accepted": false
+}

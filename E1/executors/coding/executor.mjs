@@ -9,7 +9,7 @@ const answer = (decision, reason, more = {}) => immutable({decision, reason, acc
 const portSpecs = {githubReader: ['SCOPED_GITHUB_ISSUE_READER', 'readIssue'], modelPort: ['ACCOUNTED_PATCH_MODEL_PORT', 'proposePatch'], gitPort: ['ISOLATED_GIT_WORKTREE_PORT', 'inspectBase', 'createWorktree', 'applyPatch', 'readback'], testRunner: ['FIXED_SANDBOX_TEST_RUNNER', 'run'], qaPort: ['INDEPENDENT_FROZEN_ARTIFACT_QA', 'evaluate'], publisher: ['SCOPED_DRAFT_PR_INTENT_PUBLISHER', 'prepareDraftIntent']};
 
 function build(options, profile) {
-  const {authority, githubReader, modelPort, gitPort, testRunner, qaPort, publisher, lifecycle = null, clock = () => new Date().toISOString(), hostProtectedRoots = []} = options;
+  const {authority, githubReader, modelPort, gitPort, testRunner, qaPort, publisher, lifecycle = null, invocationIdFactory = () => randomUUID().replaceAll('-', ''), clock = () => new Date().toISOString(), hostProtectedRoots = []} = options;
   const ports = {githubReader, modelPort, gitPort, testRunner, qaPort, publisher};
   need(Array.isArray(hostProtectedRoots) && hostProtectedRoots.every(x => typeof x === 'string' && x.length > 0), 'CODING_HOST_PROTECTION');
   return Object.freeze({profile, async run({grant_ref, context, attempt_scope}) {
@@ -74,7 +74,8 @@ function build(options, profile) {
       const results = [];
       for (const capability of grant.test_capabilities) {
         need(Date.parse(clock()) + capability.timeout_ms <= Date.parse(grant.expires_at), 'CODING_TEST_DEADLINE');
-        const invocation_id = randomUUID().replaceAll('-', '');
+        const invocation_id = invocationIdFactory({grant, capability, readback});
+        need(typeof invocation_id === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9_.:-]{7,159}$/.test(invocation_id), 'CODING_TEST_INVOCATION_ID');
         const result = await call(() => testRunner.run({worktree_id, capability, grant_ref, deadline: grant.expires_at, ...(version2 ? {expected_head_sha: readback.head_sha, expected_tree_sha: readback.tree_sha, profile_digest: grant.test_profile_digest, invocation_id} : {})}));
         need(result?.capability_id === capability.capability_id && result.command_digest === capability.command_digest && result.sandbox_enforced === true && result.network === 'DENY' && Number.isSafeInteger(result.exit_code) && /^sha256:[a-f0-9]{64}$/.test(result.output_digest) && Number.isSafeInteger(result.timeout_ms) && result.timeout_ms > 0 && result.timeout_ms <= capability.timeout_ms, 'CODING_TEST_RECEIPT');
         if (version2) need(result.tested_head_sha === readback.head_sha && result.tested_tree_sha === readback.tree_sha && result.profile_digest === grant.test_profile_digest && result.invocation_id === invocation_id, 'CODING_STALE_TEST_RECEIPT');

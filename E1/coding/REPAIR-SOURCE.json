@@ -1,0 +1,274 @@
+{
+  "schema": "awe.e1.repair-source/1",
+  "status": "PRE_MODEL_SOURCE_SNAPSHOT",
+  "prior_run": "g1_normalize_01",
+  "source_digest": "sha256:60594b8e511e90b31376d5b01829547ab0e63cda416f637452f22fc3f1e9a7a7",
+  "source_files": [
+    {
+      "path": "E1/broker/benchmark.mjs",
+      "sha256": "f7683c1415511ac23ac460f2edb5a9de5f1af320c8face0221c40582ae97d7b1"
+    },
+    {
+      "path": "E1/broker/canary.mjs",
+      "sha256": "0e65ba971230ecf7acb6761cc0567b95fd03312f615e22b9f379adaed648636a"
+    },
+    {
+      "path": "E1/broker/head.mjs",
+      "sha256": "d70266727d65dde48c512e2e818eb797831e028b7a8b33cea39f05b7c0b4fc13"
+    },
+    {
+      "path": "E1/broker/index.mjs",
+      "sha256": "168ac981514626d8c3fe170dbfe66d932b55fbd8d7c8ae1405be27b89fcb8e91"
+    },
+    {
+      "path": "E1/broker/model.mjs",
+      "sha256": "df1da574e40c89fb4a1da4d16fc54d9ba5b74b05e1dd8da869d3674adb59adc6"
+    },
+    {
+      "path": "E1/broker/registry.mjs",
+      "sha256": "87f6a8cb7b66c8b76f2894ec770c0a20f8387a05fbefd9154ee5ee026e17b5d8"
+    },
+    {
+      "path": "E1/broker/schemas.mjs",
+      "sha256": "f1cc4272ba96c42bdf0c0a94c916bcd24b2d4ab283868ab0a0477a546846aacf"
+    },
+    {
+      "path": "E1/coordinator/admission.mjs",
+      "sha256": "ce54554e9e611aac86ce8614b5be85c5b1cfdfdf1122a3ccb3a8fd44a1877fa1"
+    },
+    {
+      "path": "E1/coordinator/authority-server.mjs",
+      "sha256": "583d5e1d7f8bacd8862cb9df4e1dde1e326c3f7a3d49fa16d0c581a3e9a87e73"
+    },
+    {
+      "path": "E1/coordinator/cloud-policy.mjs",
+      "sha256": "e0c944a8185bd266d4ed5890579e785d698b429c9654cfe09e7defd74f813d3b"
+    },
+    {
+      "path": "E1/coordinator/coding-run.mjs",
+      "sha256": "12b04a480728b0da01d5a8099a826e6deb8cb8501d664f1a2eb39b273b50dd1d"
+    },
+    {
+      "path": "E1/coordinator/coordinator.mjs",
+      "sha256": "0d947284d013ba9ca6f7f4f6c0f851e1b0c23316a7b4c653c0d0514c531b3869"
+    },
+    {
+      "path": "E1/coordinator/errors.mjs",
+      "sha256": "f2911bffd56bd47a737f2d424d6982c0a43fc8825ea9666aacbc1fa91e50e668"
+    },
+    {
+      "path": "E1/coordinator/index.mjs",
+      "sha256": "fc451b94f4d105cfd3481d8a21797c235f7bdcb5d14e22423e6ff4b1dee90d5f"
+    },
+    {
+      "path": "E1/coordinator/leaf-worker.mjs",
+      "sha256": "af5f2ebd4b8bfc4eedaf0273c75b5fab92932d38686f5f8b648ecb89bb2dbebd"
+    },
+    {
+      "path": "E1/coordinator/migrate.mjs",
+      "sha256": "ea64d90a941ab9297d5bfb53fa1d2933925fb7b158335d5af0a4c397ef129640"
+    },
+    {
+      "path": "E1/coordinator/migrations/0001-durable-runtime.sql",
+      "sha256": "d0708161fc480b1489a89a93e1e3d7c508fbf6aeecefb642df380a69e3c78472"
+    },
+    {
+      "path": "E1/coordinator/migrations/0002-local-model-quiescence.sql",
+      "sha256": "379791e981bd5d0b40b28a60add314458c2b3837722aeb3e61fb74a36e1d5ee1"
+    },
+    {
+      "path": "E1/coordinator/migrations/0003-cloud-accounting.sql",
+      "sha256": "ed2f7e3f7aff2598e29f08caf60a262370836b598b588a1b20b192ab57994676"
+    },
+    {
+      "path": "E1/coordinator/migrations/0004-cloud-authorization.sql",
+      "sha256": "6ba41950ec39790d01565cc55b7c315b783465d300e877e73b87858cfb695034"
+    },
+    {
+      "path": "E1/coordinator/migrations/0005-cloud-scope-amendment.sql",
+      "sha256": "e0efa1802a2a0a90ad478b1c5a339e2c34665ef5949622be38af54e192686f39"
+    },
+    {
+      "path": "E1/coordinator/migrations/0006-cloud-scope-lock-order.sql",
+      "sha256": "d88d8289b8d4b29a1d301e54723570af7e4c9018fc528288ee43098047dae303"
+    },
+    {
+      "path": "E1/coordinator/migrations/0007-coding-run-state.sql",
+      "sha256": "806a619f1012ccf7911b89396533fea12b05eca488b099306988a7abef004ee1"
+    },
+    {
+      "path": "E1/coordinator/migrations/0008-coding-head-authority.sql",
+      "sha256": "3ee459c7989a4b6c93a72ae2bcec257d3560b325f9b7e1d5732bd2d2e835cfa3"
+    },
+    {
+      "path": "E1/coordinator/operations/disable-cloud.sql",
+      "sha256": "e71d4882280b55717a613b7283214171a962a0c9ba70afab7bcc85afde225977"
+    },
+    {
+      "path": "E1/coordinator/psql-session.mjs",
+      "sha256": "249b2ca32c67c7ff7a64bd9f7cf44af543ccaf0dafef9a9b1e8729ff5844e7fe"
+    },
+    {
+      "path": "E1/coordinator/quiescence.mjs",
+      "sha256": "1df99ac57e04cbdbcdc150d3b1379b1eece187475f6805e6e527aed0a99d17a7"
+    },
+    {
+      "path": "E1/coordinator/resource.mjs",
+      "sha256": "99641f84b411685ed517d1fe092f15975f17134914daf46974748c8a186b5063"
+    },
+    {
+      "path": "E1/host/coding/coordinator-binding.mjs",
+      "sha256": "86fbb735544346082f17d2c1e933827d51be21a26900fb49f44899ba30459a0e"
+    },
+    {
+      "path": "E1/host/coding/git-port.mjs",
+      "sha256": "cf3d183b6d5bbf4d359bd5635608a55151ecccd0f9f6e0ae37ac9906d3419e7c"
+    },
+    {
+      "path": "E1/host/coding/grant-authority.mjs",
+      "sha256": "8cc099be17850bc1ec2ae78188f5f9fa23fd0ce104347bef692f813484e99a67"
+    },
+    {
+      "path": "E1/host/coding/issue-reader.mjs",
+      "sha256": "a6930e5527f833d123a0dfcbaf22a37acddd387f999b9dfc5c6e3169e1cf7159"
+    },
+    {
+      "path": "E1/host/coding/mission.mjs",
+      "sha256": "5045c3d87b64fe58e8d621e29e5410279a0abcfed7c26e6502001bbc72a8abfc"
+    },
+    {
+      "path": "E1/host/coding/model-port.mjs",
+      "sha256": "a9ae2857b2517f39907fefbd7613f7282dcdeac4ca66f6190c92d4884ab847b2"
+    },
+    {
+      "path": "E1/host/coding/pilot.mjs",
+      "sha256": "e15d55e030443dae7086f00867f4f4bdd3f4f64ac6d45827935b143cf98e555a"
+    },
+    {
+      "path": "E1/host/coding/policy.mjs",
+      "sha256": "193a93a7a27d699950a469462515687672e7e01d8f20d471eacdfe75635bc323"
+    },
+    {
+      "path": "E1/host/coding/publisher-intent.mjs",
+      "sha256": "7b3d9c0dd14a27d568593fa15a5993658e9dd9f5cf6fa6dc3d57886a8184fd49"
+    },
+    {
+      "path": "E1/host/coding/recovery.mjs",
+      "sha256": "39cf3deb4ab752daea066c3b6b6739759613e205bf243784c397e4e921031f99"
+    },
+    {
+      "path": "E1/host/coding/repair-context.mjs",
+      "sha256": "c4c3143dd22d39488ca67eb8af7cb6ca00f610565ef41d3905be6dab7956570c"
+    },
+    {
+      "path": "E1/host/coding/repair-contracts.mjs",
+      "sha256": "9491f21979cfb4ec34ce24e34b59b51a1dee6f57e64d83c5cf8487cf05e5ca80"
+    },
+    {
+      "path": "E1/host/coding/repair-driver.mjs",
+      "sha256": "745d2fd992f364e02bfa283c98a5fbc2e233850efd64dbc47193ecdb4eeceff0"
+    },
+    {
+      "path": "E1/host/coding/repair-mission.mjs",
+      "sha256": "b1c7392ef1715b0e78e566a5c341ef931638600351bffebeb0b7a788964c15aa"
+    },
+    {
+      "path": "E1/host/coding/repair-session.mjs",
+      "sha256": "476cb629b30aa6675f5b0a54ebe54828751d9d270217972953ec5d124b84193e"
+    },
+    {
+      "path": "E1/host/coding/repository-context.mjs",
+      "sha256": "f3c2d6f132a8fb325704f7547c5f1984a1bd5631bd0e391ffccf41e2b76b58c4"
+    },
+    {
+      "path": "E1/host/mission-runner.mjs",
+      "sha256": "6c76219968e98e527a254c8fced34d40ef5b8c878ba947600f1378aacae52112"
+    },
+    {
+      "path": "E1/host/program-runner/profiles.mjs",
+      "sha256": "9fe9fe1b4c4c42ce0b7442b65ae4d142d53bcf0b0f2aae14a58c8838d5a453ad"
+    },
+    {
+      "path": "E1/host/program-runner/receipts.mjs",
+      "sha256": "fae085666d58555f90095297dc8f3629e6f04ccc215fa4fcbdfbd133a886eb1b"
+    },
+    {
+      "path": "E1/host/program-runner/runner.mjs",
+      "sha256": "6272216e512f30151c507cbc693e39a8abb35e90995ef658341666108031a81d"
+    },
+    {
+      "path": "E1/host/program-runner/sandbox.py",
+      "sha256": "732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c"
+    },
+    {
+      "path": "E1/qa-coding/cold-readback.mjs",
+      "sha256": "3afb6ea4a0accbc9c90e87773a7d9e2ef17e9aadda771f4d83e0e5b66b966f1b"
+    },
+    {
+      "path": "E1/qa-coding/commitments.mjs",
+      "sha256": "fc338efdbbf06915bb95c05c7570f55e962c401ec7637f6e020b302d647c0992"
+    },
+    {
+      "path": "E1/qa-coding/git-readback.mjs",
+      "sha256": "d3fae781af34d3c29a86465351d67b8fdaad43cb543c88bc2f7dce94fad0c54c"
+    },
+    {
+      "path": "E1/qa-coding/holdout.json",
+      "sha256": "a9596447c9f8e924a8bb4b62f292f1cc35f38824aa58fab91d4de01b2989510f"
+    },
+    {
+      "path": "E1/qa-coding/leaf.mjs",
+      "sha256": "b6c36efc0778d84804d0f85528278cc5c2890072f353e86b665582c46007c5dc"
+    },
+    {
+      "path": "E1/qa-coding/native-review.mjs",
+      "sha256": "b692c7b1ed56486e49b68f1ad661951ed635f70cdf85108d4c29a026a0774cde"
+    },
+    {
+      "path": "E1/qa-coding/oracle.mjs",
+      "sha256": "6d15c35354374f55163ac88e12a18ae8eb16915c4220404c8bdd52049447442f"
+    },
+    {
+      "path": "E1/qa-coding/public-brief.json",
+      "sha256": "5a54de4633f2bedd9cf1023bc24377ad5c70c0e071b358f97a13bffbb6b68687"
+    },
+    {
+      "path": "E1/qa-coding/tree-proof.mjs",
+      "sha256": "691283ecbe8809a59be82a68b023eb8f1990d618454b6ce4db2bf447b8b113e4"
+    },
+    {
+      "path": "E1/qa-coding/verify-cold.mjs",
+      "sha256": "66534e3548ce386d5e38636a6939e27e87270072caffe72b6e360f7c1efc9d64"
+    },
+    {
+      "path": "E1/qa-coding/verify-failed-attempt.mjs",
+      "sha256": "583bdb8f1db015d89ef48d371ba75ceed665b5d1aa26c7636991e6bdd31092dc"
+    },
+    {
+      "path": "E1/qa-repair/bindings.mjs",
+      "sha256": "bd09cf87603e88d8c59d8a8d7738007fd328044b6b3d098fd11363625830c535"
+    },
+    {
+      "path": "E1/qa-repair/cold.mjs",
+      "sha256": "ffd37059e577adb63f109a9b5ae32a12de43e497bfb0c6daf55b29689030cee6"
+    },
+    {
+      "path": "E1/qa-repair/leaf.mjs",
+      "sha256": "f7853b38a3997cd3ce9fe55f7f63c7678ca431c0b8911b81f859dfd795e2b567"
+    },
+    {
+      "path": "E1/qa-repair/prior.mjs",
+      "sha256": "fa74abbdc9ffaab32746e57e54cbd6324b36556fd5a45b32eeaca1a721e3467f"
+    },
+    {
+      "path": "E1/qa-repair/supervision.mjs",
+      "sha256": "36e294d24f557f8276508f948f148d9a711d5b102ddb9c0919440c71a094b401"
+    },
+    {
+      "path": "E1/qa-repair/verify-cold.mjs",
+      "sha256": "862f818db2b26c4f8ddda02db8962f6b67093d7ad411376b1abf0749edccd9df"
+    }
+  ],
+  "trial": "TWO_FILE_BOUNDED_REPAIR_NOT_FULL_G2",
+  "max_total_wires_including_prior": 4
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "awe.e1.coding-run-migration/1",
+  "resource_id": "awe_e1_a2a3_20261108",
+  "port": 5433,
+  "file": "E1/coordinator/migrations/0007-coding-run-state.sql",
+  "sha256": "806a619f1012ccf7911b89396533fea12b05eca488b099306988a7abef004ee1",
+  "before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "after": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "rows": {
+    "runs": 0,
+    "qa_can_read": true,
+    "worker_can_write": false
+  },
+  "first_compile_attempt": "ROLLED_BACK_SYNTAX_ERROR_CASE_PARENTHESIS",
+  "model_calls": 0,
+  "paid_calls": 0,
+  "e0_access": false
+}
