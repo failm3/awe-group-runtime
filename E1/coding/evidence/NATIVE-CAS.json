@@ -1,0 +1,30 @@
+{
+  "schema": "awe.e1.coding-run-native-review/1",
+  "mode": "EXPLICIT_SYNTHETIC_NATIVE_POSTGRESQL_NO_MODEL",
+  "evidence": [
+    {
+      "project_id": "prj_coding_native_84245bcaac",
+      "mission_id": "mission_coding_native_84245bcaac",
+      "run_id": "native_84245bcaac",
+      "status": "PASS_NATIVE_CONTROLLER_NEGATIVES",
+      "cases": [
+        "OPEN_IDEMPOTENCY",
+        "BINDING_CONFLICT",
+        "TWO_SESSION_CAS",
+        "OPERATION_IDEMPOTENCY",
+        "OPERATION_CONFLICT",
+        "EARLY_RESULT_DENIED",
+        "QA_MUTATION_DENIED",
+        "DIRECT_TABLE_WRITES_DENIED",
+        "WORKER_SQL_DENIED",
+        "UNKNOWN_HOLD_NO_RESUME"
+      ],
+      "native_attempt_rows": 1,
+      "attempt_origin": "EXPLICIT_SYNTHETIC_NATIVE_STATE_NO_PROVIDER_TRANSPORT",
+      "model_calls": 0,
+      "provider_calls": 0,
+      "paid_calls": 0,
+      "runtime_candidate_sources_written": 0
+    }
+  ]
+}

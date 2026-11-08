@@ -31,7 +31,7 @@ function save(p, value) { fs.mkdirSync(path.dirname(p), {recursive: true}); cons
 export function codingSourcePins() {
   const files = [];
   for (const area of ['E1/host/coding', 'E1/host/program-runner', 'E1/qa-coding', 'E1/executors/coding']) {
-    function walk(dir) { for (const entry of fs.readdirSync(path.join(root, dir), {withFileTypes: true})) { const p = dir + '/' + entry.name; if (entry.isDirectory()) walk(p); else if (/\.(mjs|py|json)$/.test(p)) files.push({path: p, sha256: hash(fs.readFileSync(path.join(root, p)))}); } }
+    function walk(dir) { for (const entry of fs.readdirSync(path.join(root, dir), {withFileTypes: true})) { const p = dir + '/' + entry.name; if (entry.isDirectory() && entry.name !== 'evidence' && !entry.name.startsWith('.')) walk(p); else if (entry.isFile() && /\.(mjs|py|json)$/.test(p)) files.push({path: p, sha256: hash(fs.readFileSync(path.join(root, p)))}); } }
     walk(area);
   }
   return files.sort((a, b) => a.path.localeCompare(b.path, 'en'));

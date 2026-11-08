@@ -1,0 +1,578 @@
+{
+  "schema": "awe.e1.tooling-native-review/1",
+  "status": "PASS_BOUNDED_INSTALLED_TOOL_REVIEW",
+  "checked_at": "2026-11-08T10:50:56.129Z",
+  "catalog": {
+    "schema": "awe.e1.catalog-source/1",
+    "records": 4504,
+    "bytes": 5620443,
+    "sha256": "5a83c501b290b83a17f6ffaeb0fe9cae772e26be7a6a4c5cbcb948908fc76b56",
+    "full_catalog_exported": false,
+    "lifecycle": "CANDIDATES_ONLY"
+  },
+  "actual_tool_probes": [
+    {
+      "schema": "awe.e1.installed-tool-probe/1",
+      "profile_id": "ripgrep-stdin",
+      "checked_at": "2026-11-08T10:50:56.129Z",
+      "binary_pins": [
+        {
+          "role": "tool",
+          "digest": "sha256:14231169855ec5205cf5a1b6f1db358ff4aed4247c86b69ce8aae647c77f6680",
+          "bytes": 4218880,
+          "version": "ripgrep 15.2.0 (rev e89fff89ac)"
+        }
+      ],
+      "catalog_ref": {
+        "catalog_id": "Радар-0673",
+        "source_url": "https://github.com/BurntSushi/ripgrep",
+        "raw_digest": "sha256:b83de138e17f52157e41eba827dc4665c188e082e68934abd01a39aa09215d8e",
+        "catalog_digest": "sha256:5a83c501b290b83a17f6ffaeb0fe9cae772e26be7a6a4c5cbcb948908fc76b56"
+      },
+      "distribution": {
+        "version": "15.2.0",
+        "homepage": "https://github.com/BurntSushi/ripgrep",
+        "manifest_digest": "sha256:fe578aef2cfcb6eab48ba76703f400865a8212159ed753b197851381f6f697df",
+        "archive_url": "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip",
+        "archive_sha256": "71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5",
+        "build_attestation": "NOT_PROVEN"
+      },
+      "license": {
+        "spdx": "MIT",
+        "evidence_digest": "sha256:970813655a1bf777d2ead189cef71ab73ab92ce04dc864027d61a45de03e6728",
+        "upstream_url": "https://github.com/BurntSushi/ripgrep/blob/15.2.0/LICENSE-MIT",
+        "upstream_blob_sha": "3b0a5dc09c1e16357459ddc9182a50f360f3cdba",
+        "match_normalization": "CRLF_TO_LF"
+      },
+      "quality": {
+        "suite_id": "e1.tooling.fixed-stdin/2",
+        "suite_digest": "sha256:6a1442e9d0cab0dba4066a42048bdf46b62c4b919f4ce1790a1cb441da932c5c",
+        "tests": 4,
+        "passed": 4,
+        "score": 1000,
+        "scope": "FOUR_SYNTHETIC_STDIN_CASES_ONLY",
+        "test_results": [
+          {
+            "case_id": "literal_1",
+            "passed": true,
+            "execution_digest": "sha256:3806d9a028db4e506c08cbfc12374f547100a328be17a68581ca71e9286d29af",
+            "input_digest": "sha256:49df585d2b65161386ce2f564b1745733fc2073aa11351ee2985027854f6279c",
+            "output_digest": "sha256:52fd0a17c938115a9ae4ba377490ebce6f7b39064df5ef9a0d4b4a1049d88627"
+          },
+          {
+            "case_id": "literal_2",
+            "passed": true,
+            "execution_digest": "sha256:a1cf2b1b29e5b431186913445bb1093f8bf43672bd916f63128e247d8ef32100",
+            "input_digest": "sha256:2ec0364e4e45e15daeca4e92c9aceb79270d4df294b06211d42e6e0ff664c328",
+            "output_digest": "sha256:22eddbfdc43f63e752eb8954c233cb993482a75ac0bb8cfc44f54e66e54f6cf4"
+          },
+          {
+            "case_id": "literal_3",
+            "passed": true,
+            "execution_digest": "sha256:50974e704d1421a5cec1ad12aea1a6e40f148f3bd333fa267f211c78df947ca5",
+            "input_digest": "sha256:e4ae7857ecb6cfd7a2f719df9b2c936ddd12c72077fa9ff39a733af582e3a98b",
+            "output_digest": "sha256:fd363e8c2bbc943435a5981a8dc656403c23bbe639df8c77ce339abb8ac98510"
+          },
+          {
+            "case_id": "literal_4",
+            "passed": true,
+            "execution_digest": "sha256:a503bdbf801213aea8a3450ddc70d1d2b6681013f9e54e01d9d8aec8d2ca8e25",
+            "input_digest": "sha256:689cd2bb0a8850babb104d63b2e73688d691ea7f59d785441db17b53c8067c72",
+            "output_digest": "sha256:03df5c85e5bdc4ff1143bfe5a603785367db2bde470705f474989710e568b3e0"
+          }
+        ]
+      },
+      "manual_topic_review": {
+        "resolved_for_profile_only": true,
+        "catalog_flag": "manual_topic_review",
+        "broader_claims_enabled": false
+      },
+      "native_admission": "NOT_RUN_HOST_REVIEW_ONLY",
+      "installation_performed": false,
+      "external_effects": 0
+    },
+    {
+      "schema": "awe.e1.installed-tool-probe/1",
+      "profile_id": "ripgrep-all-stdin",
+      "checked_at": "2026-11-08T10:50:56.129Z",
+      "binary_pins": [
+        {
+          "role": "tool",
+          "digest": "sha256:a0e452df4ed0f09c449db282408dde293740580262ffb01a5c14a6618bf5ec74",
+          "bytes": 6259712,
+          "version": "ripgrep-all 0.10.9"
+        },
+        {
+          "role": "rg",
+          "digest": "sha256:14231169855ec5205cf5a1b6f1db358ff4aed4247c86b69ce8aae647c77f6680",
+          "bytes": 4218880,
+          "version": "ripgrep 15.2.0 (rev e89fff89ac)"
+        }
+      ],
+      "catalog_ref": {
+        "catalog_id": "Радар-0046",
+        "source_url": "https://github.com/phiresky/ripgrep-all",
+        "raw_digest": "sha256:68a4725af9e0a15ad50afef39db9fb9ec28eb367625e0947d94b7035264f1844",
+        "catalog_digest": "sha256:5a83c501b290b83a17f6ffaeb0fe9cae772e26be7a6a4c5cbcb948908fc76b56"
+      },
+      "distribution": {
+        "version": "0.10.9",
+        "homepage": "https://github.com/phiresky/ripgrep-all",
+        "manifest_digest": "sha256:7c2e0e6932b52ca457b11c3fbafdea7225a9bd26b03a7820a35f6f5dec8164c2",
+        "archive_url": "https://github.com/phiresky/ripgrep-all/releases/download/v0.10.9/ripgrep_all-v0.10.9-x86_64-pc-windows-msvc.zip",
+        "archive_sha256": "da03e969ac01839443739c547ca8eb521e648e712251d61a98d34a1521b9f43b",
+        "build_attestation": "NOT_PROVEN"
+      },
+      "license": {
+        "spdx": "AGPL-3.0-or-later",
+        "evidence_digest": "sha256:5e01d167766c9eb7b0ec55cdcf676152494122c53850f1c1f2df26d7aba0736f",
+        "upstream_url": "https://github.com/phiresky/ripgrep-all/blob/v0.10.9/LICENSE.md",
+        "upstream_blob_sha": "5de3773c915716c167d3332c0ebd2b4a3a470888",
+        "match_normalization": "CRLF_TO_LF"
+      },
+      "quality": {
+        "suite_id": "e1.tooling.fixed-stdin/2",
+        "suite_digest": "sha256:6a1442e9d0cab0dba4066a42048bdf46b62c4b919f4ce1790a1cb441da932c5c",
+        "tests": 4,
+        "passed": 4,
+        "score": 1000,
+        "scope": "FOUR_SYNTHETIC_STDIN_CASES_ONLY",
+        "test_results": [
+          {
+            "case_id": "literal_1",
+            "passed": true,
+            "execution_digest": "sha256:97f18d9d9b66c6addb7daa7f7cd21fcb01e0e5d71e94ba8ea5d734987957953a",
+            "input_digest": "sha256:49df585d2b65161386ce2f564b1745733fc2073aa11351ee2985027854f6279c",
+            "output_digest": "sha256:52fd0a17c938115a9ae4ba377490ebce6f7b39064df5ef9a0d4b4a1049d88627"
+          },
+          {
+            "case_id": "literal_2",
+            "passed": true,
+            "execution_digest": "sha256:c2b671b2342afe249e02e7a4fbd009cf5087ef01b058d665b46093d0045c567c",
+            "input_digest": "sha256:2ec0364e4e45e15daeca4e92c9aceb79270d4df294b06211d42e6e0ff664c328",
+            "output_digest": "sha256:22eddbfdc43f63e752eb8954c233cb993482a75ac0bb8cfc44f54e66e54f6cf4"
+          },
+          {
+            "case_id": "literal_3",
+            "passed": true,
+            "execution_digest": "sha256:543e6d9b6e010059ab9b52c1fcb55a57bebf8207bd36907f1e4c59849ca521e7",
+            "input_digest": "sha256:e4ae7857ecb6cfd7a2f719df9b2c936ddd12c72077fa9ff39a733af582e3a98b",
+            "output_digest": "sha256:fd363e8c2bbc943435a5981a8dc656403c23bbe639df8c77ce339abb8ac98510"
+          },
+          {
+            "case_id": "literal_4",
+            "passed": true,
+            "execution_digest": "sha256:d878e6eeafb0c8f9015981eb4d66911cabae1e352ed82b07cefbdf55a8b83e52",
+            "input_digest": "sha256:689cd2bb0a8850babb104d63b2e73688d691ea7f59d785441db17b53c8067c72",
+            "output_digest": "sha256:03df5c85e5bdc4ff1143bfe5a603785367db2bde470705f474989710e568b3e0"
+          }
+        ]
+      },
+      "manual_topic_review": {
+        "resolved_for_profile_only": true,
+        "catalog_flag": "manual_topic_review",
+        "broader_claims_enabled": false
+      },
+      "native_admission": "NOT_RUN_HOST_REVIEW_ONLY",
+      "installation_performed": false,
+      "external_effects": 0
+    }
+  ],
+  "signed_reviews": [
+    {
+      "payload": {
+        "schema": "awe.e1.tool-review/1",
+        "profile_id": "ripgrep-stdin",
+        "source": {
+          "catalog_id": "Радар-0673",
+          "source_url": "https://github.com/BurntSushi/ripgrep",
+          "raw_digest": "sha256:b83de138e17f52157e41eba827dc4665c188e082e68934abd01a39aa09215d8e",
+          "catalog_digest": "sha256:5a83c501b290b83a17f6ffaeb0fe9cae772e26be7a6a4c5cbcb948908fc76b56"
+        },
+        "distribution": {
+          "version": "15.2.0",
+          "homepage": "https://github.com/BurntSushi/ripgrep",
+          "manifest_digest": "sha256:fe578aef2cfcb6eab48ba76703f400865a8212159ed753b197851381f6f697df",
+          "archive_url": "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-pc-windows-msvc.zip",
+          "archive_sha256": "71b2fef860abe467217a538ff31de02f5258807c0129f771846f87bd029aafc5",
+          "build_attestation": "NOT_PROVEN"
+        },
+        "version": "15.2.0",
+        "binary_pins": [
+          {
+            "role": "tool",
+            "digest": "sha256:14231169855ec5205cf5a1b6f1db358ff4aed4247c86b69ce8aae647c77f6680",
+            "bytes": 4218880,
+            "version": "ripgrep 15.2.0 (rev e89fff89ac)"
+          }
+        ],
+        "license": {
+          "spdx": "MIT",
+          "evidence_digest": "sha256:970813655a1bf777d2ead189cef71ab73ab92ce04dc864027d61a45de03e6728",
+          "upstream_url": "https://github.com/BurntSushi/ripgrep/blob/15.2.0/LICENSE-MIT",
+          "upstream_blob_sha": "3b0a5dc09c1e16357459ddc9182a50f360f3cdba",
+          "match_normalization": "CRLF_TO_LF"
+        },
+        "input_schema_digest": "sha256:045404ae1d12baa73318e0c8d5c2096fea1b418370b2a817485bf9972cb11a23",
+        "output_schema_digest": "sha256:7a165057e1f195fbe75441c89c12df69513f479df768054f0f6e42166f21e6ab",
+        "permissions": [
+          "artifact.read",
+          "artifact.write"
+        ],
+        "data_classes": [
+          "PUBLIC",
+          "PROJECT"
+        ],
+        "origins": [
+          "OWNER",
+          "PROJECT"
+        ],
+        "effect_class": "NONE",
+        "platform": "win32",
+        "quality": {
+          "suite_id": "e1.tooling.fixed-stdin/2",
+          "suite_digest": "sha256:6a1442e9d0cab0dba4066a42048bdf46b62c4b919f4ce1790a1cb441da932c5c",
+          "tests": 4,
+          "passed": 4,
+          "score": 1000,
+          "scope": "FOUR_SYNTHETIC_STDIN_CASES_ONLY",
+          "test_results": [
+            {
+              "case_id": "literal_1",
+              "passed": true,
+              "execution_digest": "sha256:3806d9a028db4e506c08cbfc12374f547100a328be17a68581ca71e9286d29af",
+              "input_digest": "sha256:49df585d2b65161386ce2f564b1745733fc2073aa11351ee2985027854f6279c",
+              "output_digest": "sha256:52fd0a17c938115a9ae4ba377490ebce6f7b39064df5ef9a0d4b4a1049d88627"
+            },
+            {
+              "case_id": "literal_2",
+              "passed": true,
+              "execution_digest": "sha256:a1cf2b1b29e5b431186913445bb1093f8bf43672bd916f63128e247d8ef32100",
+              "input_digest": "sha256:2ec0364e4e45e15daeca4e92c9aceb79270d4df294b06211d42e6e0ff664c328",
+              "output_digest": "sha256:22eddbfdc43f63e752eb8954c233cb993482a75ac0bb8cfc44f54e66e54f6cf4"
+            },
+            {
+              "case_id": "literal_3",
+              "passed": true,
+              "execution_digest": "sha256:50974e704d1421a5cec1ad12aea1a6e40f148f3bd333fa267f211c78df947ca5",
+              "input_digest": "sha256:e4ae7857ecb6cfd7a2f719df9b2c936ddd12c72077fa9ff39a733af582e3a98b",
+              "output_digest": "sha256:fd363e8c2bbc943435a5981a8dc656403c23bbe639df8c77ce339abb8ac98510"
+            },
+            {
+              "case_id": "literal_4",
+              "passed": true,
+              "execution_digest": "sha256:a503bdbf801213aea8a3450ddc70d1d2b6681013f9e54e01d9d8aec8d2ca8e25",
+              "input_digest": "sha256:689cd2bb0a8850babb104d63b2e73688d691ea7f59d785441db17b53c8067c72",
+              "output_digest": "sha256:03df5c85e5bdc4ff1143bfe5a603785367db2bde470705f474989710e568b3e0"
+            }
+          ]
+        },
+        "manual_topic_review": {
+          "resolved_for_profile_only": true,
+          "catalog_flag": "manual_topic_review",
+          "broader_claims_enabled": false
+        },
+        "cost": {
+          "basis": "ACTUAL_API_DEBIT_MICROS",
+          "effective_actual_micros": 0,
+          "currency": "USD",
+          "verified": true,
+          "infrastructure_cost": "NOT_MEASURED"
+        },
+        "issued_at": "2026-11-08T10:50:56.129Z",
+        "expires_at": "2026-11-08T11:20:56.131Z",
+        "key_id": "sha256:ec4ec76c40480cc313b241851899a5d5ad877d6ef3dadfbb3c54b74d586e96f3",
+        "probe_digest": "sha256:2e1c3dd525f740fdc7f5969eb3a69b119716fe9453c2a1d9f205101f3b79efbd",
+        "trust_scope": "HOST_LOCAL_REVIEW_NOT_OWNER_OR_NATIVE_GRANT"
+      },
+      "signature": "hUwMzIzOwwhqKX7oy49iR1BXEIsDuN307jgRDQzhljAXVa3V7CTVH4qBx1mV38fBoTqsN97bGVw55zHsfaEQBw=="
+    },
+    {
+      "payload": {
+        "schema": "awe.e1.tool-review/1",
+        "profile_id": "ripgrep-all-stdin",
+        "source": {
+          "catalog_id": "Радар-0046",
+          "source_url": "https://github.com/phiresky/ripgrep-all",
+          "raw_digest": "sha256:68a4725af9e0a15ad50afef39db9fb9ec28eb367625e0947d94b7035264f1844",
+          "catalog_digest": "sha256:5a83c501b290b83a17f6ffaeb0fe9cae772e26be7a6a4c5cbcb948908fc76b56"
+        },
+        "distribution": {
+          "version": "0.10.9",
+          "homepage": "https://github.com/phiresky/ripgrep-all",
+          "manifest_digest": "sha256:7c2e0e6932b52ca457b11c3fbafdea7225a9bd26b03a7820a35f6f5dec8164c2",
+          "archive_url": "https://github.com/phiresky/ripgrep-all/releases/download/v0.10.9/ripgrep_all-v0.10.9-x86_64-pc-windows-msvc.zip",
+          "archive_sha256": "da03e969ac01839443739c547ca8eb521e648e712251d61a98d34a1521b9f43b",
+          "build_attestation": "NOT_PROVEN"
+        },
+        "version": "0.10.9",
+        "binary_pins": [
+          {
+            "role": "tool",
+            "digest": "sha256:a0e452df4ed0f09c449db282408dde293740580262ffb01a5c14a6618bf5ec74",
+            "bytes": 6259712,
+            "version": "ripgrep-all 0.10.9"
+          },
+          {
+            "role": "rg",
+            "digest": "sha256:14231169855ec5205cf5a1b6f1db358ff4aed4247c86b69ce8aae647c77f6680",
+            "bytes": 4218880,
+            "version": "ripgrep 15.2.0 (rev e89fff89ac)"
+          }
+        ],
+        "license": {
+          "spdx": "AGPL-3.0-or-later",
+          "evidence_digest": "sha256:5e01d167766c9eb7b0ec55cdcf676152494122c53850f1c1f2df26d7aba0736f",
+          "upstream_url": "https://github.com/phiresky/ripgrep-all/blob/v0.10.9/LICENSE.md",
+          "upstream_blob_sha": "5de3773c915716c167d3332c0ebd2b4a3a470888",
+          "match_normalization": "CRLF_TO_LF"
+        },
+        "input_schema_digest": "sha256:045404ae1d12baa73318e0c8d5c2096fea1b418370b2a817485bf9972cb11a23",
+        "output_schema_digest": "sha256:7a165057e1f195fbe75441c89c12df69513f479df768054f0f6e42166f21e6ab",
+        "permissions": [
+          "artifact.read",
+          "artifact.write"
+        ],
+        "data_classes": [
+          "PUBLIC",
+          "PROJECT"
+        ],
+        "origins": [
+          "OWNER",
+          "PROJECT"
+        ],
+        "effect_class": "NONE",
+        "platform": "win32",
+        "quality": {
+          "suite_id": "e1.tooling.fixed-stdin/2",
+          "suite_digest": "sha256:6a1442e9d0cab0dba4066a42048bdf46b62c4b919f4ce1790a1cb441da932c5c",
+          "tests": 4,
+          "passed": 4,
+          "score": 1000,
+          "scope": "FOUR_SYNTHETIC_STDIN_CASES_ONLY",
+          "test_results": [
+            {
+              "case_id": "literal_1",
+              "passed": true,
+              "execution_digest": "sha256:97f18d9d9b66c6addb7daa7f7cd21fcb01e0e5d71e94ba8ea5d734987957953a",
+              "input_digest": "sha256:49df585d2b65161386ce2f564b1745733fc2073aa11351ee2985027854f6279c",
+              "output_digest": "sha256:52fd0a17c938115a9ae4ba377490ebce6f7b39064df5ef9a0d4b4a1049d88627"
+            },
+            {
+              "case_id": "literal_2",
+              "passed": true,
+              "execution_digest": "sha256:c2b671b2342afe249e02e7a4fbd009cf5087ef01b058d665b46093d0045c567c",
+              "input_digest": "sha256:2ec0364e4e45e15daeca4e92c9aceb79270d4df294b06211d42e6e0ff664c328",
+              "output_digest": "sha256:22eddbfdc43f63e752eb8954c233cb993482a75ac0bb8cfc44f54e66e54f6cf4"
+            },
+            {
+              "case_id": "literal_3",
+              "passed": true,
+              "execution_digest": "sha256:543e6d9b6e010059ab9b52c1fcb55a57bebf8207bd36907f1e4c59849ca521e7",
+              "input_digest": "sha256:e4ae7857ecb6cfd7a2f719df9b2c936ddd12c72077fa9ff39a733af582e3a98b",
+              "output_digest": "sha256:fd363e8c2bbc943435a5981a8dc656403c23bbe639df8c77ce339abb8ac98510"
+            },
+            {
+              "case_id": "literal_4",
+              "passed": true,
+              "execution_digest": "sha256:d878e6eeafb0c8f9015981eb4d66911cabae1e352ed82b07cefbdf55a8b83e52",
+              "input_digest": "sha256:689cd2bb0a8850babb104d63b2e73688d691ea7f59d785441db17b53c8067c72",
+              "output_digest": "sha256:03df5c85e5bdc4ff1143bfe5a603785367db2bde470705f474989710e568b3e0"
+            }
+          ]
+        },
+        "manual_topic_review": {
+          "resolved_for_profile_only": true,
+          "catalog_flag": "manual_topic_review",
+          "broader_claims_enabled": false
+        },
+        "cost": {
+          "basis": "ACTUAL_API_DEBIT_MICROS",
+          "effective_actual_micros": 0,
+          "currency": "USD",
+          "verified": true,
+          "infrastructure_cost": "NOT_MEASURED"
+        },
+        "issued_at": "2026-11-08T10:50:56.129Z",
+        "expires_at": "2026-11-08T11:20:56.131Z",
+        "key_id": "sha256:ec4ec76c40480cc313b241851899a5d5ad877d6ef3dadfbb3c54b74d586e96f3",
+        "probe_digest": "sha256:60b52b98a3162c2ac824774f8abd9af0d62f7b992c08cc331a314fd12e274e2e",
+        "trust_scope": "HOST_LOCAL_REVIEW_NOT_OWNER_OR_NATIVE_GRANT"
+      },
+      "signature": "V7RXSmE8WSE4X5PyVKU3iJDcH2XHA7KEBfj6UO925Rs2uQte3QUfpCdoWwbrzD7Ze1Y9s+1dUTkw5UlfbX0LDQ=="
+    }
+  ],
+  "review_public_key": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAoxedAmHy7R9/oEqVCIA2DZyZCvjLS8RaI1zUZrnsAz8=\n-----END PUBLIC KEY-----\n",
+  "review_key_fingerprint": "sha256:ec4ec76c40480cc313b241851899a5d5ad877d6ef3dadfbb3c54b74d586e96f3",
+  "activated_refs": [
+    {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "capability_id": "e1.tool.ripgrep-stdin",
+      "version": "1.0.0",
+      "manifest_digest": "sha256:cce03697f69742aee72b3f1dcefbe18bc00c1f38057e859c632d1be4977fe509",
+      "input_schema": {
+        "schema_id": "e1.tool.fixed-text.input",
+        "version": "1.0.0",
+        "digest": "sha256:045404ae1d12baa73318e0c8d5c2096fea1b418370b2a817485bf9972cb11a23"
+      },
+      "output_schema": {
+        "schema_id": "e1.tool.fixed-text.output",
+        "version": "1.0.0",
+        "digest": "sha256:7a165057e1f195fbe75441c89c12df69513f479df768054f0f6e42166f21e6ab"
+      }
+    },
+    {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "capability_id": "e1.tool.rga-stdin",
+      "version": "1.0.0",
+      "manifest_digest": "sha256:1f4513aef9b6be72e64a993b3bd929e1796e9db1933132492ec2d488656798a0",
+      "input_schema": {
+        "schema_id": "e1.tool.fixed-text.input",
+        "version": "1.0.0",
+        "digest": "sha256:045404ae1d12baa73318e0c8d5c2096fea1b418370b2a817485bf9972cb11a23"
+      },
+      "output_schema": {
+        "schema_id": "e1.tool.fixed-text.output",
+        "version": "1.0.0",
+        "digest": "sha256:7a165057e1f195fbe75441c89c12df69513f479df768054f0f6e42166f21e6ab"
+      }
+    }
+  ],
+  "choices": [
+    {
+      "evidence": "OFFLINE_POLICY_GRANT_FIXTURE_NOT_NATIVE",
+      "value": {
+        "schema": "awe.e1.executor-choice/1",
+        "semantic_need": "text.literal-search",
+        "decision": "SELECTED",
+        "selected": {
+          "capability_id": "e1.tool.ripgrep-stdin",
+          "ref_digest": "sha256:a0f17bd8d06db29240ab5014a973cc5da95d632b5a012d924755878eaa2af13a",
+          "executor_type": "script",
+          "eligible": true,
+          "reasons": [],
+          "quality_score": 1000,
+          "effective_actual_micros": 0
+        },
+        "candidates": [
+          {
+            "capability_id": "e1.tool.ripgrep-stdin",
+            "ref_digest": "sha256:a0f17bd8d06db29240ab5014a973cc5da95d632b5a012d924755878eaa2af13a",
+            "executor_type": "script",
+            "eligible": true,
+            "reasons": [],
+            "quality_score": 1000,
+            "effective_actual_micros": 0
+          },
+          {
+            "capability_id": "e1.tool.rga-stdin",
+            "ref_digest": "sha256:4911ff10c03fd5b20900a64c2d567b00bdc6def7b86f890d4336aabed072c906",
+            "executor_type": "program",
+            "eligible": true,
+            "reasons": [],
+            "quality_score": 1000,
+            "effective_actual_micros": 0
+          }
+        ],
+        "rule": "GRANT_DATA_QUALITY_HEALTH_GATE_THEN_API_DEBIT_QUALITY_DETERMINISTIC_TIEBREAK",
+        "dispatch_authorized": false,
+        "infrastructure_cost_comparison": "NOT_MEASURED"
+      }
+    },
+    {
+      "evidence": "OFFLINE_POLICY_GRANT_FIXTURE_NOT_NATIVE",
+      "value": {
+        "schema": "awe.e1.executor-choice/1",
+        "semantic_need": "text.literal-search",
+        "decision": "SELECTED",
+        "selected": {
+          "capability_id": "e1.tool.rga-stdin",
+          "ref_digest": "sha256:4911ff10c03fd5b20900a64c2d567b00bdc6def7b86f890d4336aabed072c906",
+          "executor_type": "program",
+          "eligible": true,
+          "reasons": [],
+          "quality_score": 1000,
+          "effective_actual_micros": 0
+        },
+        "candidates": [
+          {
+            "capability_id": "e1.tool.ripgrep-stdin",
+            "ref_digest": "sha256:a0f17bd8d06db29240ab5014a973cc5da95d632b5a012d924755878eaa2af13a",
+            "executor_type": "script",
+            "eligible": false,
+            "reasons": [
+              "UNAVAILABLE"
+            ],
+            "quality_score": 1000,
+            "effective_actual_micros": 0
+          },
+          {
+            "capability_id": "e1.tool.rga-stdin",
+            "ref_digest": "sha256:4911ff10c03fd5b20900a64c2d567b00bdc6def7b86f890d4336aabed072c906",
+            "executor_type": "program",
+            "eligible": true,
+            "reasons": [],
+            "quality_score": 1000,
+            "effective_actual_micros": 0
+          }
+        ],
+        "rule": "GRANT_DATA_QUALITY_HEALTH_GATE_THEN_API_DEBIT_QUALITY_DETERMINISTIC_TIEBREAK",
+        "dispatch_authorized": false,
+        "infrastructure_cost_comparison": "NOT_MEASURED"
+      }
+    }
+  ],
+  "denied_candidate": {
+    "catalog_id": "Радар-2476",
+    "source_url": "https://github.com/modelcontextprotocol/servers",
+    "verified": "CANDIDATE",
+    "installed": "NOT_VERIFIED",
+    "dispatch": "DENIED_NO_HOST_REVIEW"
+  },
+  "async_prelaunch_guard_tests": [
+    {
+      "scenario": "grant_revoke_during_resolver",
+      "actual_executable_invocations": 0,
+      "native_ports": "OFFLINE_TEST_DOUBLE",
+      "candidate_input_frozen": true
+    },
+    {
+      "scenario": "review_revoke_during_resolver",
+      "actual_executable_invocations": 0,
+      "native_ports": "OFFLINE_TEST_DOUBLE",
+      "candidate_input_frozen": true
+    },
+    {
+      "scenario": "expiry_during_resolver",
+      "actual_executable_invocations": 0,
+      "native_ports": "OFFLINE_TEST_DOUBLE",
+      "candidate_input_frozen": true
+    },
+    {
+      "scenario": "short_execution_window",
+      "actual_executable_invocations": 0,
+      "native_ports": "OFFLINE_TEST_DOUBLE",
+      "candidate_input_frozen": true
+    },
+    {
+      "scenario": "caller_mutation_frozen",
+      "actual_executable_invocations": 1,
+      "native_ports": "OFFLINE_TEST_DOUBLE",
+      "candidate_input_frozen": true
+    }
+  ],
+  "actual_A2_tool_dispatch": "NOT_RUN",
+  "AWE_model_calls": 0,
+  "paid_calls": 0,
+  "actual_API_cost_micros": 0,
+  "installation_performed": false,
+  "full_catalog_exported": false,
+  "unsafe_effects": 0,
+  "limitations": [
+    "Source provenance is installed distribution/release metadata; reproducible upstream build attestation NOT_PROVEN",
+    "Trusted fixed-stdin adapters are not a hostile-code OS sandbox",
+    "Selection metadata tests do not prove model routing, native tool dispatch or dynamic agents"
+  ]
+}

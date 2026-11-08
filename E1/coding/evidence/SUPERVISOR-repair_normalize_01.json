@@ -1,0 +1,38 @@
+{
+  "schema": "awe.e1.automatic-repair-supervisor/1",
+  "run_id": "repair_normalize_01",
+  "supervisor_pid": 29160,
+  "source_digest": "sha256:60594b8e511e90b31376d5b01829547ab0e63cda416f637452f22fc3f1e9a7a7",
+  "started_at": "2026-11-08T10:51:15.788Z",
+  "max_restarts": 2,
+  "observed_exits": [
+    {
+      "pid": 39080,
+      "exit_code": 90,
+      "signal": null,
+      "ended_at": "2026-11-08T10:53:00.091Z",
+      "known_injected_fault": "AFTER_MODEL_PERSISTED",
+      "original_process_observed_dead": true
+    },
+    {
+      "pid": 40220,
+      "exit_code": 90,
+      "signal": null,
+      "ended_at": "2026-11-08T10:53:16.237Z",
+      "known_injected_fault": "AFTER_NATIVE_COMPLETED",
+      "original_process_observed_dead": true
+    },
+    {
+      "pid": 38288,
+      "exit_code": 1,
+      "signal": null,
+      "ended_at": "2026-11-08T10:54:34.795Z",
+      "known_injected_fault": null,
+      "original_process_observed_dead": true
+    }
+  ],
+  "current_child_pid": null,
+  "status": "STOPPED",
+  "operator_phase_commands": 0,
+  "finished_at": "2026-11-08T10:54:34.797Z"
+}

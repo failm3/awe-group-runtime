@@ -1,6 +1,6 @@
 {
   "schema": "awe.e1.coding-delivery-checkpoint/1",
-  "status": "G1_KNOWN_MODEL_FAILURE_RECONCILED_QA_FAIL_REPAIR_CONTROLLER_IN_PROGRESS",
+  "status": "STOPPED_MODEL_ATTEMPT_CAP_EXHAUSTED",
   "base_commit": "9c3eaa182a862dadd5a326836408063b45f7219c",
   "audit_commit": "9fc932e14acacaf295f918e8777514bb430715ba",
   "branch": "codex/e1-coding-g1-20261108",
@@ -56,13 +56,35 @@
     "candidate_edited_by_sol": false
   },
   "next": {
-    "experiment": "TWO_FILE_BOUNDED_REPAIR",
-    "aggregate_model_limit_including_prior": 4,
-    "prior_used": 1,
-    "new_head_limit": 1,
-    "new_code_limit": 2,
     "full_three_file_G2": "NOT_PROVEN",
-    "automatic_restart": "NOT_PROVEN",
-    "cloud_enabled": false
+    "dynamic_agents_G3": "NOT_IMPLEMENTED",
+    "model_generations_permitted_for_closed_trial": 0,
+    "no_new_project_or_task_budget_reset": true,
+    "requirements": [
+      "Versioned code transport and route-quality qualification",
+      "New bounded scope must retain all spent attempts explicitly",
+      "Finish native two-tool dispatch without any LLM generation"
+    ]
+  },
+  "runtime_pr": "https://github.com/failm3/awe-group-runtime/pull/9",
+  "repair": {
+    "run_id": "repair_normalize_01",
+    "status": "STOPPED_CAP_EXHAUSTED",
+    "source_commit": "28ad8f2e33267ed66fce466c8eb21b62cab4a482",
+    "source_digest": "sha256:60594b8e511e90b31376d5b01829547ab0e63cda416f637452f22fc3f1e9a7a7",
+    "outer_phase": "STOPPED",
+    "mission_state": "CANCELLED",
+    "aggregate_model_wires": 4,
+    "all_confirmed": true,
+    "unknown": 0,
+    "total_input_tokens": 4725,
+    "total_output_tokens": 1789,
+    "api_actual_micros": 0,
+    "automatic_child_restarts": 2,
+    "successful_product": false,
+    "terminal_reason": "CODING_NO_CHANGE",
+    "manual_terminal_finalization": 1,
+    "evidence": "E1/coding/evidence/STOPPED-repair_normalize_01.json",
+    "independent_cold": "E1/qa-repair/evidence/STOPPED-repair_normalize_01.json"
   }
 }

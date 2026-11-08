@@ -8,13 +8,18 @@ export function rawPatchProposal(patch) {
 
 /** Native completion is separate from semantic acceptance. A valid failed-test
  * artifact may enter WAIT_QA as truthful evidence, never as product success. */
-export async function completeCodingResult(client, scope, {proposal, artifact, model_receipt, product_status = 'PENDING_INDEPENDENT_QA'}) {
-  need(client && typeof client.complete === 'function', 'CODING_NATIVE_COMPLETION_REQUIRED');
+export function buildCodingResult({proposal, artifact, model_receipt, product_status = 'PENDING_INDEPENDENT_QA'}) {
   const output = validateBoundValue(PATCH_PROPOSAL_SCHEMA, proposal ?? rawPatchProposal(artifact.patch));
   need(artifact && artifact.patch && digest(output) === digest(rawPatchProposal(artifact.patch)), 'CODING_NATIVE_PATCH_BINDING');
   const result = immutable({output_schema_digest: PATCH_PROPOSAL_SCHEMA_DIGEST, output, artifact_digest: digest(output),
     evidence: {coding_artifact: artifact, model_receipt, product_status}});
   const result_hash = digest(result);
+  return immutable({result, result_hash});
+}
+
+export async function completeCodingResult(client, scope, input) {
+  need(client && typeof client.complete === 'function', 'CODING_NATIVE_COMPLETION_REQUIRED');
+  const {result, result_hash} = buildCodingResult(input);
   const value = await client.complete({...scope, result, result_hash});
   need(value?.status === 'WAIT_QA', 'CODING_NATIVE_WAIT_QA_REQUIRED');
   return immutable({result, result_hash, value});

@@ -1,0 +1,56 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {randomBytes,createHash} from 'node:crypto';
+import {digest} from '../../contracts/index.mjs';
+import {createPsqlSession, sqlJson} from '../../coordinator/psql-session.mjs';
+import {validateResourceDescriptor} from '../../coordinator/resource.mjs';
+import {createCodingRunStore} from '../../coordinator/coding-run.mjs';
+import {createNativeE1Host} from '../../host/staging.mjs';
+import {createRepairMission} from '../../host/coding/repair-mission.mjs';
+import {REPAIR_PRODUCT_SCHEMA_DIGEST} from '../../host/coding/repair-contracts.mjs';
+
+const enabled=process.env.AWE_CODING_RUN_NATIVE==='1';
+const evidence=[];
+const hash=label=>digest({label});
+const resourcePath=()=>process.env.AWE_E1_CODING_RUN_RESOURCE??new URL('../../../.private/e1-resource.json',import.meta.url);
+const evidencePath=()=>process.env.AWE_CODING_RUN_EVIDENCE??process.env.AWE_E1_CODING_RUN_EVIDENCE;
+
+test('native coding run CAS, idempotency, roles and held native attempt; zero model calls',{skip:!enabled,timeout:120000},async t=>{
+  const resource=validateResourceDescriptor(JSON.parse(fs.readFileSync(resourcePath(),'utf8')));
+  const run_id='native_'+randomBytes(5).toString('hex'),rawIssue={repository:{owner:'synthetic-owner',name:'native-run-fixture'},issue_number:1,title:'SQL controller fixture only',body:'Synthetic native state probe; no code generation or model calls.'},issue={...rawIssue,digest:digest(rawIssue)};
+  const f=createRepairMission({run_id,issue,prior:{result_hash:hash('synthetic fixture, no adopted row'),attempt_id:'unused_prior_fixture'},failedPublicTest:{reason:'EXPLICIT_SYNTHETIC_SQL_TEST_NOT_AWE_FAILURE'}});
+  const policy={budget_cap_micros:'0',quota_cap:4,max_parallel:1,resource_limits:{cpu:1,local_model:1},capabilities:Object.fromEntries(f.capabilities.map(c=>[c.ref.capability_id,{resource_keys:[c.executor_kind==='llm'?'local_model':'cpu'],max_claims:1,priority:0}]))};
+  let host,db,db2,qaDb,workerDb;
+  t.after(async()=>{await Promise.allSettled([db?.close(),db2?.close(),qaDb?.close(),workerDb?.close()].filter(Boolean));if(host)await host.close();});
+  host=await createNativeE1Host({resource,authority:f.authority,ingress:f.ingress,capabilities:f.capabilities,domainManifests:[f.domainManifest],ownerGrants:[f.grant],policy});
+  await host.admitPublished(f.spec.mission_id,f.contexts.coordinator);
+  db=await createPsqlSession(resource);db2=await createPsqlSession(resource);qaDb=await createPsqlSession(resource,{role:'qa'});
+  const binding={schema:'awe.e1.coding-run-binding/1',run_id,project_id:f.spec.project_id,mission_id:f.spec.mission_id,root_grant_digest:digest(f.grant),brief_digest:issue.digest,oracle_digest:hash('frozen synthetic oracle'),source_digest:hash('native fixture source'),original_base_sha:'a'.repeat(40),deadline:f.spec.deadline,head_task_id:'head_plan',code_task_ids:['code_r01','code_r02','code_r03'],head_capability_id:'e1.head.coding',code_capability_id:'e1.coding.patch',product_task_id:'product_gate',product_capability_id:'e1.coding.product',product_output_schema_digest:REPAIR_PRODUCT_SCHEMA_DIGEST,limits:{head:1,code:3,total:4},prior_attempt_refs:[]};
+  const store=createCodingRunStore({db,project_id:f.spec.project_id}),contender=createCodingRunStore({db:db2,project_id:f.spec.project_id});
+  const opened=await store.open(binding);assert.equal(opened.phase,'NEW');assert.equal(opened.counters.total,0);assert.equal((await store.open(binding)).repeated,true);
+  await assert.rejects(store.open({...binding,oracle_digest:hash('substitute')}),/CODING_RUN_OPEN_CONFLICT/);
+  const claim=await host.coordinator.claim({mission_id:f.spec.mission_id,task_id:'head_plan',worker_id:'e1_worker',capabilities:['e1.head.coding'],lease_ms:120000});assert.equal(claim.status,'CLAIMED');
+  const scope={mission_id:claim.mission_id,task_id:claim.task_id,worker_id:claim.worker_id,fence:claim.fence,attempt_id:'attempt_'+run_id,logical_request_id:'request_'+run_id};
+  const transition={phase:'HEAD_PENDING',decision:'START_SYNTHETIC_NATIVE_HEAD',refs:{task_id:scope.task_id,attempt_id:scope.attempt_id,logical_request_id:scope.logical_request_id,worker_id:scope.worker_id,fence:Number(scope.fence),plan_digest:digest(f.plan)}};
+  const first={run_id,expected_revision:0,operation_id:'head.intent.a',transition},second={...first,operation_id:'head.intent.b'};
+  const race=await Promise.allSettled([store.advance(first),contender.advance(second)]);assert.equal(race.filter(r=>r.status==='fulfilled').length,1);assert.match(race.find(r=>r.status==='rejected').reason.code,/CODING_RUN_STALE_REVISION/);
+  const winner=race[0].status==='fulfilled'?first:second;
+  assert.equal((await store.advance(winner)).repeated,true);
+  await assert.rejects(store.advance({...winner,transition:{...transition,decision:'CHANGED_SAME_OPERATION'}}),/CODING_RUN_OPERATION_CONFLICT/);
+  const current=await store.read(run_id);assert.equal(current.revision,1);assert.equal(current.phase,'HEAD_PENDING');
+  await assert.rejects(store.advance({run_id,expected_revision:1,operation_id:'skip.product',transition:{phase:'RESULT_READY',decision:'FALSE_SUCCESS',refs:{product_pass:true}}}),/CODING_RUN_PHASE_ORDER/);
+  const qaDenied=JSON.parse(await qaDb.query("SELECT awe_e1_runtime.coding_run_command('advance',"+sqlJson({project_id:f.spec.project_id,run_id})+');'));assert.equal(qaDenied.error,'CODING_RUN_QA_WRITE_DENIED');
+  const qaStore=createCodingRunStore({db:qaDb,project_id:f.spec.project_id});assert.equal((await qaStore.read(run_id)).revision,1);
+  const privileges=JSON.parse(await db.query("SELECT jsonb_build_object('coord',has_table_privilege('awe_e1_coord','awe_e1_runtime.coding_run','INSERT,UPDATE,DELETE'),'qa',has_table_privilege('awe_e1_qa','awe_e1_runtime.coding_run','INSERT,UPDATE,DELETE'),'worker',has_table_privilege('awe_e1_worker','awe_e1_runtime.coding_run','INSERT,UPDATE,DELETE'));"));assert.deepEqual(privileges,{coord:false,qa:false,worker:false});
+  workerDb=await createPsqlSession(resource,{role:'worker',verify_marker:false});
+  await assert.rejects(workerDb.query("SELECT awe_e1_runtime.coding_run_command('read',"+sqlJson({project_id:f.spec.project_id,run_id})+');'));
+  const reserved=await host.coordinator.reserve({...scope,route_id:'ollama.local.qwen3-4b-instruct',request_hash:hash('explicit synthetic native no transport'),reserve_micros:0,quota_units:1,capability_id:'e1.head.coding',capability_version:'1.0.0'});assert.equal(reserved.status,'RESERVED');
+  await host.coordinator.markSending(scope);await host.coordinator.unknown({...scope,reason:'EXPLICIT_SYNTHETIC_STATE_PROBE_NO_PROVIDER_CALL'});
+  const held=await store.read(run_id);assert.equal(held.phase,'HOLD');assert.equal(held.counters.total,1);assert.equal(held.counters.unknown,1);assert.equal(held.counters.remaining_total,3);
+  await assert.rejects(store.advance({run_id,expected_revision:1,operation_id:'try.resume',transition:{phase:'HEAD_CONFIRMED',decision:'FALSE_RESUME',refs:{head_output_digest:hash('not a real model output')}}}),/CODING_RUN_NATIVE_HOLD/);
+  const stopped=await store.advance({run_id,expected_revision:1,operation_id:'hold.persist',transition:{phase:'STOPPED',decision:'NATIVE_UNKNOWN_HOLD',refs:{stop_reason:'EXPLICIT_SYNTHETIC_TEST_NO_PROVIDER'}}});assert.equal(stopped.stored_phase,'STOPPED');assert.equal(stopped.phase,'HOLD');
+  evidence.push({project_id:f.spec.project_id,mission_id:f.spec.mission_id,run_id,status:'PASS_NATIVE_CONTROLLER_NEGATIVES',cases:['OPEN_IDEMPOTENCY','BINDING_CONFLICT','TWO_SESSION_CAS','OPERATION_IDEMPOTENCY','OPERATION_CONFLICT','EARLY_RESULT_DENIED','QA_MUTATION_DENIED','DIRECT_TABLE_WRITES_DENIED','WORKER_SQL_DENIED','UNKNOWN_HOLD_NO_RESUME'],native_attempt_rows:1,attempt_origin:'EXPLICIT_SYNTHETIC_NATIVE_STATE_NO_PROVIDER_TRANSPORT',model_calls:0,provider_calls:0,paid_calls:0,runtime_candidate_sources_written:0});
+});
+
+test.after(()=>{if(enabled&&evidencePath())fs.writeFileSync(evidencePath(),JSON.stringify({schema:'awe.e1.coding-run-native-review/1',mode:'EXPLICIT_SYNTHETIC_NATIVE_POSTGRESQL_NO_MODEL',evidence},null,2)+'\n');});

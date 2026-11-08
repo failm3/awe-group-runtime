@@ -1,0 +1,45 @@
+{
+  "schema": "awe.e1.coding-run-adoption-native-review/1",
+  "mode": "EXPLICIT_SYNTHETIC_NATIVE_FIXTURES_ROLLED_BACK",
+  "results": [
+    {
+      "status": "PASS_NATIVE_GUARD_FIXTURES_ONLY",
+      "checks": [
+        "PRIOR_REAL_CONFIRMED_FAILED_QA_JOIN",
+        "PRIOR_REQUEST_SUBSTITUTION_DENIED",
+        "SECOND_PRIOR_ADOPTION_DENIED",
+        "UNICODE_HEAD_DIGEST_MATCHES_JS",
+        "HEAD_WITHOUT_QA_DENIED",
+        "HEAD_PRODUCER_QA_DENIED",
+        "UNRELATED_HEAD_GENERATION_DENIED",
+        "HEAD_HASH_SUBSTITUTION_DENIED",
+        "HEAD_BLOCK_SCOPE_DENIED",
+        "ACCEPTED_PINNED_HEAD_ADMITS_PLAN",
+        "V7_BYPASS_ROLES_DENIED",
+        "HEAD_MAX_ONE_DENIES_SECOND_CODE",
+        "CODE_ONLY_RESULT_DENIED",
+        "PRODUCT_NO_QA_DENIED",
+        "PRODUCT_WRONG_SCHEMA_DENIED",
+        "PRODUCT_WRONG_HEAD_DENIED",
+        "PRODUCT_WRONG_PRIOR_DENIED",
+        "PRODUCT_WRONG_ORACLE_DENIED",
+        "PRODUCT_SAME_PRODUCER_QA_DENIED",
+        "ALL_PROJECT_FOREIGN_MISSION_COUNTED_AND_HELD",
+        "EXACT_PRODUCT_NATIVE_QA_GUARD_POSITIVE"
+      ],
+      "guard_project_ids": [
+        "prj_coding_adopt_3a960a6175",
+        "prj_coding_adopt_7a7fa1e0cb"
+      ],
+      "prior_attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+      "old_native_digest_before": "a2ebd7c4f6b60d3cd258b5eda17de967af336c08877320ffb5d65988e6cb24e5",
+      "old_native_digest_after": "a2ebd7c4f6b60d3cd258b5eda17de967af336c08877320ffb5d65988e6cb24e5",
+      "prior_rows_after_rollback": 0,
+      "all_seeded_results": "EXPLICIT_SYNTHETIC_NATIVE_GUARD_TEST_NOT_AWE_AUTHORSHIP",
+      "provider_calls": 0,
+      "model_calls": 0,
+      "paid_calls": 0,
+      "old_rows_changed": 0
+    }
+  ]
+}

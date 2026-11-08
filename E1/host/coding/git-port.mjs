@@ -95,7 +95,8 @@ export function createGitPort({repositoryRoot, worktreesRoot, journalRoot, repos
     need(head === value.base_sha || !value.patch || digest([...changed].sort()) === digest(value.patch.changes.map(c => c.path).sort()), 'CODING_GIT_CHANGED_PATHS');
     const files = changed.map(p => blobFile(value.root, head, p, true));
     if (value.patch) need(files.every(f => value.patch.changes.some(c => c.path === f.path && c.after_digest === f.digest)), 'CODING_GIT_PATCH_READBACK');
-    return immutable({root: value.root, worktree_id, base_sha: value.base_sha, head_sha: head, tree_sha: tree, branch: value.branch, files});
+    const all_files = readPaths.map(p => blobFile(value.root, head, p, true));
+    return immutable({root: value.root, worktree_id, base_sha: value.base_sha, head_sha: head, tree_sha: tree, branch: value.branch, files, all_files});
   };
   return Object.freeze({kind: 'ISOLATED_GIT_WORKTREE_PORT', mode: 'LIVE_SCOPED_HOST', isolation: 'ISOLATED_WORKTREE',
     resolveWorktree,

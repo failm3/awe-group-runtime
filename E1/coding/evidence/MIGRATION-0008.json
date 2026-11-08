@@ -1,0 +1,33 @@
+{
+  "schema": "awe.e1.coding-head-migration/1",
+  "file": "E1/coordinator/migrations/0008-coding-head-authority.sql",
+  "sha256": "3ee459c7989a4b6c93a72ae2bcec257d3560b325f9b7e1d5732bd2d2e835cfa3",
+  "resource_id": "awe_e1_a2a3_20261108",
+  "port": 5433,
+  "before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "after": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "permissions": {
+    "qa_v7": false,
+    "coord_v7": false,
+    "coord_wrapper": true
+  },
+  "model_calls": 0,
+  "e0_access": false
+}

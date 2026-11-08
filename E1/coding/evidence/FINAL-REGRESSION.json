@@ -1,0 +1,28 @@
+{
+  "schema": "awe.e1.final-legacy-regression/1",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "--test-reporter=tap",
+    "E1/tests/coordinator/quiescence.test.mjs",
+    "E1/tests/coordinator/resource.test.mjs",
+    "E1/tests/broker/broker.test.mjs",
+    "E1/tests/executors/coding.test.mjs",
+    "E1/tests/host/artifact-binding.test.mjs",
+    "E1/qa2/model-seams.test.mjs",
+    "E1/qa2/maintenance-oracle.test.mjs"
+  ],
+  "status": 0,
+  "error": null,
+  "summary": {
+    "tests": 69,
+    "pass": 69,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "stdout_sha256": "631a92536593f5bd427f98ef01247db0f38429f04685a30b06ec5172412521dc",
+  "new_model_calls": 0,
+  "postgresql_connections": 0
+}

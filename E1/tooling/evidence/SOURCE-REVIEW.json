@@ -1,0 +1,33 @@
+{
+  "schema": "awe.e1.tool-source-review/1",
+  "checked_at": "2026-11-08T10:51:25.968Z",
+  "rga_source": {
+    "url": "https://github.com/phiresky/ripgrep-all/blob/v0.10.9/src/bin/rga.rs",
+    "git_blob_sha": "5330e8f18cd62b30170649c2e9715d0ddbd9ffc5",
+    "smart_case_line": 115,
+    "dependency_path_line": 155,
+    "observations": [
+      "Upstream prepends --smart-case; adapter now explicitly passes --case-sensitive after upstream defaults",
+      "Upstream prepends executable directory and its lib subdirectory to PATH; adapter denies rg.exe in either directory"
+    ],
+    "source_review_scope": "FIXED_STDIN_ADAPTER_BEHAVIOR_ONLY_NOT_FULL_SOURCE_SECURITY_AUDIT"
+  },
+  "licenses": [
+    {
+      "tool": "ripgrep",
+      "url": "https://github.com/BurntSushi/ripgrep/blob/15.2.0/LICENSE-MIT",
+      "upstream_git_blob_sha": "3b0a5dc09c1e16357459ddc9182a50f360f3cdba",
+      "installed_normalized_match": true
+    },
+    {
+      "tool": "ripgrep-all",
+      "url": "https://github.com/phiresky/ripgrep-all/blob/v0.10.9/LICENSE.md",
+      "upstream_git_blob_sha": "5de3773c915716c167d3332c0ebd2b4a3a470888",
+      "installed_normalized_match": true
+    }
+  ],
+  "normalization": "CRLF_TO_LF_FOR_LICENSE_GIT_BLOB_COMPARISON",
+  "binary_reproducible_upstream_build": "NOT_PROVEN",
+  "host_binary_ABA_resistance": "NOT_PROVEN_TRUSTED_HOST_BOUNDARY",
+  "new_provider_calls": 0
+}

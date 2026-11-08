@@ -18,3 +18,13 @@ Next experiment: **TWO_FILE_BOUNDED_REPAIR**, with the immutable failed attempt 
 The separate tool-library stream located the original 4,504 records by exact import hash. Existing tool_registry discovery remains metadata-only. E1 review/selection/dispatch and the small installed-tool proof are separate work, not proof that AWE has dispatched native tool tasks yet. No mass parsing or installation.
 
 E0, original worktrees and PG5432 were not modified. Cloud remains disabled by the existing financial gates. No merge, external recruiting action or production release.
+
+## Final bounded repair result
+
+The actual repair trial is **STOPPED_MODEL_ATTEMPT_CAP_EXHAUSTED**, not PASS. Four CONFIRMED wires include the original code, one accepted bounded Head decision, and two repair generations: 4725 input / 1789 output tokens, API micros 0, UNKNOWN 0. The r02 candidate retained the CLI SyntaxError; r03 repeated both files unchanged and was rejected as CODING_NO_CHANGE. Original G1 failure remains immutable.
+
+Two supervised child exits and automatic restarts were observed after model fsync and native completion. They continued the same native attempt/result without another wire. This is bounded cooperative child-process recovery, not arbitrary SIGKILL/power-loss or successful G2. Sol performed one explicitly recorded post-stop terminal finalization; the new mission is CANCELLED, outer STOPPED, leases 0, remaining quota 0.
+
+[Terminal state](evidence/STOPPED-repair_normalize_01.json), [independent negative cold witness](../qa-repair/evidence/STOPPED-repair_normalize_01.json), [quality observations](evidence/QUALITY-OBSERVATIONS.json), [failed r02 and rejected r03](artifacts/repair_normalize_01/). Source code and model outputs are preserved separately; no candidate was repaired by Codex. Full three-file G2 and dynamic G3 remain NOT_PROVEN.
+
+The tool-library bridge and deterministic native utility proof are tracked separately under E1/tooling/. A local model catalog also lists gpt-oss:20b, but no generation, route binding, resource fit or quality claim was made for it. A closed trial must never be restarted through a new identity to hide consumed counters.
