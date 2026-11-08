@@ -1,0 +1,1396 @@
+{
+  "schema": "awe.e1.g1-report/1",
+  "status": "BLOCKED_OR_REPAIR",
+  "run_id": "g1_normalize_01",
+  "started_at": "2026-11-08T10:03:58.539Z",
+  "finished_at": "2026-11-08T10:05:14.798Z",
+  "source_pins": [
+    {
+      "path": "E1/executors/coding/contracts.mjs",
+      "sha256": "1e8d68d5ca78dc42c2649e4c119d744079cf6615a0cb80fdaf4331ea48637e73"
+    },
+    {
+      "path": "E1/executors/coding/executor.mjs",
+      "sha256": "ed6ca71a675fcc291b4a35c294359d3982e054dde2838c14be84bbe903c79a1d"
+    },
+    {
+      "path": "E1/executors/coding/index.mjs",
+      "sha256": "a15cbfe006f2181f9a27522e53fd3f2b2164d6e1db3f1e46bd8dd052a731ad79"
+    },
+    {
+      "path": "E1/host/coding/coordinator-binding.mjs",
+      "sha256": "0285e6940e01aa1718b3abe5a610e9c499e709bd431ede52506399ade6be84cd"
+    },
+    {
+      "path": "E1/host/coding/git-port.mjs",
+      "sha256": "1fea6a9593d269f0b10502171843899fbcc2b6393f5c1a4a89d300224cfca1d6"
+    },
+    {
+      "path": "E1/host/coding/grant-authority.mjs",
+      "sha256": "8cc099be17850bc1ec2ae78188f5f9fa23fd0ce104347bef692f813484e99a67"
+    },
+    {
+      "path": "E1/host/coding/issue-reader.mjs",
+      "sha256": "a6930e5527f833d123a0dfcbaf22a37acddd387f999b9dfc5c6e3169e1cf7159"
+    },
+    {
+      "path": "E1/host/coding/mission.mjs",
+      "sha256": "5045c3d87b64fe58e8d621e29e5410279a0abcfed7c26e6502001bbc72a8abfc"
+    },
+    {
+      "path": "E1/host/coding/model-port.mjs",
+      "sha256": "a9ae2857b2517f39907fefbd7613f7282dcdeac4ca66f6190c92d4884ab847b2"
+    },
+    {
+      "path": "E1/host/coding/pilot.mjs",
+      "sha256": "710165d97bfda5c0930ac9fa1769a396526a2cefcd2775d21365dc4265be5513"
+    },
+    {
+      "path": "E1/host/coding/policy.mjs",
+      "sha256": "193a93a7a27d699950a469462515687672e7e01d8f20d471eacdfe75635bc323"
+    },
+    {
+      "path": "E1/host/coding/publisher-intent.mjs",
+      "sha256": "7b3d9c0dd14a27d568593fa15a5993658e9dd9f5cf6fa6dc3d57886a8184fd49"
+    },
+    {
+      "path": "E1/host/coding/repository-context.mjs",
+      "sha256": "f3c2d6f132a8fb325704f7547c5f1984a1bd5631bd0e391ffccf41e2b76b58c4"
+    },
+    {
+      "path": "E1/host/program-runner/profiles.mjs",
+      "sha256": "9fe9fe1b4c4c42ce0b7442b65ae4d142d53bcf0b0f2aae14a58c8838d5a453ad"
+    },
+    {
+      "path": "E1/host/program-runner/receipts.mjs",
+      "sha256": "fae085666d58555f90095297dc8f3629e6f04ccc215fa4fcbdfbd133a886eb1b"
+    },
+    {
+      "path": "E1/host/program-runner/runner.mjs",
+      "sha256": "6272216e512f30151c507cbc693e39a8abb35e90995ef658341666108031a81d"
+    },
+    {
+      "path": "E1/host/program-runner/sandbox.py",
+      "sha256": "732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c"
+    },
+    {
+      "path": "E1/qa-coding/cold-readback.mjs",
+      "sha256": "3afb6ea4a0accbc9c90e87773a7d9e2ef17e9aadda771f4d83e0e5b66b966f1b"
+    },
+    {
+      "path": "E1/qa-coding/commitments.mjs",
+      "sha256": "fc338efdbbf06915bb95c05c7570f55e962c401ec7637f6e020b302d647c0992"
+    },
+    {
+      "path": "E1/qa-coding/git-readback.mjs",
+      "sha256": "d3fae781af34d3c29a86465351d67b8fdaad43cb543c88bc2f7dce94fad0c54c"
+    },
+    {
+      "path": "E1/qa-coding/holdout.json",
+      "sha256": "a9596447c9f8e924a8bb4b62f292f1cc35f38824aa58fab91d4de01b2989510f"
+    },
+    {
+      "path": "E1/qa-coding/leaf.mjs",
+      "sha256": "b6c36efc0778d84804d0f85528278cc5c2890072f353e86b665582c46007c5dc"
+    },
+    {
+      "path": "E1/qa-coding/native-review.mjs",
+      "sha256": "b692c7b1ed56486e49b68f1ad661951ed635f70cdf85108d4c29a026a0774cde"
+    },
+    {
+      "path": "E1/qa-coding/oracle.mjs",
+      "sha256": "6d15c35354374f55163ac88e12a18ae8eb16915c4220404c8bdd52049447442f"
+    },
+    {
+      "path": "E1/qa-coding/public-brief.json",
+      "sha256": "5a54de4633f2bedd9cf1023bc24377ad5c70c0e071b358f97a13bffbb6b68687"
+    },
+    {
+      "path": "E1/qa-coding/tree-proof.mjs",
+      "sha256": "691283ecbe8809a59be82a68b023eb8f1990d618454b6ce4db2bf447b8b113e4"
+    },
+    {
+      "path": "E1/qa-coding/verify-cold.mjs",
+      "sha256": "66534e3548ce386d5e38636a6939e27e87270072caffe72b6e360f7c1efc9d64"
+    }
+  ],
+  "source_pin_digest": "sha256:352d2d5b2954552a54e56bc5ca44e50b32f464592a1a1907176c87c2342b699a",
+  "issue": {
+    "repository": {
+      "owner": "failm3",
+      "name": "awe-group-runtime"
+    },
+    "issue_number": 8,
+    "title": "Normalize fictional events from JSON Lines",
+    "body": "Implement exactly two Python 3 standard-library files, normalizer.py and cli.py, in the root of the disposable repository. In normalizer.py implement normalize_event(value). Accept a JSON object only if both id and kind are strings. Strip ASCII spaces, tabs, carriage returns and newlines from both ends of both strings. If either is empty after trimming, or the input is invalid, return None. Otherwise return a dict with exactly id (preserve case) and kind (lowercase ASCII); ignore extra fields. Input strings in this task consist of printable ASCII plus the listed whitespace. In cli.py import and actually call normalizer.normalize_event (direct function import also accepted). Read UTF-8 JSON Lines from standard input. Skip blank, malformed and invalid records. Emit one valid JSON object per accepted input on its own line in input order; preserve duplicates. Produce no other stdout and no stderr; exit zero for the specified inputs, including empty input and a final line without a newline. JSON key order and insignificant whitespace are immaterial. Example input {\"id\":\" Z9 \",\"kind\":\" Open \",\"n\":4} produces {\"id\":\"Z9\",\"kind\":\"open\"}. Do not access files other than imports of the approved modules, the network, environment or subprocesses. Supply only the two full-file patch changes through the registered schema.",
+    "digest": "sha256:d038745c393a2f9ce7547f9ccae3c9b83ab9fae7c7250f2e5a2eb2b20bf50e33"
+  },
+  "input_origin": "SOL_AUTHENTICATED_GITHUB_SNAPSHOT",
+  "brief_sha256": "5a54de4633f2bedd9cf1023bc24377ad5c70c0e071b358f97a13bffbb6b68687",
+  "oracle_commitment": "sha256:a9596447c9f8e924a8bb4b62f292f1cc35f38824aa58fab91d4de01b2989510f",
+  "fixture": {
+    "spec": {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "mission_id": "mission_coding_g1_normalize_01",
+      "project_id": "prj_coding_g1_normalize_01",
+      "owner_id": "e1_owner",
+      "revision": 1,
+      "goal": "G1-NORMALIZE-01: AWE generates two cooperating Python files from the frozen synthetic brief, tests the exact Git tree and submits it to independent QA. No manual solution, network effects or production release.",
+      "criteria": [
+        {
+          "criterion_id": "component",
+          "text": "Both generated files are necessary, pass independent hidden integration checks, and have native model/Git provenance."
+        }
+      ],
+      "facts_refs": [
+        {
+          "contract_version": "awe.e1.contracts/1",
+          "release": "AWE_E1/1",
+          "artifact_id": "brief_g1_normalize_01",
+          "project_id": "prj_coding_g1_normalize_01",
+          "mission_id": "mission_coding_g1_normalize_01",
+          "uri": "artifact:coding/g1_normalize_01/brief",
+          "digest": "sha256:d038745c393a2f9ce7547f9ccae3c9b83ab9fae7c7250f2e5a2eb2b20bf50e33",
+          "media_type": "application/json",
+          "schema": {
+            "schema_id": "e1.coding.issue-snapshot",
+            "version": "1.0.0",
+            "digest": "sha256:82ef96cebaf5fbe16269fd18b0240d78f5b9b90a4155a17eb797115b09148ecf"
+          },
+          "data_class": "PUBLIC",
+          "origin": "OWNER",
+          "producer_id": "e1_owner",
+          "created_at": "2026-11-08T10:03:58.539Z"
+        }
+      ],
+      "domain_manifest": {
+        "manifest_id": "domain.coding_g1",
+        "version": "1.0.0",
+        "digest": "sha256:65c4b194214a48e8f0c9dcf1de8cd34b44ec69e1242bf6cffe7d511e224584ba"
+      },
+      "requested_capabilities": [
+        {
+          "contract_version": "awe.e1.contracts/1",
+          "release": "AWE_E1/1",
+          "capability_id": "e1.coding.patch",
+          "version": "1.0.0",
+          "manifest_digest": "sha256:0ca4e303082f460d2e1c6a9cf35bc10d0c1c0f3e60e8e32d0678cd68b379a5a5",
+          "input_schema": {
+            "schema_id": "e1.instruction",
+            "version": "1.0.0",
+            "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+          },
+          "output_schema": {
+            "schema_id": "e1.coding.patch.proposal",
+            "version": "1.0.0",
+            "digest": "sha256:791e51a1dd3384c7852ccd5f0fd04a6c0c473e0c8402d6d68b7320a3d7b1118e"
+          }
+        }
+      ],
+      "budget": {
+        "currency": "NONE",
+        "amount_micros": "0"
+      },
+      "deadline": "2026-11-08T12:03:58.539Z",
+      "data_classes": [
+        "PUBLIC"
+      ],
+      "allowed_origins": [
+        "OWNER"
+      ],
+      "max_replans": 0,
+      "max_actions": 0
+    },
+    "grant": {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "grant_id": "grant_coding_g1_normalize_01",
+      "grant_version": 1,
+      "mission_id": "mission_coding_g1_normalize_01",
+      "project_id": "prj_coding_g1_normalize_01",
+      "owner_id": "e1_owner",
+      "issued_by": "e1_owner",
+      "spec_digest": "sha256:0e73fd3b8fce114856b96994140379ae003abdaf0e0cfe1283603efccd5a1371",
+      "issued_at": "2026-11-08T10:03:58.539Z",
+      "expires_at": "2026-11-08T12:03:58.539Z",
+      "revoked_at": null,
+      "revocation_reason": null,
+      "allowed_principals": [
+        "e1_owner",
+        "e1_head",
+        "e1_coordinator",
+        "e1_worker",
+        "e1_qa"
+      ],
+      "permissions": [
+        "mission.create",
+        "mission.revise",
+        "mission.revoke",
+        "plan.propose",
+        "plan.validate",
+        "plan.publish",
+        "artifact.read",
+        "artifact.write",
+        "qa.evaluate"
+      ],
+      "allowed_capabilities": [
+        {
+          "contract_version": "awe.e1.contracts/1",
+          "release": "AWE_E1/1",
+          "capability_id": "e1.coding.patch",
+          "version": "1.0.0",
+          "manifest_digest": "sha256:0ca4e303082f460d2e1c6a9cf35bc10d0c1c0f3e60e8e32d0678cd68b379a5a5",
+          "input_schema": {
+            "schema_id": "e1.instruction",
+            "version": "1.0.0",
+            "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+          },
+          "output_schema": {
+            "schema_id": "e1.coding.patch.proposal",
+            "version": "1.0.0",
+            "digest": "sha256:791e51a1dd3384c7852ccd5f0fd04a6c0c473e0c8402d6d68b7320a3d7b1118e"
+          }
+        }
+      ],
+      "allowed_data_classes": [
+        "PUBLIC"
+      ],
+      "allowed_origins": [
+        "OWNER"
+      ],
+      "allowed_effect_classes": [
+        "NONE"
+      ],
+      "destinations": [],
+      "max_tasks": 1,
+      "max_actions": 0,
+      "max_replans": 0,
+      "budget_cap": {
+        "currency": "NONE",
+        "amount_micros": "0"
+      }
+    },
+    "plan": {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "plan_id": "plan_coding_g1_normalize_01",
+      "mission_id": "mission_coding_g1_normalize_01",
+      "project_id": "prj_coding_g1_normalize_01",
+      "revision": 1,
+      "spec_digest": "sha256:0e73fd3b8fce114856b96994140379ae003abdaf0e0cfe1283603efccd5a1371",
+      "grant_digest": "sha256:337a21c02e6d46e7eb306500e09dcc97b224b8b9d1430027ce91e70f5fbe765a",
+      "grant_version": 1,
+      "previous_digest": null,
+      "proposed_by": "e1_head",
+      "reason": "Host-declared single G1 task: proves live multi-file execution, not adaptive planning or full autonomy.",
+      "created_at": "2026-11-08T10:03:58.539Z",
+      "budget": {
+        "currency": "NONE",
+        "amount_micros": "0"
+      },
+      "deadline": "2026-11-08T12:03:58.539Z",
+      "tasks": [
+        {
+          "contract_version": "awe.e1.contracts/1",
+          "release": "AWE_E1/1",
+          "task_id": "code_r01",
+          "title": "Normalize fictional events from JSON Lines",
+          "capability": {
+            "contract_version": "awe.e1.contracts/1",
+            "release": "AWE_E1/1",
+            "capability_id": "e1.coding.patch",
+            "version": "1.0.0",
+            "manifest_digest": "sha256:0ca4e303082f460d2e1c6a9cf35bc10d0c1c0f3e60e8e32d0678cd68b379a5a5",
+            "input_schema": {
+              "schema_id": "e1.instruction",
+              "version": "1.0.0",
+              "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+            },
+            "output_schema": {
+              "schema_id": "e1.coding.patch.proposal",
+              "version": "1.0.0",
+              "digest": "sha256:791e51a1dd3384c7852ccd5f0fd04a6c0c473e0c8402d6d68b7320a3d7b1118e"
+            }
+          },
+          "input": {
+            "instruction": "Implement exactly two Python 3 standard-library files, normalizer.py and cli.py, in the root of the disposable repository. In normalizer.py implement normalize_event(value). Accept a JSON object only if both id and kind are strings. Strip ASCII spaces, tabs, carriage returns and newlines from both ends of both strings. If either is empty after trimming, or the input is invalid, return None. Otherwise return a dict with exactly id (preserve case) and kind (lowercase ASCII); ignore extra fields. Input strings in this task consist of printable ASCII plus the listed whitespace. In cli.py import and actually call normalizer.normalize_event (direct function import also accepted). Read UTF-8 JSON Lines from standard input. Skip blank, malformed and invalid records. Emit one valid JSON object per accepted input on its own line in input order; preserve duplicates. Produce no other stdout and no stderr; exit zero for the specified inputs, including empty input and a final line without a newline. JSON key order and insignificant whitespace are immaterial. Example input {\"id\":\" Z9 \",\"kind\":\" Open \",\"n\":4} produces {\"id\":\"Z9\",\"kind\":\"open\"}. Do not access files other than imports of the approved modules, the network, environment or subprocesses. Supply only the two full-file patch changes through the registered schema."
+          },
+          "depends_on": [],
+          "dependency_bindings": [],
+          "criterion_ids": [
+            "component"
+          ],
+          "budget": {
+            "currency": "NONE",
+            "amount_micros": "0"
+          },
+          "deadline": "2026-11-08T12:03:58.539Z",
+          "timeout_ms": 300000,
+          "data_classes": [
+            "PUBLIC"
+          ],
+          "origin": {
+            "kind": "OWNER",
+            "source_digests": [
+              "sha256:d038745c393a2f9ce7547f9ccae3c9b83ab9fae7c7250f2e5a2eb2b20bf50e33"
+            ]
+          },
+          "effect": {
+            "contract_version": "awe.e1.contracts/1",
+            "release": "AWE_E1/1",
+            "effect_id": "intent_code_r01",
+            "mission_id": "mission_coding_g1_normalize_01",
+            "project_id": "prj_coding_g1_normalize_01",
+            "task_id": "code_r01",
+            "effect_class": "NONE",
+            "permission": null,
+            "destination": null,
+            "business_key": null,
+            "payload_digest": "sha256:6827b34e80b9d013f5c1ee7f137c36293e4a8713a2b8026cc5e4833a1b008db3",
+            "max_actions": 0,
+            "reconcile_capability": null,
+            "unknown_policy": "HOLD",
+            "outcome": "NOT_STARTED"
+          },
+          "retry": {
+            "max_attempts": 1,
+            "retry_on": [],
+            "on_unknown": "HOLD"
+          },
+          "qa": {
+            "rubric_id": "e1.coding.g1.rubric",
+            "rubric_digest": "sha256:d6af0a5e8b831fcd4342ffad453969bc9a62df294e289380a63f0c750bc16a88",
+            "required_checks": [
+              "schema",
+              "sources",
+              "scope"
+            ],
+            "reviewer_role": "QA"
+          }
+        }
+      ]
+    },
+    "rubric": {
+      "checks": [
+        "schema",
+        "sources",
+        "scope"
+      ],
+      "brief_sha256": "5a54de4633f2bedd9cf1023bc24377ad5c70c0e071b358f97a13bffbb6b68687",
+      "oracle_commitment": "sha256:a9596447c9f8e924a8bb4b62f292f1cc35f38824aa58fab91d4de01b2989510f",
+      "test_profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9"
+    }
+  },
+  "coding_grant": {
+    "contract_version": "awe.e1.coding-executor/2",
+    "grant_id": "coding_g1_normalize_01",
+    "owner_id": "e1_owner",
+    "project_id": "prj_coding_g1_normalize_01",
+    "mission_id": "mission_coding_g1_normalize_01",
+    "task_id": "code_r01",
+    "producer_id": "e1_worker",
+    "repository": {
+      "owner": "failm3",
+      "name": "awe-group-runtime"
+    },
+    "issue_number": 8,
+    "issue_digest": "sha256:d038745c393a2f9ce7547f9ccae3c9b83ab9fae7c7250f2e5a2eb2b20bf50e33",
+    "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+    "branch_prefix": "codex/",
+    "path_allowlist": [
+      "normalizer.py",
+      "cli.py"
+    ],
+    "read_allowlist": [
+      "normalizer.py",
+      "cli.py"
+    ],
+    "test_profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+    "model_capability": {
+      "capability_id": "e1.coding.patch",
+      "version": "1.0.0",
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "output_schema_digest": "sha256:791e51a1dd3384c7852ccd5f0fd04a6c0c473e0c8402d6d68b7320a3d7b1118e"
+    },
+    "test_capabilities": [
+      {
+        "capability_id": "e1.coding.public-tests",
+        "version": "1.0.0",
+        "command_digest": "sha256:2ba4bdf4d2f2ea8dd934c5497d2ae39b36a072fdd437811398c85930a60ba6a1",
+        "timeout_ms": 20000
+      }
+    ],
+    "budget": {
+      "currency": "NONE",
+      "amount_micros": 0
+    },
+    "issued_at": "2026-11-08T10:03:58.539Z",
+    "expires_at": "2026-11-08T12:03:58.539Z",
+    "max_steps": 16,
+    "max_model_attempts": 1,
+    "max_patch_bytes": 32768,
+    "max_files": 2,
+    "permissions": [
+      "issue.read",
+      "repository.read",
+      "worktree.create",
+      "branch.create",
+      "patch.apply",
+      "tests.run",
+      "qa.request",
+      "draft_pr.prepare"
+    ]
+  },
+  "outcome": {
+    "decision": "REPAIR",
+    "reason": "CODING_FIXED_TEST_FAILED",
+    "accepted": false,
+    "self_development_verified": false,
+    "external_mutations": 0,
+    "profile": "LIVE_SCOPED_HOST",
+    "artifact": {
+      "contract_version": "awe.e1.coding-artifact/2",
+      "grant_digest": "sha256:b4697c4da3ce25678b2368913cee2aaf4d46d3cf66dd037cfabf9a007749b7a6",
+      "issue_digest": "sha256:d038745c393a2f9ce7547f9ccae3c9b83ab9fae7c7250f2e5a2eb2b20bf50e33",
+      "repository": {
+        "owner": "failm3",
+        "name": "awe-group-runtime"
+      },
+      "issue_number": 8,
+      "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+      "branch": "codex/coding_g1_normalize_01",
+      "head_sha": "0e79374b60ab35e089ab36d6d9e6787dd63dc6e9",
+      "tree_sha": "e71dc3f0a66d1f29a09cdb572ed6d03666bf5592",
+      "attempt_scope": {
+        "mission_id": "mission_coding_g1_normalize_01",
+        "task_id": "code_r01",
+        "worker_id": "e1_worker",
+        "fence": 556,
+        "logical_request_id": "request_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+        "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775"
+      },
+      "patch": {
+        "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+        "summary": "Implement two Python files, normalizer.py and cli.py, to normalize fictional events from JSON Lines input. normalizer.py provides a function normalize_event that validates and transforms input JSON objects with id and kind fields, stripping whitespace and normalizing case. cli.py reads JSON Lines from stdin, processes each record using the normalizer, and outputs valid JSON objects in input order, preserving duplicates. Only valid records are processed; malformed or empty records are skipped. Output is strictly one valid JSON object per line, with no extra output or errors. The implementation adheres strictly to the standard library and does not access external resources.",
+        "changes": [
+          {
+            "path": "normalizer.py",
+            "before_digest": "sha256:f50ce9a5e157e3f77701abb3f07ecb393b51f9bf0151373d7457ebe7df46f2ee",
+            "after_text": "def normalize_event(value):\n    if not isinstance(value, dict):\n        return None\n    id_val = value.get(\"id\")\n    kind_val = value.get(\"kind\")\n    if not (isinstance(id_val, str) and isinstance(kind_val, str)):\n        return None\n    id_trim = id_val.strip('\\x20\\x09\\x0a\\x0d')\n    kind_trim = kind_val.strip('\\x20\\x09\\x0a\\x0d')\n    if not id_trim or not kind_trim:\n        return None\n    return {\"id\": id_trim, \"kind\": kind_trim.lower()}\n",
+            "after_digest": "sha256:bbff4366392b0320c56815851c2b240259ccdd91ff6ccbc132fd28939386b263"
+          },
+          {
+            "path": "cli.py",
+            "before_digest": "sha256:d42067cf2293ca5c5f6848f0d9e6a2ef5b492fae1ca9a5777f221ea35213050b",
+            "after_text": "import normalizer\nimport sys\nimport json\n\nfor line in sys.stdin:\n    line = line.strip()\\n    if not line:\\n        continue\n    try:\\n        record = json.loads(line)\\n        result = normalizer.normalize_event(record)\\n        if result is not None:\\n            print(json.dumps(result))\\n    except json.JSONDecodeError:\\n        continue",
+            "after_digest": "sha256:cb2fdf0f9754043cbb95f7c14d769898c9f59f88506a658e6f1e5819768e6752"
+          }
+        ],
+        "patch_bytes": 787,
+        "patch_digest": "sha256:56e576d3ce9c40140e4945e48d8382f03554fd3bfeb2ce83af21d3d4da737aae"
+      },
+      "tests": [
+        {
+          "schema": "awe.e1.program-receipt/1",
+          "status": "EXECUTED",
+          "sandbox_enforced": true,
+          "network": "DENY",
+          "boundary": {
+            "home_absent": true,
+            "windows_absent": true,
+            "repository_absent": true,
+            "private_absent": true,
+            "network_namespace": true,
+            "mount_namespace": true,
+            "pid_namespace": true,
+            "seccomp_enforced": true,
+            "no_new_privileges": true,
+            "source_readonly": true,
+            "socket_denied": true,
+            "fork_denied": true,
+            "exec_denied": true,
+            "tmpfs_bounded": true
+          },
+          "exit_code": 1,
+          "timed_out": false,
+          "output_truncated": false,
+          "output_encoding_valid": true,
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/harness/launcher.py\", line 68, in <module>\n    runpy.run_path(sys.argv[0],run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 286, in run_path\n  File \"<frozen runpy>\", line 259, in _get_code_from_file\n  File \"/work/cli.py\", line 6\n    line = line.strip()\\n    if not line:\\n        continue\n                        ^\nSyntaxError: unexpected character after line continuation character\n",
+          "stdout_bytes_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_bytes_digest": "sha256:ce9e1589092ce9079f8bae8d628b47e0ea6f66cc92c97fb95ba83ff496527626",
+          "source_files": [
+            {
+              "path": "cli.py",
+              "digest": "sha256:cb2fdf0f9754043cbb95f7c14d769898c9f59f88506a658e6f1e5819768e6752",
+              "bytes": 344
+            },
+            {
+              "path": "normalizer.py",
+              "digest": "sha256:bbff4366392b0320c56815851c2b240259ccdd91ff6ccbc132fd28939386b263",
+              "bytes": 443
+            }
+          ],
+          "source_digest": "sha256:144419454e03119086442f55780d369efdb863e6a27284fafce08dd6875c278f",
+          "stdin_digest": "sha256:0e5458115af5f1e8b2e2c295882f7337ea4b7088d3acc93f81d8817f527aa38e",
+          "entrypoint": "cli.py",
+          "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+          "sandbox_source_digest": "sha256:732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c",
+          "tested_head_sha": "0e79374b60ab35e089ab36d6d9e6787dd63dc6e9",
+          "tested_tree_sha": "e71dc3f0a66d1f29a09cdb572ed6d03666bf5592",
+          "invocation_id": "1976f27b76c84fb397bf4bece7a0f413",
+          "toolchain": {
+            "platform": "linux-x86_64",
+            "python_version": "3.14.4",
+            "python_digest": "sha256:52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+            "bwrap_version": "bubblewrap 0.11.1"
+          },
+          "limits": {
+            "source_bytes": 32768,
+            "stdin_bytes": 8192,
+            "stdout_bytes": 16384,
+            "stderr_bytes": 4096,
+            "address_space_bytes": 268435456,
+            "cpu_seconds": 2,
+            "wall_seconds": 5,
+            "tmpfs_bytes": 16777216,
+            "file_bytes": 1048576,
+            "open_fds": 32,
+            "candidate_processes": 1
+          },
+          "duration_ms": 65,
+          "output_digest": "sha256:a563415cfc3fa375c9d2308c8f76b2e37a14410d7dc78d90cdf97d5e663b1b9a",
+          "receipt_digest": "sha256:936e580b014e0ae590f990b0a9a27e43b8217eeeb53efbdb22efdee2d5f7cf0d",
+          "capability_id": "e1.coding.public-tests",
+          "command_digest": "sha256:2ba4bdf4d2f2ea8dd934c5497d2ae39b36a072fdd437811398c85930a60ba6a1",
+          "timeout_ms": 20000,
+          "program_receipt": {
+            "schema": "awe.e1.program-receipt/1",
+            "status": "EXECUTED",
+            "sandbox_enforced": true,
+            "network": "DENY",
+            "boundary": {
+              "home_absent": true,
+              "windows_absent": true,
+              "repository_absent": true,
+              "private_absent": true,
+              "network_namespace": true,
+              "mount_namespace": true,
+              "pid_namespace": true,
+              "seccomp_enforced": true,
+              "no_new_privileges": true,
+              "source_readonly": true,
+              "socket_denied": true,
+              "fork_denied": true,
+              "exec_denied": true,
+              "tmpfs_bounded": true
+            },
+            "exit_code": 1,
+            "timed_out": false,
+            "output_truncated": false,
+            "output_encoding_valid": true,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"/harness/launcher.py\", line 68, in <module>\n    runpy.run_path(sys.argv[0],run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 286, in run_path\n  File \"<frozen runpy>\", line 259, in _get_code_from_file\n  File \"/work/cli.py\", line 6\n    line = line.strip()\\n    if not line:\\n        continue\n                        ^\nSyntaxError: unexpected character after line continuation character\n",
+            "stdout_bytes_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stderr_bytes_digest": "sha256:ce9e1589092ce9079f8bae8d628b47e0ea6f66cc92c97fb95ba83ff496527626",
+            "source_files": [
+              {
+                "path": "cli.py",
+                "digest": "sha256:cb2fdf0f9754043cbb95f7c14d769898c9f59f88506a658e6f1e5819768e6752",
+                "bytes": 344
+              },
+              {
+                "path": "normalizer.py",
+                "digest": "sha256:bbff4366392b0320c56815851c2b240259ccdd91ff6ccbc132fd28939386b263",
+                "bytes": 443
+              }
+            ],
+            "source_digest": "sha256:144419454e03119086442f55780d369efdb863e6a27284fafce08dd6875c278f",
+            "stdin_digest": "sha256:0e5458115af5f1e8b2e2c295882f7337ea4b7088d3acc93f81d8817f527aa38e",
+            "entrypoint": "cli.py",
+            "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+            "sandbox_source_digest": "sha256:732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c",
+            "tested_head_sha": "0e79374b60ab35e089ab36d6d9e6787dd63dc6e9",
+            "tested_tree_sha": "e71dc3f0a66d1f29a09cdb572ed6d03666bf5592",
+            "invocation_id": "1976f27b76c84fb397bf4bece7a0f413",
+            "toolchain": {
+              "platform": "linux-x86_64",
+              "python_version": "3.14.4",
+              "python_digest": "sha256:52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+              "bwrap_version": "bubblewrap 0.11.1"
+            },
+            "limits": {
+              "source_bytes": 32768,
+              "stdin_bytes": 8192,
+              "stdout_bytes": 16384,
+              "stderr_bytes": 4096,
+              "address_space_bytes": 268435456,
+              "cpu_seconds": 2,
+              "wall_seconds": 5,
+              "tmpfs_bytes": 16777216,
+              "file_bytes": 1048576,
+              "open_fds": 32,
+              "candidate_processes": 1
+            },
+            "duration_ms": 65,
+            "output_digest": "sha256:3f63bfb72c1710b6369212890a71704f3ba4dba8802214ea0d5a1f4a96de4ab7",
+            "receipt_digest": "sha256:936e580b014e0ae590f990b0a9a27e43b8217eeeb53efbdb22efdee2d5f7cf0d"
+          }
+        }
+      ],
+      "producer_id": "e1_worker",
+      "rubric_digest": "sha256:d6af0a5e8b831fcd4342ffad453969bc9a62df294e289380a63f0c750bc16a88",
+      "model_receipt_digest": "sha256:e1dd1ad2195820e0a43a2492eafcd3fb290ea28c3b7c06edb280be2d09f492ca",
+      "steps_used": 8,
+      "profile": "LIVE_SCOPED_HOST",
+      "artifact_digest": "sha256:a4edffbd10ee73fc94ce94a12676b01db76c91841e00555f07047a41d46fcd12",
+      "accepted": false
+    },
+    "worktree_id": "wt_19ddb2858cceb0620ded1e59d242a464",
+    "steps_used": 9,
+    "model_receipt": {
+      "proposal": {
+        "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+        "summary": "Implement two Python files, normalizer.py and cli.py, to normalize fictional events from JSON Lines input. normalizer.py provides a function normalize_event that validates and transforms input JSON objects with id and kind fields, stripping whitespace and normalizing case. cli.py reads JSON Lines from stdin, processes each record using the normalizer, and outputs valid JSON objects in input order, preserving duplicates. Only valid records are processed; malformed or empty records are skipped. Output is strictly one valid JSON object per line, with no extra output or errors. The implementation adheres strictly to the standard library and does not access external resources.",
+        "changes": [
+          {
+            "path": "normalizer.py",
+            "before_digest": "sha256:f50ce9a5e157e3f77701abb3f07ecb393b51f9bf0151373d7457ebe7df46f2ee",
+            "after_text": "def normalize_event(value):\n    if not isinstance(value, dict):\n        return None\n    id_val = value.get(\"id\")\n    kind_val = value.get(\"kind\")\n    if not (isinstance(id_val, str) and isinstance(kind_val, str)):\n        return None\n    id_trim = id_val.strip('\\x20\\x09\\x0a\\x0d')\n    kind_trim = kind_val.strip('\\x20\\x09\\x0a\\x0d')\n    if not id_trim or not kind_trim:\n        return None\n    return {\"id\": id_trim, \"kind\": kind_trim.lower()}\n"
+          },
+          {
+            "path": "cli.py",
+            "before_digest": "sha256:d42067cf2293ca5c5f6848f0d9e6a2ef5b492fae1ca9a5777f221ea35213050b",
+            "after_text": "import normalizer\nimport sys\nimport json\n\nfor line in sys.stdin:\n    line = line.strip()\\n    if not line:\\n        continue\n    try:\\n        record = json.loads(line)\\n        result = normalizer.normalize_event(record)\\n        if result is not None:\\n            print(json.dumps(result))\\n    except json.JSONDecodeError:\\n        continue"
+          }
+        ]
+      },
+      "accounting_status": "CONFIRMED",
+      "wire_attempts": 1,
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+      "actual_cost_micros": 0,
+      "usage": {
+        "input_tokens": 763,
+        "output_tokens": 554,
+        "total_duration_ns": 65040209000,
+        "eval_duration_ns": 50241962000,
+        "load_duration_ns": 9259025500,
+        "prompt_eval_duration_ns": 5528877000,
+        "latency_ms": 65050,
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "wire_attempts": 1
+      },
+      "model": {
+        "id": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560,
+          "runner": "ggml"
+        }
+      },
+      "evidence_level": "LIVE_SCOPED_HOST",
+      "native_receipt": {
+        "response": {
+          "decision": "PROPOSED",
+          "reason": "A3_MODEL_RESPONSE_VALIDATED",
+          "accepted": false,
+          "effects": 0,
+          "wire_attempts": 1,
+          "output": {
+            "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+            "summary": "Implement two Python files, normalizer.py and cli.py, to normalize fictional events from JSON Lines input. normalizer.py provides a function normalize_event that validates and transforms input JSON objects with id and kind fields, stripping whitespace and normalizing case. cli.py reads JSON Lines from stdin, processes each record using the normalizer, and outputs valid JSON objects in input order, preserving duplicates. Only valid records are processed; malformed or empty records are skipped. Output is strictly one valid JSON object per line, with no extra output or errors. The implementation adheres strictly to the standard library and does not access external resources.",
+            "changes": [
+              {
+                "path": "normalizer.py",
+                "before_digest": "sha256:f50ce9a5e157e3f77701abb3f07ecb393b51f9bf0151373d7457ebe7df46f2ee",
+                "after_text": "def normalize_event(value):\n    if not isinstance(value, dict):\n        return None\n    id_val = value.get(\"id\")\n    kind_val = value.get(\"kind\")\n    if not (isinstance(id_val, str) and isinstance(kind_val, str)):\n        return None\n    id_trim = id_val.strip('\\x20\\x09\\x0a\\x0d')\n    kind_trim = kind_val.strip('\\x20\\x09\\x0a\\x0d')\n    if not id_trim or not kind_trim:\n        return None\n    return {\"id\": id_trim, \"kind\": kind_trim.lower()}\n"
+              },
+              {
+                "path": "cli.py",
+                "before_digest": "sha256:d42067cf2293ca5c5f6848f0d9e6a2ef5b492fae1ca9a5777f221ea35213050b",
+                "after_text": "import normalizer\nimport sys\nimport json\n\nfor line in sys.stdin:\n    line = line.strip()\\n    if not line:\\n        continue\n    try:\\n        record = json.loads(line)\\n        result = normalizer.normalize_event(record)\\n        if result is not None:\\n            print(json.dumps(result))\\n    except json.JSONDecodeError:\\n        continue"
+              }
+            ]
+          },
+          "output_digest": "sha256:65b6be6a6568d42ec9595dda567564dd49e991480e83c625b966d003def6e79a",
+          "response_digest": "sha256:819f943ef74ba2afbe0893adb91fa81ac74088483d950fb720531fa74b52b213",
+          "request_hash": "sha256:8d0c7a0e5dce6051eeeb003f8c5e123d1b7b1669f357dd53ca7478d7650604f7",
+          "usage": {
+            "input_tokens": 763,
+            "output_tokens": 554,
+            "total_duration_ns": 65040209000,
+            "eval_duration_ns": 50241962000,
+            "load_duration_ns": 9259025500,
+            "prompt_eval_duration_ns": 5528877000,
+            "latency_ms": 65050,
+            "model": "qwen3:4b-instruct",
+            "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+            "wire_attempts": 1
+          },
+          "model": {
+            "id": "qwen3:4b-instruct",
+            "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M",
+              "context_length": 262144,
+              "embedding_length": 2560,
+              "runner": "ggml"
+            }
+          },
+          "accounting_status": "CONFIRMED",
+          "evidence_level": "LIVE_LOCAL_MODEL"
+        },
+        "native_attempt": {
+          "fence": 556,
+          "state": "CONFIRMED",
+          "usage": {
+            "model": "qwen3:4b-instruct",
+            "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+            "latency_ms": 65050,
+            "input_tokens": 763,
+            "output_tokens": 554,
+            "wire_attempts": 1,
+            "eval_duration_ns": 50241962000,
+            "load_duration_ns": 9259025500,
+            "total_duration_ns": 65040209000,
+            "prompt_eval_duration_ns": 5528877000
+          },
+          "reason": null,
+          "task_id": "code_r01",
+          "reserved": 0,
+          "route_id": "ollama.local.qwen3-4b-instruct",
+          "worker_id": "e1_worker",
+          "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+          "mission_id": "mission_coding_g1_normalize_01",
+          "project_id": "prj_coding_g1_normalize_01",
+          "actual_cost": 0,
+          "quota_units": 1,
+          "provider_ref": "ollama:2026-11-08T10:05:05.2615013Z",
+          "request_hash": "sha256:8d0c7a0e5dce6051eeeb003f8c5e123d1b7b1669f357dd53ca7478d7650604f7",
+          "logical_request_id": "request_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775"
+        },
+        "context_digest": "sha256:a95a90d3299f60deb47149a49bd923fbb075eb55b9493abfad58276aaa873276",
+        "scope": {
+          "mission_id": "mission_coding_g1_normalize_01",
+          "task_id": "code_r01",
+          "worker_id": "e1_worker",
+          "fence": 556,
+          "logical_request_id": "request_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+          "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775"
+        }
+      },
+      "host_binding_digest": "sha256:cf38dde6e05ca2cd5ec9c38175a1854fcf4c7b80eab7b93b7bc08e67ab334405"
+    }
+  },
+  "native_task": {
+    "fence": 556,
+    "state": "WAIT_QA",
+    "claims": 1,
+    "reason": null,
+    "result": {
+      "output": {
+        "changes": [
+          {
+            "path": "normalizer.py",
+            "after_text": "def normalize_event(value):\n    if not isinstance(value, dict):\n        return None\n    id_val = value.get(\"id\")\n    kind_val = value.get(\"kind\")\n    if not (isinstance(id_val, str) and isinstance(kind_val, str)):\n        return None\n    id_trim = id_val.strip('\\x20\\x09\\x0a\\x0d')\n    kind_trim = kind_val.strip('\\x20\\x09\\x0a\\x0d')\n    if not id_trim or not kind_trim:\n        return None\n    return {\"id\": id_trim, \"kind\": kind_trim.lower()}\n",
+            "before_digest": "sha256:f50ce9a5e157e3f77701abb3f07ecb393b51f9bf0151373d7457ebe7df46f2ee"
+          },
+          {
+            "path": "cli.py",
+            "after_text": "import normalizer\nimport sys\nimport json\n\nfor line in sys.stdin:\n    line = line.strip()\\n    if not line:\\n        continue\n    try:\\n        record = json.loads(line)\\n        result = normalizer.normalize_event(record)\\n        if result is not None:\\n            print(json.dumps(result))\\n    except json.JSONDecodeError:\\n        continue",
+            "before_digest": "sha256:d42067cf2293ca5c5f6848f0d9e6a2ef5b492fae1ca9a5777f221ea35213050b"
+          }
+        ],
+        "summary": "Implement two Python files, normalizer.py and cli.py, to normalize fictional events from JSON Lines input. normalizer.py provides a function normalize_event that validates and transforms input JSON objects with id and kind fields, stripping whitespace and normalizing case. cli.py reads JSON Lines from stdin, processes each record using the normalizer, and outputs valid JSON objects in input order, preserving duplicates. Only valid records are processed; malformed or empty records are skipped. Output is strictly one valid JSON object per line, with no extra output or errors. The implementation adheres strictly to the standard library and does not access external resources.",
+        "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258"
+      },
+      "evidence": {
+        "model_receipt": {
+          "model": {
+            "id": "qwen3:4b-instruct",
+            "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+            "details": {
+              "family": "qwen3",
+              "format": "gguf",
+              "runner": "ggml",
+              "families": [
+                "qwen3"
+              ],
+              "parent_model": "",
+              "context_length": 262144,
+              "parameter_size": "4.0B",
+              "embedding_length": 2560,
+              "quantization_level": "Q4_K_M"
+            }
+          },
+          "usage": {
+            "model": "qwen3:4b-instruct",
+            "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+            "latency_ms": 65050,
+            "input_tokens": 763,
+            "output_tokens": 554,
+            "wire_attempts": 1,
+            "eval_duration_ns": 50241962000,
+            "load_duration_ns": 9259025500,
+            "total_duration_ns": 65040209000,
+            "prompt_eval_duration_ns": 5528877000
+          },
+          "proposal": {
+            "changes": [
+              {
+                "path": "normalizer.py",
+                "after_text": "def normalize_event(value):\n    if not isinstance(value, dict):\n        return None\n    id_val = value.get(\"id\")\n    kind_val = value.get(\"kind\")\n    if not (isinstance(id_val, str) and isinstance(kind_val, str)):\n        return None\n    id_trim = id_val.strip('\\x20\\x09\\x0a\\x0d')\n    kind_trim = kind_val.strip('\\x20\\x09\\x0a\\x0d')\n    if not id_trim or not kind_trim:\n        return None\n    return {\"id\": id_trim, \"kind\": kind_trim.lower()}\n",
+                "before_digest": "sha256:f50ce9a5e157e3f77701abb3f07ecb393b51f9bf0151373d7457ebe7df46f2ee"
+              },
+              {
+                "path": "cli.py",
+                "after_text": "import normalizer\nimport sys\nimport json\n\nfor line in sys.stdin:\n    line = line.strip()\\n    if not line:\\n        continue\n    try:\\n        record = json.loads(line)\\n        result = normalizer.normalize_event(record)\\n        if result is not None:\\n            print(json.dumps(result))\\n    except json.JSONDecodeError:\\n        continue",
+                "before_digest": "sha256:d42067cf2293ca5c5f6848f0d9e6a2ef5b492fae1ca9a5777f221ea35213050b"
+              }
+            ],
+            "summary": "Implement two Python files, normalizer.py and cli.py, to normalize fictional events from JSON Lines input. normalizer.py provides a function normalize_event that validates and transforms input JSON objects with id and kind fields, stripping whitespace and normalizing case. cli.py reads JSON Lines from stdin, processes each record using the normalizer, and outputs valid JSON objects in input order, preserving duplicates. Only valid records are processed; malformed or empty records are skipped. Output is strictly one valid JSON object per line, with no extra output or errors. The implementation adheres strictly to the standard library and does not access external resources.",
+            "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258"
+          },
+          "route_id": "ollama.local.qwen3-4b-instruct",
+          "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+          "wire_attempts": 1,
+          "evidence_level": "LIVE_SCOPED_HOST",
+          "native_receipt": {
+            "scope": {
+              "fence": 556,
+              "task_id": "code_r01",
+              "worker_id": "e1_worker",
+              "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+              "mission_id": "mission_coding_g1_normalize_01",
+              "logical_request_id": "request_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775"
+            },
+            "response": {
+              "model": {
+                "id": "qwen3:4b-instruct",
+                "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+                "details": {
+                  "family": "qwen3",
+                  "format": "gguf",
+                  "runner": "ggml",
+                  "families": [
+                    "qwen3"
+                  ],
+                  "parent_model": "",
+                  "context_length": 262144,
+                  "parameter_size": "4.0B",
+                  "embedding_length": 2560,
+                  "quantization_level": "Q4_K_M"
+                }
+              },
+              "usage": {
+                "model": "qwen3:4b-instruct",
+                "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+                "latency_ms": 65050,
+                "input_tokens": 763,
+                "output_tokens": 554,
+                "wire_attempts": 1,
+                "eval_duration_ns": 50241962000,
+                "load_duration_ns": 9259025500,
+                "total_duration_ns": 65040209000,
+                "prompt_eval_duration_ns": 5528877000
+              },
+              "output": {
+                "changes": [
+                  {
+                    "path": "normalizer.py",
+                    "after_text": "def normalize_event(value):\n    if not isinstance(value, dict):\n        return None\n    id_val = value.get(\"id\")\n    kind_val = value.get(\"kind\")\n    if not (isinstance(id_val, str) and isinstance(kind_val, str)):\n        return None\n    id_trim = id_val.strip('\\x20\\x09\\x0a\\x0d')\n    kind_trim = kind_val.strip('\\x20\\x09\\x0a\\x0d')\n    if not id_trim or not kind_trim:\n        return None\n    return {\"id\": id_trim, \"kind\": kind_trim.lower()}\n",
+                    "before_digest": "sha256:f50ce9a5e157e3f77701abb3f07ecb393b51f9bf0151373d7457ebe7df46f2ee"
+                  },
+                  {
+                    "path": "cli.py",
+                    "after_text": "import normalizer\nimport sys\nimport json\n\nfor line in sys.stdin:\n    line = line.strip()\\n    if not line:\\n        continue\n    try:\\n        record = json.loads(line)\\n        result = normalizer.normalize_event(record)\\n        if result is not None:\\n            print(json.dumps(result))\\n    except json.JSONDecodeError:\\n        continue",
+                    "before_digest": "sha256:d42067cf2293ca5c5f6848f0d9e6a2ef5b492fae1ca9a5777f221ea35213050b"
+                  }
+                ],
+                "summary": "Implement two Python files, normalizer.py and cli.py, to normalize fictional events from JSON Lines input. normalizer.py provides a function normalize_event that validates and transforms input JSON objects with id and kind fields, stripping whitespace and normalizing case. cli.py reads JSON Lines from stdin, processes each record using the normalizer, and outputs valid JSON objects in input order, preserving duplicates. Only valid records are processed; malformed or empty records are skipped. Output is strictly one valid JSON object per line, with no extra output or errors. The implementation adheres strictly to the standard library and does not access external resources.",
+                "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258"
+              },
+              "reason": "A3_MODEL_RESPONSE_VALIDATED",
+              "effects": 0,
+              "accepted": false,
+              "decision": "PROPOSED",
+              "request_hash": "sha256:8d0c7a0e5dce6051eeeb003f8c5e123d1b7b1669f357dd53ca7478d7650604f7",
+              "output_digest": "sha256:65b6be6a6568d42ec9595dda567564dd49e991480e83c625b966d003def6e79a",
+              "wire_attempts": 1,
+              "evidence_level": "LIVE_LOCAL_MODEL",
+              "response_digest": "sha256:819f943ef74ba2afbe0893adb91fa81ac74088483d950fb720531fa74b52b213",
+              "accounting_status": "CONFIRMED"
+            },
+            "context_digest": "sha256:a95a90d3299f60deb47149a49bd923fbb075eb55b9493abfad58276aaa873276",
+            "native_attempt": {
+              "fence": 556,
+              "state": "CONFIRMED",
+              "usage": {
+                "model": "qwen3:4b-instruct",
+                "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+                "latency_ms": 65050,
+                "input_tokens": 763,
+                "output_tokens": 554,
+                "wire_attempts": 1,
+                "eval_duration_ns": 50241962000,
+                "load_duration_ns": 9259025500,
+                "total_duration_ns": 65040209000,
+                "prompt_eval_duration_ns": 5528877000
+              },
+              "reason": null,
+              "task_id": "code_r01",
+              "reserved": 0,
+              "route_id": "ollama.local.qwen3-4b-instruct",
+              "worker_id": "e1_worker",
+              "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+              "mission_id": "mission_coding_g1_normalize_01",
+              "project_id": "prj_coding_g1_normalize_01",
+              "actual_cost": 0,
+              "quota_units": 1,
+              "provider_ref": "ollama:2026-11-08T10:05:05.2615013Z",
+              "request_hash": "sha256:8d0c7a0e5dce6051eeeb003f8c5e123d1b7b1669f357dd53ca7478d7650604f7",
+              "logical_request_id": "request_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775"
+            }
+          },
+          "accounting_status": "CONFIRMED",
+          "actual_cost_micros": 0,
+          "host_binding_digest": "sha256:cf38dde6e05ca2cd5ec9c38175a1854fcf4c7b80eab7b93b7bc08e67ab334405"
+        },
+        "product_status": "PRODUCER_TEST_FAILED",
+        "coding_artifact": {
+          "patch": {
+            "changes": [
+              {
+                "path": "normalizer.py",
+                "after_text": "def normalize_event(value):\n    if not isinstance(value, dict):\n        return None\n    id_val = value.get(\"id\")\n    kind_val = value.get(\"kind\")\n    if not (isinstance(id_val, str) and isinstance(kind_val, str)):\n        return None\n    id_trim = id_val.strip('\\x20\\x09\\x0a\\x0d')\n    kind_trim = kind_val.strip('\\x20\\x09\\x0a\\x0d')\n    if not id_trim or not kind_trim:\n        return None\n    return {\"id\": id_trim, \"kind\": kind_trim.lower()}\n",
+                "after_digest": "sha256:bbff4366392b0320c56815851c2b240259ccdd91ff6ccbc132fd28939386b263",
+                "before_digest": "sha256:f50ce9a5e157e3f77701abb3f07ecb393b51f9bf0151373d7457ebe7df46f2ee"
+              },
+              {
+                "path": "cli.py",
+                "after_text": "import normalizer\nimport sys\nimport json\n\nfor line in sys.stdin:\n    line = line.strip()\\n    if not line:\\n        continue\n    try:\\n        record = json.loads(line)\\n        result = normalizer.normalize_event(record)\\n        if result is not None:\\n            print(json.dumps(result))\\n    except json.JSONDecodeError:\\n        continue",
+                "after_digest": "sha256:cb2fdf0f9754043cbb95f7c14d769898c9f59f88506a658e6f1e5819768e6752",
+                "before_digest": "sha256:d42067cf2293ca5c5f6848f0d9e6a2ef5b492fae1ca9a5777f221ea35213050b"
+              }
+            ],
+            "summary": "Implement two Python files, normalizer.py and cli.py, to normalize fictional events from JSON Lines input. normalizer.py provides a function normalize_event that validates and transforms input JSON objects with id and kind fields, stripping whitespace and normalizing case. cli.py reads JSON Lines from stdin, processes each record using the normalizer, and outputs valid JSON objects in input order, preserving duplicates. Only valid records are processed; malformed or empty records are skipped. Output is strictly one valid JSON object per line, with no extra output or errors. The implementation adheres strictly to the standard library and does not access external resources.",
+            "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+            "patch_bytes": 787,
+            "patch_digest": "sha256:56e576d3ce9c40140e4945e48d8382f03554fd3bfeb2ce83af21d3d4da737aae"
+          },
+          "tests": [
+            {
+              "limits": {
+                "open_fds": 32,
+                "file_bytes": 1048576,
+                "cpu_seconds": 2,
+                "stdin_bytes": 8192,
+                "tmpfs_bytes": 16777216,
+                "source_bytes": 32768,
+                "stderr_bytes": 4096,
+                "stdout_bytes": 16384,
+                "wall_seconds": 5,
+                "address_space_bytes": 268435456,
+                "candidate_processes": 1
+              },
+              "schema": "awe.e1.program-receipt/1",
+              "status": "EXECUTED",
+              "stderr": "Traceback (most recent call last):\n  File \"/harness/launcher.py\", line 68, in <module>\n    runpy.run_path(sys.argv[0],run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 286, in run_path\n  File \"<frozen runpy>\", line 259, in _get_code_from_file\n  File \"/work/cli.py\", line 6\n    line = line.strip()\\n    if not line:\\n        continue\n                        ^\nSyntaxError: unexpected character after line continuation character\n",
+              "stdout": "",
+              "network": "DENY",
+              "boundary": {
+                "exec_denied": true,
+                "fork_denied": true,
+                "home_absent": true,
+                "pid_namespace": true,
+                "socket_denied": true,
+                "tmpfs_bounded": true,
+                "private_absent": true,
+                "windows_absent": true,
+                "mount_namespace": true,
+                "source_readonly": true,
+                "seccomp_enforced": true,
+                "network_namespace": true,
+                "no_new_privileges": true,
+                "repository_absent": true
+              },
+              "exit_code": 1,
+              "timed_out": false,
+              "toolchain": {
+                "platform": "linux-x86_64",
+                "bwrap_version": "bubblewrap 0.11.1",
+                "python_digest": "sha256:52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+                "python_version": "3.14.4"
+              },
+              "entrypoint": "cli.py",
+              "timeout_ms": 20000,
+              "duration_ms": 65,
+              "source_files": [
+                {
+                  "path": "cli.py",
+                  "bytes": 344,
+                  "digest": "sha256:cb2fdf0f9754043cbb95f7c14d769898c9f59f88506a658e6f1e5819768e6752"
+                },
+                {
+                  "path": "normalizer.py",
+                  "bytes": 443,
+                  "digest": "sha256:bbff4366392b0320c56815851c2b240259ccdd91ff6ccbc132fd28939386b263"
+                }
+              ],
+              "stdin_digest": "sha256:0e5458115af5f1e8b2e2c295882f7337ea4b7088d3acc93f81d8817f527aa38e",
+              "capability_id": "e1.coding.public-tests",
+              "invocation_id": "1976f27b76c84fb397bf4bece7a0f413",
+              "output_digest": "sha256:a563415cfc3fa375c9d2308c8f76b2e37a14410d7dc78d90cdf97d5e663b1b9a",
+              "source_digest": "sha256:144419454e03119086442f55780d369efdb863e6a27284fafce08dd6875c278f",
+              "command_digest": "sha256:2ba4bdf4d2f2ea8dd934c5497d2ae39b36a072fdd437811398c85930a60ba6a1",
+              "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+              "receipt_digest": "sha256:936e580b014e0ae590f990b0a9a27e43b8217eeeb53efbdb22efdee2d5f7cf0d",
+              "program_receipt": {
+                "limits": {
+                  "open_fds": 32,
+                  "file_bytes": 1048576,
+                  "cpu_seconds": 2,
+                  "stdin_bytes": 8192,
+                  "tmpfs_bytes": 16777216,
+                  "source_bytes": 32768,
+                  "stderr_bytes": 4096,
+                  "stdout_bytes": 16384,
+                  "wall_seconds": 5,
+                  "address_space_bytes": 268435456,
+                  "candidate_processes": 1
+                },
+                "schema": "awe.e1.program-receipt/1",
+                "status": "EXECUTED",
+                "stderr": "Traceback (most recent call last):\n  File \"/harness/launcher.py\", line 68, in <module>\n    runpy.run_path(sys.argv[0],run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 286, in run_path\n  File \"<frozen runpy>\", line 259, in _get_code_from_file\n  File \"/work/cli.py\", line 6\n    line = line.strip()\\n    if not line:\\n        continue\n                        ^\nSyntaxError: unexpected character after line continuation character\n",
+                "stdout": "",
+                "network": "DENY",
+                "boundary": {
+                  "exec_denied": true,
+                  "fork_denied": true,
+                  "home_absent": true,
+                  "pid_namespace": true,
+                  "socket_denied": true,
+                  "tmpfs_bounded": true,
+                  "private_absent": true,
+                  "windows_absent": true,
+                  "mount_namespace": true,
+                  "source_readonly": true,
+                  "seccomp_enforced": true,
+                  "network_namespace": true,
+                  "no_new_privileges": true,
+                  "repository_absent": true
+                },
+                "exit_code": 1,
+                "timed_out": false,
+                "toolchain": {
+                  "platform": "linux-x86_64",
+                  "bwrap_version": "bubblewrap 0.11.1",
+                  "python_digest": "sha256:52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41",
+                  "python_version": "3.14.4"
+                },
+                "entrypoint": "cli.py",
+                "duration_ms": 65,
+                "source_files": [
+                  {
+                    "path": "cli.py",
+                    "bytes": 344,
+                    "digest": "sha256:cb2fdf0f9754043cbb95f7c14d769898c9f59f88506a658e6f1e5819768e6752"
+                  },
+                  {
+                    "path": "normalizer.py",
+                    "bytes": 443,
+                    "digest": "sha256:bbff4366392b0320c56815851c2b240259ccdd91ff6ccbc132fd28939386b263"
+                  }
+                ],
+                "stdin_digest": "sha256:0e5458115af5f1e8b2e2c295882f7337ea4b7088d3acc93f81d8817f527aa38e",
+                "invocation_id": "1976f27b76c84fb397bf4bece7a0f413",
+                "output_digest": "sha256:3f63bfb72c1710b6369212890a71704f3ba4dba8802214ea0d5a1f4a96de4ab7",
+                "source_digest": "sha256:144419454e03119086442f55780d369efdb863e6a27284fafce08dd6875c278f",
+                "profile_digest": "sha256:e15853d22733e247366dcdff8a92e69c7d0ec45576f79f3329355974947d5bf9",
+                "receipt_digest": "sha256:936e580b014e0ae590f990b0a9a27e43b8217eeeb53efbdb22efdee2d5f7cf0d",
+                "tested_head_sha": "0e79374b60ab35e089ab36d6d9e6787dd63dc6e9",
+                "tested_tree_sha": "e71dc3f0a66d1f29a09cdb572ed6d03666bf5592",
+                "output_truncated": false,
+                "sandbox_enforced": true,
+                "stderr_bytes_digest": "sha256:ce9e1589092ce9079f8bae8d628b47e0ea6f66cc92c97fb95ba83ff496527626",
+                "stdout_bytes_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "output_encoding_valid": true,
+                "sandbox_source_digest": "sha256:732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c"
+              },
+              "tested_head_sha": "0e79374b60ab35e089ab36d6d9e6787dd63dc6e9",
+              "tested_tree_sha": "e71dc3f0a66d1f29a09cdb572ed6d03666bf5592",
+              "output_truncated": false,
+              "sandbox_enforced": true,
+              "stderr_bytes_digest": "sha256:ce9e1589092ce9079f8bae8d628b47e0ea6f66cc92c97fb95ba83ff496527626",
+              "stdout_bytes_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "output_encoding_valid": true,
+              "sandbox_source_digest": "sha256:732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c"
+            }
+          ],
+          "branch": "codex/coding_g1_normalize_01",
+          "profile": "LIVE_SCOPED_HOST",
+          "accepted": false,
+          "base_sha": "290794e859bc002a85b76e58e4bcd43d95ac3258",
+          "head_sha": "0e79374b60ab35e089ab36d6d9e6787dd63dc6e9",
+          "tree_sha": "e71dc3f0a66d1f29a09cdb572ed6d03666bf5592",
+          "repository": {
+            "name": "awe-group-runtime",
+            "owner": "failm3"
+          },
+          "steps_used": 8,
+          "producer_id": "e1_worker",
+          "grant_digest": "sha256:b4697c4da3ce25678b2368913cee2aaf4d46d3cf66dd037cfabf9a007749b7a6",
+          "issue_digest": "sha256:d038745c393a2f9ce7547f9ccae3c9b83ab9fae7c7250f2e5a2eb2b20bf50e33",
+          "issue_number": 8,
+          "attempt_scope": {
+            "fence": 556,
+            "task_id": "code_r01",
+            "worker_id": "e1_worker",
+            "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+            "mission_id": "mission_coding_g1_normalize_01",
+            "logical_request_id": "request_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775"
+          },
+          "rubric_digest": "sha256:d6af0a5e8b831fcd4342ffad453969bc9a62df294e289380a63f0c750bc16a88",
+          "artifact_digest": "sha256:a4edffbd10ee73fc94ce94a12676b01db76c91841e00555f07047a41d46fcd12",
+          "contract_version": "awe.e1.coding-artifact/2",
+          "model_receipt_digest": "sha256:e1dd1ad2195820e0a43a2492eafcd3fb290ea28c3b7c06edb280be2d09f492ca"
+        }
+      },
+      "artifact_digest": "sha256:65b6be6a6568d42ec9595dda567564dd49e991480e83c625b966d003def6e79a",
+      "output_schema_digest": "sha256:791e51a1dd3384c7852ccd5f0fd04a6c0c473e0c8402d6d68b7320a3d7b1118e"
+    },
+    "task_id": "code_r01",
+    "deadline": "2026-11-08T15:03:58.539+03:00",
+    "document": {
+      "qa": {
+        "rubric_id": "e1.coding.g1.rubric",
+        "reviewer_role": "QA",
+        "rubric_digest": "sha256:d6af0a5e8b831fcd4342ffad453969bc9a62df294e289380a63f0c750bc16a88",
+        "required_checks": [
+          "schema",
+          "sources",
+          "scope"
+        ]
+      },
+      "input": {
+        "instruction": "Implement exactly two Python 3 standard-library files, normalizer.py and cli.py, in the root of the disposable repository. In normalizer.py implement normalize_event(value). Accept a JSON object only if both id and kind are strings. Strip ASCII spaces, tabs, carriage returns and newlines from both ends of both strings. If either is empty after trimming, or the input is invalid, return None. Otherwise return a dict with exactly id (preserve case) and kind (lowercase ASCII); ignore extra fields. Input strings in this task consist of printable ASCII plus the listed whitespace. In cli.py import and actually call normalizer.normalize_event (direct function import also accepted). Read UTF-8 JSON Lines from standard input. Skip blank, malformed and invalid records. Emit one valid JSON object per accepted input on its own line in input order; preserve duplicates. Produce no other stdout and no stderr; exit zero for the specified inputs, including empty input and a final line without a newline. JSON key order and insignificant whitespace are immaterial. Example input {\"id\":\" Z9 \",\"kind\":\" Open \",\"n\":4} produces {\"id\":\"Z9\",\"kind\":\"open\"}. Do not access files other than imports of the approved modules, the network, environment or subprocesses. Supply only the two full-file patch changes through the registered schema."
+      },
+      "retry": {
+        "retry_on": [],
+        "on_unknown": "HOLD",
+        "max_attempts": 1
+      },
+      "title": "Normalize fictional events from JSON Lines",
+      "budget": {
+        "currency": "NONE",
+        "amount_micros": "0"
+      },
+      "effect": {
+        "outcome": "NOT_STARTED",
+        "release": "AWE_E1/1",
+        "task_id": "code_r01",
+        "effect_id": "intent_code_r01",
+        "mission_id": "mission_coding_g1_normalize_01",
+        "permission": null,
+        "project_id": "prj_coding_g1_normalize_01",
+        "destination": null,
+        "max_actions": 0,
+        "business_key": null,
+        "effect_class": "NONE",
+        "payload_digest": "sha256:6827b34e80b9d013f5c1ee7f137c36293e4a8713a2b8026cc5e4833a1b008db3",
+        "unknown_policy": "HOLD",
+        "contract_version": "awe.e1.contracts/1",
+        "reconcile_capability": null
+      },
+      "origin": {
+        "kind": "OWNER",
+        "source_digests": [
+          "sha256:d038745c393a2f9ce7547f9ccae3c9b83ab9fae7c7250f2e5a2eb2b20bf50e33"
+        ]
+      },
+      "release": "AWE_E1/1",
+      "task_id": "code_r01",
+      "deadline": "2026-11-08T12:03:58.539Z",
+      "capability": {
+        "release": "AWE_E1/1",
+        "version": "1.0.0",
+        "input_schema": {
+          "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8",
+          "version": "1.0.0",
+          "schema_id": "e1.instruction"
+        },
+        "capability_id": "e1.coding.patch",
+        "output_schema": {
+          "digest": "sha256:791e51a1dd3384c7852ccd5f0fd04a6c0c473e0c8402d6d68b7320a3d7b1118e",
+          "version": "1.0.0",
+          "schema_id": "e1.coding.patch.proposal"
+        },
+        "manifest_digest": "sha256:0ca4e303082f460d2e1c6a9cf35bc10d0c1c0f3e60e8e32d0678cd68b379a5a5",
+        "contract_version": "awe.e1.contracts/1"
+      },
+      "depends_on": [],
+      "timeout_ms": 300000,
+      "data_classes": [
+        "PUBLIC"
+      ],
+      "criterion_ids": [
+        "component"
+      ],
+      "contract_version": "awe.e1.contracts/1",
+      "dependency_bindings": []
+    },
+    "priority": 0,
+    "is_current": true,
+    "max_claims": 1,
+    "mission_id": "mission_coding_g1_normalize_01",
+    "project_id": "prj_coding_g1_normalize_01",
+    "plan_digest": "sha256:e230a3048960b23064e3e59d8604594e071110fafd4240fa67d26a5b7fc4d2d0",
+    "producer_id": "e1_worker",
+    "reserve_cap": 0,
+    "result_hash": "sha256:8ff06c08d5cd59359039da1c1d6dae00c89cbac972e9769952315b092b7eae79",
+    "model_routes": [
+      "ollama.local.qwen3-4b-instruct"
+    ],
+    "capability_id": "e1.coding.patch",
+    "executor_kind": "llm",
+    "output_schema": {
+      "type": "object",
+      "required": [
+        "base_sha",
+        "summary",
+        "changes"
+      ],
+      "properties": {
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "before_digest",
+              "after_text"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "maxLength": 240,
+                "minLength": 1
+              },
+              "after_text": {
+                "type": "string",
+                "maxLength": 65536
+              },
+              "before_digest": {
+                "type": "string",
+                "pattern": "^(?:sha256:[a-f0-9]{64}|ABSENT)$",
+                "maxLength": 71,
+                "minLength": 6
+              }
+            },
+            "additionalProperties": false
+          },
+          "maxItems": 16,
+          "minItems": 1
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 1024,
+          "minLength": 1
+        },
+        "base_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$",
+          "maxLength": 40,
+          "minLength": 40
+        }
+      },
+      "additionalProperties": false
+    },
+    "resource_keys": [
+      "local_model"
+    ],
+    "capability_version": "1.0.0"
+  },
+  "native_attempts": [
+    {
+      "fence": 556,
+      "state": "CONFIRMED",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 65050,
+        "input_tokens": 763,
+        "output_tokens": 554,
+        "wire_attempts": 1,
+        "eval_duration_ns": 50241962000,
+        "load_duration_ns": 9259025500,
+        "total_duration_ns": 65040209000,
+        "prompt_eval_duration_ns": 5528877000
+      },
+      "reason": null,
+      "task_id": "code_r01",
+      "reserved": 0,
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "worker_id": "e1_worker",
+      "attempt_id": "attempt_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775",
+      "mission_id": "mission_coding_g1_normalize_01",
+      "project_id": "prj_coding_g1_normalize_01",
+      "actual_cost": 0,
+      "quota_units": 1,
+      "provider_ref": "ollama:2026-11-08T10:05:05.2615013Z",
+      "request_hash": "sha256:8d0c7a0e5dce6051eeeb003f8c5e123d1b7b1669f357dd53ca7478d7650604f7",
+      "logical_request_id": "request_1b9815faf48135e09546c82932ddbf6a7425ccf85fbe27dca0d3dab489ce7775"
+    }
+  ],
+  "ledger": {
+    "spent": 0,
+    "reserved": 0,
+    "quota_used": 1
+  },
+  "qa": null,
+  "runner_source_pins": [
+    {
+      "file": "E1/host/program-runner/profiles.mjs",
+      "digest": "sha256:9fe9fe1b4c4c42ce0b7442b65ae4d142d53bcf0b0f2aae14a58c8838d5a453ad"
+    },
+    {
+      "file": "E1/host/program-runner/receipts.mjs",
+      "digest": "sha256:fae085666d58555f90095297dc8f3629e6f04ccc215fa4fcbdfbd133a886eb1b"
+    },
+    {
+      "file": "E1/host/program-runner/runner.mjs",
+      "digest": "sha256:6272216e512f30151c507cbc693e39a8abb35e90995ef658341666108031a81d"
+    },
+    {
+      "file": "E1/host/program-runner/sandbox.py",
+      "digest": "sha256:732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c"
+    }
+  ],
+  "api_actual_cost_micros": 0,
+  "paid_generations": 0,
+  "external_effects": 0,
+  "sol_candidate_edits": 0,
+  "adaptive_repair": "NOT_TESTED",
+  "dynamic_agents": "NOT_TESTED",
+  "github_dispatch": "LOCAL_INTENT_ONLY",
+  "accepted": false
+}

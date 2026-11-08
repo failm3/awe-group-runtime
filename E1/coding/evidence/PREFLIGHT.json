@@ -1,0 +1,57 @@
+{
+  "schema": "awe.e1.g1-preflight/1",
+  "source_commit": "9e3aa737db653e6e8d8d712da0557fe1ac2677ca",
+  "root_executed_legacy_regression": {
+    "command": [
+      "node",
+      "--test",
+      "--test-concurrency=1",
+      "--test-reporter=tap",
+      "E1/tests/coordinator/quiescence.test.mjs",
+      "E1/tests/coordinator/resource.test.mjs",
+      "E1/tests/broker/broker.test.mjs",
+      "E1/tests/executors/coding.test.mjs",
+      "E1/tests/host/artifact-binding.test.mjs",
+      "E1/qa2/model-seams.test.mjs",
+      "E1/qa2/maintenance-oracle.test.mjs"
+    ],
+    "status": 0,
+    "error": null,
+    "summary": {
+      "tests": 69,
+      "pass": 69,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "stdout_sha256": "a5c0ed12cd72063aabcf00a658475da4089ef9df43261ae6d9dc612d264ee26d",
+    "new_model_calls": 0,
+    "postgresql_connections": 0
+  },
+  "root_executed_contract_qa_profile_tests": {
+    "tests": 56,
+    "pass": 56,
+    "model_calls": 0,
+    "pg_connections": 0
+  },
+  "independent_astra_final_targeted": {
+    "tests": 31,
+    "pass": 31
+  },
+  "engineer_reported": {
+    "P1_local_git_and_contracts": {
+      "tests": 36,
+      "pass": 36
+    },
+    "P2_offline": {
+      "tests": 21,
+      "pass": 21
+    },
+    "P2_actual_wsl_bwrap": {
+      "tests": 7,
+      "pass": 7
+    }
+  },
+  "counts_overlap_do_not_sum": true,
+  "source_code_scope": "P0/P1/P2/P3 interfaces and adversarial controls; not successful G1 quality"
+}
