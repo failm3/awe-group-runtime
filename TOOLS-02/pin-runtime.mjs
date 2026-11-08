@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import {PINNED_FILES} from '../awe/executable_tools/pins.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const hash=p=>'sha256:'+createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const binaries={node:process.execPath,python:'C:/Users/1/AppData/Local/Programs/Python/Python313/python.exe',git:'C:/Program Files/Git/cmd/git.exe'};
+const lock={contract:'tools02.runtime/1',node_version:process.version,files:PINNED_FILES.map(p=>({path:p,digest:hash(path.join(root,p))})),binaries:Object.fromEntries(Object.entries(binaries).map(([id,p])=>{const resolved=fs.realpathSync(p);return [id,{path:resolved,digest:hash(resolved)}];}))};
+fs.writeFileSync(path.join(root,'TOOLS-02/runtime-lock.json'),JSON.stringify(lock,null,2)+'\n');
+console.log(JSON.stringify({status:'PINNED_LOCAL_E0',files:lock.files.length,binaries:Object.keys(binaries),approval:'NOT_IMPLIED'}));

@@ -1,0 +1,120 @@
+{
+  "schema": "awe.qa2.export-safety.delta-review.v1",
+  "reviewed_at": "2026-11-08T00:26:18.332Z",
+  "verdict": "GO_EXACT_454_SOURCE_PLUS_2_DISABLED_TEMPLATES_AND_5_REVIEWED_ROOT_FILES",
+  "source_revision": "c6c2db24c4648d96fd93c8fe7da63ba98dd9af19",
+  "source_files": 454,
+  "source_byte_identical": 453,
+  "declared_transformations": [
+    {
+      "path": "INTEGRATION-01/adapters/int04-host.mjs",
+      "source_sha256": "b4b9a63517024a8fe00e2ca285baaf6d06f67f704817ac85bcc2d096422bf164",
+      "export_sha256": "00598c38437c70ce8e73cd29c8ca72543e6b8e2bacedb7924f30ded0868a9925",
+      "exact_change": "Only defer historical MASTER01 import into its explicit branch",
+      "bytes": 40454
+    }
+  ],
+  "new_source_files": [
+    {
+      "path": "INTEGRATION-01/ui/index.html",
+      "sha256": "14506fe9893b9d308a8c0bf71686944d7852418070d483bfa2d3c450b84ea775",
+      "bytes": 1056
+    },
+    {
+      "path": "INTEGRATION-01/ui/styles.css",
+      "sha256": "2666109eea4f82dd3c22f5098a1612510b94b2e2a0eb4e2740a5c7e121dbda6d",
+      "bytes": 26751
+    },
+    {
+      "path": "RT-02/make-diff.py",
+      "sha256": "7bafbacc25cf9a133616bab33f0b623dda9f47925af49358ebdc35d9cf4c59d7",
+      "bytes": 736
+    },
+    {
+      "path": "RT-02/package.py",
+      "sha256": "92ee685f327f3a89ee8539486db337c83b2aa028dff8fe09e606f791d7d994e0",
+      "bytes": 1895
+    },
+    {
+      "path": "RT-02/replay-package.py",
+      "sha256": "72305e6b783f06c45c354c2cc9587065370756ad2494b0ebcfcdab4b1ffa8e30",
+      "bytes": 2002
+    },
+    {
+      "path": "awe/hermes_runtime/config.yaml",
+      "sha256": "836abbbcf11f60720a887ed1a630601f3332111100d0ce6b01a36fba8917e255",
+      "bytes": 654
+    },
+    {
+      "path": "awe/hermes_runtime/executors/job-host.py",
+      "sha256": "22d5af59621eb131b8cf89d2177fd1dd5b60ad99857601e5c6331532b6d19074",
+      "bytes": 8095
+    },
+    {
+      "path": "awe/hermes_runtime/executors/python.py",
+      "sha256": "480d1d981fd7f5fb38b66978e7ad09483562fd5e72e2ab1d068e93bd0c68baad",
+      "bytes": 1942
+    }
+  ],
+  "generated": [
+    {
+      "path": "RT-02/runtime-lock.json",
+      "sha256": "fff4418066c9e790c94c58396733bf477df3d5b26000520fdf7da52097b462aa",
+      "bytes": 809,
+      "executable_paths_and_hashes": "ALL_NULL_NO_NATIVE_BINDING"
+    },
+    {
+      "path": "TOOLS-02/runtime-lock.json",
+      "sha256": "a2644c5b9d367187f0e748d6d5baf18e3ea536c5f5f6bbfeb909362924993977",
+      "bytes": 2092,
+      "executable_paths_and_hashes": "ALL_NULL_NO_NATIVE_BINDING"
+    }
+  ],
+  "root_authored": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 88,
+      "sha256": "9cf4d3a147dae6663617c76521b9ceb2a2b8906e8fa2537daa6eaa3937242ede"
+    },
+    {
+      "path": "package.json",
+      "bytes": 253,
+      "sha256": "7e15799824335cd6269f1dad8c6c9afc91f3930a1675bee2daae53045c9fc1ec"
+    },
+    {
+      "path": "README.md",
+      "bytes": 398,
+      "sha256": "71633c2b857217aa34fe087b18c8b512e5f7c5b68ebc1fd9b57f5612ae9d06ad"
+    },
+    {
+      "path": "E1/TEAM-A2A3.md",
+      "bytes": 3290,
+      "sha256": "992020444ce52301ebc84c61ac9fca601e460a927e1f5382982459cd3cce9684"
+    }
+  ],
+  "no_new_source_secret_pii_pattern_hits": true,
+  "no_binary_symlink_special_file": true,
+  "legacy_disabled_templates_fail_before_spawn": true,
+  "native_hermes_activation_supported": false,
+  "remaining_provenance_mismatches": [],
+  "scan_sha256": "cd4a16800964f290cce37375141dbbc240a63ab0df88f421111a81245eeea1ba",
+  "mandatory_exclusions": [
+    ".git/** from any original repository",
+    ".private/**",
+    ".reference/**",
+    "E1/.local/**",
+    "E1/qa2/export-safety-scan.json",
+    "E1/qa2/export-safety-delta-scan.json"
+  ],
+  "limits": [
+    "Exact listed source and generated hashes only; concurrent A2/A3/root implementation is not included.",
+    "Historical source/helper paths remain literal source code; no legacy helper executed.",
+    "Package/replay scripts are source only; private evidence and original Git history remain excluded.",
+    "No release, deployment, owner acceptance, external effects or paid-model authorization."
+  ]
+}

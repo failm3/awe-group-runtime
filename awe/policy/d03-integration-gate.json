@@ -1,0 +1,22 @@
+{
+  "id": "d02-to-d03-offline-gate-v1",
+  "status": "READY_FOR_OFFLINE_REVIEW",
+  "contracts_version": "1.0.0",
+  "required_base_sha": "3abee561ae97428680a4fe5826b0f40ae676319a",
+  "production_ready": false,
+  "d03_implementation_in_this_package": false,
+  "requirements": [
+    {"id":"G01","owner":"D-01/integrator","requirement":"Accept exact D-02 source/evidence hashes and additive package boundary checker; root baseline checker still freezes only D-01. Update shared manifest/CI only through D-01 review.","status":"PENDING_REVIEW"},
+    {"id":"G02","owner":"D-02/D-03","requirement":"Authenticated non-JSON AuthContext source separated from worker process. Load principals, independent QA subjects, membership, policy/auth/stop/owner epochs and current task/spec/fence from authoritative state; no worker-supplied trust registry.","status":"NOT_RUN"},
+    {"id":"G03","owner":"D-03","requirement":"In a serialized durable transaction compare current revision/lease/fence/epochs, enforce scope and action/resource/payload/actor binding, consume one-use approval, reserve exact quote/cap quota and decrement child/ancestor attempts. Unique project/task/operation identity blocks replay across restart.","status":"NOT_RUN"},
+    {"id":"G04","owner":"D-03/D-04","requirement":"Before physical dispatch recheck authority at a defined linearization point against concurrent revoke/cancel. Use durable fenced inbox/outbox; dispatching/unknown outcomes retain approval consumption and reservation until reconciliation; never infer safe retry from timeout.","status":"NOT_RUN"},
+    {"id":"G05","owner":"D-03/D-07/D-08","requirement":"Apply project/task/classification ACL before retrieval, ranking, trace projection or serialization; keep hidden QA outside Executor checkout and local verdict sealed from Examiner/Auditor; independent identities cannot alias producer subject.","status":"NOT_RUN"},
+    {"id":"G06","owner":"D-02/D-03/independent QA","requirement":"Run negative suite against disposable authoritative adapter, including lost lease, stale context, unavailable store, enqueue/retrieval then revoke, concurrent approval/quota use, crash/restart/replay and child parent revoke. Store command/exit/hash and zero unauthorized physical effects.","status":"NOT_RUN"},
+    {"id":"G07","owner":"owner/ops/independent QA","requirement":"Approve disposable infrastructure/custodian and execute all 10 sandbox acceptance probes independently; no real keys, provider or live Workspace without separate authorization.","status":"NOT_RUN"}
+  ],
+  "adapter_proposals_not_d01_contract_changes": [
+    {"name":"loadSecuritySnapshot","purpose":"Return immutable authoritative state plus revision/fence; unavailable/stale state denies"},
+    {"name":"reserveAuthorizedEffect","purpose":"Atomic durable approval/operation/quota/ancestor-attempt transaction under current authority"},
+    {"name":"dispatchFencedOrReconcile","purpose":"Final authority check, durable outbox/receipt and uncertain-outcome handling"}
+  ]
+}

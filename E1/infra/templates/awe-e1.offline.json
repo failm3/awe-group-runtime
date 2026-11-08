@@ -1,0 +1,28 @@
+{
+  "schema": "awe-e1.infra.v1",
+  "composition": "AWE_E1",
+  "release": "AWE_E1/1",
+  "mode": "OFFLINE_PREFLIGHT",
+  "namespace": "awe_e1_dev",
+  "project_id": "prj_e1_career",
+  "origin": "https://awe-e1.invalid",
+  "source_commit": "3579aeeda379caf78dafe5351704956f1ecc0ea5",
+  "paths": {
+    "root": "${E1_ROOT}",
+    "state": "${E1_ROOT}/state",
+    "objects": "${E1_ROOT}/objects",
+    "backup": "${E1_ROOT}/backup",
+    "pgdata": "${E1_ROOT}/pgdata"
+  },
+  "database": {"name": "awe_e1_dev", "schema": "awe_e1_infra", "host": "127.0.0.1", "port": 55481, "enabled": false},
+  "principals": {
+    "owner": {"principal_id": "id_e1_owner", "os_account_ref": "os-account://awe-e1/owner"},
+    "issuer": {"principal_id": "id_e1_issuer", "os_account_ref": "os-account://awe-e1/issuer"},
+    "coordinator": {"principal_id": "id_e1_coordinator", "os_account_ref": "os-account://awe-e1/coordinator"},
+    "worker": {"principal_id": "id_e1_worker", "os_account_ref": "os-account://awe-e1/worker"},
+    "qa": {"principal_id": "id_e1_qa", "os_account_ref": "os-account://awe-e1/qa"},
+    "security": {"principal_id": "id_e1_security", "os_account_ref": "os-account://awe-e1/security"}
+  },
+  "model": {"enabled": false, "endpoint": null, "model_id": null, "digest": null, "status": "BLOCKED"},
+  "supervisor": {"max_restarts": 2, "stop_timeout_ms": 1500}
+}

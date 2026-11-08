@@ -1,0 +1,12 @@
+{
+  "name": "awe-group-e1-contract-preflight",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": "24.21.0", "npm": "11.19.0"},
+  "scripts": {
+    "test": "node release/verify.mjs",
+    "examples": "node --require ../baseline/offline-guard.cjs cli.mjs examples",
+    "preflight": "node --require ../baseline/offline-guard.cjs cli.mjs preflight"
+  }
+}

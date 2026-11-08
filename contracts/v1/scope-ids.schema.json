@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/scope-ids.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "contract": {
+      "const": "scope-ids"
+    },
+    "scope": {
+      "$ref": "common.schema.json#/$defs/scope"
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract",
+    "scope"
+  ],
+  "additionalProperties": false
+}

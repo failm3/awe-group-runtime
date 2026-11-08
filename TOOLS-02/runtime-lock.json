@@ -1,0 +1,68 @@
+{
+  "contract": "tools02.runtime/1",
+  "node_version": "v24.21.0",
+  "files": [
+    {
+      "path": "awe/executable_tools/protocol.mjs",
+      "digest": "sha256:11afc6b54791dba3542fbcdfcbab82d710d53b02194940e8f530a305c5517e1b"
+    },
+    {
+      "path": "awe/executable_tools/scope.mjs",
+      "digest": "sha256:1b6e9e953b26c270af525e48494fada6cf5ea5e165c016f2d13e3a2f808cb602"
+    },
+    {
+      "path": "awe/executable_tools/programs.mjs",
+      "digest": "sha256:1ad95d5d036dd113d3ce490a67c70cd960d66a77b3d93c8dc2d4a14b779954c3"
+    },
+    {
+      "path": "awe/executable_tools/pins.mjs",
+      "digest": "sha256:cd3b4af6a083737e016a3656be0290d4884ebc06ec0d40d5d4887713cd6e4172"
+    },
+    {
+      "path": "awe/executable_tools/process.mjs",
+      "digest": "sha256:a395671d6fb50f4fe74956b53102dc8a29246c0df1947590eca69ab583c24dab"
+    },
+    {
+      "path": "awe/executable_tools/verification.mjs",
+      "digest": "sha256:cf7a23bd62066c8fa7c9d80b4305ee40091d3096233350bed5f5f15fcfabe6e4"
+    },
+    {
+      "path": "awe/executable_tools/host.mjs",
+      "digest": "sha256:ccfc4833cf6d2499d93bfc70b1d7defbdb04419cd1e81580cfc0e06e736bacf6"
+    },
+    {
+      "path": "awe/executable_tools/facade.mjs",
+      "digest": "sha256:f13195b141571c9aa20d4a621ebeb2dd8f14f35700d9adebe46023ba2ea248cb"
+    },
+    {
+      "path": "awe/tool_registry/common.mjs",
+      "digest": "sha256:bb95b2e474cb5ae1a126d1a5102ecc88e950fa1976fde3cd4cc13e8f648be7e9"
+    },
+    {
+      "path": "awe/policy/json.mjs",
+      "digest": "sha256:87ad08111442d0fb6ccc54c6ea3342a581bc0b81ea7a15c8987247dd98e24126"
+    },
+    {
+      "path": "contracts/canonical.mjs",
+      "digest": "sha256:2abfaf7840f735735fb8b633ea6a0b5d0fdb56eb67e0cd1aae16f7b4775f861c"
+    },
+    {
+      "path": "TOOLS-02/child-guard.cjs",
+      "digest": "sha256:9a267c7d048e90570b98049c6b59e512dbef58ffda4c152d43f0a320bbab5c2c"
+    }
+  ],
+  "binaries": {
+    "node": {
+      "path": null,
+      "digest": null
+    },
+    "python": {
+      "path": null,
+      "digest": null
+    },
+    "git": {
+      "path": null,
+      "digest": null
+    }
+  }
+}

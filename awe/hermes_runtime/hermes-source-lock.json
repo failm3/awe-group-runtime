@@ -1,0 +1,30 @@
+{
+  "hermes_version": "0.22.2+2645.g7058601",
+  "commit": "7058601bf5cdc35502676a9b8aec0480e7e80127",
+  "python_declared": "3.14",
+  "files": [
+    {
+      "path": "runtime/pyproject.toml",
+      "bytes": 43266,
+      "sha256": "9bec0b5f97ba40a00fc52b482244d03d0e73b0b9f7380a91756cbeeefb7d660d"
+    },
+    {
+      "path": "runtime/uv.lock",
+      "bytes": 1201712,
+      "sha256": "bce2b3fa48113c4ec5beb96290d9c04cd24cc970d88ec213de077f294603d715"
+    },
+    {
+      "path": "runtime/pm/uv.lock",
+      "bytes": 3310,
+      "sha256": "735e1e9847f7b3c5f2c50ae9818573d18f71d02f6f0ea12be80a55ce03e8d831"
+    },
+    {
+      "path": "runtime/pm/lock.json",
+      "bytes": 33804,
+      "sha256": "172dbe11404b0305e81c2cea4597cb8d680e642ea7f0591a79d7a305af5a0661"
+    }
+  ],
+  "install_status": "NOT_INSTALLED_IN_AWE",
+  "wheelhouse": "NOT_AVAILABLE",
+  "effective_runtime_dependencies": "NOT_VALIDATED"
+}

@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/common.schema.json",
+  "$defs": {
+    "actor": {
+      "type": "object",
+      "properties": {
+        "identity_id": {
+          "type": "string",
+          "pattern": "^act_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        "role": {
+          "enum": [
+            "OWNER",
+            "SUPERVISOR",
+            "EXECUTOR",
+            "EXAMINER",
+            "AUDITOR",
+            "ARTIFACT_SERVICE",
+            "ROUTE_BROKER",
+            "STATE_SERVICE",
+            "CONTEXT_BUILDER",
+            "PROJECT_FACTORY"
+          ]
+        }
+      },
+      "required": [
+        "identity_id",
+        "role"
+      ],
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "pattern": "^prj_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "^task_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        "operation_id": {
+          "type": "string",
+          "pattern": "^op_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        }
+      },
+      "required": [
+        "project_id",
+        "task_id",
+        "operation_id"
+      ],
+      "additionalProperties": false
+    },
+    "epochs": {
+      "type": "object",
+      "properties": {
+        "policy": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "auth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "stop": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "owner": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "policy",
+        "auth",
+        "stop",
+        "owner"
+      ],
+      "additionalProperties": false
+    },
+    "spec": {
+      "type": "object",
+      "properties": {
+        "spec_id": {
+          "type": "string",
+          "pattern": "^spec_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "spec_id",
+        "revision",
+        "content_hash"
+      ],
+      "additionalProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "pattern": "^prj_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        "artifact_id": {
+          "type": "string",
+          "pattern": "^art_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "media_type": {
+          "enum": [
+            "application/json",
+            "text/plain",
+            "application/octet-stream"
+          ]
+        },
+        "aggregate_hash": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "project_id",
+        "artifact_id",
+        "content_hash",
+        "bytes",
+        "media_type",
+        "aggregate_hash"
+      ],
+      "additionalProperties": false
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "norm": {
+      "enum": [
+        "constitution:0.1-draft:C-01",
+        "constitution:0.1-draft:C-02",
+        "constitution:0.1-draft:C-03",
+        "constitution:0.1-draft:C-04",
+        "constitution:0.1-draft:C-05",
+        "constitution:0.1-draft:C-06",
+        "constitution:0.1-draft:C-07",
+        "constitution:0.1-draft:C-08",
+        "constitution:0.1-draft:C-09",
+        "constitution:0.1-draft:C-10",
+        "constitution:0.1-draft:C-11",
+        "constitution:0.1-draft:C-12",
+        "canvas-principle:v01:C-01",
+        "canvas-principle:v01:C-02",
+        "canvas-principle:v01:C-03",
+        "canvas-principle:v01:C-04",
+        "canvas-principle:v01:C-05",
+        "canvas-principle:v01:C-06",
+        "canvas-principle:v01:C-07",
+        "canvas-principle:v01:C-08",
+        "canvas-principle:v01:C-09",
+        "canvas-principle:v01:C-10"
+      ]
+    }
+  }
+}

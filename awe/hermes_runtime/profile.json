@@ -1,0 +1,12 @@
+{
+  "version": "rt01/1",
+  "mode": "E0_OFFLINE",
+  "physical_decision": "DENY",
+  "hermes": {"version": "0.22.2+2645.g7058601", "commit": "7058601bf5cdc35502676a9b8aec0480e7e80127", "python": "3.14", "installation": "NOT_INSTALLED_IN_AWE", "dependencies": "REQUIRE_REVIEWED_OFFLINE_WHEELHOUSE_AND_LOCK_DIGESTS"},
+  "node": "24.21.0",
+  "transport": "RT01_SYNTHETIC_ONLY",
+  "owners": {"tasks": "D03_INT03", "execution": "D04_RT01", "context": "D05", "budget": "D06_D09", "memory": "D07", "qa": "D08_INT03", "attempts": "D09", "retry": "INT03_NO_AUTOMATIC_RETRY", "models": "LLM01", "tools": "TR01", "authority": "SEC01"},
+  "limits": {"depth": 1, "children": 2, "port_timeout_ms": 1000, "event_batch": 64, "json_bytes": 65536},
+  "disabled": ["physical_dispatch", "provider_calls", "fallback", "auto_retry", "auto_recovery", "native_memory", "native_delegation", "cron", "mcp", "terminal", "filesystem_tools", "browser", "skills", "plugins", "profile_import", "updater"],
+  "e1_gates": ["OWNER_APPROVAL", "SEC01_SANDBOX_EGRESS", "AUTHENTICATED_ISSUER", "D09_DURABLE_LINEAGE", "LLM01_PINNED_BROKER", "TR01_PROPOSAL_ONLY", "HERMES_EFFECTIVE_CONFIG_ATTESTATION"]
+}

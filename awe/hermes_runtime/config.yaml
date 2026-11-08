@@ -1,0 +1,25 @@
+# Clean candidate configuration for the pinned Hermes revision. Never launched.
+# Policy in profile.json and the RT01 DENY transport remains authoritative in E0.
+model:
+  provider: custom
+  default: awe-offline-disabled
+  base_url: https://awe-disabled.invalid/v1
+toolsets: []
+platform_toolsets:
+  cli: []
+mcp_servers: {}
+fallback_model: []
+memory:
+  memory_enabled: false
+  user_profile_enabled: false
+  nudge_interval: 0
+compression:
+  enabled: false
+agent:
+  # Installed code clamps this to >=1. SDK retries still require LLM01 mediation.
+  api_max_retries: 1
+  auto_recovery_cycles: 0
+  max_turns: 1
+database:
+  journal_mode: wal
+  synchronous: FULL

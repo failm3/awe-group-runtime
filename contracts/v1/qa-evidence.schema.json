@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/qa-evidence.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "contract": {
+      "const": "qa-evidence"
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^req_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "correlation_id": {
+      "type": "string",
+      "pattern": "^corr_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "causation_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^evt_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "actor": {
+      "$ref": "common.schema.json#/$defs/actor"
+    },
+    "scope": {
+      "$ref": "common.schema.json#/$defs/scope"
+    },
+    "epochs": {
+      "$ref": "common.schema.json#/$defs/epochs"
+    },
+    "spec": {
+      "$ref": "common.schema.json#/$defs/spec"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expected_revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "criterion_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(M[0-9]{2}|TCE[0-9]{2}|E[0-9]{2}|Q[0-9]{2})$(?![\\s\\S])"
+      },
+      "minItems": 1,
+      "maxItems": 128,
+      "uniqueItems": true
+    },
+    "artifact": {
+      "$ref": "common.schema.json#/$defs/artifact"
+    },
+    "profile_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+    },
+    "test_code_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+    },
+    "input_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+    },
+    "runner": {
+      "$ref": "common.schema.json#/$defs/actor"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^run_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "environment_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "execution_status": {
+      "enum": [
+        "NOT_RUN",
+        "RUNNING",
+        "EXECUTED",
+        "ERROR",
+        "SKIPPED"
+      ]
+    },
+    "verdict": {
+      "oneOf": [
+        {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNCLEAR",
+            "BLOCKED"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "exit_code": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stdout_ref": {
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/artifact"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stderr_ref": {
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/artifact"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "producer_attestation": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract",
+    "request_id",
+    "correlation_id",
+    "causation_id",
+    "actor",
+    "scope",
+    "epochs",
+    "spec",
+    "created_at",
+    "expected_revision",
+    "criterion_ids",
+    "artifact",
+    "profile_hash",
+    "test_code_hash",
+    "input_hash",
+    "runner",
+    "run_id",
+    "environment_version",
+    "execution_status",
+    "verdict",
+    "exit_code",
+    "stdout_ref",
+    "stderr_ref",
+    "producer_attestation",
+    "reason"
+  ],
+  "additionalProperties": false
+}

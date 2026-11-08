@@ -1,0 +1,17 @@
+{
+  "scope": "M02/M03/M12 offline subset only; local self-run, not independent acceptance",
+  "mapping": [
+    {"criterion":"M02","cases":["N01","N02","N03","N06","N11","N12","N13","N14","N15","N16","N17","N18","N19","N20","N25","N26","N27","N28"],"test_prefixes":["M02/P","M02/A","M02/R","M02/Q","M02/J","M02/T"],"claim":"Actor/policy/action/approval/quota/epoch checks before simulated effect; local replay protection"},
+    {"criterion":"M03","cases":["N04","N05","N07","N08","N09","N10","N29","N30","N31","N32","N33"],"test_prefixes":["M03/V","M03/S"],"claim":"Two-project/task logical ACL, canary non-disclosure, blind QA and trace projection; manifest design checks"},
+    {"criterion":"M12","cases":["N21","N22","N23","N24"],"test_prefixes":["M12/C","M12/B"],"claim":"Scoped tool pins, child narrowing/parent revoke/shared attempts, direct bypass denial and bounded synthetic read"}
+  ],
+  "not_run": [
+    {"id":"REAL_AUTH","reason":"No real issuer, authentication protocol, signing keys or independent identity attestation"},
+    {"id":"M02_DURABLE","reason":"No PG transactions, broker restart, multi-process race or physical transport; D-03 integration pending"},
+    {"id":"M03_VM_OS_DB","reason":"VM/firewall/RLS/FS/junction/process/secrets/cache/backup/export isolation not executed; 10 future probes are NOT_RUN"},
+    {"id":"M12_REAL_TOOL","reason":"No real worker/tool/child process, timer interruption, binary/truncated output pipeline or egress probe"},
+    {"id":"INDEPENDENT_QA","reason":"Local self-run only; D-08 independent review/attestation and seal/reveal not implemented"},
+    {"id":"REMOTE_CI","reason":"No remote/push/workflow changes authorized; tests run locally"},
+    {"id":"PROVIDER","reason":"All quote/tariff/cost data synthetic; no real account, key or paid API"}
+  ]
+}

@@ -1,0 +1,2678 @@
+[
+  {
+    "id": "actor-ref",
+    "contract": "actor-ref",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "actor-ref",
+      "actor": {
+        "identity_id": "act_supervisor",
+        "role": "SUPERVISOR"
+      }
+    }
+  },
+  {
+    "id": "scope-ids",
+    "contract": "scope-ids",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "scope-ids",
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      }
+    }
+  },
+  {
+    "id": "epochs",
+    "contract": "epochs",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "epochs",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      }
+    }
+  },
+  {
+    "id": "spec-revision",
+    "contract": "spec-revision",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_owner",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "spec-revision",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_owner",
+        "role": "OWNER"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "status": "DRAFT",
+      "requirements": [
+        "reqmt_no_effects",
+        "reqmt_contracts"
+      ],
+      "norms": [
+        "constitution:0.1-draft:C-06",
+        "canvas-principle:v01:C-06"
+      ],
+      "supersedes": null
+    }
+  },
+  {
+    "id": "event-envelope",
+    "contract": "event-envelope",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": {
+          "receipt_hash": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141",
+          "body_hash": "sha256:dbce4bfb2ac1f041b54b8a8d54d3b81b5ab1f89272aa1b14f9fdbc377ef0f006"
+        }
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "event-envelope",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_supervisor",
+        "role": "SUPERVISOR"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "event_id": "evt_synthetic",
+      "event_type": "task.transitioned",
+      "source_version": "1.0.0",
+      "sequence": 2,
+      "received_at": "2026-11-05T12:00:00.000Z",
+      "expires_at": "2026-11-06T12:00:00.000Z",
+      "payload_ref": {
+        "project_id": "prj_site_zhiv",
+        "artifact_id": "art_synthetic",
+        "content_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+        "bytes": 12,
+        "media_type": "text/plain",
+        "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36"
+      },
+      "producer_receipt_hash": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+    }
+  },
+  {
+    "id": "state-transition",
+    "contract": "state-transition",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "state-transition",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_supervisor",
+        "role": "SUPERVISOR"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "event_id": "evt_transition",
+      "from_state": "RUNNING",
+      "to_state": "QA_PENDING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "resume_state": null,
+      "reason": "Synthetic candidate submitted; no execution",
+      "guard_refs": [],
+      "owner_action_id": null,
+      "subscription_id": null
+    }
+  },
+  {
+    "id": "owner-action",
+    "contract": "owner-action",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_owner",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "owner-action",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_owner",
+        "role": "OWNER"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "owner_action_id": "oa_inventory",
+      "status": "SUBMITTED",
+      "action": "inventory",
+      "resource": "synthetic-route-metadata",
+      "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+      "expires_at": "2026-11-06T12:00:00.000Z",
+      "max_uses": 1,
+      "uses": 0,
+      "revoked_at": null,
+      "verification_receipt": null
+    }
+  },
+  {
+    "id": "approval",
+    "contract": "approval",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_owner",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "approval",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_owner",
+        "role": "OWNER"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "approval_id": "appr_synthetic",
+      "action": "read",
+      "resource": "synthetic-artifact",
+      "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+      "approver": {
+        "identity_id": "act_owner",
+        "role": "OWNER"
+      },
+      "expires_at": "2026-11-06T12:00:00.000Z",
+      "max_uses": 1,
+      "uses": 0,
+      "revoked_at": null,
+      "policy_revision": 1
+    }
+  },
+  {
+    "id": "tool-capability",
+    "contract": "tool-capability",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "tool-capability",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_supervisor",
+        "role": "SUPERVISOR"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "tool_id": "tool_fixture",
+      "tool_version": "1.0.0",
+      "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84",
+      "input_schema_hash": "sha256:18e6ea3b35135d8930d843284410498982e07b7846c2b3457e4867fac8471c00",
+      "output_schema_hash": "sha256:67906e547723710ad2fa4b3629b60e6376e1510689048684b4f0b00ab39e3ee3",
+      "effect_class": "READ_ONLY",
+      "timeout_ms": 1000,
+      "max_output_bytes": 16384,
+      "network_scope": "NONE",
+      "credential_handle": null,
+      "retry_eligible": true
+    }
+  },
+  {
+    "id": "tool-receipt",
+    "contract": "tool-receipt",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_executor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "tool-receipt",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_executor",
+        "role": "EXECUTOR"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "receipt_id": "rcpt_tool",
+      "tool_id": "tool_fixture",
+      "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84",
+      "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+      "effect_class": "READ_ONLY",
+      "outcome": "CONFIRMED",
+      "output": {
+        "project_id": "prj_site_zhiv",
+        "artifact_id": "art_synthetic",
+        "content_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+        "bytes": 12,
+        "media_type": "text/plain",
+        "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36"
+      },
+      "full_output_bytes": 12,
+      "truncated": false,
+      "retry_allowed": true,
+      "external_receipt": "sha256:527f4da62394277974b51a4e5b505d23ebf66fff01e92228df85b64f6ea90f3c"
+    }
+  },
+  {
+    "id": "provider-price",
+    "contract": "provider-price",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "provider-price",
+      "price_profile_id": "price_unknown",
+      "status": "UNKNOWN",
+      "seller": "synthetic-no-provider",
+      "model": "synthetic-no-model",
+      "currency": null,
+      "input_micros_per_million": null,
+      "output_micros_per_million": null,
+      "quote_ref": null,
+      "checked_at": null,
+      "expires_at": null,
+      "reason": "No seller quote; no dispatch permitted"
+    }
+  },
+  {
+    "id": "attempt-receipt",
+    "contract": "attempt-receipt",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_route_broker",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "attempt-receipt",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_route_broker",
+        "role": "ROUTE_BROKER"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "attempt_id": "att_synthetic",
+      "logical_request_id": "llm_synthetic",
+      "attempt_number": 1,
+      "kind": "MAIN",
+      "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+      "reservation_micros": "0",
+      "settled_micros": null,
+      "uncertain": false,
+      "status": "NOT_SENT",
+      "price": {
+        "schema_version": "1.0.0",
+        "contract": "provider-price",
+        "price_profile_id": "price_unknown",
+        "status": "UNKNOWN",
+        "seller": "synthetic-no-provider",
+        "model": "synthetic-no-model",
+        "currency": null,
+        "input_micros_per_million": null,
+        "output_micros_per_million": null,
+        "quote_ref": null,
+        "checked_at": null,
+        "expires_at": null,
+        "reason": "No seller quote; no dispatch permitted"
+      },
+      "usage_tokens": null
+    }
+  },
+  {
+    "id": "event-cursor",
+    "contract": "event-cursor",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "event-cursor",
+      "recipient": {
+        "identity_id": "act_supervisor",
+        "role": "SUPERVISOR"
+      },
+      "project_id": "prj_site_zhiv",
+      "stream_id": "stream_synthetic",
+      "last_sequence": 2,
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "expires_at": "2026-11-06T12:00:00.000Z"
+    }
+  },
+  {
+    "id": "artifact-ref",
+    "contract": "artifact-ref",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "artifact-ref",
+      "artifact": {
+        "project_id": "prj_site_zhiv",
+        "artifact_id": "art_synthetic",
+        "content_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+        "bytes": 12,
+        "media_type": "text/plain",
+        "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36"
+      }
+    }
+  },
+  {
+    "id": "qa-evidence",
+    "contract": "qa-evidence",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_examiner",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": {
+          "attestation": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d",
+          "body_hash": "sha256:759fad6b3ec4022df43c3247a2cfb45f9e7ef39b601134add5d859b371ecd19e"
+        }
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "qa-evidence",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_examiner",
+        "role": "EXAMINER"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "criterion_ids": [
+        "M01",
+        "M22"
+      ],
+      "artifact": {
+        "project_id": "prj_site_zhiv",
+        "artifact_id": "art_synthetic",
+        "content_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+        "bytes": 12,
+        "media_type": "text/plain",
+        "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36"
+      },
+      "profile_hash": "sha256:d03c47ca99633f5081ebfe4b1e76248bc2fb07690cc2baed9c1e3467ee80d78a",
+      "test_code_hash": "sha256:20929618bf7ce35a11ba4aee43f0515bf57c325dbcd92c52b22d0aff474c019c",
+      "input_hash": "sha256:ce151c3c566c7b31485d6cfeb9ab8ff27797abff378bdc4279d2dbc0b5f5e97b",
+      "runner": {
+        "identity_id": "act_examiner",
+        "role": "EXAMINER"
+      },
+      "run_id": "run_synthetic",
+      "environment_version": "synthetic-fixture-v1",
+      "execution_status": "EXECUTED",
+      "verdict": "PASS",
+      "exit_code": 0,
+      "stdout_ref": {
+        "project_id": "prj_site_zhiv",
+        "artifact_id": "art_synthetic",
+        "content_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+        "bytes": 12,
+        "media_type": "text/plain",
+        "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36"
+      },
+      "stderr_ref": {
+        "project_id": "prj_site_zhiv",
+        "artifact_id": "art_synthetic",
+        "content_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+        "bytes": 12,
+        "media_type": "text/plain",
+        "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36"
+      },
+      "producer_attestation": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d",
+      "reason": null
+    }
+  },
+  {
+    "id": "run-grant",
+    "contract": "run-grant",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "run-grant",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_supervisor",
+        "role": "SUPERVISOR"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "run_id": "run_parent",
+      "parent_run_id": null,
+      "capabilities": [
+        "tool_fixture"
+      ],
+      "deadline": "2026-11-06T12:00:00.000Z",
+      "budget_ref": "sha256:53c4e5af9c687fc74e69dbeb3a3be1ffca0cbdf5731a6ce48d21d1cacc02c5f3",
+      "config_hash": "sha256:680f6868e719709be40b437afee23d84c17438d77b44cb7caf6a087cfbe037e5",
+      "manifest_hash": "sha256:a86c863ce9c45a9ed2817aa8ea662aa3198cc377d354370329f0a8779406120b",
+      "depth": 0,
+      "max_children": 2,
+      "max_physical_attempts": 2
+    }
+  },
+  {
+    "id": "wait-subscription",
+    "contract": "wait-subscription",
+    "expected": "VALID",
+    "context": {
+      "now": "2026-11-05T12:00:00.000Z",
+      "principals": {
+        "act_owner": {
+          "role": "OWNER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_supervisor": {
+          "role": "SUPERVISOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_executor": {
+          "role": "EXECUTOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_examiner": {
+          "role": "EXAMINER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_auditor": {
+          "role": "AUDITOR",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_artifact_service": {
+          "role": "ARTIFACT_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_route_broker": {
+          "role": "ROUTE_BROKER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_state_service": {
+          "role": "STATE_SERVICE",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_context_builder": {
+          "role": "CONTEXT_BUILDER",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        },
+        "act_project_factory": {
+          "role": "PROJECT_FACTORY",
+          "projects": [
+            "prj_site_zhiv"
+          ]
+        }
+      },
+      "authenticated_identity_id": "act_supervisor",
+      "project_id": "prj_site_zhiv",
+      "task_id": "task_contracts",
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "revision": 1,
+      "state": "RUNNING",
+      "lease_epoch": 1,
+      "fence": 2,
+      "operation": {
+        "id": "op_synthetic",
+        "payload_hash": "sha256:a5d1fde182642c7b8ba14ed38773bb78acae9d35b454c3b5267f809fa02d8c88",
+        "tool_id": "tool_fixture",
+        "tool_digest": "sha256:34ec2bdbcd836d0e2a00b5634c824413bf61afbb1ad5ca98a22c95f33238af84"
+      },
+      "stream_id": "stream_synthetic",
+      "last_sequence": 10,
+      "aggregate_hash": "sha256:b381dbcd835c086df36f7fd48b0465ec497905d205896b0cd2cae15950c9af36",
+      "artifact_hash": "sha256:d3134154f141308d9d78fee9e4f385423f8012f9de1ceb3962462e0f28fdfd6c",
+      "required_criteria": [
+        "M01",
+        "M22"
+      ],
+      "event_receipts": {
+        "evt_synthetic": "sha256:0b21e878342110e4ac05063975dee903e7b68f31ac28eac7c87a9f7ba7ccb141"
+      },
+      "attestations": {
+        "run_synthetic": "sha256:37195d2a7074158ec019174e42c6025064ff082d1b8b8989606ad3709164415d"
+      },
+      "guards": {
+        "deps_complete": "sha256:b9f07835f8b81a36cbca25b1404d950f18d99698211af8026e8ae12d03b2473d",
+        "project_ready": "sha256:4ea0a440a896c15daf43d90763a54b5df3983509185e731d576cb4a34800cd3b",
+        "quota": "sha256:bc5a4f644eab259375c6e8ee4d3e700eee6d93fe226329a5de1125bc27c1ad1c",
+        "local_qa": "sha256:1c33e25c86d89c8b477cd93e6054b972ca84f844fe730299031fac3c1b512a35",
+        "examiner_qa": "sha256:fd79425f068f26455f5cda061e8a6c325099b8f1d567dd2dbbb794ad0f72948f",
+        "auditor_qa": "sha256:87209b380a9bf01f7463129eaadb0fd0ceb876de8656e0d8cca30ebf6c3ecd82",
+        "integration_qa": "sha256:3640dbe22f9b1728b63dc310c52aebe5ae2c9f9421e0ec1b93356cddb60b37cb",
+        "persisted": "sha256:621db2504c3e95377077f944535c2487954553c956019004aa48090998a04247",
+        "independent_readback": "sha256:efcfcb3e9663a024db16283146c6f24d2c0c9b6b909598c2be3a1fb9958cd20c",
+        "checkpoint": "sha256:60a9ba122eed662638a82675ef7691358b6612ce5ed44c640f9035d62527f1cf",
+        "outbox": "sha256:4b19c3795c9b08f5596e6c72c0b4378822c1f6c3a56c28c4c60b8ecc8dc353ba",
+        "effects_reconciled": "sha256:0bdd897e7a53eca57c94c272e859e5ad2b372286bb5f7aaa34e360806dca3890",
+        "resume_verified": "sha256:7b25f653c2cfd4b04f9729d9a84b26990c516823e73a11a0bf448ca5d30846eb"
+      }
+    },
+    "value": {
+      "schema_version": "1.0.0",
+      "contract": "wait-subscription",
+      "request_id": "req_synthetic",
+      "correlation_id": "corr_synthetic",
+      "causation_id": null,
+      "actor": {
+        "identity_id": "act_supervisor",
+        "role": "SUPERVISOR"
+      },
+      "scope": {
+        "project_id": "prj_site_zhiv",
+        "task_id": "task_contracts",
+        "operation_id": "op_synthetic"
+      },
+      "epochs": {
+        "policy": 1,
+        "auth": 1,
+        "stop": 0,
+        "owner": 1
+      },
+      "spec": {
+        "spec_id": "spec_synthetic",
+        "revision": 1,
+        "content_hash": "sha256:d091b38600479de5e777d31427ed3331022e32c62c80ed4062f4b6f91bc62b68"
+      },
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "expected_revision": 1,
+      "subscription_id": "sub_synthetic",
+      "event_type": "owner-action.updated",
+      "resume_state": "RUNNING",
+      "cursor": {
+        "schema_version": "1.0.0",
+        "contract": "event-cursor",
+        "recipient": {
+          "identity_id": "act_supervisor",
+          "role": "SUPERVISOR"
+        },
+        "project_id": "prj_site_zhiv",
+        "stream_id": "stream_synthetic",
+        "last_sequence": 2,
+        "epochs": {
+          "policy": 1,
+          "auth": 1,
+          "stop": 0,
+          "owner": 1
+        },
+        "expires_at": "2026-11-06T12:00:00.000Z"
+      },
+      "deadline": "2026-11-06T12:00:00.000Z"
+    }
+  }
+]

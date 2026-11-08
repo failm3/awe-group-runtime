@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync,mkdirSync,readdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {join,resolve} from 'node:path';
+const root=resolve(import.meta.dirname,'..');
+const paths=['C:/Users/1/AWE-GROUP-INT04/awe/integration_v4/offline-host.mjs','C:/Users/1/AWE-GROUP-TR01/TR-01/CONTRACTS.md'];
+const rows=paths.map(p=>({path:p,sha256:createHash('sha256').update(readFileSync(p)).digest('hex')}));
+const walk=p=>readdirSync(join(root,p),{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(p+'/'+e.name):[p+'/'+e.name]);
+const protectedFiles=['contracts','awe/state','awe/persistence','awe/runtime','awe/policy'].filter(p=>existsSync(join(root,p))).flatMap(walk).map(path=>({path,sha256:createHash('sha256').update(readFileSync(join(root,path))).digest('hex')}));
+mkdirSync(join(root,'RT-02/evidence'),{recursive:true});
+writeFileSync(join(root,'RT-02/evidence/ownership-before.json'),JSON.stringify({rows,protectedFiles},null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({external_readonly_sources:rows.length,protected_files:protectedFiles.length}));

@@ -1,0 +1,34 @@
+{
+  "mode": "SYNTHETIC_ONLY",
+  "principals": [
+    {"actor":{"identity_id":"act_owner","role":"OWNER"},"subject":"synthetic-owner","tasks":[{"project_id":"prj_site_zhiv","task_id":"task_page"}]},
+    {"actor":{"identity_id":"act_supervisor","role":"SUPERVISOR"},"subject":"synthetic-supervisor","tasks":[{"project_id":"prj_site_zhiv","task_id":"task_page"}]},
+    {"actor":{"identity_id":"act_executor","role":"EXECUTOR"},"subject":"synthetic-author","tasks":[{"project_id":"prj_site_zhiv","task_id":"task_page"}]},
+    {"actor":{"identity_id":"act_child","role":"EXECUTOR"},"subject":"synthetic-child","tasks":[{"project_id":"prj_site_zhiv","task_id":"task_page"}]},
+    {"actor":{"identity_id":"act_examiner","role":"EXAMINER"},"subject":"synthetic-examiner","tasks":[{"project_id":"prj_site_zhiv","task_id":"task_page"}]},
+    {"actor":{"identity_id":"act_auditor","role":"AUDITOR"},"subject":"synthetic-auditor","tasks":[{"project_id":"prj_site_zhiv","task_id":"task_page"}]},
+    {"actor":{"identity_id":"act_foreign","role":"EXECUTOR"},"subject":"synthetic-control","tasks":[{"project_id":"prj_isolation_control","task_id":"task_control"}]}
+  ],
+  "projects": [
+    {"project_id":"prj_site_zhiv","policy_id":"d02-simulation-v1","epochs":{"policy":1,"auth":1,"stop":0,"owner":1},"tasks":[
+      {"task_id":"task_page","revision":3,"state":"RUNNING","quota_micros":"100","spec":{"spec_id":"spec_site","revision":1,"content_hash":"sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}},
+      {"task_id":"task_other","revision":3,"state":"RUNNING","quota_micros":"100","spec":{"spec_id":"spec_other","revision":1,"content_hash":"sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}}
+    ]},
+    {"project_id":"prj_isolation_control","policy_id":"d02-simulation-v1","epochs":{"policy":1,"auth":1,"stop":0,"owner":1},"tasks":[
+      {"task_id":"task_control","revision":1,"state":"RUNNING","quota_micros":"100","spec":{"spec_id":"spec_control","revision":1,"content_hash":"sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"}}
+    ]}
+  ],
+  "resources": [
+    {"id":"site:page","project_id":"prj_site_zhiv","task_id":"task_page","kind":"tool","classification":"WORK","roles":["EXECUTOR","EXAMINER","AUDITOR"],"value":{"text":"synthetic public artifact"}},
+    {"id":"site:memory","project_id":"prj_site_zhiv","task_id":"task_page","kind":"memory","classification":"WORK","roles":["EXECUTOR","EXAMINER","AUDITOR"],"value":{"text":"synthetic project memory"}},
+    {"id":"site:hidden","project_id":"prj_site_zhiv","task_id":"task_page","kind":"evidence","classification":"QA_HIDDEN","roles":["EXECUTOR","EXAMINER","AUDITOR"],"value":{"canary":"SYNTHETIC_HIDDEN_QA_CANARY"}},
+    {"id":"site:local-qa","project_id":"prj_site_zhiv","task_id":"task_page","kind":"evidence","classification":"LOCAL_QA","roles":["EXECUTOR","EXAMINER","AUDITOR"],"value":{"verdict":"SYNTHETIC_LOCAL_VERDICT"}},
+    {"id":"site:qa-evidence","project_id":"prj_site_zhiv","task_id":"task_page","kind":"evidence","classification":"QA_EVIDENCE","roles":["EXECUTOR","EXAMINER","AUDITOR"],"value":{"verdict":"SYNTHETIC_INDEPENDENT_VERDICT"}},
+    {"id":"site:trace","project_id":"prj_site_zhiv","task_id":"task_page","kind":"trace","classification":"TRACE","roles":["OWNER","SUPERVISOR","EXECUTOR","EXAMINER","AUDITOR"],"value":{"raw":"SYNTHETIC_RAW_TRACE_CANARY","hidden_context":"SYNTHETIC_HIDDEN_QA_CANARY"}},
+    {"id":"site:secret","project_id":"prj_site_zhiv","task_id":"task_page","kind":"secret","classification":"SECRET","roles":["OWNER","EXECUTOR","EXAMINER","AUDITOR"],"value":{"canary":"SYNTHETIC_SECRET_CANARY"}},
+    {"id":"other:memory","project_id":"prj_site_zhiv","task_id":"task_other","kind":"memory","classification":"WORK","roles":["EXECUTOR"],"value":{"canary":"SYNTHETIC_OTHER_TASK_CANARY"}},
+    {"id":"foreign:tool","project_id":"prj_isolation_control","task_id":"task_control","kind":"tool","classification":"WORK","roles":["EXECUTOR"],"value":{"canary":"SYNTHETIC_FOREIGN_CANARY"}},
+    {"id":"foreign:memory","project_id":"prj_isolation_control","task_id":"task_control","kind":"memory","classification":"WORK","roles":["EXECUTOR"],"value":{"canary":"SYNTHETIC_FOREIGN_CANARY"}},
+    {"id":"foreign:evidence","project_id":"prj_isolation_control","task_id":"task_control","kind":"evidence","classification":"QA_EVIDENCE","roles":["AUDITOR"],"value":{"canary":"SYNTHETIC_FOREIGN_CANARY"}}
+  ]
+}

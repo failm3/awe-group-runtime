@@ -1,0 +1,88 @@
+{
+  "contract_version": "awe.e1.contracts/1",
+  "release": "AWE_E1/1",
+  "manifest_id": "domain.career",
+  "version": "1.0.0",
+  "project_id": "prj_e1_career",
+  "domain": "career",
+  "description": "Fictional offline career package; no personal facts, applications or external destinations.",
+  "capabilities": [
+    {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "capability_id": "common.research",
+      "version": "1.0.0",
+      "manifest_digest": "sha256:1ae4ad50a2d5e815322f888cddeb70b73286deb2481f78013950cfd0a9eaae50",
+      "input_schema": {
+        "schema_id": "e1.instruction",
+        "version": "1.0.0",
+        "digest": "sha256:d856f36ec5d6a45953d1ccda79dab0eace4209c7c63cacf3d1e30a736234d640"
+      },
+      "output_schema": {
+        "schema_id": "e1.text",
+        "version": "1.0.0",
+        "digest": "sha256:a4a00369e482212a7af1f99fb1d1074a642827277986683abf954ec94299a5b2"
+      }
+    },
+    {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "capability_id": "common.transform",
+      "version": "1.0.0",
+      "manifest_digest": "sha256:87c1c8601ae2d696a17e826af6f5a590d790f21208bf995a54dd79019a48c055",
+      "input_schema": {
+        "schema_id": "e1.instruction",
+        "version": "1.0.0",
+        "digest": "sha256:d856f36ec5d6a45953d1ccda79dab0eace4209c7c63cacf3d1e30a736234d640"
+      },
+      "output_schema": {
+        "schema_id": "e1.text",
+        "version": "1.0.0",
+        "digest": "sha256:a4a00369e482212a7af1f99fb1d1074a642827277986683abf954ec94299a5b2"
+      }
+    },
+    {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "capability_id": "common.build",
+      "version": "1.0.0",
+      "manifest_digest": "sha256:a255dce015b932c198912025550dda0ba09013a80912fbcf9ae035c577375797",
+      "input_schema": {
+        "schema_id": "e1.instruction",
+        "version": "1.0.0",
+        "digest": "sha256:d856f36ec5d6a45953d1ccda79dab0eace4209c7c63cacf3d1e30a736234d640"
+      },
+      "output_schema": {
+        "schema_id": "e1.text",
+        "version": "1.0.0",
+        "digest": "sha256:a4a00369e482212a7af1f99fb1d1074a642827277986683abf954ec94299a5b2"
+      }
+    },
+    {
+      "contract_version": "awe.e1.contracts/1",
+      "release": "AWE_E1/1",
+      "capability_id": "common.qa",
+      "version": "1.0.0",
+      "manifest_digest": "sha256:e1c0aebcc3b25ee6add04f3f7f180f768245c6712895bdd611a935f5f0adef8f",
+      "input_schema": {
+        "schema_id": "e1.instruction",
+        "version": "1.0.0",
+        "digest": "sha256:d856f36ec5d6a45953d1ccda79dab0eace4209c7c63cacf3d1e30a736234d640"
+      },
+      "output_schema": {
+        "schema_id": "e1.text",
+        "version": "1.0.0",
+        "digest": "sha256:a4a00369e482212a7af1f99fb1d1074a642827277986683abf954ec94299a5b2"
+      }
+    }
+  ],
+  "qa_rubric": {
+    "rubric_id": "e1.fixture.rubric",
+    "digest": "sha256:6909d11ae5d953f44535cb8c9dcd7332bf3c34d1605c2d646427b53837ff1603",
+    "checks": [
+      "schema",
+      "sources",
+      "scope"
+    ]
+  }
+}

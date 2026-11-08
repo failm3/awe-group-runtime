@@ -1,0 +1,1342 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/e1/awe-e1-1.schema.json",
+  "$defs": {
+    "Budget": {
+      "type": "object",
+      "properties": {
+        "currency": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "RUB",
+            "USD",
+            "EUR"
+          ]
+        },
+        "amount_micros": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,17})$(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "currency",
+        "amount_micros"
+      ],
+      "additionalProperties": false
+    },
+    "SchemaBinding": {
+      "type": "object",
+      "properties": {
+        "schema_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32,
+          "pattern": "\\S"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "schema_id",
+        "version",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "Retry": {
+      "type": "object",
+      "properties": {
+        "max_attempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "retry_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "TRANSIENT_NO_EFFECT"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 1,
+          "uniqueItems": true
+        },
+        "on_unknown": {
+          "const": "HOLD"
+        }
+      },
+      "required": [
+        "max_attempts",
+        "retry_on",
+        "on_unknown"
+      ],
+      "additionalProperties": false
+    },
+    "CapabilityRef": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "capability_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+[.][0-9]+[.][0-9]+$(?![\\s\\S])",
+          "maxLength": 32
+        },
+        "manifest_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "input_schema": {
+          "$ref": "#/$defs/SchemaBinding"
+        },
+        "output_schema": {
+          "$ref": "#/$defs/SchemaBinding"
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "capability_id",
+        "version",
+        "manifest_digest",
+        "input_schema",
+        "output_schema"
+      ],
+      "additionalProperties": false
+    },
+    "ArtifactRef": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "artifact_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "mission_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "uri": {
+          "type": "string",
+          "pattern": "^artifact:[a-z][a-z0-9._/-]{0,127}$(?![\\s\\S])"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "\\S"
+        },
+        "schema": {
+          "$ref": "#/$defs/SchemaBinding"
+        },
+        "data_class": {
+          "type": "string",
+          "enum": [
+            "PUBLIC",
+            "PROJECT",
+            "PERSONAL",
+            "SECRET"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "OWNER",
+            "PROJECT",
+            "EXTERNAL",
+            "INFERRED",
+            "UNKNOWN"
+          ]
+        },
+        "producer_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "artifact_id",
+        "project_id",
+        "mission_id",
+        "uri",
+        "digest",
+        "media_type",
+        "schema",
+        "data_class",
+        "origin",
+        "producer_id",
+        "created_at"
+      ],
+      "additionalProperties": false
+    },
+    "EffectIntent": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "effect_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "mission_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "effect_class": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "LOCAL_READ",
+            "LOCAL_WRITE",
+            "EXTERNAL_READ",
+            "EXTERNAL_WRITE"
+          ]
+        },
+        "permission": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "mission.create",
+                "mission.revise",
+                "mission.revoke",
+                "plan.propose",
+                "plan.validate",
+                "plan.publish",
+                "artifact.read",
+                "artifact.write",
+                "effect.local",
+                "effect.external_read",
+                "effect.external_write",
+                "qa.evaluate"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "destination": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "business_key": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "payload_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "max_actions": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "reconcile_capability": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/CapabilityRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unknown_policy": {
+          "const": "HOLD"
+        },
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "NOT_STARTED",
+            "OUTCOME_UNKNOWN",
+            "CONFIRMED",
+            "NO_EFFECT"
+          ]
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "effect_id",
+        "mission_id",
+        "project_id",
+        "task_id",
+        "effect_class",
+        "permission",
+        "destination",
+        "business_key",
+        "payload_digest",
+        "max_actions",
+        "reconcile_capability",
+        "unknown_policy",
+        "outcome"
+      ],
+      "additionalProperties": false
+    },
+    "TaskSpec": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "\\S"
+        },
+        "capability": {
+          "$ref": "#/$defs/CapabilityRef"
+        },
+        "input": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+            "maxLength": 80
+          },
+          "minItems": 0,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "dependency_bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "task_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+                "maxLength": 80
+              },
+              "output_schema": {
+                "$ref": "#/$defs/SchemaBinding"
+              }
+            },
+            "required": [
+              "task_id",
+              "output_schema"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "criterion_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+            "maxLength": 80
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "RUB",
+                "USD",
+                "EUR"
+              ]
+            },
+            "amount_micros": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]{0,17})$(?![\\s\\S])"
+            }
+          },
+          "required": [
+            "currency",
+            "amount_micros"
+          ],
+          "additionalProperties": false
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 600000
+        },
+        "data_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "PUBLIC",
+              "PROJECT",
+              "PERSONAL",
+              "SECRET"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 4,
+          "uniqueItems": true
+        },
+        "origin": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "OWNER",
+                "PROJECT",
+                "EXTERNAL",
+                "INFERRED",
+                "UNKNOWN"
+              ]
+            },
+            "source_digests": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+              },
+              "minItems": 1,
+              "maxItems": 32,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "kind",
+            "source_digests"
+          ],
+          "additionalProperties": false
+        },
+        "effect": {
+          "$ref": "#/$defs/EffectIntent"
+        },
+        "retry": {
+          "$ref": "#/$defs/Retry"
+        },
+        "qa": {
+          "type": "object",
+          "properties": {
+            "rubric_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+              "maxLength": 80
+            },
+            "rubric_digest": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+            },
+            "required_checks": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+                "maxLength": 80
+              },
+              "minItems": 1,
+              "maxItems": 32,
+              "uniqueItems": true
+            },
+            "reviewer_role": {
+              "const": "QA"
+            }
+          },
+          "required": [
+            "rubric_id",
+            "rubric_digest",
+            "required_checks",
+            "reviewer_role"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "task_id",
+        "title",
+        "capability",
+        "input",
+        "depends_on",
+        "dependency_bindings",
+        "criterion_ids",
+        "budget",
+        "deadline",
+        "timeout_ms",
+        "data_classes",
+        "origin",
+        "effect",
+        "retry",
+        "qa"
+      ],
+      "additionalProperties": false
+    },
+    "MissionSpec": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "mission_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "owner_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096,
+          "pattern": "\\S"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "criterion_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+                "maxLength": 80
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2048,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "criterion_id",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "facts_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ArtifactRef"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "domain_manifest": {
+          "type": "object",
+          "properties": {
+            "manifest_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+              "maxLength": 80
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 32,
+              "pattern": "\\S"
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+            }
+          },
+          "required": [
+            "manifest_id",
+            "version",
+            "digest"
+          ],
+          "additionalProperties": false
+        },
+        "requested_capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CapabilityRef"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "RUB",
+                "USD",
+                "EUR"
+              ]
+            },
+            "amount_micros": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]{0,17})$(?![\\s\\S])"
+            }
+          },
+          "required": [
+            "currency",
+            "amount_micros"
+          ],
+          "additionalProperties": false
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "data_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "PUBLIC",
+              "PROJECT",
+              "PERSONAL",
+              "SECRET"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 4,
+          "uniqueItems": true
+        },
+        "allowed_origins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "OWNER",
+              "PROJECT",
+              "EXTERNAL",
+              "INFERRED",
+              "UNKNOWN"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 5,
+          "uniqueItems": true
+        },
+        "max_replans": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "max_actions": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 64
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "mission_id",
+        "project_id",
+        "owner_id",
+        "revision",
+        "goal",
+        "criteria",
+        "facts_refs",
+        "domain_manifest",
+        "requested_capabilities",
+        "budget",
+        "deadline",
+        "data_classes",
+        "allowed_origins",
+        "max_replans",
+        "max_actions"
+      ],
+      "additionalProperties": false
+    },
+    "MissionGrant": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "grant_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "grant_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "mission_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "owner_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "issued_by": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "spec_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "revoked_at": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revocation_reason": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "allowed_principals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+            "maxLength": 80
+          },
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "mission.create",
+              "mission.revise",
+              "mission.revoke",
+              "plan.propose",
+              "plan.validate",
+              "plan.publish",
+              "artifact.read",
+              "artifact.write",
+              "effect.local",
+              "effect.external_read",
+              "effect.external_write",
+              "qa.evaluate"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "allowed_capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CapabilityRef"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "allowed_data_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "PUBLIC",
+              "PROJECT",
+              "PERSONAL",
+              "SECRET"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 4,
+          "uniqueItems": true
+        },
+        "allowed_origins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "OWNER",
+              "PROJECT",
+              "EXTERNAL",
+              "INFERRED",
+              "UNKNOWN"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 5,
+          "uniqueItems": true
+        },
+        "allowed_effect_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "LOCAL_READ",
+              "LOCAL_WRITE",
+              "EXTERNAL_READ",
+              "EXTERNAL_WRITE"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 5,
+          "uniqueItems": true
+        },
+        "destinations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "\\S"
+          },
+          "minItems": 0,
+          "maxItems": 64,
+          "uniqueItems": true
+        },
+        "max_tasks": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "max_actions": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 64
+        },
+        "max_replans": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "budget_cap": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "RUB",
+                "USD",
+                "EUR"
+              ]
+            },
+            "amount_micros": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]{0,17})$(?![\\s\\S])"
+            }
+          },
+          "required": [
+            "currency",
+            "amount_micros"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "grant_id",
+        "grant_version",
+        "mission_id",
+        "project_id",
+        "owner_id",
+        "issued_by",
+        "spec_digest",
+        "issued_at",
+        "expires_at",
+        "revoked_at",
+        "revocation_reason",
+        "allowed_principals",
+        "permissions",
+        "allowed_capabilities",
+        "allowed_data_classes",
+        "allowed_origins",
+        "allowed_effect_classes",
+        "destinations",
+        "max_tasks",
+        "max_actions",
+        "max_replans",
+        "budget_cap"
+      ],
+      "additionalProperties": false
+    },
+    "PlanRevision": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "plan_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "mission_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "spec_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "grant_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "grant_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "previous_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "proposed_by": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "type": "string",
+              "enum": [
+                "NONE",
+                "RUB",
+                "USD",
+                "EUR"
+              ]
+            },
+            "amount_micros": {
+              "type": "string",
+              "pattern": "^(0|[1-9][0-9]{0,17})$(?![\\s\\S])"
+            }
+          },
+          "required": [
+            "currency",
+            "amount_micros"
+          ],
+          "additionalProperties": false
+        },
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaskSpec"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "plan_id",
+        "mission_id",
+        "project_id",
+        "revision",
+        "spec_digest",
+        "grant_digest",
+        "grant_version",
+        "previous_digest",
+        "proposed_by",
+        "reason",
+        "created_at",
+        "budget",
+        "deadline",
+        "tasks"
+      ],
+      "additionalProperties": false
+    },
+    "QAResult": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "qa_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "mission_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "artifact_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "plan_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "rubric_digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        "evaluator_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "producer_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "evaluated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "check_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+                "maxLength": 80
+              },
+              "passed": {
+                "type": "boolean"
+              },
+              "evidence_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ArtifactRef"
+                },
+                "minItems": 1,
+                "maxItems": 32,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "check_id",
+              "passed",
+              "evidence_refs"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "accepted": {
+          "const": false
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "qa_id",
+        "mission_id",
+        "project_id",
+        "task_id",
+        "artifact_digest",
+        "plan_digest",
+        "rubric_digest",
+        "evaluator_id",
+        "producer_id",
+        "evaluated_at",
+        "verdict",
+        "checks",
+        "accepted"
+      ],
+      "additionalProperties": false
+    },
+    "DomainManifest": {
+      "type": "object",
+      "properties": {
+        "contract_version": {
+          "const": "awe.e1.contracts/1"
+        },
+        "release": {
+          "const": "AWE_E1/1"
+        },
+        "manifest_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32,
+          "pattern": "\\S"
+        },
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "domain": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+          "maxLength": 80
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CapabilityRef"
+          },
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true
+        },
+        "qa_rubric": {
+          "type": "object",
+          "properties": {
+            "rubric_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+              "maxLength": 80
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+            },
+            "checks": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_.-]{0,79}$(?![\\s\\S])",
+                "maxLength": 80
+              },
+              "minItems": 1,
+              "maxItems": 32,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "rubric_id",
+            "digest",
+            "checks"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "contract_version",
+        "release",
+        "manifest_id",
+        "version",
+        "project_id",
+        "domain",
+        "description",
+        "capabilities",
+        "qa_rubric"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

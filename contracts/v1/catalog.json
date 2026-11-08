@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "status": "PROPOSED_FOR_OWNER_REVIEW",
+  "schemas": [
+    "actor-ref",
+    "approval",
+    "artifact-ref",
+    "attempt-receipt",
+    "epochs",
+    "event-cursor",
+    "event-envelope",
+    "owner-action",
+    "provider-price",
+    "qa-evidence",
+    "run-grant",
+    "scope-ids",
+    "spec-revision",
+    "state-transition",
+    "tool-capability",
+    "tool-receipt",
+    "wait-subscription"
+  ],
+  "roles": [
+    "OWNER",
+    "SUPERVISOR",
+    "EXECUTOR",
+    "EXAMINER",
+    "AUDITOR",
+    "ARTIFACT_SERVICE",
+    "ROUTE_BROKER",
+    "STATE_SERVICE",
+    "CONTEXT_BUILDER",
+    "PROJECT_FACTORY"
+  ],
+  "task_states": [
+    "DRAFT",
+    "READY",
+    "RUNNING",
+    "QA_PENDING",
+    "REWORK",
+    "PERSISTING",
+    "RECONCILING",
+    "WAITING_FOR_EVENT",
+    "WAITING_FOR_OWNER",
+    "BLOCKED",
+    "COMPLETE",
+    "CANCELLING",
+    "CANCELLED",
+    "FAILED"
+  ],
+  "canonicalization": "awe-canonical-json-v1",
+  "unknown_fields": "REJECT",
+  "minor_versions": "EXPLICIT_ALLOWLIST_ONLY",
+  "supported_versions": [
+    "1.0.0"
+  ]
+}

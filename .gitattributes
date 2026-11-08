@@ -1,0 +1,3 @@
+* -text
+# Preserve the exact reviewed historical source bytes.
+awe/hermes_runtime/process-transport.mjs -whitespace

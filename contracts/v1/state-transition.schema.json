@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/state-transition.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "contract": {
+      "const": "state-transition"
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^req_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "correlation_id": {
+      "type": "string",
+      "pattern": "^corr_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "causation_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^evt_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "actor": {
+      "$ref": "common.schema.json#/$defs/actor"
+    },
+    "scope": {
+      "$ref": "common.schema.json#/$defs/scope"
+    },
+    "epochs": {
+      "$ref": "common.schema.json#/$defs/epochs"
+    },
+    "spec": {
+      "$ref": "common.schema.json#/$defs/spec"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expected_revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^evt_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "from_state": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "RUNNING",
+        "QA_PENDING",
+        "REWORK",
+        "PERSISTING",
+        "RECONCILING",
+        "WAITING_FOR_EVENT",
+        "WAITING_FOR_OWNER",
+        "BLOCKED",
+        "COMPLETE",
+        "CANCELLING",
+        "CANCELLED",
+        "FAILED"
+      ]
+    },
+    "to_state": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "RUNNING",
+        "QA_PENDING",
+        "REWORK",
+        "PERSISTING",
+        "RECONCILING",
+        "WAITING_FOR_EVENT",
+        "WAITING_FOR_OWNER",
+        "BLOCKED",
+        "COMPLETE",
+        "CANCELLING",
+        "CANCELLED",
+        "FAILED"
+      ]
+    },
+    "lease_epoch": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "fence": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "resume_state": {
+      "oneOf": [
+        {
+          "enum": [
+            "DRAFT",
+            "READY",
+            "RUNNING",
+            "QA_PENDING",
+            "REWORK",
+            "PERSISTING",
+            "RECONCILING",
+            "WAITING_FOR_EVENT",
+            "WAITING_FOR_OWNER",
+            "BLOCKED",
+            "COMPLETE",
+            "CANCELLING",
+            "CANCELLED",
+            "FAILED"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "guard_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+      },
+      "minItems": 0,
+      "maxItems": 128,
+      "uniqueItems": true
+    },
+    "owner_action_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^oa_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "subscription_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^sub_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract",
+    "request_id",
+    "correlation_id",
+    "causation_id",
+    "actor",
+    "scope",
+    "epochs",
+    "spec",
+    "created_at",
+    "expected_revision",
+    "event_id",
+    "from_state",
+    "to_state",
+    "lease_epoch",
+    "fence",
+    "resume_state",
+    "reason",
+    "guard_refs",
+    "owner_action_id",
+    "subscription_id"
+  ],
+  "additionalProperties": false
+}

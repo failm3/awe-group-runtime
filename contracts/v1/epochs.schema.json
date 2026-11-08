@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/epochs.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "contract": {
+      "const": "epochs"
+    },
+    "epochs": {
+      "$ref": "common.schema.json#/$defs/epochs"
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract",
+    "epochs"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,358 @@
+{
+  "seed": 501,
+  "clock": "2026-11-05T12:00:00.000Z",
+  "synthetic": true,
+  "hash_method": "sha256 of UTF-8 JSON.stringify fixture, preserving file key order (includes intentionally invalid JSON-domain values)",
+  "positive": [
+    {
+      "id": "actor-ref",
+      "sha256": "sha256:ae87861717dc3f5607591cf97c69570f0953d7b33e535e6483aaa7997267c5a5"
+    },
+    {
+      "id": "scope-ids",
+      "sha256": "sha256:82b99389ea5cad58b128d4f20ce945463a48aeb4d51c40873dbeedac188fe8e4"
+    },
+    {
+      "id": "epochs",
+      "sha256": "sha256:0fc5e38afb1d9fc85717308f38685392884b6073631cd020b223b245139639a2"
+    },
+    {
+      "id": "spec-revision",
+      "sha256": "sha256:71cf6fd8150d08bd381012d6f76cabc5129ec2f59c1c45bdf8b3b1bf36db19d2"
+    },
+    {
+      "id": "event-envelope",
+      "sha256": "sha256:38129b37add814acdb7ea10b727a60d0f59e20a709eb81f6444ec401429cc1ed"
+    },
+    {
+      "id": "state-transition",
+      "sha256": "sha256:248b81beb680e376ec9f9660f76bb7c98a7ee0c6907b7a00c1254fa38576c655"
+    },
+    {
+      "id": "owner-action",
+      "sha256": "sha256:9c312c277d20aad9116363659b6e88ca156f7ed6b7e44328e4471c3b0fe237f2"
+    },
+    {
+      "id": "approval",
+      "sha256": "sha256:c593d97a512f6d7cf84a4fb45680d15b5717c8ec296e40f2b527597195cc4756"
+    },
+    {
+      "id": "tool-capability",
+      "sha256": "sha256:2c27f29f36372178ac380d374bceccfeefdddec051351948ce7d5ede41784c7a"
+    },
+    {
+      "id": "tool-receipt",
+      "sha256": "sha256:ab24a1a18463c0f40820d14e0aa42bb19a63b7198bedc4169f05048d5764a949"
+    },
+    {
+      "id": "provider-price",
+      "sha256": "sha256:e50cbfa54a3c291fe9b8ac1a0e9c38f316fe9d6f9cd933b264a4f5f68b3e51a4"
+    },
+    {
+      "id": "attempt-receipt",
+      "sha256": "sha256:f994c6a6b6e2d680a60ec7b436e63488d79cf4d15db7b2f0f5bbbdd64ca16802"
+    },
+    {
+      "id": "event-cursor",
+      "sha256": "sha256:264845c762dbf82f2017a8e45a5df152b12a0d183009bac1eff78f1c78768510"
+    },
+    {
+      "id": "artifact-ref",
+      "sha256": "sha256:61cfed5573d6ca3fc228a00ef400f4fbfade06b6a12cf29beae8bde520fc04cf"
+    },
+    {
+      "id": "qa-evidence",
+      "sha256": "sha256:b94782665d5382622ee766bc3f820edb27c6be9d2bcca8baf378413733845679"
+    },
+    {
+      "id": "run-grant",
+      "sha256": "sha256:0ad552237a04eb01740841c85d06162fe3ff51788e9f7f4923ae2eaa8b7952fb"
+    },
+    {
+      "id": "wait-subscription",
+      "sha256": "sha256:bec68d42bf2cb2a0987f26c8882613ad02bde841cd900e31bf4e80fbadcbf651"
+    }
+  ],
+  "negative": [
+    {
+      "id": "major-incompatible",
+      "sha256": "sha256:a97d7dc7452b5dce68fc00804ac283d2edf94a7174eb2ca586df023d305cabdc"
+    },
+    {
+      "id": "minor-not-allowlisted",
+      "sha256": "sha256:64ac1752c1c28793590a99ebd80aff6ffd70d3e12fa3d4964ce890f8e27ecd59"
+    },
+    {
+      "id": "unknown-field",
+      "sha256": "sha256:42292dfa0498775ff611c81776d03ae088829dd36ea893d32456d0fba1225c1c"
+    },
+    {
+      "id": "unknown-role",
+      "sha256": "sha256:b8389ec63c616a7be594982f52e7fe6cef2422aef46f27ab3b08542cd5425b99"
+    },
+    {
+      "id": "forged-known-role",
+      "sha256": "sha256:a255d87eda477faced24d463d575cc75bad2978309f8b5f979894e580275e547"
+    },
+    {
+      "id": "unknown-actor",
+      "sha256": "sha256:69e4874865c6331f4d09ee646e0fe48f859ca6a6be8ae659096c9c90923688db"
+    },
+    {
+      "id": "body-identity-is-not-context",
+      "sha256": "sha256:cda88385b55e476d7feb3a58ec778a5a0e55c54ac09088d0192cbec0a3e85b37"
+    },
+    {
+      "id": "cross-project",
+      "sha256": "sha256:391c0ce154d584cde235610f8c60ea63fe2a20ca77fb93cfdd5359e9febdbce4"
+    },
+    {
+      "id": "empty-project",
+      "sha256": "sha256:e305f8fccb32e342a8755f87dd46368eaf3bdc042218efc53e649dd0a381be1d"
+    },
+    {
+      "id": "operation-prefix",
+      "sha256": "sha256:7a85d79a92c66eaa0b0421adbafd1c7a60f5c693b04153101bb697d124f0f6fe"
+    },
+    {
+      "id": "id-trailing-newline",
+      "sha256": "sha256:fafc01d5209f8019b8ea6b9dfe248c880728ecbd2de6dff207210547e6464a32"
+    },
+    {
+      "id": "foreign-task",
+      "sha256": "sha256:dcfe3a1350bb6a317b6bdd4c30f712ce730069708cdb38deed5d091f46a1b87e"
+    },
+    {
+      "id": "foreign-operation",
+      "sha256": "sha256:d419552d53de9a1ecb7a80ae5c6a6d90f962698e44085f5a52931ba132fc0973"
+    },
+    {
+      "id": "forged-event-receipt",
+      "sha256": "sha256:3085eb1f11703b208e0d817f60d582e9339949819ac96e30e4e6689acc9010f1"
+    },
+    {
+      "id": "stale-auth",
+      "sha256": "sha256:35705cad2d387c3c8289f65be57645156f2abfc7c20c465947d5d201c64e7cbd"
+    },
+    {
+      "id": "stale-policy",
+      "sha256": "sha256:56b8ce192f34aed85b396bb3a9f30f625054052f8172f6b5ab88364aab2ef4f9"
+    },
+    {
+      "id": "stale-stop",
+      "sha256": "sha256:85200638b6d80c1172e96dd4d95fb8e501a3bef5399ea14a1e75e587a27dddde"
+    },
+    {
+      "id": "null-epoch",
+      "sha256": "sha256:d4b253663979d07a76054debb67b3bebb698a6e0bc7374d99c994d413e634f37"
+    },
+    {
+      "id": "unnamespaced-norm",
+      "sha256": "sha256:3d394ef74c8ad01f659a87e593715676136f284951a3b007f659d89b169932ce"
+    },
+    {
+      "id": "unknown-norm",
+      "sha256": "sha256:dd71959b242da60724720a1b7c2f7c919c994eec7b666971f8910a49d7a0f816"
+    },
+    {
+      "id": "rewrite-spec-ref",
+      "sha256": "sha256:b816674b477266b652e7aff21e33b5d0cb71cdab79d25d4693dd66178b066fb2"
+    },
+    {
+      "id": "bad-supersession",
+      "sha256": "sha256:73950821c9c2ab49767ab4ef803456f46d0a474614c8ad0dd1bb794c5e62ba18"
+    },
+    {
+      "id": "future-event",
+      "sha256": "sha256:d061e81dc71a1ff9fd766a3f075e87d45eba0709d5ca60b3eaa705544bee69b0"
+    },
+    {
+      "id": "non-utc-event",
+      "sha256": "sha256:23a4dd46e0a92152058859372cea16fc58a28e88f94c424872e3c2ad09fd2a0a"
+    },
+    {
+      "id": "calendar-invalid",
+      "sha256": "sha256:b6ba9af7a04b6118be3f247fc3c4738f6bf914fc23457e75b31416c0829261ea"
+    },
+    {
+      "id": "expired-event",
+      "sha256": "sha256:12a3056996e07252252dc3830a27bc5a6be44678de4b9aac54f3fd3b9c8c2ca1"
+    },
+    {
+      "id": "foreign-artifact",
+      "sha256": "sha256:1947be28d46ea877de7b245b2eb9c00565d5cc9dcda2d2eb818e8e6f497acb0a"
+    },
+    {
+      "id": "terminal-resurrection",
+      "sha256": "sha256:2b25110d49277a93fd4f45857d34601f5c7dc7517acfd966202cb1f2f6997746"
+    },
+    {
+      "id": "late-cancel-resume",
+      "sha256": "sha256:6f99fe7fd788bb2922830122c7f98e92eb2ce2c3be1f12ff80e6db2aee40d819"
+    },
+    {
+      "id": "cancel-pending-resume",
+      "sha256": "sha256:aae99ea25e7a521ea2137d57eeca6770cfe3296dd5a4e71a019ab297128a1804"
+    },
+    {
+      "id": "stale-fence",
+      "sha256": "sha256:8a07db3eddcb2ead44b83fa5622c423f9ede3a6b47c619723ee2b00b1d4bdeb7"
+    },
+    {
+      "id": "stale-cas",
+      "sha256": "sha256:1a56c6edd49145fdc43405ba6f30dc2b2d9d6681dcd14adbf0b64e24c769102e"
+    },
+    {
+      "id": "executor-complete",
+      "sha256": "sha256:88106c3a5b0a923ac499519d2c97644891ad7add57904b58f01970ed5bce811d"
+    },
+    {
+      "id": "complete-without-readback",
+      "sha256": "sha256:c7ba26913520f4252d9a70e9cbb4eb09a99410351c828676b830db26cfd91a8b"
+    },
+    {
+      "id": "waiting-without-action",
+      "sha256": "sha256:f88081862c03e7cad6e1bc8e93d3ac2cd1bfe4129f9c710d70c1e4456a4c363d"
+    },
+    {
+      "id": "waiting-without-subscription",
+      "sha256": "sha256:1d651fcc5adfc3910a5334d8daf605774aad877191f190e7bcb2bb3ee6280b68"
+    },
+    {
+      "id": "submitted-not-verified",
+      "sha256": "sha256:0cda97dd9f8654f2a04535c4c44252be6ecab5e5510f34a775d41be8e0b054f0"
+    },
+    {
+      "id": "verified-without-test",
+      "sha256": "sha256:97ebaf2fcd3f38fdda1909d25efaf6f4ba05e02e3de1f2ac204e3d0ab0267a00"
+    },
+    {
+      "id": "revoked-owner-action",
+      "sha256": "sha256:621643f399247caf8f4b8eedbef53b63ddb9045051b65a96d28cf4491c699852"
+    },
+    {
+      "id": "expired-approval",
+      "sha256": "sha256:3d25eee8a3b0d010703066fbc196c7db412e96baa21d00c9b3f06dbebd36a192"
+    },
+    {
+      "id": "replayed-approval",
+      "sha256": "sha256:32bdbcfd4b9ca7688a345fdde2f212341e3f7ff46452f170069ef88b58316746"
+    },
+    {
+      "id": "revoked-approval",
+      "sha256": "sha256:c4d7ced348a13d89014b39e73f6c4ffd0a4bd1b5d62183da2bbcc6603e725f58"
+    },
+    {
+      "id": "unsafe-tool-retry",
+      "sha256": "sha256:1d0a0bc31b093d42c6abdf2e0fd6e373658161cc2c55e334e69f31c6ad478dbd"
+    },
+    {
+      "id": "wrong-tool-digest",
+      "sha256": "sha256:50905379929459fe13338be3b449e08b7b082c5a3064ce417de7895cbb126c77"
+    },
+    {
+      "id": "changed-tool-payload",
+      "sha256": "sha256:cf582e0d1138fff2048ad723a423da4f76c0007b6535cdef0b2cafc06b949e99"
+    },
+    {
+      "id": "unknown-effect-no-replay",
+      "sha256": "sha256:aef906a0a97f07c0c32ecde05a2d53aab49119128ac72bdd019e897c5cbb8ffa"
+    },
+    {
+      "id": "missing-effect-receipt",
+      "sha256": "sha256:9e11cc384381d2c0d8e8646f310d1608170d150cfb72d7e8814833f73cfe687d"
+    },
+    {
+      "id": "unknown-price-not-free",
+      "sha256": "sha256:edcfeef2457c13df29124222e153ebd262374154ab9d29c6f9e43d79307332fa"
+    },
+    {
+      "id": "quoted-price-incomplete",
+      "sha256": "sha256:04e8ef5df35def88dc43e6c4bd07cd688e9e9c1f8ca56e482c31c7e72216086b"
+    },
+    {
+      "id": "unknown-paid-dispatch",
+      "sha256": "sha256:c5a47331a252deaf3785d12651fcb4ef9d4c5b2e917a720400d15a49850b753a"
+    },
+    {
+      "id": "unbounded-attempt",
+      "sha256": "sha256:f83bca361f0dbf0f4fdf95d077288b909aa5f68f098b177a2b061eb6966c65e1"
+    },
+    {
+      "id": "currency-float",
+      "sha256": "sha256:a38fe43abb0c26a0fb0618106679b6c3f3cf9234b6d06338aa7bdce24afaedc4"
+    },
+    {
+      "id": "not-sent-not-free-receipt",
+      "sha256": "sha256:91b1cb278465582571c41ffc77cbc43f5058b9fbddecff86231994c27fc12e06"
+    },
+    {
+      "id": "cursor-foreign-recipient",
+      "sha256": "sha256:afdd0c68104bcc1cd4147c4733a38f0e1fac621ccc8aca4c28dfb946aa267478"
+    },
+    {
+      "id": "cursor-future-offset",
+      "sha256": "sha256:cf8243814e0afa9d9754f1846ccf4692bca1f8ba9bbfba0f01df7b70774820ea"
+    },
+    {
+      "id": "cursor-wrong-stream",
+      "sha256": "sha256:86227eadaeb870f160fa1f289f7ed4bf3790607082d87906ef7e5e6839c3f398"
+    },
+    {
+      "id": "hash-not-content-addressed",
+      "sha256": "sha256:fa2e644250a4ff2e5dcaa0581b5804be604fb3db7c68d1b0848b6435db71107c"
+    },
+    {
+      "id": "not-run-cannot-pass",
+      "sha256": "sha256:52fee47b8fdc8059990a9ca70b15b2d36a5efd39f0bcb8e9f847adb7c7f56d7d"
+    },
+    {
+      "id": "skipped-cannot-pass",
+      "sha256": "sha256:2463a1d1880d2aa5be053168015f4f9186d24ec4d6b3a6513ae71d651b3fbc93"
+    },
+    {
+      "id": "failed-exit-cannot-pass",
+      "sha256": "sha256:599e447d11168b1bb6147f828acf781e87bad1526dc4d035092bee4df756d9ee"
+    },
+    {
+      "id": "forged-qa-attestation",
+      "sha256": "sha256:a0f023ab6502ad358108051e66ccf57579fda730026bfbd8adc87af5b01da461"
+    },
+    {
+      "id": "receipt-body-changed",
+      "sha256": "sha256:fcddfcdfc9b3144049cade5ea66c9c1f820ed1a68fe4272ee126d70908d35b17"
+    },
+    {
+      "id": "event-body-changed",
+      "sha256": "sha256:648c49c7b9c0b45014f6bb5f04413ad638936ca7f70cdc59eccd46cf5af9abad"
+    },
+    {
+      "id": "qa-stale-aggregate",
+      "sha256": "sha256:7e58d9cb5827363ecb0040e4e363a02725e8678eb1bb3d2019b6f5c01ce693d7"
+    },
+    {
+      "id": "qa-unknown-criterion",
+      "sha256": "sha256:95053c00463b5090598c9b89e77ec322002ca008084b7e9bb1da7450579aa244"
+    },
+    {
+      "id": "qa-self-acceptance",
+      "sha256": "sha256:a54334424aa4e036c0cfaf1285dbd1f0b1d9022e9d92b8cb861649b2d541c1ac"
+    },
+    {
+      "id": "qa-missing-stdout",
+      "sha256": "sha256:7878d7054314536ea3c8355ce9e5534c3dd8364823e01db91b1adaed81f8cd61"
+    },
+    {
+      "id": "child-depth-mismatch",
+      "sha256": "sha256:db865d0455d9189d50f8ce1a01976ee0997a5453698f3150af20c46d73f46035"
+    },
+    {
+      "id": "child-widened",
+      "sha256": "sha256:f631298c229bbece6902d584d7e22f7c0828f2d2e283b67bad9e40a2d0b9da65"
+    },
+    {
+      "id": "wait-expired",
+      "sha256": "sha256:9348938bbd6b1ad1d1337aafd36ac6d22a6eaa6b3031e68800102c101dbbe292"
+    }
+  ]
+}

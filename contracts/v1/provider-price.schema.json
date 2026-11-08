@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/provider-price.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "contract": {
+      "const": "provider-price"
+    },
+    "price_profile_id": {
+      "type": "string",
+      "pattern": "^price_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "status": {
+      "enum": [
+        "UNKNOWN",
+        "QUOTED"
+      ]
+    },
+    "seller": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "currency": {
+      "oneOf": [
+        {
+          "enum": [
+            "USD",
+            "RUB",
+            "EUR"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "input_micros_per_million": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,29})$(?![\\s\\S])"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "output_micros_per_million": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,29})$(?![\\s\\S])"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "quote_ref": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "checked_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "expires_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract",
+    "price_profile_id",
+    "status",
+    "seller",
+    "model",
+    "currency",
+    "input_micros_per_million",
+    "output_micros_per_million",
+    "quote_ref",
+    "checked_at",
+    "expires_at",
+    "reason"
+  ],
+  "additionalProperties": false
+}

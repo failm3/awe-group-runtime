@@ -1,0 +1,12 @@
+{
+  "interface": "awe-hermes-runtime-adapter/1.0.0",
+  "implementation": "original local E0 abstraction, fixed synthetic transport",
+  "base_commit": "16a5017dd77bd1e65a47aae4be2b5215756d997e",
+  "contracts": {"version": "1.0.0", "paths": ["contracts/v1/run-grant.schema.json", "contracts/v1/tool-receipt.schema.json", "contracts/validate.mjs"]},
+  "integration": {"release": "awe-int01-e0-1", "path": "awe/integration/bridge.mjs", "methods": ["authenticate", "review", "dispatchCanary"]},
+  "state": {"mode": "E0 memory only", "path": "awe/state/service.mjs", "methods": ["getProject", "getTask", "recordToolReceipt"]},
+  "hermes_reference": {"source": "baseline/sources/sources/AWE-GROUP-AUDITS/A-Workspace/AUDIT-A-WORKSPACE.md", "historical_audited_commit": "7058601bf5cdc35502676a9b8aec0480e7e80127", "runtime_verified": false, "code_copied": false, "wire_compatible": false, "license_adopted": false},
+  "licensing": {"local_code": "repository UNLICENSED; no new distribution rights granted", "third_party_runtime_dependencies": [], "upstream_code_imported": false, "future_real_hermes_binding": "Separate pinned public API and license review required"},
+  "toolchain": {"node": "24.21.0", "npm_required": false},
+  "physical_dispatch": "DISABLED"
+}

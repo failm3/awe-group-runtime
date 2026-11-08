@@ -1,0 +1,97 @@
+{
+  "release": "AWE_E1/1",
+  "contract_version": "awe.e1.contracts/1",
+  "mode": "OFFLINE_CONTRACT_PREFLIGHT_ONLY",
+  "schema_document_digest": "sha256:05fba6ed665c0851380a77f61906bde327f871f50e4aba8ef9e0d58b7763db19",
+  "capability_registry_digest": "sha256:35599bbe691347fc88b7b305ea231ab3cc815cc94374270b472c2a06fc24584c",
+  "node_required": "24.21.0",
+  "fixtures": [
+    {
+      "kind": "A",
+      "release": "AWE_E1/1",
+      "project_id": "prj_e1_career",
+      "domain_manifest_digest": "sha256:65fa5b102f218fbcedaa2c47203089eadeed2c824396ed0682431a1a6f9ee1eb",
+      "spec_digest": "sha256:f036c95986369953b73c1617ec031192fb3995ec7cf2e4ebad46ddba8b41b137",
+      "grant_digest": "sha256:e3aa3220593bd06f85c16ff607c9d47ea7b59eb7c40e577cb286ab9bf33ee7da",
+      "plan_digest": "sha256:d2d8532166e681892a756b066fa4f08ad3c5def56310414fe1bcfd57fd82a15c",
+      "decision": "PUBLISHED_PREFLIGHT_ONLY",
+      "tasks": [
+        {
+          "task_id": "source_left",
+          "depends_on": []
+        },
+        {
+          "task_id": "source_right",
+          "depends_on": []
+        },
+        {
+          "task_id": "dedupe",
+          "depends_on": [
+            "source_left",
+            "source_right"
+          ]
+        },
+        {
+          "task_id": "package",
+          "depends_on": [
+            "dedupe"
+          ]
+        },
+        {
+          "task_id": "review",
+          "depends_on": [
+            "package"
+          ]
+        }
+      ],
+      "accepted": false,
+      "effects": 0,
+      "execution_authorized": false
+    },
+    {
+      "kind": "B",
+      "release": "AWE_E1/1",
+      "project_id": "prj_e1_product",
+      "domain_manifest_digest": "sha256:4154b4ee95609f684a6ad97c274c3b601ee3d7d2544cbc2fbf413978b1db5a57",
+      "spec_digest": "sha256:e3f3fc108937b4d1a0fdcbfaa291d48bb97dffd6344e23549406713ce140b499",
+      "grant_digest": "sha256:0e56bbc8895e6f90508e321203f4c6a00db7b4bf4112f472801a9f20cc7e311b",
+      "plan_digest": "sha256:5472fdbfc6be379f0ec1b099c32b5b433307c69f5528fe89810072f2709f6b8f",
+      "decision": "PUBLISHED_PREFLIGHT_ONLY",
+      "tasks": [
+        {
+          "task_id": "brief",
+          "depends_on": []
+        },
+        {
+          "task_id": "spike",
+          "depends_on": []
+        },
+        {
+          "task_id": "design",
+          "depends_on": [
+            "brief",
+            "spike"
+          ]
+        },
+        {
+          "task_id": "build",
+          "depends_on": [
+            "design"
+          ]
+        },
+        {
+          "task_id": "review",
+          "depends_on": [
+            "build"
+          ]
+        }
+      ],
+      "accepted": false,
+      "effects": 0,
+      "execution_authorized": false
+    }
+  ],
+  "accepted": false,
+  "effects": 0,
+  "execution_authorized": false
+}

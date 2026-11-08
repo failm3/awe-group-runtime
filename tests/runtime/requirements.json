@@ -1,0 +1,15 @@
+{
+  "issue": "https://github.com/failm3/nivict-ai-academy/issues/10",
+  "profile": "D04_E0_SYNTHETIC_V1",
+  "test_file": "tests/runtime/runtime.test.mjs",
+  "requirements": [
+    {"id": "M07-runtime", "tests": ["R01", "R06", "R10", "R15", "R25", "R35"], "claim": "Pinned local adapter and fake transport; no real Hermes API compatibility claim"},
+    {"id": "M08-child", "tests": ["R01", "R02", "R03", "R04", "R05", "R08", "R09", "R33", "R34"], "claim": "Bounded RunGrant, one child depth, capability/scope/budget/deadline narrowing and shared reserved attempts"},
+    {"id": "M12-tools", "tests": ["R01", "R07", "R11", "R12", "R24", "R26", "R27"], "claim": "Exact tool identity, one operation, INT01 PEP, synthetic receipt, physical DENY"},
+    {"id": "M15-recovery", "tests": ["R13", "R14", "R15", "R16", "R17", "R18", "R19", "R28", "R29", "R30", "R31", "R32"], "claim": "No replay/resurrection on cancel, missing handles, owner epoch changes or lost ACK; process-local only"},
+    {"id": "A-01", "tests": ["R21", "R22", "R23"], "claim": "Selected model B is checked against the exact reviewed B row"},
+    {"id": "A-02", "tests": ["R16", "R17"], "claim": "Abandoned helper becomes UNKNOWN with owner epoch reconciliation and retained capacity"},
+    {"id": "truthful-QA", "tests": ["R01", "R20", "R32"], "claim": "WORK_COMPLETED cannot produce authoritative COMPLETE or independent QA verdict"}
+  ],
+  "not_run": ["real Hermes", "real provider/API", "OS/VM egress sandbox", "durable store recovery", "independent D08 QA", "remote CI"]
+}

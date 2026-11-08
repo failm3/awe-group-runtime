@@ -1,0 +1,26 @@
+{
+  "contract": "rt02.runtime-lock/1",
+  "platform": "win32",
+  "node": "v24.21.0",
+  "python": "3.13.2",
+  "executables": {
+    "node": {
+      "path": null,
+      "hash": null
+    },
+    "python": {
+      "path": null,
+      "hash": null
+    },
+    "cli": {
+      "path": null,
+      "hash": null
+    }
+  },
+  "sources": {
+    "awe/hermes_runtime/executors/javascript.cjs": "sha256:90c2c61785d9caa471c5033e7d46c046dc4123959e22b4e0c6b85ac4f0dad161",
+    "awe/hermes_runtime/executors/python.py": "sha256:480d1d981fd7f5fb38b66978e7ad09483562fd5e72e2ab1d068e93bd0c68baad",
+    "awe/hermes_runtime/executors/job-host.py": "sha256:22d5af59621eb131b8cf89d2177fd1dd5b60ad99857601e5c6331532b6d19074",
+    "baseline/offline-guard.cjs": "sha256:5a6d5e9bade55e11e5960e105901c61bceb0c20e3729f22bfce411fa1033a26d"
+  }
+}

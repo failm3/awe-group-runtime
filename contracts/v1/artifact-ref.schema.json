@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/artifact-ref.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "contract": {
+      "const": "artifact-ref"
+    },
+    "artifact": {
+      "$ref": "common.schema.json#/$defs/artifact"
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract",
+    "artifact"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const root=path.resolve(import.meta.dirname,'../..'),base=path.join(root,'INTEGRATION-01'),replay=path.join(base,'delivery/replay-check');
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const active=JSON.parse(fs.readFileSync(path.join(base,'CANDIDATE-SOURCES.json'))),lock=JSON.parse(fs.readFileSync(path.join(base,'SOURCE-LOCK.json')));
+assert.equal(sha(fs.readFileSync(path.join(base,'CANDIDATE-SOURCES.json'))),sha(fs.readFileSync(path.join(replay,'INTEGRATION-01/CANDIDATE-SOURCES.json'))));
+for(const f of active.files)assert.equal(sha(fs.readFileSync(path.join(replay,f.path))),f.sha256);
+for(const s of lock.sources)for(const f of s.files)assert.equal(sha(fs.readFileSync(path.join(replay,'INTEGRATION-01/snapshots',s.id,f.path))),f.sha256);
+assert(!fs.existsSync(path.join(replay,'.git')));
+const tap=fs.readFileSync(path.join(base,'evidence/package-replay.tap'),'utf8');for(const [k,n]of Object.entries({tests:29,pass:29,fail:0,cancelled:0,skipped:0}))assert.equal(Number(new RegExp('^# '+k+' (\\d+)','m').exec(tap)?.[1]),n);
+assert.equal(fs.statSync(path.join(base,'evidence/package-replay.stderr.txt')).size,0);
+const result={status:'PASS',recordedAt:new Date().toISOString(),scope:'Extracted preflight archive, no Git and no original worktree dependency',node:process.version,activeSourceFiles:active.files.length,snapshotFiles:lock.sources.reduce((n,s)=>n+s.files.length,0),candidateManifestSha256:sha(fs.readFileSync(path.join(base,'CANDIDATE-SOURCES.json'))),tests:29,pass:29,fail:0,tap:'evidence/package-replay.tap',tapSha256:sha(Buffer.from(tap)),preflightArchive:JSON.parse(fs.readFileSync(path.join(base,'delivery/PREFLIGHT-ARCHIVE.json'))),finalArchiveNote:'Final archive adds replay reports/documentation; exact same 170 active runtime files. Each final ZIP entry is independently byte-checked by package-review.ps1.'};
+fs.writeFileSync(path.join(base,'evidence/PACKAGE-REPLAY.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({status:result.status,tests:29,activeSourceFiles:result.activeSourceFiles,snapshotFiles:result.snapshotFiles}));

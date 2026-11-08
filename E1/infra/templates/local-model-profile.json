@@ -1,0 +1,18 @@
+{
+  "schema": "awe-e1.local-model-profile.v1",
+  "composition": "AWE_E1",
+  "status": "BLOCKED",
+  "enabled": false,
+  "endpoint": null,
+  "model_id": null,
+  "model_digest": null,
+  "actual_model_calls": 0,
+  "candidates": [
+    {"host": "Mac M4 Pro 24 GB", "model": "Qwen3-8B Q4", "availability": "UNKNOWN", "measurement_status": "NOT_RUN"},
+    {"host": "Windows", "model": "Qwen3:4b", "availability": "UNKNOWN", "measurement_status": "NOT_RUN"}
+  ],
+  "equivalence": "NOT_PROVEN",
+  "required_measurements": ["REACHABLE_AUTHORIZED_NODE", "PINNED_MODEL_AND_QUANT_DIGEST", "ACTUAL_MODEL_ID_AND_USAGE", "ACCEPTED_QUALITY", "P95_LATENCY", "MEMORY_PRESSURE", "NODE_UPTIME"],
+  "private_input_policy": "NO_CLOUD_ROUTE",
+  "automatic_probe_or_call": false
+}

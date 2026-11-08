@@ -1,0 +1,14 @@
+{
+  "policy_id": "d02-disposable-egress-proposal-v1",
+  "status": "PROPOSED_NOT_ENFORCED",
+  "environment": "FUTURE_DISPOSABLE_E1",
+  "deployment_authorized": false,
+  "project_boundary": "ONE_VM_PER_PROJECT",
+  "lifecycle": {"disposable": true, "destroy_after_probe": true, "live_workspace_mounts": [], "host_mounts": [], "host_devices": [], "container_socket": false},
+  "network": {"default": "DENY", "egress_allowlist": [], "ingress_allowlist": [], "ipv4": "DENY", "ipv6": "DENY", "tcp": "DENY", "udp": "DENY", "dns": "DENY", "metadata": "DENY", "loopback_host_gateway": "DENY", "proxy_environment": "ABSENT", "provider_access": "NONE"},
+  "worker": {"os_identity": "DISTINCT_UNPRIVILEGED_PER_PROJECT", "capabilities": [], "host_terminal": false, "secret_handles": [], "inherited_descriptors": [], "control_plane_credentials": false},
+  "storage": {"project_volume": "PRIVATE_EPHEMERAL", "cross_project_mounts": [], "qa_hidden_volume": "EXAMINER_ONLY_OUTSIDE_WORKER_CHECKOUT", "local_qa_verdict": "SEALED_FROM_EXAMINER_AND_AUDITOR", "trace": "PEP_METADATA_PROJECTION_ONLY", "backups_exports_cache": "PROJECT_SCOPED_NO_SHARED_WORKER_MOUNT"},
+  "database": {"worker_direct_access": false, "superuser": false, "owner": false, "bypassrls": false, "force_rls": true, "project_policy": "CURRENT_AUTH_CONTEXT_REQUIRED"},
+  "effect_gateway": {"mode": "OFFLINE_RECORDER_ONLY", "direct_worker_dispatch": "DENY", "recheck_at_dispatch": true, "secrets_in_worker": false},
+  "acceptance": {"independent_verifier": "REQUIRED_NOT_ASSIGNED", "host_firewall_receipts": "REQUIRED_NOT_RUN", "vm_image_digest": "UNKNOWN", "custodian": "UNASSIGNED", "real_isolation": "NOT_RUN"}
+}

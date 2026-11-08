@@ -1,0 +1,36 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "awe-group-offline-contracts",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNLICENSED - private owner review only"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "awe:scope",
+        "value": "D-01 authored sources; no vendored runtime dependencies"
+      },
+      {
+        "name": "awe:toolchain",
+        "value": "Node.js 24.21.0; npm 11.19.0 (command wrapper only); OS and CI action components listed separately in toolchain-inventory.json"
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "awe-group-offline-contracts",
+      "dependsOn": []
+    }
+  ]
+}

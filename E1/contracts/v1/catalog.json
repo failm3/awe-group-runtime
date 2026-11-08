@@ -1,0 +1,52 @@
+{
+  "contract_version": "awe.e1.contracts/1",
+  "release": "AWE_E1/1",
+  "schema_document_digest": "sha256:05fba6ed665c0851380a77f61906bde327f871f50e4aba8ef9e0d58b7763db19",
+  "contracts": [
+    {
+      "type": "MissionSpec",
+      "local_ref": "#/$defs/MissionSpec",
+      "schema_digest": "sha256:898bbe16c1157939c31e7cd4deeec244333f83fec264c367115ff6880c376ab6"
+    },
+    {
+      "type": "MissionGrant",
+      "local_ref": "#/$defs/MissionGrant",
+      "schema_digest": "sha256:6a5d84e2edd27816d6321b598f21dfc9ade79a86d8fdf8dfd0a96cea3f89dbc9"
+    },
+    {
+      "type": "PlanRevision",
+      "local_ref": "#/$defs/PlanRevision",
+      "schema_digest": "sha256:553bf5cc380bb33532ae55ac62377582d027fa8e0471c9ec9a15674ea7aed168"
+    },
+    {
+      "type": "TaskSpec",
+      "local_ref": "#/$defs/TaskSpec",
+      "schema_digest": "sha256:8598d68dbb0d99670caf5bafb93912adee2649a89a085b1da9bc9ed93c72d2e9"
+    },
+    {
+      "type": "CapabilityRef",
+      "local_ref": "#/$defs/CapabilityRef",
+      "schema_digest": "sha256:f92d2fc9380c10dd8f49387fd9ac0334d44add50aea31e5f22fa74abf7dde6af"
+    },
+    {
+      "type": "ArtifactRef",
+      "local_ref": "#/$defs/ArtifactRef",
+      "schema_digest": "sha256:d3b675d43ff94735fab106206623fe9f7d557a39644bb49fbb1aa3d98a524b8f"
+    },
+    {
+      "type": "EffectIntent",
+      "local_ref": "#/$defs/EffectIntent",
+      "schema_digest": "sha256:828386c32aa26ba5a4a72e52a1210ba795cfdeb47d622dfed638872825ed3b56"
+    },
+    {
+      "type": "QAResult",
+      "local_ref": "#/$defs/QAResult",
+      "schema_digest": "sha256:01a297642c3cbb01b6dd998c333ddb72412a7674590e3d6ec1f9aa466893ef31"
+    },
+    {
+      "type": "DomainManifest",
+      "local_ref": "#/$defs/DomainManifest",
+      "schema_digest": "sha256:734c4462325a4acf6fde94d6553a672276cddb5098aed405a29de0f957128363"
+    }
+  ]
+}

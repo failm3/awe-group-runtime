@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://awe.invalid/contracts/v1/attempt-receipt.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "contract": {
+      "const": "attempt-receipt"
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^req_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "correlation_id": {
+      "type": "string",
+      "pattern": "^corr_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "causation_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^evt_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+          "maxLength": 72
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "actor": {
+      "$ref": "common.schema.json#/$defs/actor"
+    },
+    "scope": {
+      "$ref": "common.schema.json#/$defs/scope"
+    },
+    "epochs": {
+      "$ref": "common.schema.json#/$defs/epochs"
+    },
+    "spec": {
+      "$ref": "common.schema.json#/$defs/spec"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expected_revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^att_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "logical_request_id": {
+      "type": "string",
+      "pattern": "^llm_[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])",
+      "maxLength": 72
+    },
+    "attempt_number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2
+    },
+    "kind": {
+      "enum": [
+        "MAIN",
+        "CHILD",
+        "QA",
+        "COMPACTION",
+        "FALLBACK",
+        "REPAIR"
+      ]
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$(?![\\s\\S])"
+    },
+    "reservation_micros": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,29})$(?![\\s\\S])"
+    },
+    "settled_micros": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]{0,29})$(?![\\s\\S])"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "uncertain": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "NOT_SENT",
+        "RECEIVED",
+        "OUTCOME_UNKNOWN"
+      ]
+    },
+    "price": {
+      "$ref": "provider-price.schema.json"
+    },
+    "usage_tokens": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "contract",
+    "request_id",
+    "correlation_id",
+    "causation_id",
+    "actor",
+    "scope",
+    "epochs",
+    "spec",
+    "created_at",
+    "expected_revision",
+    "attempt_id",
+    "logical_request_id",
+    "attempt_number",
+    "kind",
+    "payload_hash",
+    "reservation_micros",
+    "settled_micros",
+    "uncertain",
+    "status",
+    "price",
+    "usage_tokens"
+  ],
+  "additionalProperties": false
+}

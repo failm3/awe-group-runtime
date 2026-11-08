@@ -1,0 +1,150 @@
+{
+  "version": "1.0.0",
+  "status": "DRAFT_NOT_RATIFIED",
+  "precedence": "OWNER_DECISION_PENDING; no norm grants authority",
+  "constitution": [
+    {
+      "id": "constitution:0.1-draft:C-01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-02",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-03",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-04",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-05",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-06",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-07",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-08",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-09",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-10",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-11",
+      "status": "DRAFT"
+    },
+    {
+      "id": "constitution:0.1-draft:C-12",
+      "status": "DRAFT"
+    }
+  ],
+  "canvas": [
+    {
+      "id": "canvas-principle:v01:C-01",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-01"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-02",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-02",
+        "constitution:0.1-draft:C-06"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-03",
+      "status": "DRAFT",
+      "proposed_topic_matches": [],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-04",
+      "status": "DRAFT",
+      "proposed_topic_matches": [],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-05",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-04",
+        "constitution:0.1-draft:C-05"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-06",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-03",
+        "constitution:0.1-draft:C-04"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-07",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-07",
+        "constitution:0.1-draft:C-11"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-08",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-08"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-09",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-09",
+        "constitution:0.1-draft:C-10"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    },
+    {
+      "id": "canvas-principle:v01:C-10",
+      "status": "DRAFT",
+      "proposed_topic_matches": [
+        "constitution:0.1-draft:C-11",
+        "constitution:0.1-draft:C-12"
+      ],
+      "equivalence": "NOT_ASSUMED",
+      "approved": false
+    }
+  ],
+  "source": "Raw immutable academy-specs snapshots; B-12; D ADR-04"
+}

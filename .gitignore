@@ -1,0 +1,9 @@
+.private/
+.reference/
+node_modules/
+E1/.local/
+outputs/private/
+*.key
+*.pem
+.env
+.env.*

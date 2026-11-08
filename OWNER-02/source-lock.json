@@ -1,0 +1,25 @@
+{
+  "profile": "E0_LOCAL_REVIEWED_ONLY",
+  "review_scope": "MASTER01_OFFLINE_IMPLEMENTATION_CANDIDATE_NOT_INDEPENDENT_ACCEPTANCE",
+  "files": {
+    "awe/execution_security/registry.mjs": "sha256:a84317d7eb200076dd5bd57e3806c85e55101a2f02f81a2070f3ae740efb4477",
+    "awe/execution_security/gate.mjs": "sha256:998c2f999c0b3f3d3992fd8b66b9ffcda7ad70c50496cb9d76e5be20bc6582b0",
+    "awe/execution_security/authority.mjs": "sha256:49c6da0d02d294b0cefae1c314bf70a61a202b328d3e9abbc5779ec08bd61f52",
+    "awe/execution_security/identity.mjs": "sha256:a4cfb164fc92b7531db4bba2c4f50e9e0b948cae0d59f592e3c94afabfaee891",
+    "awe/execution_security/common.mjs": "sha256:5fe6108bf8a7747064075a61bb53fdd440d918c71773c877a6e728888c4ad0f5",
+    "awe/execution_security/local-reviewed.mjs": "sha256:a3bb3c8a58387663dd0303fe36c5f5d6346bf8d89989c8fab359aa5676436f51",
+    "awe/execution_security/local-adapter.mjs": "sha256:47f339c30979ff6128a291972862f8e6d3a5bb36788c878d1e707279098b3e04",
+    "awe/execution_security/local-d09.mjs": "sha256:17288a23548529d35a65a683df0e6e5e045cff483409f6accd51fc902ec42410",
+    "awe/hermes_runtime/bounded-frames.mjs": "sha256:2b360b2cb2d2060cd0e69df05301529758ce584fbe47bfe6ff0aa9860362abd5",
+    "awe/hermes_runtime/executors/job-host.py": "sha256:22d5af59621eb131b8cf89d2177fd1dd5b60ad99857601e5c6331532b6d19074",
+    "TOOLS-02/child-guard.cjs": "sha256:9a267c7d048e90570b98049c6b59e512dbef58ffda4c152d43f0a320bbab5c2c",
+    "awe/execution_security/local-text-adapter.mjs": "sha256:ea3073eaa4e99c6c275317ecac6e9d42fdf6114c73f33a264b80e00fe8eda30e",
+    "awe/executable_tools/scope.mjs": "sha256:1b6e9e953b26c270af525e48494fada6cf5ea5e165c016f2d13e3a2f808cb602",
+    "awe/executable_tools/protocol.mjs": "sha256:11afc6b54791dba3542fbcdfcbab82d710d53b02194940e8f530a305c5517e1b",
+    "awe/executable_tools/pins.mjs": "sha256:cd3b4af6a083737e016a3656be0290d4884ebc06ec0d40d5d4887713cd6e4172",
+    "awe/tool_registry/common.mjs": "sha256:bb95b2e474cb5ae1a126d1a5102ecc88e950fa1976fde3cd4cc13e8f648be7e9",
+    "awe/policy/json.mjs": "sha256:87ad08111442d0fb6ccc54c6ea3342a581bc0b81ea7a15c8987247dd98e24126",
+    "contracts/canonical.mjs": "sha256:2abfaf7840f735735fb8b633ea6a0b5d0fdb56eb67e0cd1aae16f7b4775f861c"
+  },
+  "production_authorized": false
+}

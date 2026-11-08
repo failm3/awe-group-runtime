@@ -1,0 +1,22 @@
+{
+  "source_url": "https://github.com/failm3/nivict-ai-academy/issues/7",
+  "title": "[AWE IMPLEMENTATION] D-02 — Trusted AuthN/AuthZ, effect policy and offline isolation",
+  "issue_updated_at": "2026-11-05T11:12:40Z",
+  "retrieval": "Read requested issue and its comments through GitHub connector before offline development; comments empty",
+  "comments_count": 0,
+  "record_type": "Requirement extraction, not a replacement for upstream issue",
+  "required_head": "3abee561ae97428680a4fe5826b0f40ae676319a",
+  "scope": ["awe/policy/", "awe/sandbox/", "tests/security/"],
+  "requirements": [
+    "Separate implementation Git worktree, exact D-01 SHA; stop on mismatch",
+    "E0/E1 simulated sandbox only; synthetic trusted identities, no real issuer claim",
+    "AuthContext/PDP/PEP check scope, actor, action, resource, payload hash, policy/auth/stop epochs, quota and approval before every effect",
+    "Fail closed for unknown role, policy or quote; action-bound one-use approvals and execution-time revocation",
+    "Project/task scope, child grant narrowing, stop/cancel epoch, limited trace visibility, Examiner/Auditor independence",
+    "Deny cross-project tool/memory/evidence access and hidden QA leak",
+    "Future VM/egress manifest and acceptance probes; JS wrapper is not evidence of real egress denial",
+    "M02/M03/M12 offline negative fixtures, coverage matrix, command/exit/hash evidence, honest VM/network NOT RUN",
+    "Concrete files/APIs/tests/limitations, D-03 integration gate and owner decisions"
+  ],
+  "prohibitions": ["D-01 version or shared directory edits", "real credentials/account APIs/live Workspace", "Workspace shell copy", "paid APIs", "remote creation/push/merge/deploy"]
+}

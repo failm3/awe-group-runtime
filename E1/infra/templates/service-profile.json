@@ -1,0 +1,16 @@
+{
+  "schema": "awe-e1.service-profile.v1",
+  "composition": "AWE_E1",
+  "installation_status": "BLOCKED",
+  "profile_kind": "DECLARATION_ONLY",
+  "authority": {"count": 1, "os_account_ref": "os-account://awe-e1/coordinator", "uptime": "UNKNOWN"},
+  "worker": {"count": 1, "os_account_ref": "os-account://awe-e1/worker", "qa_key_access": "DENY"},
+  "qa": {"os_account_ref": "os-account://awe-e1/qa", "signing_key_status": "NOT_PROVISIONED"},
+  "security": {"os_account_ref": "os-account://awe-e1/security", "credential_access": "DENY"},
+  "start_requirements": ["OWNER_E1_HOST_AND_DATABASE_SCOPE", "PINNED_SIGNED_RELEASE", "REAL_OS_IDENTITIES", "E1_DATABASE_READBACK", "SCOPED_VAULT_UNLOCKED"],
+  "stop_strategy": ["DRAIN_NEW_CLAIMS", "RECONCILE_IN_FLIGHT_WITH_EXISTING_D03_D09", "GRACEFUL_STOP", "PRESERVE_OUTBOX_AND_CURSOR"],
+  "crash_strategy": ["BOUNDED_RESTART", "WAIT_IF_VAULT_LOCKED", "HOLD_IF_STATE_UNKNOWN", "NO_AUTOMATIC_SECOND_AUTHORITY"],
+  "network": "UNBOUND_DENY",
+  "database_connection_status": "NOT_AUTHORIZED",
+  "automatic_install_command": null
+}
