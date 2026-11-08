@@ -1,0 +1,26 @@
+[
+  {
+    "file": "E1/recruit/cli.mjs",
+    "sha256": "457f3c1da3199d10ddc7ffe81f84b09f0cdddc331c363dad7c5e899b89b3a06f"
+  },
+  {
+    "file": "E1/recruit/cold.mjs",
+    "sha256": "9f988d7680fcbc378e3fbb00f651e0ce787f9d3054143949ac934f81417abdda"
+  },
+  {
+    "file": "E1/recruit/fixture-http.mjs",
+    "sha256": "7c0a73a3d5990ea69cc3681a6eae5602b0a72f49a054712e111240579431bd4c"
+  },
+  {
+    "file": "E1/recruit/mission.mjs",
+    "sha256": "9ff2932d0974759d31644b017c106eb790c6ff4cd509ca1c0f59e9d7f7b60fc9"
+  },
+  {
+    "file": "E1/recruit/pipeline.mjs",
+    "sha256": "7076bfc9e0a2759062b0e23f4181cd841ded5d885b590c9f0677f5dc5e42240a"
+  },
+  {
+    "file": "E1/recruit/worker.mjs",
+    "sha256": "460d63d1931dec01e4061de07c3db0a4bdbb4083a9e9337a54753345bceb3544"
+  }
+]

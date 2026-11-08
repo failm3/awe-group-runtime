@@ -1,0 +1,71 @@
+{
+  "cycle": 3,
+  "variant": "holdout",
+  "supervisor": "CODEX_ASTRA",
+  "source_base": "3c22522c52cb6428757fd391e8630c912016b61b",
+  "oracle_sha256": "c96003fc698f16fdca6b24e5c14deff52e475df9893079fdc0557a62c42aae8e",
+  "start": {
+    "stderr": "",
+    "exit": 0,
+    "command": "node E1/recruit/cli.mjs start .private/recruit-cycle03_4101.json",
+    "stdout": {
+      "status": "INTERRUPTED_UNFINISHED",
+      "mission_id": "mission_recruit_cycle03_4101",
+      "pid": 33800,
+      "killed_worker_pid": 32672,
+      "checkpoint": ".private/recruit-cycle03_4101.json",
+      "paid_calls": 0,
+      "external_effects": 0
+    }
+  },
+  "resume": {
+    "stderr": "",
+    "exit": 0,
+    "command": "node E1/recruit/cli.mjs resume .private/recruit-cycle03_4101.json",
+    "stdout": {
+      "status": "PARTIAL",
+      "pipeline_status": "PASS",
+      "recovery_status": "PROVEN",
+      "coding_status": "BLOCKED",
+      "mission_id": "mission_recruit_cycle03_4101",
+      "run_id": "cycle03_4101",
+      "pid": 30916,
+      "cold_pid": 45552,
+      "model_calls": 1,
+      "paid_calls": 0,
+      "external_effects": 0,
+      "evidence": "E1/recruit/evidence/cycle03_4101.json"
+    }
+  },
+  "source_files": 6,
+  "source_changed": 0,
+  "runtime_evidence_sha256": "f68d3364c9634496c58d9e9b17bf242ffab37776d465b55821703181c72f6d92",
+  "final_cold_digest": "sha256:97a03da9447e1c568d7bb0cafc770b0c28822a7fd3d40cdf10b86681475abd69",
+  "ranked_ids": [
+    "job-001",
+    "job-002",
+    "job-003",
+    "job-004",
+    "job-006"
+  ],
+  "local_model": {
+    "reserved": 0,
+    "route": "ollama.local.qwen3-4b-instruct",
+    "state": "CONFIRMED",
+    "actual_cost": 0,
+    "usage": {
+      "input_tokens": 423,
+      "output_tokens": 25,
+      "total_duration_ns": 2161213400,
+      "eval_duration_ns": 1280432000,
+      "load_duration_ns": 5025600,
+      "prompt_eval_duration_ns": 868295000,
+      "latency_ms": 2167,
+      "model": "qwen3:4b-instruct",
+      "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "wire_attempts": 1
+    }
+  },
+  "qa_accepted": false,
+  "next": "Independent QA cold audit of actual E1 state"
+}

@@ -1,0 +1,202 @@
+{
+  "schema": "awe.e1.cloud4.compact-financial-review/1",
+  "reviewed_at": "2026-11-08T04:33:44.707Z",
+  "owner_consent": "ISSUED",
+  "provenance": "HOST_ATTESTED_CHAT_AND_GITHUB_DELEGATION",
+  "signature_verified": true,
+  "trusted_public_key_digest": "sha256:fba8a46d7acd437dbe2d19b2f3317c6d780fc24b9c6452852fda569ba1f75555",
+  "key_binding_id": "router_cheap_staging",
+  "owner_id": "e1_owner",
+  "project_ids": [
+    "prj_cloud_canary_20261108",
+    "prj_recruit_cycle01_4101",
+    "prj_recruit_cycle02_4101",
+    "prj_recruit_cycle03_4101",
+    "prj_recruit_cycle04_4101",
+    "prj_recruit_score01_4101"
+  ],
+  "authorization_digest": "sha256:e88054feccd4ed7a4a7af9ff61b57e5f2f8d50773a82c4142ee5fcfa033b0372",
+  "prior_authorization_digest": "sha256:ab0759a45e953ad01eafecf14ad455d7d9133b696979a80781c3e635c9060851",
+  "scope_revision": 2,
+  "limits": {
+    "account_changes": "DENY",
+    "account_reserve_unallocated_micros": "21000000",
+    "canary": {
+      "attempts": 2,
+      "budget_micros": "500000",
+      "per_attempt_micros": "250000",
+      "route_ids": [
+        "router.cheap.chat.gpt-6-sol",
+        "router.cheap.chat.claude-opus-4-8"
+      ]
+    },
+    "fallback": "DENY",
+    "followup": {
+      "attempts": 20,
+      "budget_micros": "9500000",
+      "per_attempt_micros": "1000000"
+    },
+    "total_actual_micros": "10000000",
+    "total_attempts": 22,
+    "unknown_policy": "HOLD",
+    "wire_attempts_per_request": 1
+  },
+  "state": "PREPARED_PROVIDER_BLOCKED",
+  "history_entries": 1,
+  "real_funding": {
+    "spent": 0,
+    "state": "DISABLED",
+    "reason": "OWNER_FUNDING_AND_HARD_PROVIDER_CAP_NOT_VERIFIED",
+    "reserved": 0,
+    "budget_cap": 0,
+    "attempts_cap": 0,
+    "attempts_used": 0,
+    "key_binding_id": "router_cheap_staging",
+    "budget_group_id": "router.cheap.shared/1",
+    "per_attempt_cap": 0,
+    "accounting_semantics": {
+      "spent": "BOOKED_CONFIRMED_CHARGES_ONLY",
+      "schema": "awe.e1.cloud-accounting-semantics/1",
+      "amount_encoding": "UNSIGNED_DECIMAL_STRING_USD_MICROS",
+      "unknown_charge_cost": "UNKNOWN_NOT_ZERO",
+      "observed_overrun_micros": "SUM_OF_POSITIVE_OBSERVED_HELD_CHARGE_MINUS_ORIGINAL_RESERVATION",
+      "unknown_charge_attempts": "SENDING_OR_UNKNOWN_ATTEMPTS_WITHOUT_OBSERVED_CHARGE",
+      "observed_held_charge_micros": "OBSERVED_UNCONFIRMED_CHARGES_ON_HELD_ATTEMPTS"
+    },
+    "booked_confirmed_micros": "0",
+    "observed_overrun_micros": "0",
+    "unknown_charge_attempts": 0,
+    "observed_held_charge_micros": "0"
+  },
+  "accounting_reset": false,
+  "router_key_access": false,
+  "paid_generations": 0,
+  "provider_contract": "ACTUAL_DEBIT_CAP_AND_SOURCE_CHARGED_ACK_UNVERIFIED",
+  "native_suites": [
+    {
+      "suite": "0004_PHASE",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "provider_calls": 0,
+      "evidence_mode": "EXPLICIT_SYNTHETIC_NATIVE_ACCOUNTING_FAKE_PROVIDER_CHARGES",
+      "compact_evidence_sha256": "c5df7b5ba572923199f7f31b24c04d952c3ddf5201327689ba87edbbce37c096",
+      "cases": [
+        {
+          "case": "SIGNED_PREPARED_PROVIDER_BLOCKED",
+          "authorization_digest": "sha256:f3ceab6b38431fd7aab6546f63c3559da78f72cb7c55ce04b03139ca935732d1",
+          "owner_consent": "ISSUED",
+          "funded": false
+        },
+        {
+          "case": "NATIVE_CANARY_BOUNDS",
+          "actual_paid_calls": 0,
+          "explicit_fake_charged_micros": 32,
+          "attempts_used": 2,
+          "third_canary_denied": true
+        },
+        {
+          "case": "SAME_KEY_INDEPENDENT_QA_PROMOTION",
+          "provider_calls": 0,
+          "native_qa_records": 2,
+          "counters_reset": false,
+          "followup_reserve": 40
+        },
+        {
+          "case": "POOLED_UNKNOWN_HOLD",
+          "state": "HOLD",
+          "booked_confirmed_micros": "32",
+          "reserved": 40,
+          "unknown_charge_attempts": 1,
+          "actual_unknown_cost": "UNKNOWN_NOT_ZERO"
+        }
+      ]
+    },
+    {
+      "suite": "0005_SCOPE_CAS",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "provider_calls": 0,
+      "evidence_mode": "EXPLICIT_SYNTHETIC_NATIVE_FAKE_PROVIDER_PROOF",
+      "compact_evidence_sha256": "f15d86fd57d9ec5b5f06e1a133c381011fe04f5b6a0d011e5c9cef828c7b4fc3",
+      "cases": [
+        {
+          "case": "NATIVE_SAME_KEY_SCOPE_CAS",
+          "accepted": 1,
+          "rejected": 1,
+          "history_count": 1,
+          "funded": false,
+          "key_alias_created": false
+        },
+        {
+          "case": "STALE_FUNDING_AND_FUNDED_AMEND_DENIED",
+          "booked": 0,
+          "reserved": 0,
+          "attempts_used": 0,
+          "accounting_reset": false
+        },
+        {
+          "case": "COLD_HISTORY_AND_ACL",
+          "qa_amend": false,
+          "worker_amend": false,
+          "coordinator_history_write": false,
+          "history_retained": true
+        }
+      ]
+    },
+    {
+      "suite": "0006_FUNDED_LOCK_ORDER",
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "provider_calls": 0,
+      "evidence_mode": "NATIVE_POSTGRESQL_EXPLICIT_SYNTHETIC_FUNDING",
+      "compact_evidence_sha256": "f4a41e796325cc145896b0cbbfb6819c223c8cf2ed834febcdbec1a630f604b3",
+      "cases": [
+        {
+          "case": "FUNDED_AMEND_RESERVE_LOCK_ORDER",
+          "native_backends": 2,
+          "holder": "NATIVE_BUDGET_AND_AUTH_ROW_LOCKS_WITH_REAL_RESERVE",
+          "amend_reject": "A2_CLOUD_AUTHZ_AMEND_FUNDED_OR_ATTEMPTED",
+          "amend_completed_while_auth_held": true,
+          "reserve": "RESERVED",
+          "reserved": 40,
+          "attempts_used": 1,
+          "no_send_release_reserved": 0,
+          "counters_reset": false,
+          "provider_calls": 0,
+          "elapsed_ms": 33
+        }
+      ]
+    }
+  ],
+  "independent_native_replay": {
+    "status": "PASS",
+    "tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "source_stable": true,
+    "started_at": "2026-11-08T04:36:28.372Z",
+    "finished_at": "2026-11-08T04:36:31.789Z",
+    "evidence": "E1/qa4/FINANCE-NATIVE.json",
+    "evidence_sha256": "cdde6da62eec752332b769abc158dba7722e5f5faa6ba7e73867f4254d8642c5",
+    "provider_calls": 0,
+    "key_file_reads": 0,
+    "ddl": false,
+    "coverage": "REPLAY_OF_SAME_11_CASES_NOT_ADDITIONAL_UNIQUE_CASES"
+  },
+  "migration_sha256": {
+    "0004-cloud-authorization.sql": "6ba41950ec39790d01565cc55b7c315b783465d300e877e73b87858cfb695034",
+    "0005-cloud-scope-amendment.sql": "e0efa1802a2a0a90ad478b1c5a339e2c34665ef5949622be38af54e192686f39",
+    "0006-cloud-scope-lock-order.sql": "d88d8289b8d4b29a1d301e54723570af7e4c9018fc528288ee43098047dae303"
+  },
+  "full_reference_docs_published": false,
+  "disable_operations": "PREPARED_NOT_RUN",
+  "signed_owner_authorization_present": true,
+  "native_funding_absence_reason": "PROVIDER_ACTUAL_CAP_UNVERIFIED_NOT_MISSING_OWNER_CONSENT"
+}

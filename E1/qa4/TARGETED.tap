@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: QA4 freezes thirty synthetic records, independent oracle and unseen rank perturbation
+ok 1 - QA4 freezes thirty synthetic records, independent oracle and unseen rank perturbation
+  ---
+  duration_ms: 19.923
+  type: 'test'
+  ...
+# Subtest: QA4 complete offline-shaped fixture passes pipeline but keeps missing coding PARTIAL
+ok 2 - QA4 complete offline-shaped fixture passes pipeline but keeps missing coding PARTIAL
+  ---
+  duration_ms: 8.5404
+  type: 'test'
+  ...
+# Subtest: QA4 holdout uses same independent rules with changed eligible ranking
+ok 3 - QA4 holdout uses same independent rules with changed eligible ranking
+  ---
+  duration_ms: 12.7404
+  type: 'test'
+  ...
+# Subtest: QA4 planted rank defect is caught against original frozen oracle
+ok 4 - QA4 planted rank defect is caught against original frozen oracle
+  ---
+  duration_ms: 7.2617
+  type: 'test'
+  ...
+# Subtest: QA4 current revision and exact source reference cannot be replaced by stale opening
+ok 5 - QA4 current revision and exact source reference cannot be replaced by stale opening
+  ---
+  duration_ms: 15.8385
+  type: 'test'
+  ...
+# Subtest: QA4 similar titles cannot erase a distinct canonical role
+ok 6 - QA4 similar titles cannot erase a distinct canonical role
+  ---
+  duration_ms: 6.7112
+  type: 'test'
+  ...
+# Subtest: QA4 stale, inactive, injection and schema rejects must be explicit
+ok 7 - QA4 stale, inactive, injection and schema rejects must be explicit
+  ---
+  duration_ms: 20.0741
+  type: 'test'
+  ...
+# Subtest: QA4 changed source bodies, invented HTTP digests and hidden transient failure fail read QA
+ok 8 - QA4 changed source bodies, invented HTTP digests and hidden transient failure fail read QA
+  ---
+  duration_ms: 21.899
+  type: 'test'
+  ...
+# Subtest: QA4 arbitrary egress or non-GET source dispatch cannot satisfy source scope
+ok 9 - QA4 arbitrary egress or non-GET source dispatch cannot satisfy source scope
+  ---
+  duration_ms: 9.2231
+  type: 'test'
+  ...
+# Subtest: QA4 invented qualifications fail even with valid fact refs and freshly recomputed package digest
+ok 10 - QA4 invented qualifications fail even with valid fact refs and freshly recomputed package digest
+  ---
+  duration_ms: 13.2157
+  type: 'test'
+  ...
+# Subtest: QA4 zero-send invariant detects planted unsafe send
+ok 11 - QA4 zero-send invariant detects planted unsafe send
+  ---
+  duration_ms: 5.8664
+  type: 'test'
+  ...
+# Subtest: QA4 forged model usage or unacknowledged outcome cannot become actual model provenance
+ok 12 - QA4 forged model usage or unacknowledged outcome cannot become actual model provenance
+  ---
+  duration_ms: 6.8181
+  type: 'test'
+  ...
+# Subtest: QA4 review requires native model counts separately from textual success claims
+ok 13 - QA4 review requires native model counts separately from textual success claims
+  ---
+  duration_ms: 3.7576
+  type: 'test'
+  ...
+# Subtest: QA4 cold final readback proves survival and cannot alone prove unfinished-work recovery
+ok 14 - QA4 cold final readback proves survival and cannot alone prove unfinished-work recovery
+  ---
+  duration_ms: 5.5356
+  type: 'test'
+  ...
+# Subtest: QA4 Codex-authored code cannot be relabelled as AWE-created while coding capability is absent
+ok 15 - QA4 Codex-authored code cannot be relabelled as AWE-created while coding capability is absent
+  ---
+  duration_ms: 6.162
+  type: 'test'
+  ...
+# Subtest: QA4 newly available narrow code can satisfy conditional CODE only with independently verified native author and every score
+ok 16 - QA4 newly available narrow code can satisfy conditional CODE only with independently verified native author and every score
+  ---
+  duration_ms: 11.3642
+  type: 'test'
+  ...
+# Subtest: QA4 code flags cannot substitute for bound author/source/sandbox/every-input evidence
+ok 17 - QA4 code flags cannot substitute for bound author/source/sandbox/every-input evidence
+  ---
+  duration_ms: 42.679
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 359.0174

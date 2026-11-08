@@ -1,0 +1,219 @@
+{
+  "schema": "awe.recruit.model-authored-score/1",
+  "status": "INDEPENDENT_QA_VERIFIED",
+  "run_id": "score01_4101",
+  "producer": "AWE_E1_RUNTIME_LOCAL_MODEL",
+  "mission_id": "mission_recruit_score01_4101",
+  "project_id": "prj_recruit_score01_4101",
+  "task_id": "score_author",
+  "plan_digest": "sha256:23fc5315ec28dfd7b13ce85e49ce692d3bed001a15b3c302423903a8b945cf61",
+  "grant_digest": "sha256:e29b86449de41764e63b9ebcb0d0c8ab70aeb907e7adc9e66d8b588e3cd54e84",
+  "result_hash": "sha256:50734cc40f59e0076d91eef5d1d0fcf171acf878a1d596edefa35a07beb69dee",
+  "code": "def score(skills):\n    if not skills:\n        return 0\n    normalized = {skill.strip().lower() for skill in skills}\n    skill_counts = {\"javascript\": 5, \"sql\": 3, \"testing\": 2}\n    return sum(skill_counts.get(skill, 0) for skill in normalized)",
+  "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+  "language": "python",
+  "filename": "score_helper.py",
+  "model": {
+    "id": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "ggml"
+    }
+  },
+  "usage": {
+    "input_tokens": 221,
+    "output_tokens": 87,
+    "total_duration_ns": 10145623400,
+    "eval_duration_ns": 4559121000,
+    "load_duration_ns": 3931871400,
+    "prompt_eval_duration_ns": 1645092000,
+    "latency_ms": 10151,
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "wire_attempts": 1
+  },
+  "accounting_status": "CONFIRMED",
+  "native_attempts": [
+    {
+      "fence": 483,
+      "state": "CONFIRMED",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 10151,
+        "input_tokens": 221,
+        "output_tokens": 87,
+        "wire_attempts": 1,
+        "eval_duration_ns": 4559121000,
+        "load_duration_ns": 3931871400,
+        "total_duration_ns": 10145623400,
+        "prompt_eval_duration_ns": 1645092000
+      },
+      "reason": null,
+      "task_id": "score_author",
+      "reserved": 0,
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "worker_id": "e1_worker",
+      "attempt_id": "attempt_2bf9d74e1b0af3a0d52aac5180422602f219e8c6225409bebbb289d6d19bebb0",
+      "mission_id": "mission_recruit_score01_4101",
+      "project_id": "prj_recruit_score01_4101",
+      "actual_cost": 0,
+      "quota_units": 1,
+      "provider_ref": "ollama:2026-11-08T04:26:20.7638547Z",
+      "request_hash": "sha256:790a8a984c752ff434b24d4635056d34cafe9d15571c6b03453c5cf468a115d2",
+      "logical_request_id": "request_2bf9d74e1b0af3a0d52aac5180422602f219e8c6225409bebbb289d6d19bebb0"
+    }
+  ],
+  "producer_tests": {
+    "schema": "awe.recruit.score-sandbox/1",
+    "status": "EXECUTED",
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "scores": [
+      0,
+      5,
+      3,
+      2,
+      10
+    ],
+    "boundary": {
+      "home_absent": true,
+      "windows_absent": true,
+      "repository_absent": true,
+      "host_network_denied": true
+    },
+    "sandbox_enforced": true,
+    "network": "DENY",
+    "limits": {
+      "cpu_seconds": 3,
+      "address_space_bytes": 536870912,
+      "file_bytes": 1048576,
+      "open_fds": 64,
+      "processes": 64,
+      "wall_seconds": 8
+    },
+    "external_effects": 0
+  },
+  "independent_qa": {
+    "type": "EVALUATED",
+    "pid": 35888,
+    "evaluation": {
+      "schema": "awe.qa4.score-verdict/1",
+      "verdict": "PASS",
+      "checks": [
+        {
+          "check_id": "schema",
+          "passed": true
+        },
+        {
+          "check_id": "sources",
+          "passed": true
+        },
+        {
+          "check_id": "scope",
+          "passed": true
+        }
+      ],
+      "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+      "holdout_digest": "sha256:3b428905c94b69e6cbb24f0189f6e98172fc0bdf888ebbe545f78824a2254f16",
+      "case_count": 19,
+      "expected_scores_digest": "sha256:42332c7982ecdf12204b8f121e2d63b6dc209a3bd5aa9a4569ab65fd8cdb682a",
+      "actual_scores_digest": "sha256:42332c7982ecdf12204b8f121e2d63b6dc209a3bd5aa9a4569ab65fd8cdb682a",
+      "accepted": false,
+      "bounded_capability": "PURE_SYNTHETIC_SCORE_FUNCTION_ONLY",
+      "generic_coding_executor": "NOT_PROVEN"
+    },
+    "value": {
+      "status": "ACCEPTED"
+    },
+    "receipt": {
+      "schema": "awe.recruit.score-sandbox/1",
+      "status": "EXECUTED",
+      "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+      "scores": [
+        0,
+        5,
+        3,
+        2,
+        10,
+        10,
+        8,
+        0,
+        5,
+        3,
+        0,
+        7,
+        0,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "boundary": {
+        "home_absent": true,
+        "windows_absent": true,
+        "repository_absent": true,
+        "host_network_denied": true
+      },
+      "sandbox_enforced": true,
+      "network": "DENY",
+      "limits": {
+        "cpu_seconds": 3,
+        "address_space_bytes": 536870912,
+        "file_bytes": 1048576,
+        "open_fds": 64,
+        "processes": 64,
+        "wall_seconds": 8
+      },
+      "external_effects": 0,
+      "artifact_digest": "sha256:f4d6350d1ecd594f5f87e1d95c1c3ab32fa131087994ee2f15c29c00cbf0b8ab",
+      "native_attempt_id": "attempt_2bf9d74e1b0af3a0d52aac5180422602f219e8c6225409bebbb289d6d19bebb0",
+      "holdout_digest": "sha256:3b428905c94b69e6cbb24f0189f6e98172fc0bdf888ebbe545f78824a2254f16",
+      "authorship": "AWE_LOCAL_MODEL_CODE_OUTPUT",
+      "test_case_count": 19,
+      "generic_coding_executor": "NOT_PROVEN"
+    }
+  },
+  "isolated_git": {
+    "base_sha": "e0f15dcd8a9afe5511388081e52fe406e29be6fa",
+    "head_sha": "d803d29299b4251e951b0f9ea43ae911a176368b",
+    "branch": "codex/score-score01_4101",
+    "path_allowlist": [
+      "score_helper.py"
+    ],
+    "main_unchanged": true,
+    "remotes": 0
+  },
+  "source_pins": [
+    {
+      "file": "E1/recruit/coding/mission.mjs",
+      "sha256": "3651a4b5d83ed4d00b85eee25e15d3f593b39f5ff920acb5a1765344c786e151"
+    },
+    {
+      "file": "E1/recruit/coding/author.mjs",
+      "sha256": "13d48f809402e8dab8380948ee62dba8d0195acff14c499d0ae17a290024ba81"
+    },
+    {
+      "file": "E1/recruit/coding/sandbox.py",
+      "sha256": "24c21ca3f00f12333e0c1b8802f3b440c126c33e46f86871b5325914d4240060"
+    },
+    {
+      "file": "E1/recruit/coding/sandbox.mjs",
+      "sha256": "0a123edf4fde4fe5ebae3a079c46af7f845dc7e8c065af22d203e393990bf2a5"
+    }
+  ],
+  "external_effects": 0,
+  "accepted": false,
+  "generic_github_executor": "NOT_PROVEN"
+}

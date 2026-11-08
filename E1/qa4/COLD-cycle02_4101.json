@@ -1,0 +1,177 @@
+{
+  "schema": "awe.qa4.independent-native-cold-review/1",
+  "started_at": "2026-11-08T04:25:57.024Z",
+  "finished_at": "2026-11-08T04:25:57.446Z",
+  "inspector_pid": 45320,
+  "independent_cold_reader_pid": 36092,
+  "qa_database_role": "awe_e1_qa",
+  "native_resource": "EXISTING_E1_5433",
+  "run_id": "cycle02_4101",
+  "mission_id": "mission_recruit_cycle02_4101",
+  "project_id": "prj_recruit_cycle02_4101",
+  "run_evidence_sha256": "b1a026b88a0ee59007b45575642767b50ff7b52fb1dfded0213254b482298de3",
+  "oracle_digest": "sha256:5073d1e38f82195abd194a865769d9397d19a3d61433d9a7be5852c4bf4ad619",
+  "mission_state": "COMPLETE",
+  "artifact_digest": "sha256:7b7dc30c090bfc550862b19b9444a3920777f0b78ee374577a4c25ff3d64270f",
+  "task_bindings": [
+    {
+      "task_id": "draft",
+      "result_hash": "sha256:0ec8f1f3648b39962da6fea6830739781a13b4cf63e13ede801ebbb931763d0e",
+      "artifact_digest": "sha256:517e0b0ca1242fb914e493780e565c980e18809dfc9eeb4fd29b7865118d5339",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "472",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "rank",
+      "result_hash": "sha256:a722579769dcdcbee52532718d069090b95856ec26970cd20f1111163a383e7e",
+      "artifact_digest": "sha256:b46ba1e78e68152da6fecca1ed6180e8e620c216812a725e96cddd9c8c2f83a4",
+      "state": "ACCEPTED",
+      "claims": 2,
+      "fence": "471",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_alpha",
+      "result_hash": "sha256:14a5504a7c8a960a2c9316d5bc8c811e6a1809fc267c42d4f91f112d37a423d2",
+      "artifact_digest": "sha256:adec0de343a8febeb75451d1f83d274b8d98004b7ce69cfb15bd0af803fb2b23",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "468",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_beta",
+      "result_hash": "sha256:d8af0bf7ada78b80cc1d2d250607206f98729ef10030216725de2b6dac5f3153",
+      "artifact_digest": "sha256:47436834346cce0387a17e2defd58adda925915f88ebc85007bb4c43824efedb",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "469",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "review",
+      "result_hash": "sha256:2503bdf3f2ceb6ee5c0e530857e0f066cacaf48b7b9fbb744423dcfa40f0cad4",
+      "artifact_digest": "sha256:d839b9de555626c379a4b346a83623df869bf533f2b639ab069bc366aabd6c8a",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "473",
+      "producer_id": "e1_worker"
+    }
+  ],
+  "rank_recovery": {
+    "claim_fences": [
+      "470",
+      "471"
+    ],
+    "single_result_proposed": true,
+    "interrupted_start_pid": 15000,
+    "resume_pid": 8760,
+    "actual_killed_worker_pid": 42020
+  },
+  "project_counters": {
+    "booked_spent": 0,
+    "reserved": 0,
+    "quota_used": 1,
+    "live_leases": 0,
+    "effect_intents": 0,
+    "cloud_attempts": 0
+  },
+  "model_attempts": [
+    {
+      "attempt_id": "attempt_de5dbd71e237d7c314da9561e0c731b501e46616549fc4d1c31e037d007cda2c",
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "state": "CONFIRMED",
+      "actual_cost_micros": 0,
+      "input_tokens": 416,
+      "output_tokens": 27,
+      "wire_attempts": 1,
+      "model": "qwen3:4b-instruct",
+      "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0"
+    }
+  ],
+  "independent_verdict": {
+    "schema": "awe.qa4.run-verdict/1",
+    "status": "PARTIAL",
+    "pipeline_status": "PASS",
+    "recovery_status": "PROVEN",
+    "coding_status": "BLOCKED",
+    "unsafe_effects": 0,
+    "checks": [
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "model_origin",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_alpha",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_beta",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "rank",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "draft",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "persistence",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "recovery",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "coding_honesty",
+        "passed": true,
+        "reason": "PASS"
+      }
+    ],
+    "failures": [],
+    "accepted": false
+  },
+  "negative_control": {
+    "seed": "WRONG_RANK",
+    "caught": true,
+    "status": "FAIL"
+  },
+  "holdout_crosscheck": {
+    "public_run_is_not_holdout_success": true,
+    "status": "FAIL",
+    "meaning": "Expected rejection of original public-run data under distinct holdout oracle; actual holdout AWE execution remains separate."
+  },
+  "new_model_calls": 0,
+  "paid_calls": 0,
+  "external_effects": 0,
+  "key_access": false,
+  "resource_lifecycle": false,
+  "acceptance": false
+}

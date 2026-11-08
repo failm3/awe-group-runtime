@@ -1,0 +1,55 @@
+{
+  "schema": "awe.e1.cloud4.signed-receipt/1",
+  "algorithm": "Ed25519",
+  "document": {
+    "budget_group_id": "router.cheap.shared/1",
+    "evidence_mode": "AUTHENTICATED_HOST",
+    "expires_at": "2026-11-08T05:33:52.393Z",
+    "issued_at": "2026-11-08T04:28:09.905Z",
+    "issuer_id": "e1_cloud4_host_delegate",
+    "key_binding_id": "router_cheap_staging",
+    "limits": {
+      "account_changes": "DENY",
+      "account_reserve_unallocated_micros": "21000000",
+      "canary": {
+        "attempts": 2,
+        "budget_micros": "500000",
+        "per_attempt_micros": "250000",
+        "route_ids": [
+          "router.cheap.chat.gpt-6-sol",
+          "router.cheap.chat.claude-opus-4-8"
+        ]
+      },
+      "fallback": "DENY",
+      "followup": {
+        "attempts": 20,
+        "budget_micros": "9500000",
+        "per_attempt_micros": "1000000"
+      },
+      "total_actual_micros": "10000000",
+      "total_attempts": 22,
+      "unknown_policy": "HOLD",
+      "wire_attempts_per_request": 1
+    },
+    "mandate_digest": "sha256:b7e85a55fdc839f025be8c19518d7b772b7b471aece3c00540239eef685e3d82",
+    "owner_consent": "ISSUED",
+    "owner_id": "e1_owner",
+    "prior_authorization_digest": "sha256:ab0759a45e953ad01eafecf14ad455d7d9133b696979a80781c3e635c9060851",
+    "project_ids": [
+      "prj_cloud_canary_20261108",
+      "prj_recruit_cycle01_4101",
+      "prj_recruit_cycle02_4101",
+      "prj_recruit_cycle03_4101",
+      "prj_recruit_cycle04_4101",
+      "prj_recruit_score01_4101"
+    ],
+    "provenance": "HOST_ATTESTED_CHAT_AND_GITHUB_DELEGATION",
+    "provider": "router.cheap",
+    "schema": "awe.e1.cloud4.owner-authorization/1",
+    "scope_revision": 2
+  },
+  "document_digest": "sha256:e88054feccd4ed7a4a7af9ff61b57e5f2f8d50773a82c4142ee5fcfa033b0372",
+  "public_key_spki_der": "MCowBQYDK2VwAyEAESbRimR7+hmes87/qxbmwBKbNdgtrukWTkqlrqOAax4=",
+  "public_key_digest": "sha256:fba8a46d7acd437dbe2d19b2f3317c6d780fc24b9c6452852fda569ba1f75555",
+  "signature": "3mscx5Xe2tB04uD2ykVb/QWfujDBpmKNNpcqoXqmwLYKjS/7teePBj80WOSSO3nif/KLjtFpo35gex6QMtDNAA=="
+}

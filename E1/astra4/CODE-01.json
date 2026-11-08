@@ -1,0 +1,49 @@
+{
+  "case": "SANDBOX-RECRUIT-01-CODE",
+  "order_sha256": "8e336257808bd3bd7c4a662d07a11d46b9c421178c2b3be775b4699a784307e7",
+  "phase": "AUTHOR",
+  "supervisor": "CODEX_ASTRA",
+  "exit": 0,
+  "command": "node E1/recruit/coding/author.mjs score01_4101",
+  "stdout": {
+    "status": "INDEPENDENT_QA_VERIFIED",
+    "mission_id": "mission_recruit_score01_4101",
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "usage": {
+      "input_tokens": 221,
+      "output_tokens": 87,
+      "total_duration_ns": 10145623400,
+      "eval_duration_ns": 4559121000,
+      "load_duration_ns": 3931871400,
+      "prompt_eval_duration_ns": 1645092000,
+      "latency_ms": 10151,
+      "model": "qwen3:4b-instruct",
+      "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "wire_attempts": 1
+    },
+    "model_calls": 1,
+    "paid_calls": 0,
+    "external_effects": 0,
+    "evidence": "E1/recruit/coding/evidence/score01_4101.json"
+  },
+  "stderr": "",
+  "source_files": 4,
+  "source_changed": 0,
+  "runtime_evidence_sha256": "9adb5c7e4cafabcec19944c42f7d558955b993b00fc31ed8ac26d077dc00207e",
+  "plan_digest": "sha256:23fc5315ec28dfd7b13ce85e49ce692d3bed001a15b3c302423903a8b945cf61",
+  "grant_digest": "sha256:e29b86449de41764e63b9ebcb0d0c8ab70aeb907e7adc9e66d8b588e3cd54e84",
+  "isolated_git": {
+    "base_sha": "e0f15dcd8a9afe5511388081e52fe406e29be6fa",
+    "head_sha": "d803d29299b4251e951b0f9ea43ae911a176368b",
+    "branch": "codex/score-score01_4101",
+    "path_allowlist": [
+      "score_helper.py"
+    ],
+    "main_unchanged": true,
+    "remotes": 0
+  },
+  "qa_cases": 19,
+  "qa_verdict": "PASS",
+  "reuse_status": "NOT_RUN",
+  "next": "Native recruit rerun bound to exact emitted score helper digest and separate QA cold evidence"
+}

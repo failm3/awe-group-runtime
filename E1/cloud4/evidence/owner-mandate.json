@@ -1,0 +1,40 @@
+{
+  "schema": "awe.e1.cloud4.verified-owner-mandate/1",
+  "provenance": "HOST_ATTESTED_CHAT_AND_GITHUB_DELEGATION",
+  "chat_ratified": true,
+  "sources": [
+    {
+      "url": "https://github.com/failm3/awe-group-runtime/issues/3",
+      "updated_at": "2026-11-08T03:57:57Z",
+      "body_digest": "sha256:588c9afded0801c318c69aeb9b213c83af303013c6876b803dee9d513d412aaa"
+    },
+    {
+      "url": "https://github.com/failm3/awe-group-runtime/issues/4",
+      "updated_at": "2026-11-08T03:58:00Z",
+      "body_digest": "sha256:b0c6a997078618294ee96bbeaa1359e9235eab7940f8f4dbba2777d76bb7558a"
+    }
+  ],
+  "limits": {
+    "total_actual_micros": "10000000",
+    "account_reserve_unallocated_micros": "21000000",
+    "total_attempts": 22,
+    "canary": {
+      "budget_micros": "500000",
+      "per_attempt_micros": "250000",
+      "attempts": 2,
+      "route_ids": [
+        "router.cheap.chat.gpt-6-sol",
+        "router.cheap.chat.claude-opus-4-8"
+      ]
+    },
+    "followup": {
+      "budget_micros": "9500000",
+      "per_attempt_micros": "1000000",
+      "attempts": 20
+    },
+    "wire_attempts_per_request": 1,
+    "unknown_policy": "HOLD",
+    "fallback": "DENY",
+    "account_changes": "DENY"
+  }
+}

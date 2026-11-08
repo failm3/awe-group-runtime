@@ -1,0 +1,62 @@
+{
+  "schema": "awe.qa4.sut-targeted/1",
+  "evidence_level": "ACTUAL_PREWRITTEN_PIPELINE_FUNCTION_NEGATIVE_TESTS_NO_RUNTIME_OR_MODEL_CALLS",
+  "command": "node --require ./E1/qa3/offline-guard.cjs --test --test-reporter=tap E1/qa4/sut-negative.test.mjs",
+  "started_at": "2026-11-08T04:19:06.056Z",
+  "finished_at": "2026-11-08T04:19:06.297Z",
+  "node": "v24.21.0",
+  "exit_status": 0,
+  "totals": {
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "source_stable": true,
+  "source_before": [
+    {
+      "path": "E1/recruit/pipeline.mjs",
+      "sha256": "0e7eba592c48249c51a678cc724f6a54b2bd5fc2815035370a15b3a678555ebb"
+    },
+    {
+      "path": "E1/qa4/sut-negative.test.mjs",
+      "sha256": "21319d918eb654e82ae6b6b782b2551f072149283f421d84cb35cd369b1136d3"
+    },
+    {
+      "path": "E1/qa4/fixtures.mjs",
+      "sha256": "d29b2466020d25c2c7c430153d7812db9d66c84261a56611f23c9649ee6cdf2d"
+    },
+    {
+      "path": "E1/qa4/oracle.mjs",
+      "sha256": "af39cfe2e9bdf32861ea24b6a99d66bb49ea14b4a8293103b240c8ffeaef2e5e"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "E1/recruit/pipeline.mjs",
+      "sha256": "0e7eba592c48249c51a678cc724f6a54b2bd5fc2815035370a15b3a678555ebb"
+    },
+    {
+      "path": "E1/qa4/sut-negative.test.mjs",
+      "sha256": "21319d918eb654e82ae6b6b782b2551f072149283f421d84cb35cd369b1136d3"
+    },
+    {
+      "path": "E1/qa4/fixtures.mjs",
+      "sha256": "d29b2466020d25c2c7c430153d7812db9d66c84261a56611f23c9649ee6cdf2d"
+    },
+    {
+      "path": "E1/qa4/oracle.mjs",
+      "sha256": "af39cfe2e9bdf32861ea24b6a99d66bb49ea14b4a8293103b240c8ffeaef2e5e"
+    }
+  ],
+  "output_sha256": "63a71a229eb98156cef3c2e1c765cf8b3e4c974f597d7169c5802dc0f09f055c",
+  "original_defects": {
+    "observation": "Independent pre-fix run: 1 pass, 2 fail; newest invalid revision revived old OPEN, mismatched canonical destination accepted.",
+    "original_oracle_changed": false
+  },
+  "provider_calls": 0,
+  "key_access": false,
+  "native_connections": 0,
+  "external_effects": 0
+}

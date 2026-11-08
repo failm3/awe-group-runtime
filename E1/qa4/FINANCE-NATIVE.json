@@ -1,0 +1,97 @@
+{
+  "schema": "awe.qa4.independent-finance-native/1",
+  "started_at": "2026-11-08T04:36:28.372Z",
+  "finished_at": "2026-11-08T04:36:31.789Z",
+  "command": "node --test --test-concurrency=1 --test-reporter=tap E1/tests/cloud4/native.test.mjs E1/tests/cloud4/native-scope.test.mjs E1/tests/cloud4/native-lock-order.test.mjs",
+  "node": "v24.21.0",
+  "exit_status": 0,
+  "error": null,
+  "totals": {
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "source_stable": true,
+  "source_before": [
+    {
+      "path": "E1/coordinator/migrations/0004-cloud-authorization.sql",
+      "sha256": "6ba41950ec39790d01565cc55b7c315b783465d300e877e73b87858cfb695034"
+    },
+    {
+      "path": "E1/coordinator/migrations/0005-cloud-scope-amendment.sql",
+      "sha256": "e0efa1802a2a0a90ad478b1c5a339e2c34665ef5949622be38af54e192686f39"
+    },
+    {
+      "path": "E1/coordinator/migrations/0006-cloud-scope-lock-order.sql",
+      "sha256": "d88d8289b8d4b29a1d301e54723570af7e4c9018fc528288ee43098047dae303"
+    },
+    {
+      "path": "E1/cloud4/authority.mjs",
+      "sha256": "c1cdd6f0a0f9b2ead9351ea33138043ee792d6b0a435d0f7e7a4667b1bbdafa1"
+    },
+    {
+      "path": "E1/cloud4/accounting.mjs",
+      "sha256": "5904d44acc2044aaff904dbd121e78096b457ea90248ae5c0ae0129deccdd28a"
+    },
+    {
+      "path": "E1/tests/cloud4/native.test.mjs",
+      "sha256": "f48a18d32135a766ec4c438156b17580929a89571d2b169267167b980ccab925"
+    },
+    {
+      "path": "E1/tests/cloud4/native-scope.test.mjs",
+      "sha256": "3276b1434eaf4dcf2b7bb2fd83777cdb788681c948c101def58354e6f80a70b3"
+    },
+    {
+      "path": "E1/tests/cloud4/native-lock-order.test.mjs",
+      "sha256": "26c327fdd1fed9792380833a12d4195ea604f8b7cbb4e0f725149021c0ffb493"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "E1/coordinator/migrations/0004-cloud-authorization.sql",
+      "sha256": "6ba41950ec39790d01565cc55b7c315b783465d300e877e73b87858cfb695034"
+    },
+    {
+      "path": "E1/coordinator/migrations/0005-cloud-scope-amendment.sql",
+      "sha256": "e0efa1802a2a0a90ad478b1c5a339e2c34665ef5949622be38af54e192686f39"
+    },
+    {
+      "path": "E1/coordinator/migrations/0006-cloud-scope-lock-order.sql",
+      "sha256": "d88d8289b8d4b29a1d301e54723570af7e4c9018fc528288ee43098047dae303"
+    },
+    {
+      "path": "E1/cloud4/authority.mjs",
+      "sha256": "c1cdd6f0a0f9b2ead9351ea33138043ee792d6b0a435d0f7e7a4667b1bbdafa1"
+    },
+    {
+      "path": "E1/cloud4/accounting.mjs",
+      "sha256": "5904d44acc2044aaff904dbd121e78096b457ea90248ae5c0ae0129deccdd28a"
+    },
+    {
+      "path": "E1/tests/cloud4/native.test.mjs",
+      "sha256": "f48a18d32135a766ec4c438156b17580929a89571d2b169267167b980ccab925"
+    },
+    {
+      "path": "E1/tests/cloud4/native-scope.test.mjs",
+      "sha256": "3276b1434eaf4dcf2b7bb2fd83777cdb788681c948c101def58354e6f80a70b3"
+    },
+    {
+      "path": "E1/tests/cloud4/native-lock-order.test.mjs",
+      "sha256": "26c327fdd1fed9792380833a12d4195ea604f8b7cbb4e0f725149021c0ffb493"
+    }
+  ],
+  "output_sha256": "fae34024ebd48b4716188dd3276a4831c0da91f1973bf8afd5bc3bb98e4866d9",
+  "actual_database": "EXISTING_ISOLATED_E1_POSTGRESQL_5433",
+  "funding_and_charge_evidence": "EXPLICIT_SYNTHETIC_TEST_KEYS_FAKE_PROVIDER_CHARGES",
+  "host_signer": "IN_MEMORY_TEST_KEYS_ONLY",
+  "actual_paid_provider_calls": 0,
+  "key_file_reads": 0,
+  "ddl": false,
+  "cluster_lifecycle": false,
+  "external_effects": 0,
+  "owner_financial_consent": "ISSUED_CONSOLIDATED_ISSUES_3_AND_4",
+  "real_provider_gate": "BLOCKED_TECHNICAL_PROOF_NOT_CONSENT",
+  "cases_include": "0004_PHASE_AND_UNKNOWN,0005_SCOPE_CAS_STALE_FUNDING_ACL,0006_FUNDED_AMEND_RESERVE_LOCK_RACE"
+}

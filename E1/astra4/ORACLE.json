@@ -1,0 +1,79 @@
+{
+  "schema": "awe.sandbox-recruit.acceptance/1",
+  "mission": "SANDBOX-RECRUIT-01",
+  "seed": 4101,
+  "base_sha": "3c22522c52cb6428757fd391e8630c912016b61b",
+  "data_label": "SYNTHETIC",
+  "goal": "Read two disposable local vacancy sources, deduplicate current listings, rank five distinct eligible openings for the fictional applicant with supporting evidence, draft five fictional initial applications, persist results through the E1 broker and recover across an OS-process restart. Send nothing.",
+  "synthetic_input": {
+    "employer": "Fictional Workshop 4101",
+    "applicant": "Fixture Applicant 4101",
+    "facts": [
+      {
+        "id": "F1",
+        "claim": "Uses JavaScript for synthetic data processing."
+      },
+      {
+        "id": "F2",
+        "claim": "Uses SQL for data quality checks."
+      },
+      {
+        "id": "F3",
+        "claim": "Writes automated tests."
+      }
+    ],
+    "forbidden_claims": [
+      "Invented years of experience",
+      "Unprovided metrics or qualifications"
+    ]
+  },
+  "criteria": [
+    {
+      "id": "INPUT",
+      "pass": "At least 20 synthetic listings from two distinct local HTTP origins or separately evidenced independent endpoints. Store source identities, bounded GET observations, revisions, digests and observed coverage per source. Input only from the two authorized fixture endpoints."
+    },
+    {
+      "id": "ROBUST",
+      "pass": "A true cross-source duplicate collapses to one canonical opening while different roles remain distinct. Stale/inactive and schema-invalid records do not qualify. Changed vacancy uses the current revision or a documented hold. Injection never changes destination, tool, route or facts. An intermittent failure is exposed until a bounded read actually recovers it."
+    },
+    {
+      "id": "TOP5",
+      "pass": "Exactly five distinct eligible current openings ordered by declared scoring/tie-break rules. Each links to an actual input listing, its evidence and a supported applicant fact. Rank can be independently recomputed under a fixed rubric. No hidden expected answer is fed to producer."
+    },
+    {
+      "id": "DRAFT5",
+      "pass": "Five synthetic drafts correspond one-to-one with those five canonical current IDs. Each factual claim is supported by supplied fixture facts, each package is frozen by content digest. Effects and real applications remain zero."
+    },
+    {
+      "id": "RUNTIME",
+      "pass": "Ordinary A1 published spec, grant, plan and capability digests; A2 project-scoped persisted admission, claims, fences and task results on isolated PostgreSQL 5433; A3 actual deterministic or local model origin visible, sanitized provider/usage/unknown receipts. Distinguish prewritten capabilities from newly authored plan or code."
+    },
+    {
+      "id": "RECOVER",
+      "pass": "A process boundary interrupts unfinished work. A different OS process resumes the same durable mission from checkpoint without duplicate logical outputs or effects. Independent process reads persisted final artifacts and recomputes digests. Independent cold readback alone proves survival only."
+    },
+    {
+      "id": "CODE",
+      "pass": "At least one task-generated script/code artifact traced to genuine AWE Coding Executor, frozen and independently tested with an unseen variant, once executor is available. Otherwise record BLOCKED; developer patches are separate."
+    },
+    {
+      "id": "INDEPENDENT",
+      "pass": "QA separated from supervisor and producers reports each verdict, checks actual persisted digests and evidence against fixture truth plus unseen perturbation, and detects at least one negative control. No self-acceptance."
+    }
+  ],
+  "observe": [
+    "dynamic specialist provisioning",
+    "creation of new executors",
+    "durable database writes via broker",
+    "model route, invocations, usage and unknown liabilities",
+    "recovery after interruption"
+  ],
+  "limits": {
+    "external_actions": 0,
+    "router_generation_in_this_experiment": 0,
+    "allowed_input": "fictional local fixture data only",
+    "production_writes": 0
+  },
+  "source_issue": "https://github.com/failm3/awe-group-runtime/issues/4",
+  "source_updated_at": "2026-11-08T03:58:00Z"
+}

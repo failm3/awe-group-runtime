@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {digest} from '../contracts/index.mjs';import {syntheticCorpus} from './fixtures.mjs';import {rankListings} from '../recruit/pipeline.mjs';
+const sources=()=>Object.values(syntheticCorpus().feeds).map(feed=>({source_id:feed.source_id,records:structuredClone(feed.listings),content_digest:digest(feed.listings)}));
+const rehash=s=>{for(const x of s)x.content_digest=digest(x.records);return s;};
+test('QA4 SUT blocks invalid highest revision rather than reviving an older open vacancy',()=>{const s=sources(),latest=s[1].records.find(x=>x.canonical_id==='job-003');latest.revision=3;latest.title=99;const result=rankListings(rehash(s),{now:'2026-11-08T04:00:00.000Z'});assert.equal(result.eligible_ids.includes('job-003'),false,'Newest invalid revision must HOLD the group, not revive older valid vacancy.');});
+test('QA4 SUT binds apply destination to its canonical opening even inside the fixture origin',()=>{const s=sources();s[0].records.find(x=>x.canonical_id==='job-005').apply_path='/apply/job-999';const result=rankListings(rehash(s),{now:'2026-11-08T04:00:00.000Z'});assert.equal(result.eligible_ids.includes('job-005'),false,'Mismatched apply ID is destination substitution.');});
+test('QA4 SUT closed latest revision never falls back to older OPEN revision',()=>{const s=sources();s[1].records.find(x=>x.canonical_id==='job-003').status='CLOSED';const result=rankListings(rehash(s),{now:'2026-11-08T04:00:00.000Z'});assert.equal(result.eligible_ids.includes('job-003'),false);});

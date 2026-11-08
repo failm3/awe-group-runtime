@@ -1,0 +1,308 @@
+{
+  "schema": "awe.qa4.final-summary/1",
+  "prepared_at": "2026-11-08T04:47:10.043Z",
+  "preparation_is_not_new_test_run": true,
+  "mission": "SANDBOX-RECRUIT-01",
+  "base_commit": "3c22522c52cb6428757fd391e8630c912016b61b",
+  "branch": "codex/e1-sandbox-recruit-01-20261108",
+  "decision": "SAFE_TO_PUBLISH_REVIEWED_SOURCE_PENDING_FINAL_INDEX_REVIEW",
+  "bounded_synthetic_mission": "PASS_CYCLE04",
+  "owner_acceptance": false,
+  "e1_pilot_accepted": false,
+  "real_career_mission": "NOT_RUN",
+  "paid_decision": "NO_GO_PAID",
+  "owner_financial_authorization": "ISSUED_CONSOLIDATED_ISSUES_3_AND_4",
+  "technical_paid_gates": [
+    "ACTUAL_DEBIT_CAP_AFTER_ALL_COEFFICIENTS",
+    "EXACT_SOURCE_AND_PRICES",
+    "AUTHENTICATED_CHARGED_ACK",
+    "FULL_REQUEST_TOKEN_BOUND",
+    "LIVE_TRANSPORT_BOUND_TO_NATIVE_AUTHORITY"
+  ],
+  "actual_paid_provider_calls": 0,
+  "qa_new_model_calls": 0,
+  "key_reads": 0,
+  "external_sends": 0,
+  "resource_lifecycle": false,
+  "ddl": false,
+  "fixtures": {
+    "raw_records": 30,
+    "sources": 2,
+    "eligible_canonical_records": 23,
+    "ranked": 5,
+    "drafts": 5,
+    "oracle_unchanged": true,
+    "astra_oracle_sha256": "c96003fc698f16fdca6b24e5c14deff52e475df9893079fdc0557a62c42aae8e",
+    "public_oracle_digest": "sha256:5073d1e38f82195abd194a865769d9397d19a3d61433d9a7be5852c4bf4ad619",
+    "hidden_expectations_sent_to_model": false
+  },
+  "actual_cycles": [
+    {
+      "run_id": "cycle01_4101",
+      "variant": "public",
+      "status": "PARTIAL",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "BLOCKED",
+      "accepted_tasks": 5,
+      "rank_claim_fences": [
+        "464",
+        "465"
+      ],
+      "negative_control_caught": true,
+      "own_variant_verified": true,
+      "distinct_variant_rejected": true,
+      "local_model_usage": [
+        {
+          "state": "CONFIRMED",
+          "input_tokens": 416,
+          "output_tokens": 27,
+          "wire_attempts": 1,
+          "actual_cost_micros": 0
+        }
+      ],
+      "evidence": {
+        "path": "E1/qa4/COLD-cycle01_4101.json",
+        "bytes": 5076,
+        "sha256": "d53bb1b5d7ed5dfd6701c3b7ab0795b7531e47e6995bc7c29f2b44ef84560279"
+      }
+    },
+    {
+      "run_id": "cycle02_4101",
+      "variant": "public",
+      "status": "PARTIAL",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "BLOCKED",
+      "accepted_tasks": 5,
+      "rank_claim_fences": [
+        "470",
+        "471"
+      ],
+      "negative_control_caught": true,
+      "own_variant_verified": true,
+      "distinct_variant_rejected": true,
+      "local_model_usage": [
+        {
+          "state": "CONFIRMED",
+          "input_tokens": 416,
+          "output_tokens": 27,
+          "wire_attempts": 1,
+          "actual_cost_micros": 0
+        }
+      ],
+      "evidence": {
+        "path": "E1/qa4/COLD-cycle02_4101.json",
+        "bytes": 5075,
+        "sha256": "0d7848838687c3c2eacef4dce870ce376c1d3ccba5ba221d9bc9a3f6892482d4"
+      }
+    },
+    {
+      "run_id": "cycle03_4101",
+      "variant": "holdout",
+      "status": "PARTIAL",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "BLOCKED",
+      "accepted_tasks": 5,
+      "rank_claim_fences": [
+        "479",
+        "480"
+      ],
+      "negative_control_caught": true,
+      "own_variant_verified": true,
+      "distinct_variant_rejected": true,
+      "local_model_usage": [
+        {
+          "state": "CONFIRMED",
+          "input_tokens": 423,
+          "output_tokens": 25,
+          "wire_attempts": 1,
+          "actual_cost_micros": 0
+        }
+      ],
+      "evidence": {
+        "path": "E1/qa4/COLD-cycle03_4101.json",
+        "bytes": 5129,
+        "sha256": "177a3bedf5b85c464423a9cf427cc55824be3ee01808c486253b9aa5dae22c2a"
+      }
+    },
+    {
+      "run_id": "cycle04_4101",
+      "variant": "holdout",
+      "status": "PASS",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "AWE_CODE_VERIFIED",
+      "accepted_tasks": 5,
+      "rank_claim_fences": [
+        "487",
+        "488"
+      ],
+      "negative_control_caught": true,
+      "own_variant_verified": true,
+      "distinct_variant_rejected": true,
+      "local_model_usage": [
+        {
+          "state": "CONFIRMED",
+          "input_tokens": 423,
+          "output_tokens": 25,
+          "wire_attempts": 1,
+          "actual_cost_micros": 0
+        }
+      ],
+      "evidence": {
+        "path": "E1/qa4/COLD-cycle04_4101.json",
+        "bytes": 6727,
+        "sha256": "938ad17c2334a8a779d6f1e41bb611c3ab0c98558026458bef9bda46fc7a7b75"
+      }
+    }
+  ],
+  "actual_code": {
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "author_mission_id": "mission_recruit_score01_4101",
+    "author_result_hash": "sha256:50734cc40f59e0076d91eef5d1d0fcf171acf878a1d596edefa35a07beb69dee",
+    "actual_local_usage": {
+      "attempt_id": "attempt_2bf9d74e1b0af3a0d52aac5180422602f219e8c6225409bebbb289d6d19bebb0",
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "model": "qwen3:4b-instruct",
+      "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "input_tokens": 221,
+      "output_tokens": 87,
+      "wire_attempts": 1,
+      "actual_cost_micros": 0
+    },
+    "native_author_verified": true,
+    "actual_bwrap_holdout_cases": 19,
+    "actual_git_objects_independently_verified": true,
+    "git_execution_repeated": false,
+    "used_by_cycle04": true,
+    "consumed_input_count": 29,
+    "scope": "PURE_SYNTHETIC_SCORE_FUNCTION_ONLY",
+    "generic_coding_executor": "NOT_PROVEN",
+    "dynamic_specialist_provisioning": "ABSENT",
+    "runtime_executor_creation": "ABSENT",
+    "evidence": {
+      "path": "E1/qa4/CODE-AUTHOR-score01_4101.json",
+      "bytes": 4506,
+      "sha256": "db392225dbb4223cd9def34c4f8a6e749863e731c6c83d5f8bd5c932032e4711"
+    }
+  },
+  "actual_awe_usage_totals": {
+    "local_attempts": 5,
+    "input_tokens": 1899,
+    "output_tokens": 191,
+    "actual_api_cost_micros": "0",
+    "codex_orchestration_usage": "NOT_MEASURED",
+    "electricity": "NOT_MEASURED"
+  },
+  "qa_targeted": [
+    {
+      "suite": "ORACLE_OFFLINE_TEST_DOUBLES",
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "source_stable": true,
+      "evidence": {
+        "path": "E1/qa4/TARGETED.json",
+        "bytes": 2988,
+        "sha256": "57d882be17b78cd0d77e0fd60f0efaba3eb0c68a955f46f8bbfbeb01c94270e0"
+      }
+    },
+    {
+      "suite": "SUT_NEGATIVES_FINAL_CURRENT_PIPELINE",
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "source_stable": true,
+      "reason_for_narrow_replay": "OPTIONAL_CODE_SCORE_BINDING_ADDED_AFTER_PRE_CODE_RETEST",
+      "historical_pre_code_evidence": {
+        "path": "E1/qa4/SUT-TARGETED-PRE-CODE.json",
+        "bytes": 2047,
+        "sha256": "4505364f8a1e0f574c3d2696dd162f3c3b635e126d720480dd3d12e6ffd963bb"
+      },
+      "evidence": {
+        "path": "E1/qa4/SUT-TARGETED.json",
+        "bytes": 2047,
+        "sha256": "43b8dcaa168daaa393c2489f6a1fdab3c8d6cf04af561cd18fb42bf8d4545be1"
+      },
+      "same_three_cases_not_additional_unique_coverage": true
+    },
+    {
+      "suite": "ACTUAL_SANDBOX_DEVELOPER_SNIPPETS",
+      "tests": 13,
+      "pass": 13,
+      "fail": 0,
+      "source_stable": true,
+      "evidence": {
+        "path": "E1/qa4/SANDBOX-TARGETED.json",
+        "bytes": 6000,
+        "sha256": "5f5c3091de271daf06f53e3d4c2fba06bb719b5b37653ba5b9cd6fc160a31305"
+      }
+    },
+    {
+      "suite": "ACTUAL_NATIVE_FINANCE_EXPLICIT_SYNTHETIC_CHARGES",
+      "tests": 11,
+      "pass": 11,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "source_stable": true,
+      "paid_provider_calls": 0,
+      "evidence": {
+        "path": "E1/qa4/FINANCE-NATIVE.json",
+        "bytes": 3688,
+        "sha256": "cdde6da62eec752332b769abc158dba7722e5f5faa6ba7e73867f4254d8642c5"
+      }
+    },
+    {
+      "suite": "INDEPENDENT_REVOCATION_NEGATIVES",
+      "tests": 4,
+      "pass": 4,
+      "evidence_level": "OBSERVED_GUARDED_PURE_CRYPTO_TEST_RUN_REPORTED_IN_QA_REPORT_NO_SEPARATE_RAW_LOG"
+    }
+  ],
+  "counts_overlap_not_unique_coverage": true,
+  "root_recorded_regression": [
+    {
+      "path": "E1/recruit/evidence/LEGACY-OFFLINE.json",
+      "bytes": 13818,
+      "sha256": "1cf838058cb1606be0744c4219f622d54542e84b3d77dce63e33da6541e2b86f",
+      "totals": {
+        "tests": 442,
+        "pass": 442,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "source_stable": true,
+      "qa_independent_rerun": false
+    },
+    {
+      "path": "E1/recruit/evidence/LEGACY-NATIVE.json",
+      "bytes": 13242,
+      "sha256": "76815c866cde061c814d17ad960ab72ce1c3a521a565728ac473136409a9458d",
+      "totals": {
+        "tests": 38,
+        "pass": 38,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "source_stable": true,
+      "qa_independent_rerun": false
+    }
+  ],
+  "historical_failures_preserved": [
+    "INITIAL_SUT_1_PASS_2_FAIL_BEFORE_FIX",
+    "INITIAL_AUTHORITY_2_PASS_2_FAIL_BEFORE_FIX",
+    "0005_STATIC_REVIEW_MISSED_FUNDED_LOCK_CYCLE_FIXED_ADDITIVELY_0006",
+    "ROOT_FIRST_UNPRIVILEGED_LEGACY_9_FAILURES_3_SKIPS_THEN_AUTHORIZED_TARGET14_AND_FULL442_PASS"
+  ],
+  "source_pin_semantics": "CURRENT_SOURCE_PINS_ARE_FINAL_REVIEW_METADATA; EACH_RUN_KEEPS_ITS_ORIGINAL_TIME_AND_EXECUTED_PINS",
+  "no_background_execution_claim": true
+}

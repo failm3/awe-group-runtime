@@ -1,0 +1,224 @@
+{
+  "schema": "awe.qa4.independent-native-cold-review/1",
+  "started_at": "2026-11-08T04:36:54.730Z",
+  "finished_at": "2026-11-08T04:36:55.180Z",
+  "inspector_pid": 39260,
+  "independent_cold_reader_pid": 28480,
+  "qa_database_role": "awe_e1_qa",
+  "native_resource": "EXISTING_E1_5433",
+  "run_id": "cycle04_4101",
+  "mission_id": "mission_recruit_cycle04_4101",
+  "project_id": "prj_recruit_cycle04_4101",
+  "run_evidence_sha256": "ccd2f4c16ae2335a508f5d8b277b6033482eee1d76c9edb12fef429f3d358249",
+  "oracle_digest": "sha256:d9c5d27afa8d26bac88894e400977b4ab020eccfb2f65d3bf2f7c22d99147e64",
+  "mission_state": "COMPLETE",
+  "artifact_digest": "sha256:6375bf99227fe4f5784f1220c7bfad8cb6ef1d545b06898ec93b40115d99c16e",
+  "task_bindings": [
+    {
+      "task_id": "draft",
+      "result_hash": "sha256:6435ef7da3dd9fc889365b65610c0fc300594ed803fa0de94490626e1d7bbf93",
+      "artifact_digest": "sha256:5e7ef7ace57b3e49fb049a5d497baff41ab79a97a359bc733a4cc7f3970eba33",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "489",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "rank",
+      "result_hash": "sha256:672c14cefdd84a7e77f87abdade1ad8e28ebeb08c1a07a9f2ac5f24068dc98f7",
+      "artifact_digest": "sha256:8e1023f633c657f617e98af8b023cfd627a6760828057c0b141fba88894869ee",
+      "state": "ACCEPTED",
+      "claims": 2,
+      "fence": "488",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_alpha",
+      "result_hash": "sha256:f34e0670fa8d615c4addd58f6d29d2d5f184751c478387b1973e7509201a7e33",
+      "artifact_digest": "sha256:d7badec8ead25eb6807654bca66deecd1a034649e4debc5e149d89b520e1044f",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "485",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "read_beta",
+      "result_hash": "sha256:9f7642342c341be26d9e6055c75d37987aa14488b2b06be2176ca3cacc7b2f78",
+      "artifact_digest": "sha256:06354ce8023bd313ef01f0c4e5f822aeaad97bb2776d9d0644fbc6ea89c928d7",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "486",
+      "producer_id": "e1_worker"
+    },
+    {
+      "task_id": "review",
+      "result_hash": "sha256:86c7519cd53aa7817e9f39a8c41628eab11707da96146e19e115b9c94770d2af",
+      "artifact_digest": "sha256:7458fa22f0fd4a5fd158c1e5470342c475db675fa75a1787ce12fd238fb3e7c2",
+      "state": "ACCEPTED",
+      "claims": 1,
+      "fence": "490",
+      "producer_id": "e1_worker"
+    }
+  ],
+  "rank_recovery": {
+    "claim_fences": [
+      "487",
+      "488"
+    ],
+    "single_result_proposed": true,
+    "interrupted_start_pid": 27584,
+    "resume_pid": 42328,
+    "actual_killed_worker_pid": 4204
+  },
+  "project_counters": {
+    "booked_spent": 0,
+    "reserved": 0,
+    "quota_used": 1,
+    "live_leases": 0,
+    "effect_intents": 0,
+    "cloud_attempts": 0
+  },
+  "model_attempts": [
+    {
+      "attempt_id": "attempt_eb5fd7678123b7491e60c7596bd1bf4d0f925255151e7b95ed198824a12d1960",
+      "route_id": "ollama.local.qwen3-4b-instruct",
+      "state": "CONFIRMED",
+      "actual_cost_micros": 0,
+      "input_tokens": 423,
+      "output_tokens": 25,
+      "wire_attempts": 1,
+      "model": "qwen3:4b-instruct",
+      "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0"
+    }
+  ],
+  "independent_verdict": {
+    "schema": "awe.qa4.run-verdict/1",
+    "status": "PASS",
+    "pipeline_status": "PASS",
+    "recovery_status": "PROVEN",
+    "coding_status": "AWE_CODE_VERIFIED",
+    "coding_scope": "PURE_SYNTHETIC_SCORE_FUNCTION_ONLY",
+    "generic_coding_executor": "NOT_PROVEN",
+    "unsafe_effects": 0,
+    "checks": [
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "model_origin",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_alpha",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "read_beta",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "rank",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "draft",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "persistence",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "recovery",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "sources",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "sources",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "scope",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "sources",
+        "passed": true,
+        "reason": "PASS"
+      },
+      {
+        "check": "coding_honesty",
+        "passed": true,
+        "reason": "PASS"
+      }
+    ],
+    "failures": [],
+    "accepted": false
+  },
+  "code_author_crossproject": {
+    "fresh_native_qa_read": true,
+    "author_mission_id": "mission_recruit_score01_4101",
+    "author_project_id": "prj_recruit_score01_4101",
+    "author_result_hash": "sha256:50734cc40f59e0076d91eef5d1d0fcf171acf878a1d596edefa35a07beb69dee",
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "state": "ACCEPTED"
+  },
+  "negative_control": {
+    "seed": "WRONG_RANK",
+    "caught": true,
+    "status": "FAIL"
+  },
+  "holdout_crosscheck": {
+    "actual_variant": "holdout",
+    "rejected_distinct_variant": "public",
+    "status": "FAIL",
+    "meaning": "An actual run cannot claim success under the distinct frozen variant. Holdout AWE execution is verified only when its own variant is the actual run."
+  },
+  "new_model_calls": 0,
+  "paid_calls": 0,
+  "external_effects": 0,
+  "key_access": false,
+  "resource_lifecycle": false,
+  "acceptance": false,
+  "post_cold_git_binding_review": {
+    "checked_at": "2026-11-08T04:38:56.793Z",
+    "read_only_raw_git_objects": true,
+    "git_commands": 0,
+    "git_mutations": 0,
+    "base_sha": "e0f15dcd8a9afe5511388081e52fe406e29be6fa",
+    "head_sha": "d803d29299b4251e951b0f9ea43ae911a176368b",
+    "source_blob_oid": "1ff6fe89510d5c9f75795c2b6a3a485cd36e9e74",
+    "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+    "path_allowlist": [
+      "score_helper.py"
+    ],
+    "main_unchanged": true,
+    "worktree_bytes_match_committed_blob": true,
+    "meaning": "Actual loose commit/tree/blob and branch refs independently read; no Git command or index change performed."
+  }
+}

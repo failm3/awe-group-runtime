@@ -1,0 +1,78 @@
+TAP version 13
+# Subtest: native funded amendment rejects before auth-row wait and preserves a real concurrent reserve
+ok 1 - native funded amendment rejects before auth-row wait and preserves a real concurrent reserve
+  ---
+  duration_ms: 566.2579
+  type: 'test'
+  ...
+# Subtest: native SAME-key prepared-only scope amendment — explicit synthetic host signing/proof
+    # Subtest: independent native backends serialize prior-digest CAS and preserve immutable prior receipt
+    ok 1 - independent native backends serialize prior-digest CAS and preserve immutable prior receipt
+      ---
+      duration_ms: 25.6881
+      type: 'test'
+      ...
+    # Subtest: stale-scope funding insert is denied; an existing zero-spend budget still forbids amendment
+    ok 2 - stale-scope funding insert is denied; an existing zero-spend budget still forbids amendment
+      ---
+      duration_ms: 23.8039
+      type: 'test'
+      ...
+    # Subtest: worker/QA cannot amend or mutate history; cold backend retains CAS lineage
+    ok 3 - worker/QA cannot amend or mutate history; cold backend retains CAS lineage
+      ---
+      duration_ms: 284.0452
+      type: 'test'
+      ...
+    1..3
+ok 2 - native SAME-key prepared-only scope amendment — explicit synthetic host signing/proof
+  ---
+  duration_ms: 594.8227
+  type: 'test'
+  ...
+# Subtest: native cloud4 owner authorization and pooled phase policy — synthetic proof/charges only
+    # Subtest: native host persists signed owner approval while missing provider proof stays blocked
+    ok 1 - native host persists signed owner approval while missing provider proof stays blocked
+      ---
+      duration_ms: 15.8365
+      type: 'test'
+      ...
+    # Subtest: explicit synthetic funding cannot bypass PREPARED native phase or forged phase
+    ok 2 - explicit synthetic funding cannot bypass PREPARED native phase or forged phase
+      ---
+      duration_ms: 39.9688
+      type: 'test'
+      ...
+    # Subtest: native canary is two exact routes/attempts and retains shared counters
+    ok 3 - native canary is two exact routes/attempts and retains shared counters
+      ---
+      duration_ms: 88.1469
+      type: 'test'
+      ...
+    # Subtest: signed independent QA gate requires native accepted results then allows same-key followup
+    ok 4 - signed independent QA gate requires native accepted results then allows same-key followup
+      ---
+      duration_ms: 55.1352
+      type: 'test'
+      ...
+    # Subtest: UNKNOWN holds entire authorization, preserves liability and forbids new phase sends
+    ok 5 - UNKNOWN holds entire authorization, preserves liability and forbids new phase sends
+      ---
+      duration_ms: 13.9895
+      type: 'test'
+      ...
+    1..5
+ok 3 - native cloud4 owner authorization and pooled phase policy — synthetic proof/charges only
+  ---
+  duration_ms: 1298.7993
+  type: 'test'
+  ...
+1..3
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3328.5698

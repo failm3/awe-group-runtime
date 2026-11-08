@@ -1,0 +1,152 @@
+{
+  "schema": "awe.e1.cloud4.authorization-readback/1",
+  "prepared": {
+    "state": "PREPARED_PROVIDER_BLOCKED",
+    "owner_consent": "ISSUED",
+    "spending_enabled": false,
+    "authorization_digest": "sha256:ab0759a45e953ad01eafecf14ad455d7d9133b696979a80781c3e635c9060851"
+  },
+  "readback": {
+    "state": "PREPARED_PROVIDER_BLOCKED",
+    "funding": {
+      "spent": 0,
+      "state": "DISABLED",
+      "reason": "OWNER_FUNDING_AND_HARD_PROVIDER_CAP_NOT_VERIFIED",
+      "reserved": 0,
+      "budget_cap": 0,
+      "attempts_cap": 0,
+      "attempts_used": 0,
+      "key_binding_id": "router_cheap_staging",
+      "budget_group_id": "router.cheap.shared/1",
+      "per_attempt_cap": 0,
+      "accounting_semantics": {
+        "spent": "BOOKED_CONFIRMED_CHARGES_ONLY",
+        "schema": "awe.e1.cloud-accounting-semantics/1",
+        "amount_encoding": "UNSIGNED_DECIMAL_STRING_USD_MICROS",
+        "unknown_charge_cost": "UNKNOWN_NOT_ZERO",
+        "observed_overrun_micros": "SUM_OF_POSITIVE_OBSERVED_HELD_CHARGE_MINUS_ORIGINAL_RESERVATION",
+        "unknown_charge_attempts": "SENDING_OR_UNKNOWN_ATTEMPTS_WITHOUT_OBSERVED_CHARGE",
+        "observed_held_charge_micros": "OBSERVED_UNCONFIRMED_CHARGES_ON_HELD_ATTEMPTS"
+      },
+      "booked_confirmed_micros": "0",
+      "observed_overrun_micros": "0",
+      "unknown_charge_attempts": 0,
+      "observed_held_charge_micros": "0"
+    },
+    "document": {
+      "limits": {
+        "canary": {
+          "attempts": 2,
+          "route_ids": [
+            "router.cheap.chat.gpt-6-sol",
+            "router.cheap.chat.claude-opus-4-8"
+          ],
+          "budget_micros": "500000",
+          "per_attempt_micros": "250000"
+        },
+        "fallback": "DENY",
+        "followup": {
+          "attempts": 20,
+          "budget_micros": "9500000",
+          "per_attempt_micros": "1000000"
+        },
+        "total_attempts": 22,
+        "unknown_policy": "HOLD",
+        "account_changes": "DENY",
+        "total_actual_micros": "10000000",
+        "wire_attempts_per_request": 1,
+        "account_reserve_unallocated_micros": "21000000"
+      },
+      "schema": "awe.e1.cloud4.owner-authorization/1",
+      "owner_id": "e1_owner",
+      "provider": "router.cheap",
+      "issued_at": "2026-11-08T04:15:44.870Z",
+      "issuer_id": "e1_cloud4_host_delegate",
+      "expires_at": "2026-11-08T05:33:52.393Z",
+      "provenance": "HOST_ATTESTED_CHAT_AND_GITHUB_DELEGATION",
+      "project_ids": [
+        "prj_recruit_cycle01_4101"
+      ],
+      "evidence_mode": "AUTHENTICATED_HOST",
+      "owner_consent": "ISSUED",
+      "key_binding_id": "router_cheap_staging",
+      "mandate_digest": "sha256:b7e85a55fdc839f025be8c19518d7b772b7b471aece3c00540239eef685e3d82",
+      "budget_group_id": "router.cheap.shared/1"
+    },
+    "accepted_at": null,
+    "hold_reason": null,
+    "prepared_at": "2026-11-08T07:15:45.120263+03:00",
+    "activated_at": null,
+    "owner_consent": "ISSUED",
+    "key_binding_id": "router_cheap_staging",
+    "signed_receipt": {
+      "schema": "awe.e1.cloud4.signed-receipt/1",
+      "document": {
+        "limits": {
+          "canary": {
+            "attempts": 2,
+            "route_ids": [
+              "router.cheap.chat.gpt-6-sol",
+              "router.cheap.chat.claude-opus-4-8"
+            ],
+            "budget_micros": "500000",
+            "per_attempt_micros": "250000"
+          },
+          "fallback": "DENY",
+          "followup": {
+            "attempts": 20,
+            "budget_micros": "9500000",
+            "per_attempt_micros": "1000000"
+          },
+          "total_attempts": 22,
+          "unknown_policy": "HOLD",
+          "account_changes": "DENY",
+          "total_actual_micros": "10000000",
+          "wire_attempts_per_request": 1,
+          "account_reserve_unallocated_micros": "21000000"
+        },
+        "schema": "awe.e1.cloud4.owner-authorization/1",
+        "owner_id": "e1_owner",
+        "provider": "router.cheap",
+        "issued_at": "2026-11-08T04:15:44.870Z",
+        "issuer_id": "e1_cloud4_host_delegate",
+        "expires_at": "2026-11-08T05:33:52.393Z",
+        "provenance": "HOST_ATTESTED_CHAT_AND_GITHUB_DELEGATION",
+        "project_ids": [
+          "prj_recruit_cycle01_4101"
+        ],
+        "evidence_mode": "AUTHENTICATED_HOST",
+        "owner_consent": "ISSUED",
+        "key_binding_id": "router_cheap_staging",
+        "mandate_digest": "sha256:b7e85a55fdc839f025be8c19518d7b772b7b471aece3c00540239eef685e3d82",
+        "budget_group_id": "router.cheap.shared/1"
+      },
+      "algorithm": "Ed25519",
+      "signature": "CAsgrMyusxxd/msmg4sETpYRTkwlOzwvqq++3lVWJ2xY+yq4iy/+84XUH/qk7UG0bk+IDcvQG+vgPVqB029ACg==",
+      "document_digest": "sha256:ab0759a45e953ad01eafecf14ad455d7d9133b696979a80781c3e635c9060851",
+      "public_key_digest": "sha256:fba8a46d7acd437dbe2d19b2f3317c6d780fc24b9c6452852fda569ba1f75555",
+      "public_key_spki_der": "MCowBQYDK2VwAyEAESbRimR7+hmes87/qxbmwBKbNdgtrukWTkqlrqOAax4="
+    },
+    "spending_enabled": false,
+    "canary_qa_receipt": null,
+    "authorization_digest": "sha256:ab0759a45e953ad01eafecf14ad455d7d9133b696979a80781c3e635c9060851",
+    "funding_grant_digest": null
+  },
+  "readiness": {
+    "schema": "awe.e1.cloud4.paid-readiness/1",
+    "owner_consent": "ISSUED_AUTHENTICATED_HOST_ATTESTATION",
+    "financial_authorization_provenance": "HOST_ATTESTED_CHAT_AND_GITHUB_DELEGATION",
+    "total_actual_authorized_micros": "10000000",
+    "unallocated_account_reserve_micros": "21000000",
+    "provider_actual_cap": "UNVERIFIED",
+    "charged_ack_contract": "UNVERIFIED",
+    "provider_request_cap_binding": "UNVERIFIED",
+    "spending_enabled": false,
+    "state": "PREPARED_PROVIDER_BLOCKED",
+    "reason": "PROVIDER_ACTUAL_CHARGE_CAP_AND_ACK_NOT_PROVEN",
+    "provider_contract_supplied": false
+  },
+  "router_key_read": false,
+  "provider_calls": 0,
+  "private_signing_key_exposed": false
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "awe.qa4.resume-checkpoint/1",
+  "mission": "SANDBOX-RECRUIT-01",
+  "base_commit": "3c22522c52cb6428757fd391e8630c912016b61b",
+  "branch": "codex/e1-sandbox-recruit-01-20261108",
+  "owner_authorization": "PRESENT_CONSOLIDATED_ISSUES_3_AND_4_2026_11_08",
+  "router_total_actual_authorized_usd": "10.00",
+  "router_canary_actual_authorized_usd": "0.50",
+  "router_send_gate": "TECHNICALLY_BLOCKED_UNTIL_CAP_SOURCE_ACK_TOKEN_BOUND_NATIVE_BINDING_PROVEN",
+  "qa_scope": "E1/qa4/** ONLY",
+  "astra_oracle_sha256": "c96003fc698f16fdca6b24e5c14deff52e475df9893079fdc0557a62c42aae8e",
+  "public_oracle_digest": "sha256:5073d1e38f82195abd194a865769d9397d19a3d61433d9a7be5852c4bf4ad619",
+  "freeze": "30 RECORDS, TWO LOCAL SOURCES, FIXED SCORING, PUBLIC AND UNSEEN VARIANTS",
+  "independent_qa_leaf": "E1/qa4/leaf.mjs",
+  "credentials": "EPHEMERAL_IPC_ONLY_NOT_STORED",
+  "actual_awe_execution": "FOUR_RECRUITING_CYCLES_AND_ONE_LOCAL_MODEL_SCORE_AUTHOR_VERIFIED",
+  "actual_native_qa_readback": "CYCLES_01_02_03_04_AND_CODE_AUTHOR_VERIFIED_SEPARATE_QA_PROCESS",
+  "actual_model_qa": "FIVE_PERSISTED_LOCAL_QWEN_ATTEMPTS_CONFIRMED",
+  "coding_executor": "NARROW_MODEL_AUTHORED_SCORE_FUNCTION_VERIFIED_AND_USED_IN_CYCLE04_GENERIC_EXECUTOR_NOT_PROVEN",
+  "external_send_attempts": 0,
+  "next": [
+    "Root creates explicit publication manifest/index using the QA allowlist.",
+    "QA independently reviews the final complete staged index; only then writes INDEX-REVIEW.json, excluding its own hash.",
+    "Preserve technical paid block and historical PARTIAL results; no new tests or model calls without a new reason."
+  ],
+  "updated_at": "2026-11-08T04:46:33.247Z",
+  "phase": "QA_FROZEN_READY_FOR_ROOT_MANIFEST_AND_STAGING",
+  "history": [
+    {
+      "run": "cycle01_4101",
+      "variant": "public",
+      "status": "PARTIAL",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "BLOCKED"
+    },
+    {
+      "run": "cycle02_4101",
+      "variant": "public",
+      "status": "PARTIAL",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "BLOCKED"
+    },
+    {
+      "run": "cycle03_4101",
+      "variant": "holdout",
+      "status": "PARTIAL",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "BLOCKED"
+    },
+    {
+      "run": "score01_4101",
+      "status": "VERIFIED_NATIVE_AUTHOR_AND_ACTUAL_SANDBOX",
+      "source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa"
+    },
+    {
+      "run": "cycle04_4101",
+      "variant": "holdout",
+      "status": "PASS",
+      "pipeline": "PASS",
+      "recovery": "PROVEN",
+      "coding": "AWE_CODE_VERIFIED",
+      "scope": "PURE_SYNTHETIC_SCORE_FUNCTION_ONLY"
+    }
+  ],
+  "independent_finance_native": "11/11_PASS_FAKE_CHARGES_ONLY",
+  "sandbox_adversarial": "13/13_PASS_ACTUAL_BWRAP_DEVELOPER_SNIPPETS",
+  "actual_paid_provider_calls": 0,
+  "qa_new_model_calls": 0,
+  "frozen_oracle_data_unchanged": true,
+  "no_background_execution_claim": true
+}

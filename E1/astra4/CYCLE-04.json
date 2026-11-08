@@ -1,0 +1,71 @@
+{
+  "cycle": 4,
+  "variant": "holdout",
+  "case": "SANDBOX-RECRUIT-01",
+  "supervisor": "CODEX_ASTRA",
+  "source_base": "3c22522c52cb6428757fd391e8630c912016b61b",
+  "oracle_sha256": "c96003fc698f16fdca6b24e5c14deff52e475df9893079fdc0557a62c42aae8e",
+  "coding_order_sha256": "8e336257808bd3bd7c4a662d07a11d46b9c421178c2b3be775b4699a784307e7",
+  "start": {
+    "command": "node E1/recruit/cli.mjs start .private/recruit-cycle04_4101.json",
+    "exit": 0,
+    "stdout": {
+      "status": "INTERRUPTED_UNFINISHED",
+      "mission_id": "mission_recruit_cycle04_4101",
+      "pid": 27584,
+      "killed_worker_pid": 4204,
+      "checkpoint": ".private/recruit-cycle04_4101.json",
+      "paid_calls": 0,
+      "external_effects": 0
+    },
+    "stderr": ""
+  },
+  "resume": {
+    "command": "node E1/recruit/cli.mjs resume .private/recruit-cycle04_4101.json",
+    "exit": 0,
+    "stdout": {
+      "status": "PASS",
+      "pipeline_status": "PASS",
+      "recovery_status": "PROVEN",
+      "coding_status": "AWE_CODE_VERIFIED",
+      "mission_id": "mission_recruit_cycle04_4101",
+      "run_id": "cycle04_4101",
+      "pid": 42328,
+      "cold_pid": 30624,
+      "model_calls": 1,
+      "paid_calls": 0,
+      "external_effects": 0,
+      "evidence": "E1/recruit/evidence/cycle04_4101.json"
+    },
+    "stderr": ""
+  },
+  "source_files": 11,
+  "source_changed": 0,
+  "runtime_evidence_sha256": "ccd2f4c16ae2335a508f5d8b277b6033482eee1d76c9edb12fef429f3d358249",
+  "final_cold_digest": "sha256:6375bf99227fe4f5784f1220c7bfad8cb6ef1d545b06898ec93b40115d99c16e",
+  "ranked_ids": [
+    "job-001",
+    "job-002",
+    "job-003",
+    "job-004",
+    "job-006"
+  ],
+  "code_source_digest": "sha256:59437dbb6107295bbfb10264691743e9fcd98dba031d183da75bbc050ad80cfa",
+  "code_executor_inputs": 29,
+  "code_executor_scores": 29,
+  "was_used_for_ranking": true,
+  "developer_fallback": false,
+  "code_input_digest": "sha256:787685231896a1fcc75d92064a036004c1276b9194a44775a009bc1e2d3fda7a",
+  "code_output_digest": "sha256:2ef3975421f99e398c0e0338833f61ee9fa5fc79d2a517c16a99b44736d763c9",
+  "qa_accepted": false,
+  "next": "Completed independent cold audit; no outstanding synthetic mission step.",
+  "final_independent_qa": {
+    "status": "PASS",
+    "pipeline": "PASS",
+    "recovery": "PROVEN",
+    "coding": "AWE_CODE_VERIFIED",
+    "native_cold": "E1/qa4/COLD-cycle04_4101.json",
+    "sha256": "433b13f00fc225f697072c16a3a650d46f9381a8d59680229e95dd29a6f7317a",
+    "owner_accepted": false
+  }
+}
