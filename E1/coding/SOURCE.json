@@ -1,0 +1,117 @@
+{
+  "schema": "awe.e1.g1-source/1",
+  "base_commit": "9c3eaa182a862dadd5a326836408063b45f7219c",
+  "audit_commit": "9fc932e14acacaf295f918e8777514bb430715ba",
+  "issue": "https://github.com/failm3/awe-group-runtime/issues/8",
+  "status": "PRE_MODEL_SOURCE_SNAPSHOT_NOT_G1_PROVEN",
+  "source_files": [
+    {
+      "path": "E1/executors/coding/contracts.mjs",
+      "sha256": "1e8d68d5ca78dc42c2649e4c119d744079cf6615a0cb80fdaf4331ea48637e73"
+    },
+    {
+      "path": "E1/executors/coding/executor.mjs",
+      "sha256": "ed6ca71a675fcc291b4a35c294359d3982e054dde2838c14be84bbe903c79a1d"
+    },
+    {
+      "path": "E1/executors/coding/index.mjs",
+      "sha256": "a15cbfe006f2181f9a27522e53fd3f2b2164d6e1db3f1e46bd8dd052a731ad79"
+    },
+    {
+      "path": "E1/host/coding/coordinator-binding.mjs",
+      "sha256": "0285e6940e01aa1718b3abe5a610e9c499e709bd431ede52506399ade6be84cd"
+    },
+    {
+      "path": "E1/host/coding/git-port.mjs",
+      "sha256": "1fea6a9593d269f0b10502171843899fbcc2b6393f5c1a4a89d300224cfca1d6"
+    },
+    {
+      "path": "E1/host/coding/grant-authority.mjs",
+      "sha256": "8cc099be17850bc1ec2ae78188f5f9fa23fd0ce104347bef692f813484e99a67"
+    },
+    {
+      "path": "E1/host/coding/issue-reader.mjs",
+      "sha256": "a6930e5527f833d123a0dfcbaf22a37acddd387f999b9dfc5c6e3169e1cf7159"
+    },
+    {
+      "path": "E1/host/coding/mission.mjs",
+      "sha256": "5045c3d87b64fe58e8d621e29e5410279a0abcfed7c26e6502001bbc72a8abfc"
+    },
+    {
+      "path": "E1/host/coding/model-port.mjs",
+      "sha256": "a9ae2857b2517f39907fefbd7613f7282dcdeac4ca66f6190c92d4884ab847b2"
+    },
+    {
+      "path": "E1/host/coding/pilot.mjs",
+      "sha256": "710165d97bfda5c0930ac9fa1769a396526a2cefcd2775d21365dc4265be5513"
+    },
+    {
+      "path": "E1/host/coding/policy.mjs",
+      "sha256": "193a93a7a27d699950a469462515687672e7e01d8f20d471eacdfe75635bc323"
+    },
+    {
+      "path": "E1/host/coding/publisher-intent.mjs",
+      "sha256": "7b3d9c0dd14a27d568593fa15a5993658e9dd9f5cf6fa6dc3d57886a8184fd49"
+    },
+    {
+      "path": "E1/host/coding/repository-context.mjs",
+      "sha256": "f3c2d6f132a8fb325704f7547c5f1984a1bd5631bd0e391ffccf41e2b76b58c4"
+    },
+    {
+      "path": "E1/host/program-runner/profiles.mjs",
+      "sha256": "9fe9fe1b4c4c42ce0b7442b65ae4d142d53bcf0b0f2aae14a58c8838d5a453ad"
+    },
+    {
+      "path": "E1/host/program-runner/receipts.mjs",
+      "sha256": "fae085666d58555f90095297dc8f3629e6f04ccc215fa4fcbdfbd133a886eb1b"
+    },
+    {
+      "path": "E1/host/program-runner/runner.mjs",
+      "sha256": "6272216e512f30151c507cbc693e39a8abb35e90995ef658341666108031a81d"
+    },
+    {
+      "path": "E1/host/program-runner/sandbox.py",
+      "sha256": "732abe3b3d7769fb1d706b305b72f78f81e5cccfbb02e20e0328c1c044a2312c"
+    },
+    {
+      "path": "E1/qa-coding/cold-readback.mjs",
+      "sha256": "3afb6ea4a0accbc9c90e87773a7d9e2ef17e9aadda771f4d83e0e5b66b966f1b"
+    },
+    {
+      "path": "E1/qa-coding/commitments.mjs",
+      "sha256": "fc338efdbbf06915bb95c05c7570f55e962c401ec7637f6e020b302d647c0992"
+    },
+    {
+      "path": "E1/qa-coding/git-readback.mjs",
+      "sha256": "d3fae781af34d3c29a86465351d67b8fdaad43cb543c88bc2f7dce94fad0c54c"
+    },
+    {
+      "path": "E1/qa-coding/holdout.json",
+      "sha256": "a9596447c9f8e924a8bb4b62f292f1cc35f38824aa58fab91d4de01b2989510f"
+    },
+    {
+      "path": "E1/qa-coding/leaf.mjs",
+      "sha256": "b6c36efc0778d84804d0f85528278cc5c2890072f353e86b665582c46007c5dc"
+    },
+    {
+      "path": "E1/qa-coding/native-review.mjs",
+      "sha256": "b692c7b1ed56486e49b68f1ad661951ed635f70cdf85108d4c29a026a0774cde"
+    },
+    {
+      "path": "E1/qa-coding/oracle.mjs",
+      "sha256": "6d15c35354374f55163ac88e12a18ae8eb16915c4220404c8bdd52049447442f"
+    },
+    {
+      "path": "E1/qa-coding/public-brief.json",
+      "sha256": "5a54de4633f2bedd9cf1023bc24377ad5c70c0e071b358f97a13bffbb6b68687"
+    },
+    {
+      "path": "E1/qa-coding/tree-proof.mjs",
+      "sha256": "691283ecbe8809a59be82a68b023eb8f1990d618454b6ce4db2bf447b8b113e4"
+    },
+    {
+      "path": "E1/qa-coding/verify-cold.mjs",
+      "sha256": "66534e3548ce386d5e38636a6939e27e87270072caffe72b6e360f7c1efc9d64"
+    }
+  ]
+}

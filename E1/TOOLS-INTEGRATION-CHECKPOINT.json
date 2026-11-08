@@ -1,0 +1,29 @@
+{
+  "schema": "awe.e1.tools-integration-checkpoint/1",
+  "status": "CATALOG_LOCATED_NATIVE_DISPATCH_NOT_IMPLEMENTED",
+  "catalog": {
+    "records": 4504,
+    "bytes": 5620443,
+    "sha256": "5a83c501b290b83a17f6ffaeb0fe9cae772e26be7a6a4c5cbcb948908fc76b56",
+    "source_relative_path": "TR-01/source/catalog/90 - Данные/all-records-classified.json",
+    "provenance": "Matches TOOLS-02/IMPORTED-FILES.json in original local source; read-only existing library, no refresh/import/install",
+    "full_catalog_exported": false
+  },
+  "source_findings": {
+    "discovery": "awe/tool_registry/discovery.mjs searchCapabilities is metadata-only and ranks tested/available/valid candidates",
+    "binding": "bindTool verifies manifest/ACL/PEP but returns BOUND_E0_ONLY, physical DENY, runtime_dispatch false",
+    "runtime_adapter": "awe/tool_registry/runtime-adapter.mjs prepareRuntimeReview has dispatch_supported false",
+    "e1": "No E1 A1 capability/native dispatch binding exists for the 4504 catalog at this checkpoint"
+  },
+  "required_G2_G3_work": [
+    "Read bounded existing catalog metadata; never treat catalog URL/title as installed or authorized executable",
+    "Select a small real subset and verify exact version/source/binary, license, data/egress permissions and fixed invocation",
+    "Produce pinned E1 capability descriptors and host activation evidence under fresh E1 scoped authority, preserving E0 contracts",
+    "Invoke only through A1 admission/A2 lease and ordinary E1 dispatch; A3/D09 for every model call",
+    "Choose script/program/local LLM/cloud LLM by required quality, capability, rights, cost and health; unknown price/quality/permissions blocks",
+    "Show actual tools used plus denied unverified/stale/revoked/out-of-scope candidates; cloud remains financially gated"
+  ],
+  "blocks_G1": false,
+  "mass_install_or_reparse": false,
+  "actual_tool_dispatch_proven": false
+}
