@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+const base='09f1a864e6fa26afa62ffac3249c6532a6116175',hash=v=>crypto.createHash('sha256').update(v).digest('hex');
+const paths=[...['schemas','registry','head','model','canary','benchmark','index'].map(name=>'E1/broker/'+name+'.mjs'),'E1/coordinator/migrations/0001-durable-runtime.sql','E1/coordinator/migrations/0002-local-model-quiescence.sql','E1/infra/config.mjs','E1/host/staging.mjs'];
+const files=paths.map(path=>{const r=spawnSync('git',['--no-optional-locks','show',base+':'+path],{maxBuffer:2*1024*1024});assert.equal(r.status,0);const source_sha256=hash(r.stdout),current_sha256=hash(fs.readFileSync(path));return {path,source_sha256,current_sha256,unchanged:source_sha256===current_sha256};});
+const diff=spawnSync('git',['--no-optional-locks','diff','--name-only',base,'--','awe','contracts','baseline'],{encoding:'utf8'});assert.equal(diff.status,0);
+const record={schema:'awe.qa3.baseline-preservation/1',base_commit:base,checked_at:new Date().toISOString(),files,e0_source_diff_paths:diff.stdout.split(/\r?\n/).filter(Boolean),runtime_model_query:false,runtime_model_generation:false,cluster_operations:false,meaning:'Source preservation only. No fresh Ollama runtime or original-mission acceptance proof.'};
+fs.writeFileSync('E1/qa3/PRESERVATION.json',JSON.stringify(record,null,2)+'\n');console.log(JSON.stringify({...record,files_checked:files.length,files:undefined},null,2));assert.ok(files.every(x=>x.unchanged)&&record.e0_source_diff_paths.length===0);

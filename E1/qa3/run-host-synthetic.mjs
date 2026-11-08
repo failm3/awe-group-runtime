@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+const hash=v=>crypto.createHash('sha256').update(v).digest('hex');
+const executable=process.env.QA3_PYTHON??(process.platform==='win32'?'py':'python3');
+const args=[...(process.platform==='win32'&&!process.env.QA3_PYTHON?['-3']:[]),'E1/qa3/host-safety.test.py'];
+const paths=['E1/qa3/host-safety.test.py','E1/host/router-cheap/preflight.py'];
+const pins=()=>paths.map(path=>({path,sha256:hash(fs.readFileSync(path))}));
+const before=pins(),started_at=new Date().toISOString();
+const env={TZ:'UTC',LANG:'C',PYTHONDONTWRITEBYTECODE:'1'};for(const key of ['SystemRoot','WINDIR','PATH','TEMP','TMP'])if(process.env[key])env[key]=process.env[key];
+const result=spawnSync(executable,args,{env,encoding:'utf8',windowsHide:true,timeout:30000,maxBuffer:1024*1024});
+const output=(result.stdout??'')+(result.stderr??''),after=pins(),publishedLog=output.replaceAll('\r\n','\n');
+const record={schema:'awe.qa3.synthetic-host-test/1',command:'python3 E1/qa3/host-safety.test.py',started_at,finished_at:new Date().toISOString(),exit_status:result.status,error:result.error?.code??null,tests:Number(/Ran (\d+) tests/.exec(output)?.[1]??0),passed:result.status===0&&/\nOK\s*$/.test(output),implementation_stable_during_run:JSON.stringify(before)===JSON.stringify(after),source_before:before,source_after:after,output_sha256:hash(output),custody_test_io:'ALL_MOCKED',discovery_secret_and_requests:'ALL_MOCKED',audit_hook:'DENIES_SECRET_PATH_READ_NETWORK_AND_PROCESS_DISPATCH',real_key_access:false,provider_calls:0,wsl_calls:0};
+fs.writeFileSync('E1/qa3/HOST-SYNTHETIC.log',publishedLog);fs.writeFileSync('E1/qa3/HOST-SYNTHETIC.json',JSON.stringify({...record,published_log_sha256:hash(publishedLog),log_normalization:'CRLF_TO_LF_ONLY_CAPTURE_HASH_RETAINED'},null,2)+'\n');console.log(JSON.stringify(record,null,2));
+assert.ok(record.passed&&record.implementation_stable_during_run);console.log(output);

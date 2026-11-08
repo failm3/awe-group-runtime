@@ -8,3 +8,6 @@ outputs/private/
 *.pem
 .env
 .env.*
+**/__pycache__/
+*.pyc
+**/.portable/

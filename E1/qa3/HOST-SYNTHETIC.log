@@ -1,0 +1,12 @@
+test_invalid_command_errors_are_sanitized_before_any_secret_read (__main__.HostSafety.test_invalid_command_errors_are_sanitized_before_any_secret_read) ... ok
+test_metadata_does_not_reclassify_catalog_get_as_paid_proof (__main__.HostSafety.test_metadata_does_not_reclassify_catalog_get_as_paid_proof) ... ok
+test_only_fixed_read_only_paths_and_no_redirects_are_allowed (__main__.HostSafety.test_only_fixed_read_only_paths_and_no_redirects_are_allowed) ... ok
+test_provider_field_names_and_expressions_cannot_inject_freeform_text (__main__.HostSafety.test_provider_field_names_and_expressions_cannot_inject_freeform_text) ... ok
+test_synthetic_custody_accepts_exact_mode_uid_single_link (__main__.HostSafety.test_synthetic_custody_accepts_exact_mode_uid_single_link) ... ok
+test_synthetic_custody_rejects_permissions_uid_hardlink_and_nonregular (__main__.HostSafety.test_synthetic_custody_rejects_permissions_uid_hardlink_and_nonregular) ... ok
+test_synthetic_custody_rejects_symlink_and_group_writable_parent (__main__.HostSafety.test_synthetic_custody_rejects_symlink_and_group_writable_parent) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.191s
+
+OK

@@ -1,5 +1,6 @@
 import {digest, canonicalize, validatePlanRevision, capabilityKey, validateCapabilityDescriptor} from '../contracts/index.mjs';
 import {check, integer} from './errors.mjs';
+import {validateCloudTaskPolicy} from './cloud-policy.mjs';
 const bridges = new WeakMap();
 const identifier = value => typeof value === 'string' && /^[a-z][a-z0-9_.-]{0,79}$/.test(value);
 const unseal = value => value?.value ?? value;
@@ -36,11 +37,13 @@ export function createAdmissionBridge({authenticate, resolvePublication, verifyG
       const resource_keys = runtime.resource_keys ?? [];
       check(Array.isArray(resource_keys) && resource_keys.length <= 16 && new Set(resource_keys).size === resource_keys.length && resource_keys.every(key => Object.hasOwn(trustedPolicy.resource_limits, key)), 'A2_TASK_RESOURCE_POLICY');
       const model_routes = runtime.model_routes ?? (cap.executor_kind === 'llm' ? ['ollama.local.qwen3-4b-instruct'] : []);
-      check(Array.isArray(model_routes) && model_routes.length <= 4 && (cap.executor_kind === 'llm' || model_routes.length === 0) && model_routes.every(route => route === 'ollama.local.qwen3-4b-instruct'), 'A2_MODEL_ROUTE_POLICY');
+      check(Array.isArray(model_routes) && model_routes.length <= 4 && new Set(model_routes).size === model_routes.length && (cap.executor_kind === 'llm' || model_routes.length === 0), 'A2_MODEL_ROUTE_POLICY');
+      const cloud_policy = runtime.cloud_policy === undefined ? undefined : validateCloudTaskPolicy(runtime.cloud_policy, {grant_digest:digest(grant),model_routes});
+      check(model_routes.every(route => route === 'ollama.local.qwen3-4b-instruct' || cloud_policy?.routes.some(snapshot => snapshot.route_id === route)), 'A2_MODEL_ROUTE_POLICY');
       const max_claims = runtime.max_claims ?? spec.retry.max_attempts;
       check(Number.isSafeInteger(max_claims) && max_claims >= 1 && max_claims <= spec.retry.max_attempts && (spec.effect.effect_class === 'NONE' || max_claims === 1), 'A2_RETRY_POLICY');
       const priority = runtime.priority ?? 0; check(Number.isSafeInteger(priority) && priority >= -100 && priority <= 100, 'A2_PRIORITY_POLICY');
-      return {spec, executor_kind: cap.executor_kind, resource_keys, model_routes, max_claims, priority, output_schema:cap.output_schema};
+      return {spec, executor_kind: cap.executor_kind, resource_keys, model_routes, max_claims, priority, output_schema:cap.output_schema, ...(cloud_policy ? {cloud_policy} : {})};
     });
     const payload = {project_id: spec.project_id, spec, grant, plan, publication, capabilities, spec_digest: digest(spec), grant_digest: digest(grant), plan_digest: digest(plan), admitted_by: principal.principal_id, tasks,
       policy: {budget_cap_micros: trustedPolicy.budget_cap_micros, quota_cap: trustedPolicy.quota_cap, max_parallel: trustedPolicy.max_parallel, resource_limits: trustedPolicy.resource_limits}};

@@ -1,0 +1,22 @@
+{
+  "schema": "awe.e1.issue3.original-preservation/1",
+  "at": "2026-11-08T03:35:55.510Z",
+  "original_writes": 0,
+  "e0_connections": 0,
+  "worktrees": [
+    {
+      "worktree_id": "51d0",
+      "head": "c6c2db24c4648d96fd93c8fe7da63ba98dd9af19",
+      "tracked_changes": 0,
+      "untracked_entries": 0,
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "worktree_id": "92ef",
+      "head": "3579aeeda379caf78dafe5351704956f1ecc0ea5",
+      "tracked_changes": 0,
+      "untracked_entries": 97,
+      "status_sha256": "ad7c93d9a5064e839231bbd6b8eee6d232347b4fd370b87cb9d018557d106624"
+    }
+  ]
+}

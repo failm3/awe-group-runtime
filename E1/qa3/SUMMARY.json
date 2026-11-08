@@ -1,0 +1,160 @@
+{
+  "schema": "awe.qa3.independent-review/1",
+  "updated_at": "2026-11-08T03:32:45.470Z",
+  "status": "PASS_TESTED_OFFLINE_AND_NATIVE_SYNTHETIC_BOUNDARIES_NO_GO_PAID",
+  "base_commit": "09f1a864e6fa26afa62ffac3249c6532a6116175",
+  "branch": "codex/e1-router-cheap-issue3-20261108",
+  "acceptance": false,
+  "cloud_mission_complete": false,
+  "actual_paid_generation": "NOT_RUN",
+  "original_mission_cloud_e2e": "NOT_RUN",
+  "actual_provider_calls": 0,
+  "qa_real_key_access": false,
+  "qa_ddl": false,
+  "qa_cluster_lifecycle": false,
+  "native_execution_owner": "ROOT_HOST_RUNNER",
+  "native_resource": "EXISTING_E1_POSTGRESQL_5433_LOCAL_TEST_ONLY",
+  "native_project_namespace": "prj_qa3_*",
+  "native_funding": "EXPLICIT_SYNTHETIC_UNIQUE_KEYS_ONLY",
+  "runs": {
+    "offline": {
+      "command": "node --require ./E1/qa3/offline-guard.cjs --test --test-concurrency=1 --test-reporter=tap E1/qa3/pricing-adversarial.test.mjs E1/qa3/funding-adversarial.test.mjs E1/qa3/broker-adversarial.test.mjs E1/qa3/host-boundary.test.mjs",
+      "started_at": "2026-11-08T03:25:47.451Z",
+      "finished_at": "2026-11-08T03:25:49.875Z",
+      "exit_status": 0,
+      "totals": {
+        "tests": 29,
+        "pass": 29,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "implementation_stable_during_run": true,
+      "output_sha256": "0e9da9a7eed291464854890f33eb8ba0d7b0a4af7b9f3237feb5b29cc158374d",
+      "log": "E1/qa3/OFFLINE.tap"
+    },
+    "native": {
+      "command": "node --require ./E1/qa3/native-guard.cjs --test --test-concurrency=1 --test-reporter=tap E1/qa3/native-integration.test.mjs",
+      "started_at": "2026-11-08T03:25:24.722Z",
+      "finished_at": "2026-11-08T03:25:28.799Z",
+      "exit_status": 0,
+      "totals": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "implementation_stable_during_run": true,
+      "output_sha256": "6208a6885ebf5a389dddd5db5452a4505352ab225a2643aa8f44cba913132282",
+      "log": "E1/qa3/NATIVE.tap"
+    },
+    "host_synthetic": {
+      "command": "python3 E1/qa3/host-safety.test.py",
+      "started_at": "2026-11-08T03:17:48.380Z",
+      "finished_at": "2026-11-08T03:17:49.007Z",
+      "exit_status": 0,
+      "totals": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0
+      },
+      "implementation_stable_during_run": true,
+      "output_sha256": "54f03583d27602d1a3e8ec07e461167c5564908f9f52de5a7c9e7c7a764546a6",
+      "log": "E1/qa3/HOST-SYNTHETIC.log",
+      "published_log_sha256": "0b2eef73611738320ffb7b4f75aca12aa73b3e7a66ec5366def0d4cf18350a0e",
+      "log_normalization": {
+        "operation": "CRLF_TO_LF_ONLY",
+        "captured_output_sha256": "54f03583d27602d1a3e8ec07e461167c5564908f9f52de5a7c9e7c7a764546a6",
+        "published_log_sha256": "0b2eef73611738320ffb7b4f75aca12aa73b3e7a66ec5366def0d4cf18350a0e",
+        "new_test_run": false,
+        "started_at_and_finished_at": "UNCHANGED_ORIGINAL_RUN_TIMES",
+        "meaning": "The capture hash binds original process output; the published-log hash binds the LF-normalized artifact."
+      }
+    },
+    "portable": {
+      "command": "node --require ./E1/qa3/offline-guard.cjs --test --test-concurrency=1 --test-reporter=tap E1/qa3/pricing-adversarial.test.mjs E1/qa3/funding-adversarial.test.mjs E1/qa3/broker-adversarial.test.mjs E1/qa3/host-boundary.test.mjs",
+      "started_at": "2026-11-08T03:09:11.735Z",
+      "finished_at": "2026-11-08T03:09:14.860Z",
+      "exit_status": 0,
+      "totals": {
+        "tests": 29,
+        "pass": 29,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "implementation_stable_during_run": null,
+      "output_sha256": "e0fff5bb1f199acd54c6d17958c92d34b178043488457db6ff642a0e7a0262da",
+      "log": "LOCAL_PORTABILITY_LOG_NOT_REQUIRED_FOR_PUBLICATION"
+    }
+  },
+  "source_preservation": {
+    "checked_files": 11,
+    "unchanged": true,
+    "e0_source_diff_paths": [],
+    "ollama_runtime_inference": "NOT_RERUN"
+  },
+  "native_evidence": "E1/qa3/NATIVE-REVIEW.json",
+  "blockers": [
+    "HARD_ACTUAL_CHARGE_CAP_AFTER_ALL_SOURCE_FACTORS_UNVERIFIED",
+    "AUTHENTICATED_EXACT_OWNER_SPENDING_GRANT_NOT_ISSUED",
+    "PROVIDER_FULL_REQUEST_INPUT_TOKEN_BOUND_UNVERIFIED",
+    "PROVIDER_EXACT_SOURCE_USAGE_CACHE_AND_CHARGED_ACK_CONTRACT_UNVERIFIED",
+    "FUTURE_LIVE_HOST_CAPABILITY_MUST_BIND_OWNING_NATIVE_ACCOUNTING",
+    "ORIGINAL_CLOUD_MISSION_AND_OWNER_ACCEPTANCE_NOT_RUN"
+  ],
+  "proposal_30_total_3_attempt_15_attempts_is_authorization": false,
+  "readonly_metadata_negative_checks": {
+    "execution_owner": "ROOT_HOST_RUNNER",
+    "source": "E1/evidence3/READONLY-PREFLIGHT-FINAL.json",
+    "source_sha256": "a5569fb01ecaec1d96dd7345075b58d33f03a6ea3cfb34b4dbe8ff3b8ef16e24",
+    "observed_at": "2026-11-08T03:16:42.687725+00:00",
+    "checks": [
+      {
+        "check": "NO_AUTH_METADATA",
+        "path": "/v1/models",
+        "status": 401,
+        "raw_error_omitted": true
+      },
+      {
+        "check": "INVALID_MODEL_METADATA",
+        "path": "/v1/models/awe-e1-nonexistent-canary-model",
+        "status": 404,
+        "raw_error_omitted": true
+      }
+    ],
+    "paid_generation_requests": 0,
+    "hard_actual_charge_cap": "UNVERIFIED",
+    "meaning": "Metadata GET negatives only; no generation, consumption or billed-cost proof."
+  },
+  "host_metadata_review": {
+    "path": "E1/host/router-cheap/preflight.py",
+    "native_capture_sha256": "fc6ecd9ee4a93a042ed96da6409247fd89c2246f96c31a41574113581e06d1e3",
+    "current_reviewed_sha256": "fc6ecd9ee4a93a042ed96da6409247fd89c2246f96c31a41574113581e06d1e3",
+    "native_source_capture_matches_current": true,
+    "change": "Two fixed GET-only metadata negatives; unauthenticated catalogue and authenticated nonexistent-model lookup.",
+    "native_runtime_executed_this_python_helper": false,
+    "validation": "Current helper passed all seven synthetic host tests; current offline 29 and final financial-readback native 9 cases source-stable."
+  },
+  "native_financial_readback": {
+    "amount_encoding": "UNSIGNED_DECIMAL_STRING_USD_MICROS",
+    "spent_compatibility_semantics": "BOOKED_CONFIRMED_CHARGES_ONLY",
+    "unknown_case": {
+      "booked_confirmed_micros": "0",
+      "observed_held_charge_micros": "0",
+      "observed_overrun_micros": "0",
+      "unknown_charge_attempts": 1,
+      "actual_charged_micros": null,
+      "actual_charge_meaning": "UNKNOWN_NOT_ZERO"
+    },
+    "overcharge_case": {
+      "booked_confirmed_micros": "0",
+      "observed_held_charge_micros": "151",
+      "observed_overrun_micros": "1",
+      "unknown_charge_attempts": 0,
+      "state": "HOLD"
+    },
+    "provider_request_actual_charge_cap_transmitted": false
+  }
+}

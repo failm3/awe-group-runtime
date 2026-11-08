@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: QA3 public cloud factory rejects raw transports, fake tokens and activation configuration
+ok 1 - QA3 public cloud factory rejects raw transports, fake tokens and activation configuration
+  ---
+  duration_ms: 48.4271
+  type: 'test'
+  ...
+# Subtest: QA3 one bounded mock POST has exact model and schema and is bracketed by durable accounting
+ok 2 - QA3 one bounded mock POST has exact model and schema and is bracketed by durable accounting
+  ---
+  duration_ms: 87.3996
+  type: 'test'
+  ...
+# Subtest: QA3 privacy labels, credential-like text and protected input additions block before any accounting or wire
+ok 3 - QA3 privacy labels, credential-like text and protected input additions block before any accounting or wire
+  ---
+  duration_ms: 156.2935
+  type: 'test'
+  ...
+# Subtest: QA3 full serialized request requires host input-token bound before reserving
+ok 4 - QA3 full serialized request requires host input-token bound before reserving
+  ---
+  duration_ms: 33.7359
+  type: 'test'
+  ...
+# Subtest: QA3 registry revocation and expired policy after reserve release only proven no-send
+ok 5 - QA3 registry revocation and expired policy after reserve release only proven no-send
+  ---
+  duration_ms: 125.2267
+  type: 'test'
+  ...
+# Subtest: QA3 revocation after durable SENDING retains reserve with UNKNOWN and zero provider wire
+ok 6 - QA3 revocation after durable SENDING retains reserve with UNKNOWN and zero provider wire
+  ---
+  duration_ms: 45.5693
+  type: 'test'
+  ...
+# Subtest: QA3 uncertain reservation or SENDING acknowledgement never blindly dispatches
+ok 7 - QA3 uncertain reservation or SENDING acknowledgement never blindly dispatches
+  ---
+  duration_ms: 73.8296
+  type: 'test'
+  ...
+# Subtest: QA3 lost wire ACK and timeout have exactly one possible send and sanitized HOLD
+ok 8 - QA3 lost wire ACK and timeout have exactly one possible send and sanitized HOLD
+  ---
+  duration_ms: 105.4663
+  type: 'test'
+  ...
+# Subtest: QA3 redirected, wrong-origin, non-JSON and oversized responses stay UNKNOWN
+ok 9 - QA3 redirected, wrong-origin, non-JSON and oversized responses stay UNKNOWN
+  ---
+  duration_ms: 201.479
+  type: 'test'
+  ...
+# Subtest: QA3 missing usage, cache counts, exact source, model or charge evidence cannot invent a settlement
+ok 10 - QA3 missing usage, cache counts, exact source, model or charge evidence cannot invent a settlement
+  ---
+  duration_ms: 543.3641
+  type: 'test'
+  ...
+# Subtest: QA3 known billed malformed, injected or truncated output settles once then requests repair
+ok 11 - QA3 known billed malformed, injected or truncated output settles once then requests repair
+  ---
+  duration_ms: 221.1599
+  type: 'test'
+  ...
+# Subtest: QA3 lost settlement ACK becomes UNKNOWN with one charge record and no second POST
+ok 12 - QA3 lost settlement ACK becomes UNKNOWN with one charge record and no second POST
+  ---
+  duration_ms: 40.852
+  type: 'test'
+  ...
+# Subtest: QA3 same logical request cannot send twice through new attempt or another broker instance
+ok 13 - QA3 same logical request cannot send twice through new attempt or another broker instance
+  ---
+  duration_ms: 48.385
+  type: 'test'
+  ...
+# Subtest: QA3 simultaneous same logical request dispatches at most once
+ok 14 - QA3 simultaneous same logical request dispatches at most once
+  ---
+  duration_ms: 49.7439
+  type: 'test'
+  ...
+# Subtest: QA3 JSON funding descriptions and forged authority objects cannot provision
+ok 15 - QA3 JSON funding descriptions and forged authority objects cannot provision
+  ---
+  duration_ms: 3.2416
+  type: 'test'
+  ...
+# Subtest: QA3 authenticated funding requires both exact owner grant and verified hard provider charge cap
+ok 16 - QA3 authenticated funding requires both exact owner grant and verified hard provider charge cap
+  ---
+  duration_ms: 1.3701
+  type: 'test'
+  ...
+# Subtest: QA3 nominal base-priced or missing request cap never equals hard actual-charge proof
+ok 17 - QA3 nominal base-priced or missing request cap never equals hard actual-charge proof
+  ---
+  duration_ms: 2.1571
+  type: 'test'
+  ...
+# Subtest: QA3 funding prevents forged digests, impossible limits and synthetic-to-live scope substitution
+ok 18 - QA3 funding prevents forged digests, impossible limits and synthetic-to-live scope substitution
+  ---
+  duration_ms: 4.5252
+  type: 'test'
+  ...
+# Subtest: QA3 cloud task policy binds exact owner grant, allowed routes and immutable quote digest
+ok 19 - QA3 cloud task policy binds exact owner grant, allowed routes and immutable quote digest
+  ---
+  duration_ms: 1.3907
+  type: 'test'
+  ...
+# Subtest: QA3 genuine host transport cannot dispatch a paid request or verify an invented input bound
+ok 20 - QA3 genuine host transport cannot dispatch a paid request or verify an invented input bound
+  ---
+  duration_ms: 1.4692
+  type: 'test'
+  ...
+# Subtest: QA3 raw policy JSON and spend proposals cannot mint authenticated host policy
+ok 21 - QA3 raw policy JSON and spend proposals cannot mint authenticated host policy
+  ---
+  duration_ms: 0.4028
+  type: 'test'
+  ...
+# Subtest: QA3 mock-only process blocks network and child-process dispatch
+ok 22 - QA3 mock-only process blocks network and child-process dispatch
+  ---
+  duration_ms: 1.8353
+  type: 'test'
+  ...
+# Subtest: QA3 rational cost rounds once after cache subtraction and source multiplier
+ok 23 - QA3 rational cost rounds once after cache subtraction and source multiplier
+  ---
+  duration_ms: 0.9045
+  type: 'test'
+  ...
+# Subtest: QA3 reservation bounds expensive cache and independently maximizes all eligible sources
+ok 24 - QA3 reservation bounds expensive cache and independently maximizes all eligible sources
+  ---
+  duration_ms: 0.6034
+  type: 'test'
+  ...
+# Subtest: QA3 exact large fractional arithmetic never under-reserves through floating-point conversion
+ok 25 - QA3 exact large fractional arithmetic never under-reserves through floating-point conversion
+  ---
+  duration_ms: 0.4339
+  type: 'test'
+  ...
+# Subtest: QA3 missing prices, source factors, evidence and invalid usage are rejected
+ok 26 - QA3 missing prices, source factors, evidence and invalid usage are rejected
+  ---
+  duration_ms: 1.0903
+  type: 'test'
+  ...
+# Subtest: QA3 quote enforces exact model route and immutable observed source snapshot
+ok 27 - QA3 quote enforces exact model route and immutable observed source snapshot
+  ---
+  duration_ms: 3.489
+  type: 'test'
+  ...
+# Subtest: QA3 stale, future, unbounded or incomplete catalog cannot create a quote
+ok 28 - QA3 stale, future, unbounded or incomplete catalog cannot create a quote
+  ---
+  duration_ms: 2.7519
+  type: 'test'
+  ...
+# Subtest: QA3 local Ollama policy remains explicitly pinned and cloud fallback disabled
+ok 29 - QA3 local Ollama policy remains explicitly pinned and cloud fallback disabled
+  ---
+  duration_ms: 0.5381
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2304.6284

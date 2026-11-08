@@ -1,0 +1,320 @@
+{
+  "schema": "awe.e1.issue3.source-manifest/1",
+  "created_at": "2026-11-08T03:35:55.602Z",
+  "base_commit": "09f1a864e6fa26afa62ffac3249c6532a6116175",
+  "branch": "codex/e1-router-cheap-issue3-20261108",
+  "issue": "https://github.com/failm3/awe-group-runtime/issues/3",
+  "status": "PARTIAL_NO_GO_PAID",
+  "key_material_included": false,
+  "paid_generations": 0,
+  "actual_cloud_funding_enabled": false,
+  "publication_review": "E1/qa3/INDEX-REVIEW.json",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 135,
+      "sha256": "387cedf37a5c900196203b81ddc5dd372eb92b756a3ec3994623883633611520"
+    },
+    {
+      "file": "E1/README.md",
+      "bytes": 4930,
+      "sha256": "16578aeef6548869b1d88c658f5603d2b804f382e726dea1ff37ccb0bd6985b0"
+    },
+    {
+      "file": "E1/astra3/LEAD-HANDOFF.md",
+      "bytes": 12779,
+      "sha256": "b457ee1c21e33580cb395c82dd6562a27570c5a0bff8d0229f7a797f3b64bce9"
+    },
+    {
+      "file": "E1/cloud/INTEGRATION-OUTCOME.md",
+      "bytes": 8685,
+      "sha256": "e267490853f437734064e89fa97d316e0a73987da392681847f3a15ed94e6871"
+    },
+    {
+      "file": "E1/cloud/REPORT.md",
+      "bytes": 8044,
+      "sha256": "c46af6c34ea161799247397a7789f02b106c0a06f7de5c2925a49cb773662db4"
+    },
+    {
+      "file": "E1/cloud/broker.mjs",
+      "bytes": 18212,
+      "sha256": "5de440b6a20eafd99601ff3b5613b365e8261542911f6a43cca4d98e611099dd"
+    },
+    {
+      "file": "E1/cloud/canary-plan.json",
+      "bytes": 2661,
+      "sha256": "22538c6126cce47c51258fd4f4b7c0500d23ded0e86115f27bf2b0e5fc1d0df8"
+    },
+    {
+      "file": "E1/cloud/catalog-status.json",
+      "bytes": 2582,
+      "sha256": "0ab9bf2cd5f1522b0297076b0ae27c08b023090d25d5c3a630cc50cfcf33c546"
+    },
+    {
+      "file": "E1/cloud/index.mjs",
+      "bytes": 283,
+      "sha256": "0dce514ffc87b0c49aeb494daa6d9a7730883da0ecea9689a5882216e392b950"
+    },
+    {
+      "file": "E1/cloud/pricing.mjs",
+      "bytes": 3797,
+      "sha256": "b7337620fc428ae5b6bb0cfae2bdff1caaf968e3f461d3397f8e7bced82b0e6c"
+    },
+    {
+      "file": "E1/cloud/registry.mjs",
+      "bytes": 4843,
+      "sha256": "32ca6a8c4ed73d936a3d7bbeba800b2614086e6a7fff2fb79b127fa3022ee826"
+    },
+    {
+      "file": "E1/coordinator/CLOUD-ACCOUNTING-REPORT.md",
+      "bytes": 9603,
+      "sha256": "ace8a5380395ff937feebb24c644140eac7dc01a14656c43f0b62ccc9fa88554"
+    },
+    {
+      "file": "E1/coordinator/admission.mjs",
+      "bytes": 6028,
+      "sha256": "ce54554e9e611aac86ce8614b5be85c5b1cfdfdf1122a3ccb3a8fd44a1877fa1"
+    },
+    {
+      "file": "E1/coordinator/cloud-policy.mjs",
+      "bytes": 6156,
+      "sha256": "e0c944a8185bd266d4ed5890579e785d698b429c9654cfe09e7defd74f813d3b"
+    },
+    {
+      "file": "E1/coordinator/coordinator.mjs",
+      "bytes": 5319,
+      "sha256": "f81b876c9467840ec3f72dfe7647d23a4460f05396acea4e2615917b9329b9c2"
+    },
+    {
+      "file": "E1/coordinator/index.mjs",
+      "bytes": 701,
+      "sha256": "fc451b94f4d105cfd3481d8a21797c235f7bdcb5d14e22423e6ff4b1dee90d5f"
+    },
+    {
+      "file": "E1/coordinator/migrate.mjs",
+      "bytes": 2150,
+      "sha256": "2a001739114847d66e25244b0643912bfb6fda32d512573c6be84b3a9f460284"
+    },
+    {
+      "file": "E1/coordinator/migrations/0003-cloud-accounting.sql",
+      "bytes": 33700,
+      "sha256": "ed2f7e3f7aff2598e29f08caf60a262370836b598b588a1b20b192ab57994676"
+    },
+    {
+      "file": "E1/coordinator/operations/disable-cloud.sql",
+      "bytes": 1893,
+      "sha256": "e71d4882280b55717a613b7283214171a962a0c9ba70afab7bcc85afde225977"
+    },
+    {
+      "file": "E1/coordinator/psql-session.mjs",
+      "bytes": 5765,
+      "sha256": "249b2ca32c67c7ff7a64bd9f7cf44af543ccaf0dafef9a9b1e8729ff5844e7fe"
+    },
+    {
+      "file": "E1/evidence3/LEGACY-NATIVE.json",
+      "bytes": 11926,
+      "sha256": "6207cc20c5f2efade5e2cc3f1a5124db97a94ce937b703ec005dfcdde0fcd31d"
+    },
+    {
+      "file": "E1/evidence3/LEGACY-OFFLINE.json",
+      "bytes": 12502,
+      "sha256": "67e38a2107d23c7a1a2a3e3f8aeeba9d1ab44329cceb5c8fce211eddc7471298"
+    },
+    {
+      "file": "E1/evidence3/ORIGINAL-PRESERVATION.json",
+      "bytes": 657,
+      "sha256": "3164643caee8bdd6bf3a134bc16cf4b12bfa36bfbe2886ab904dbfc7b661efa0"
+    },
+    {
+      "file": "E1/evidence3/READONLY-PREFLIGHT-FINAL.json",
+      "bytes": 55796,
+      "sha256": "a5569fb01ecaec1d96dd7345075b58d33f03a6ea3cfb34b4dbe8ff3b8ef16e24"
+    },
+    {
+      "file": "E1/evidence3/READONLY-PREFLIGHT.json",
+      "bytes": 55584,
+      "sha256": "107ab94a6dfa7702f8bd9999e64c8fd9e08f3c7ce6ec795e8b4e4e8863a7bb48"
+    },
+    {
+      "file": "E1/evidence3/REAL-FUNDING-DISABLED.json",
+      "bytes": 364,
+      "sha256": "d44bd3974b4202a6b110c3d700cb17bcae39f15e684e676a5b8e89cf5eb76ec2"
+    },
+    {
+      "file": "E1/host/router-cheap/host-policy.mjs",
+      "bytes": 1460,
+      "sha256": "b692993b2b79772da3bd88bfb1c9e1fef887ee6a1194452714dbe4d5290117ba"
+    },
+    {
+      "file": "E1/host/router-cheap/preflight.py",
+      "bytes": 7697,
+      "sha256": "fc6ecd9ee4a93a042ed96da6409247fd89c2246f96c31a41574113581e06d1e3"
+    },
+    {
+      "file": "E1/host/router-cheap/transport.mjs",
+      "bytes": 2044,
+      "sha256": "62a8ca0c0174c5bfaa5ca54d6bb292866f69cba31cbd24442871ed739add59e2"
+    },
+    {
+      "file": "E1/qa3/HOST-SYNTHETIC.log",
+      "bytes": 1201,
+      "sha256": "0b2eef73611738320ffb7b4f75aca12aa73b3e7a66ec5366def0d4cf18350a0e"
+    },
+    {
+      "file": "E1/qa3/NATIVE-REVIEW.json",
+      "bytes": 2742,
+      "sha256": "7bf05042f8ffe7cdd4ace33824a01c3e1470afcb2e5775257e54ad2aebd7d472"
+    },
+    {
+      "file": "E1/qa3/NATIVE.tap",
+      "bytes": 2383,
+      "sha256": "6208a6885ebf5a389dddd5db5452a4505352ab225a2643aa8f44cba913132282"
+    },
+    {
+      "file": "E1/qa3/OFFLINE.tap",
+      "bytes": 6968,
+      "sha256": "0e9da9a7eed291464854890f33eb8ba0d7b0a4af7b9f3237feb5b29cc158374d"
+    },
+    {
+      "file": "E1/qa3/PRESERVATION.json",
+      "bytes": 3311,
+      "sha256": "6ac1eccf730fc35bc19ffcbc4a55cf4eee96d90d545f0adb43b2946e48073442"
+    },
+    {
+      "file": "E1/qa3/PUBLICATION-REVIEW.json",
+      "bytes": 1739,
+      "sha256": "0684617e2fe9582c75b5d37e8d323d9fca7933d0299ac7716af893db29129ff7"
+    },
+    {
+      "file": "E1/qa3/README.md",
+      "bytes": 1603,
+      "sha256": "19d9f99f722cdcfcbb41413fff8dba611895d5c8bf7688f19681ca405b685224"
+    },
+    {
+      "file": "E1/qa3/REPORT.md",
+      "bytes": 11885,
+      "sha256": "5dd3297efe23dad84810d7b95c33afcb11157f3c108c3b68189d6165dd6f40b9"
+    },
+    {
+      "file": "E1/qa3/SOURCE-PINS.json",
+      "bytes": 5572,
+      "sha256": "6749ae2708c4344db3ce41c23fede43a75e6b6fae996b8b613394c032c9b0d70"
+    },
+    {
+      "file": "E1/qa3/SUMMARY.json",
+      "bytes": 6729,
+      "sha256": "17aab9baecc9fbd6b3688ec80c97ea407029ebc2dcb86dcea42ac7fbc88fa723"
+    },
+    {
+      "file": "E1/qa3/broker-adversarial.test.mjs",
+      "bytes": 12194,
+      "sha256": "cc6d4d0655bd435c5c9aeec4a52a10c05eb7a27dfe04096899cd586f6e709c86"
+    },
+    {
+      "file": "E1/qa3/finalize-review.mjs",
+      "bytes": 9439,
+      "sha256": "094c8049c4254e515a65ed8f07cbead42f50dbc19d0dfa70778850370cbe9c59"
+    },
+    {
+      "file": "E1/qa3/fixtures.mjs",
+      "bytes": 1353,
+      "sha256": "a5fd78282d74929371a46249becfba019e4ea59b478cc61d845f27ab30602146"
+    },
+    {
+      "file": "E1/qa3/funding-adversarial.test.mjs",
+      "bytes": 4777,
+      "sha256": "1327659e7607955cd733f7e906e2528b450446d42f346baacb35d46607aab4e6"
+    },
+    {
+      "file": "E1/qa3/host-boundary.test.mjs",
+      "bytes": 1744,
+      "sha256": "e3d935db220cfd1e2a536b7217701add618f383849ddd060f3e42d5bcdd5645d"
+    },
+    {
+      "file": "E1/qa3/host-safety.test.py",
+      "bytes": 7904,
+      "sha256": "bb45c86265113f26573374c613fc5c86fa7fdf4aa3be69fbddc5184c0fc355a7"
+    },
+    {
+      "file": "E1/qa3/native-fixture.mjs",
+      "bytes": 8336,
+      "sha256": "1749bae09fc42137605dd7f7ca0d74ac30f2fd4c87955556477beec675224af6"
+    },
+    {
+      "file": "E1/qa3/native-guard.cjs",
+      "bytes": 1883,
+      "sha256": "ee473388f81589523b79809ee58529c0e85d4d041fb0df5493e726518c8673da"
+    },
+    {
+      "file": "E1/qa3/native-integration.test.mjs",
+      "bytes": 16357,
+      "sha256": "906593cd8b5d1778185a7380554441817c5f032901deffdb553c8f5912c868a3"
+    },
+    {
+      "file": "E1/qa3/offline-guard.cjs",
+      "bytes": 932,
+      "sha256": "ad6c9a52a387c139bf2e95b3525e71be946a635a65d611d968a52971f4eefe69"
+    },
+    {
+      "file": "E1/qa3/pricing-adversarial.test.mjs",
+      "bytes": 4710,
+      "sha256": "11b5f7acc8054194341c818e4846cfc28e84fe206e3b1317cd010500030675e6"
+    },
+    {
+      "file": "E1/qa3/run-host-synthetic.mjs",
+      "bytes": 2034,
+      "sha256": "36170769670dce3567e85c2c06535cabfdf25e496fb0d24a775a509c1368e681"
+    },
+    {
+      "file": "E1/qa3/run-native.mjs",
+      "bytes": 2508,
+      "sha256": "9b6ea7a7390e26c846c8508cb4ca26370a514ecefc62d37068044ebe8845d468"
+    },
+    {
+      "file": "E1/qa3/run-offline.mjs",
+      "bytes": 2562,
+      "sha256": "2f1acfe88c8647dc941aa6cc5e224b894a29d3ab1dff75350e49b4e26644c0f2"
+    },
+    {
+      "file": "E1/qa3/verify-portability.mjs",
+      "bytes": 3981,
+      "sha256": "adb5febefc03c8162804be49d6cb17b2781218995cd5034595590255053e8cb5"
+    },
+    {
+      "file": "E1/qa3/verify-preservation.mjs",
+      "bytes": 1624,
+      "sha256": "6d2e6c375ba6088a4b168c12934df4591f767006e910aaeb11d2bc3ec17208cd"
+    },
+    {
+      "file": "E1/tests/cloud-ledger/fixtures.mjs",
+      "bytes": 6159,
+      "sha256": "effacf82489088e98eb48032c64c710855747f302dd432ce0c9408b092e1ca53"
+    },
+    {
+      "file": "E1/tests/cloud-ledger/native.test.mjs",
+      "bytes": 12863,
+      "sha256": "8a0ff2ad2e2d6fda786643436959904283d2a9a704cb549ae6ab07a24453d643"
+    },
+    {
+      "file": "E1/tests/cloud-ledger/policy.test.mjs",
+      "bytes": 3188,
+      "sha256": "8f48d8fa568ceaa56b0d47c6302f2dbc63564563d1bf7994f2c5cda502f382c1"
+    },
+    {
+      "file": "E1/tests/cloud/broker.test.mjs",
+      "bytes": 10391,
+      "sha256": "c38bec7ed45de4253b21582cc801eb7e37339723bccb4c547ab2286ee0d10502"
+    },
+    {
+      "file": "E1/tests/cloud/fixtures.mjs",
+      "bytes": 5022,
+      "sha256": "304b10dfdb26d7862c604998ccf36f36409dce6b8d05935d64351c8544d07a17"
+    },
+    {
+      "file": "E1/verification/cloud-funding-readback.mjs",
+      "bytes": 1344,
+      "sha256": "271d7afdaac63b8ad4902c42188cff268a2085e8fa67be5cc01ec1161fcc55f1"
+    }
+  ],
+  "self_and_final_index_review_excluded": true
+}

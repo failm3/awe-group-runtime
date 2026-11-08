@@ -1,0 +1,50 @@
+{
+  "schema": "awe.e1.router-cheap.catalog-status/1",
+  "status": "DISCOVERED_BUT_NOT_EXECUTABLE",
+  "source": {
+    "host_sanitized_artifact": ".private/router-preflight.json",
+    "observed_at": "2026-11-08T02:55:45.0358670Z",
+    "official_pricing_url": "https://router.cheap/api/pricing",
+    "pricing_version": "a42d372ccf0b5dd13ecf71203521f9d2",
+    "pricing_body_digest": "sha256:aa38387218648e7aac2f75eaa99cce96d2d6da220425b69b382d6a449a30410b",
+    "model_discovery_count": 75
+  },
+  "models": [
+    {
+      "model_id": "gpt-6-sol",
+      "listed_in_authenticated_models": true,
+      "observed_context_length": 1050000,
+      "observed_endpoint_types": ["openai"],
+      "billing_mode": "tiered_expr",
+      "billing_expression_digest": "sha256:4a51cc411f9bd0138f1a93bfb8f54a23fa1d846a01e667242008f5b4f2e7da86",
+      "billing_expression_support": "UNVERIFIED_NO_EVAL",
+      "normalized_usd_prices": "UNKNOWN",
+      "execution_status": "BLOCKED"
+    },
+    {
+      "model_id": "claude-opus-4-8",
+      "listed_in_authenticated_models": true,
+      "observed_context_length": 1000000,
+      "observed_endpoint_types": ["anthropic", "openai"],
+      "billing_mode": null,
+      "billing_expression_support": "NO_EXPRESSION_OBSERVED",
+      "normalized_usd_prices": "UNKNOWN",
+      "execution_status": "BLOCKED"
+    }
+  ],
+  "unverified_required_features": [
+    "Exact USD mapping of model ratios, cache ratios, source unit prices and relative source coefficients without double multiplication.",
+    "Finite conservative pricing of the gpt-6-sol tiered billing expression.",
+    "Exact source identity in each generation acknowledgement and source-price freshness semantics.",
+    "Strict bounded JSON Schema response_format support for both models.",
+    "Provider maximum output tokens and complete request tokenizer or conservative verified upper bound.",
+    "Complete input, cached input and output usage counts with no missing cache assumed zero.",
+    "Authenticated actual-charge receipt bound to provider request ID, exact source and pricing snapshot.",
+    "Provider hard cap on actual post-coefficient USD charge, including per-request limits and concurrent requests.",
+    "Exact authenticated owner spending grant and native shared-key funding admission."
+  ],
+  "provider_hard_actual_spend_limit": "UNVERIFIED",
+  "spending_enabled": false,
+  "paid_generation_requests": 0,
+  "note": "Discovery metadata is not an accepted normalized catalogue. A zero model_price field or account usage reading is not a zero-cost model price or spending authorization."
+}
