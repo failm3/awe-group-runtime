@@ -2,6 +2,7 @@ import {createHash} from 'node:crypto';
 import {canonicalize, digest, immutable, need, exact, utc, inspectBoundSchema} from '../../contracts/index.mjs';
 
 export const CODING_CONTRACT_VERSION = 'awe.e1.coding-executor/1';
+export const CODING_CONTRACT_VERSION_V2 = 'awe.e1.coding-executor/2';
 export const CODING_PERMISSIONS = Object.freeze(['issue.read', 'repository.read', 'worktree.create', 'branch.create', 'patch.apply', 'tests.run', 'qa.request', 'draft_pr.prepare']);
 export const PROTECTED_ROOTS = Object.freeze(['.git', '.github', '.codex', '.agents', '.aws', '.ssh', '.gitattributes', '.gitmodules', 'contracts', 'baseline', 'E1/contracts', 'E1/coordinator', 'E1/mission', 'E1/broker', 'E1/infra', 'E1/host', 'E1/release', 'E1/executors/coding', 'E1/index.mjs', 'E1/cli.mjs', 'E1/package.json']);
 const SHA = /^[a-f0-9]{40}$/;
@@ -42,6 +43,24 @@ export function validateCodingTaskGrant(input, {now = new Date().toISOString(), 
   need(int(input.max_steps, 1, 24) && input.max_model_attempts === 1 && int(input.max_patch_bytes, 1, 32768) && int(input.max_files, 1, 16) && input.max_files <= input.path_allowlist.length, 'CODING_GRANT_BOUNDS');
   need(Array.isArray(input.permissions) && input.permissions.length === CODING_PERMISSIONS.length && new Set(input.permissions).size === input.permissions.length && CODING_PERMISSIONS.every(permission => input.permissions.includes(permission)), 'CODING_PERMISSION_DENIED');
   return immutable(input);
+}
+
+/** Additive host-bound contract. V1 remains readable for offline replay. */
+export function validateCodingTaskGrantV2(input, options = {}) {
+  need(input?.contract_version === CODING_CONTRACT_VERSION_V2, 'CODING_V2_REQUIRED');
+  const {issue_digest, read_allowlist, test_profile_digest, ...legacy} = input;
+  validateCodingTaskGrant({...legacy, contract_version: CODING_CONTRACT_VERSION}, options);
+  need(HASH.test(issue_digest) && HASH.test(test_profile_digest), 'CODING_V2_DIGEST');
+  need(Array.isArray(read_allowlist) && read_allowlist.length > 0 && read_allowlist.length <= 32 &&
+    new Set(read_allowlist.map(p => typeof p === 'string' ? p.toLowerCase() : p)).size === read_allowlist.length, 'CODING_READ_ALLOWLIST');
+  read_allowlist.forEach(p => assertUnprotected(p, options.hostProtectedRoots ?? []));
+  need(input.path_allowlist.every(p => read_allowlist.includes(p)), 'CODING_READ_SCOPE');
+  return immutable(input);
+}
+
+export function validateCodingGrant(input, options = {}) {
+  return input?.contract_version === CODING_CONTRACT_VERSION_V2
+    ? validateCodingTaskGrantV2(input, options) : validateCodingTaskGrant(input, options);
 }
 
 export function validatePatchProposal(proposal, {grant, baseline, hostProtectedRoots = []}) {

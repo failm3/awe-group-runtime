@@ -1,0 +1,120 @@
+{
+  "case_id": "G1-NORMALIZE-01",
+  "version": 1,
+  "brief_sha256": "5a54de4633f2bedd9cf1023bc24377ad5c70c0e071b358f97a13bffbb6b68687",
+  "library": {
+    "inputs": [
+      {
+        "id": " CAse  7 ",
+        "kind": "\tPEND\r"
+      },
+      null,
+      {
+        "kind": "OK",
+        "id": 7
+      },
+      {
+        "id": "1",
+        "kind": " \t\n"
+      },
+      [],
+      false,
+      {
+        "id": " z\t",
+        "kind": " v2-OK ",
+        "extra": [
+          "ignore"
+        ]
+      },
+      {
+        "id": "\nUi\r",
+        "kind": "s T"
+      },
+      {
+        "ID": "q",
+        "kind": "X"
+      },
+      {
+        "id": "0",
+        "kind": "0"
+      }
+    ],
+    "expected": [
+      {
+        "id": "CAse  7",
+        "kind": "pend"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "id": "z",
+        "kind": "v2-ok"
+      },
+      {
+        "id": "Ui",
+        "kind": "s t"
+      },
+      null,
+      {
+        "id": "0",
+        "kind": "0"
+      }
+    ]
+  },
+  "cli": {
+    "lines": [
+      "",
+      "\t",
+      "{malformed",
+      "{\"id\":\" X1 \",\"kind\":\" T\\t\",\"other\":9}",
+      "null",
+      "[\"bad\"]",
+      "{\"id\":\"Case A\",\"kind\":\"Open\"}",
+      "{\"id\":\" X1 \",\"kind\":\" T\\t\",\"other\":9}",
+      "{\"id\":\"   \",\"kind\":\"DROP\"}",
+      "{\"id\":\"Ny\",\"kind\":false}",
+      "{\"id\":\"q\",\"kind\":\" V2-Done \"}",
+      "true",
+      "{\"kind\":\"x\"}",
+      "{\"id\":\"9\",\"kind\":\"g O\"}"
+    ],
+    "expected": [
+      {
+        "id": "X1",
+        "kind": "t"
+      },
+      {
+        "id": "Case A",
+        "kind": "open"
+      },
+      {
+        "id": "X1",
+        "kind": "t"
+      },
+      {
+        "id": "q",
+        "kind": "v2-done"
+      },
+      {
+        "id": "9",
+        "kind": "g o"
+      }
+    ]
+  },
+  "empty": {
+    "input": "\r\n\t\n]\nfalse",
+    "expected": []
+  },
+  "criteria": [
+    "library",
+    "cli",
+    "empty",
+    "base_fails",
+    "library_only_fails",
+    "cli_only_fails",
+    "cli_calls_library"
+  ]
+}

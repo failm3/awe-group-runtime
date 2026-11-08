@@ -1,0 +1,21 @@
+{
+  "schema": "awe.e1.coding-delivery-checkpoint/1",
+  "status": "IMPLEMENTING_P0_P1_P2_P3_NOT_G1_PROVEN",
+  "base_commit": "9c3eaa182a862dadd5a326836408063b45f7219c",
+  "audit_commit": "9fc932e14acacaf295f918e8777514bb430715ba",
+  "branch": "codex/e1-coding-g1-20261108",
+  "critical_path": ["P0", "P1+P2+P3", "G1", "P4/G2", "P5/G3"],
+  "owners": {"P0_and_integration": "Sol", "P1": "coding_host_p1", "P2": "program_runner_p2", "P3_and_independent_review": "Astra"},
+  "awe_candidate_solution_authored_by_codex": false,
+  "paid_generations": 0,
+  "tool_registry_stream": {
+    "required": true,
+    "blocks_G1": false,
+    "target": "G2/G3",
+    "reuse": "awe/tool_registry metadata discovery and E1 capability/native dispatch",
+    "scope": "Locate existing 4504-candidate library; verify a small pinned subset; no mass reparse or catalog install.",
+    "selection": ["deterministic script", "bounded program", "local LLM", "cloud LLM only after existing financial gates"],
+    "status": "SOURCE_INVENTORY_STARTED_NO_DISPATCH_CLAIM"
+  },
+  "limits": {"G1_model_wires_per_run": 1, "blind_retry": false, "cloud_enabled": false, "merge": false, "E0_mutations": false}
+}
