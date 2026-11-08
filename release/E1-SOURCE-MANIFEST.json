@@ -1,6 +1,6 @@
 {
   "schema": "awe.e1.source-delivery/1",
-  "created_at": "2026-11-08T01:29:34.713Z",
+  "created_at": "2026-11-08T01:43:27.280Z",
   "baseline_commit": "351719536815efcec25a56bc43c21525864f61a4",
   "source_origin": "c6c2db24c4648d96fd93c8fe7da63ba98dd9af19",
   "documentation_commit": "b7cd9c78f94a76ae06eda4b324d25ad4f3403555",
@@ -37,8 +37,8 @@
     },
     {
       "file": "E1/HANDOFF-A2-A3.md",
-      "bytes": 8416,
-      "sha256": "c8483ea902c60cfc8422cbcdac30c3d60bbba76f90c78649263f2c87bda3b92c"
+      "bytes": 9103,
+      "sha256": "c19a58cc1ca0cb56d79888dabf311e73faa3e5ee289c2a2ec57c04d3454cc176"
     },
     {
       "file": "E1/README.md",
@@ -164,6 +164,11 @@
       "file": "E1/evidence2/C1-PINNED-RESTORE.json",
       "bytes": 537,
       "sha256": "d9642f74308434a4870cc234f0318d6459bc61ab5cc21825afcb13408a3668d2"
+    },
+    {
+      "file": "E1/evidence2/CLEAN-EXPORT-TESTS.json",
+      "bytes": 11669,
+      "sha256": "efba241b8743e0c407ba46ea5d57c907d2928a9fd324771f26a052cac4b01dfa"
     },
     {
       "file": "E1/evidence2/COLD-READBACK.json",
@@ -296,14 +301,29 @@
       "sha256": "8048b48648429d1ee678ea4a55727a46d70ba0e0b347dbc6ac3c9f89cbcaeb50"
     },
     {
+      "file": "E1/qa2/PORTABILITY-COMMAND.json",
+      "bytes": 1707,
+      "sha256": "08363cdb90ef6e9e4add5f25b502b45fc882824154c87169c6cdf8c87158b30d"
+    },
+    {
+      "file": "E1/qa2/PORTABILITY-TESTS.json",
+      "bytes": 2203,
+      "sha256": "aea65e392f52675724364ca29c2bdcff4e161e2e3fc5e3443cb26e30388cd6f0"
+    },
+    {
+      "file": "E1/qa2/PORTABILITY-TESTS.tap",
+      "bytes": 5601,
+      "sha256": "38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7"
+    },
+    {
       "file": "E1/qa2/REPORT.md",
-      "bytes": 11076,
-      "sha256": "924f67c83b0619926ba49c06354d8a53ae87292d71ad05c695f43d9c4574ce0b"
+      "bytes": 12614,
+      "sha256": "c919edc1c84a1f3ead793a878694c882d40aafb34c54b2751d2c0f27fd742cf1"
     },
     {
       "file": "E1/qa2/SUMMARY.json",
-      "bytes": 3812,
-      "sha256": "c28d14e5482ca86ea5413b220bfcfe2706e3de4881175a546e33b1d3cb7bb85d"
+      "bytes": 4976,
+      "sha256": "1cb0855d0b44fe1c30e9cd9c4fd904a30ccfa9c071c9cacaf730c1fe712d8fde"
     },
     {
       "file": "E1/qa2/actual-contour-review.json",
@@ -347,8 +367,8 @@
     },
     {
       "file": "E1/qa2/model-seams.test.mjs",
-      "bytes": 13291,
-      "sha256": "0baaed9fcc4a0ae3ed3734fa9c86640662a5e6e9da33464ff5a416489002350e"
+      "bytes": 13900,
+      "sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace"
     },
     {
       "file": "E1/qa2/native-fixture.mjs",
@@ -384,6 +404,11 @@
       "file": "E1/qa2/verify-local-contour.mjs",
       "bytes": 9273,
       "sha256": "7acba1aa14e7cd2c4111722b044e0510df365f9020341375e99c712cfd5aa482"
+    },
+    {
+      "file": "E1/qa2/verify-portable-offline.mjs",
+      "bytes": 5509,
+      "sha256": "7d5838b36721e2bea10c7141650309a507e315e350aaa94abf0f26dd81d7e1e2"
     },
     {
       "file": "E1/qa2/verify-unknown-canary.mjs",

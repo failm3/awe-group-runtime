@@ -18,6 +18,8 @@ Three separate Codex subagent contexts actually worked in parallel: `coordinator
 
 Final commands `node E1/verification/staging.mjs --offline` and `--native` passed **442/442 offline + 38/38 native**, zero fail/skip/cancel; source hashes were stable. [Offline record](evidence2/OFFLINE-TESTS.json) and [native record](evidence2/NATIVE-TESTS.json) include commands, counts, timestamps and output/source hashes. Independent QA repeated its **45/45** subset separately; these overlap the integrator suite and must not be added as unique tests. [QA command](qa2/all-final.command.json), [TAP](qa2/all-final.tap), [summary](qa2/SUMMARY.json).
 
+A public-only checkout reproduced one private-descriptor dependency in a pure QA unit test. After the declared fixture-only repair, **442/442 offline** passed again without `.private/e1-resource.json` or copied reference inputs. Runtime and runner pins matched the candidate; the repaired test digest is recorded explicitly. [Clean export](evidence2/CLEAN-EXPORT-TESTS.json). Native resource fixtures still require their real host-owned descriptor.
+
 ## Actual model contour and failure handling
 
 Mission `mission_code_compact_mw7543y4` used the ordinary A1 publish/admit path. A real Head response created revision 2 with two tasks; a fixed parser and actual semantic review executed them through A2 and separate QA processes. The generated plan was not prewritten by the integrator. Two current tasks and two archived bootstrap tasks have independently checked frozen result/artifact/schema commitments and QA PASS events.
@@ -40,6 +42,7 @@ The first separate mission `mission_code_live_mw745gdt` hit a real cold-inferenc
 - Genuine complete `length` acknowledgements were misclassified UNKNOWN. They now settle real usage once and return REPAIR without accepting truncated output.
 - Native bootstrap migrations now check the actual resource identity before any DDL. The integration runner explicitly enables the native suite and rejects skips.
 - Health counts use the native RUNNING state; failed QA-session initialization closes its earlier coordinator session.
+- A pure offline QA resource test incorrectly read a private host descriptor. A clean checkout reproduced ENOENT; the test now uses a declared immutable descriptor fixture. Native tests still require the actual host-owned resource file.
 
 ## Preservation, limits and next work
 

@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: QA2 oracle parses exact frozen source/cases without claiming helper correctness
+ok 1 - QA2 oracle parses exact frozen source/cases without claiming helper correctness
+  ---
+  duration_ms: 49.991
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects frozen digest substitution and changed source case
+ok 2 - QA2 oracle rejects frozen digest substitution and changed source case
+  ---
+  duration_ms: 42.3188
+  type: 'test'
+  ...
+# Subtest: QA2 oracle accepts a typed two-kind Head proposal with semantic-after-parse dependency
+ok 3 - QA2 oracle accepts a typed two-kind Head proposal with semantic-after-parse dependency
+  ---
+  duration_ms: 71.528
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects seeded Head dependency defect even when A1 schema accepts it
+ok 4 - QA2 oracle rejects seeded Head dependency defect even when A1 schema accepts it
+  ---
+  duration_ms: 62.6251
+  type: 'test'
+  ...
+# Subtest: QA2 oracle accepts analysis identifying seeded defect and safe unimplemented correction
+ok 5 - QA2 oracle accepts analysis identifying seeded defect and safe unimplemented correction
+  ---
+  duration_ms: 32.6457
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects seeded false-success analysis and reversed comparator
+ok 6 - QA2 oracle rejects seeded false-success analysis and reversed comparator
+  ---
+  duration_ms: 33.6879
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects producer/QA subject collision and wrong task capability phase
+ok 7 - QA2 oracle rejects producer/QA subject collision and wrong task capability phase
+  ---
+  duration_ms: 36.4934
+  type: 'test'
+  ...
+# Subtest: QA2 resource descriptor denies retarget, hidden fields and unexpected roles before spawning
+ok 8 - QA2 resource descriptor denies retarget, hidden fields and unexpected roles before spawning
+  ---
+  duration_ms: 2.2678
+  type: 'test'
+  ...
+# Subtest: QA2 public live broker denies injected wire and nonlocal endpoint
+ok 9 - QA2 public live broker denies injected wire and nonlocal endpoint
+  ---
+  duration_ms: 41.5709
+  type: 'test'
+  ...
+# Subtest: QA2 selector distinguishes deterministic script and bounded semantic model with rejected alternatives
+ok 10 - QA2 selector distinguishes deterministic script and bounded semantic model with rejected alternatives
+  ---
+  duration_ms: 91.3693
+  type: 'test'
+  ...
+# Subtest: QA2 Head raw draft cannot inject budget, owner, recipient or executable tool
+ok 11 - QA2 Head raw draft cannot inject budget, owner, recipient or executable tool
+  ---
+  duration_ms: 48.8129
+  type: 'test'
+  ...
+# Subtest: QA2 forged Head context cannot materialize an otherwise valid plan
+ok 12 - QA2 forged Head context cannot materialize an otherwise valid plan
+  ---
+  duration_ms: 37.965
+  type: 'test'
+  ...
+# Subtest: QA2 one generation is bracketed by mandatory accounting and carries backend counts
+ok 13 - QA2 one generation is bracketed by mandatory accounting and carries backend counts
+  ---
+  duration_ms: 72.6711
+  type: 'test'
+  ...
+# Subtest: QA2 malformed model JSON settles consumed usage and asks for bounded repair without retry
+ok 14 - QA2 malformed model JSON settles consumed usage and asks for bounded repair without retry
+  ---
+  duration_ms: 43.178
+  type: 'test'
+  ...
+# Subtest: QA2 personal label or email content blocks before tags, model generation and accounting
+ok 15 - QA2 personal label or email content blocks before tags, model generation and accounting
+  ---
+  duration_ms: 68.6385
+  type: 'test'
+  ...
+# Subtest: QA2 unavailable model or pin mismatch has controlled no-fallback decision and zero generation
+ok 16 - QA2 unavailable model or pin mismatch has controlled no-fallback decision and zero generation
+  ---
+  duration_ms: 70.3925
+  type: 'test'
+  ...
+# Subtest: QA2 generation acknowledgement loss or missing usage enters UNKNOWN with one generation
+ok 17 - QA2 generation acknowledgement loss or missing usage enters UNKNOWN with one generation
+  ---
+  duration_ms: 84.6482
+  type: 'test'
+  ...
+# Subtest: QA2 grant expiry or route revocation after reserve releases a proven no-wire reservation
+ok 18 - QA2 grant expiry or route revocation after reserve releases a proven no-wire reservation
+  ---
+  duration_ms: 70.7998
+  type: 'test'
+  ...
+# Subtest: QA2 lost SENDING marker response is UNKNOWN with zero model wire and no blind generation
+ok 19 - QA2 lost SENDING marker response is UNKNOWN with zero model wire and no blind generation
+  ---
+  duration_ms: 40.6779
+  type: 'test'
+  ...
+# Subtest: QA2 ambiguous reservation ACK is held UNKNOWN rather than released as a proven no-send
+ok 20 - QA2 ambiguous reservation ACK is held UNKNOWN rather than released as a proven no-send
+  ---
+  duration_ms: 34.0611
+  type: 'test'
+  ...
+# Subtest: QA2 genuine length ACK settles once and requests REPAIR even when output happens to be valid JSON
+ok 21 - QA2 genuine length ACK settles once and requests REPAIR even when output happens to be valid JSON
+  ---
+  duration_ms: 84.077
+  type: 'test'
+  ...
+# Subtest: QA2 unrecognized backend completion reason remains UNKNOWN with no invented settlement
+ok 22 - QA2 unrecognized backend completion reason remains UNKNOWN with no invented settlement
+  ---
+  duration_ms: 43.8382
+  type: 'test'
+  ...
+# Subtest: QA2 independent frozen proposal checker rejects seeded missing dependency and digest substitution
+ok 23 - QA2 independent frozen proposal checker rejects seeded missing dependency and digest substitution
+  ---
+  duration_ms: 48.1725
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1537.4738

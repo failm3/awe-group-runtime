@@ -62,3 +62,12 @@ Recommended QA source/final-log/sanitized-summary paths are in `PUBLICATION-PATH
 ## Limits
 
 These results establish a bounded synthetic maintenance planning/analysis path on the scoped local E1 resource. The seed helper remains unchanged, helper function tests are NOT_RUN, and no autonomous coding/GitHub action occurred. Hostile same-host isolation and global cross-project GPU admission are not proved by process-local/model and project-scoped controls. Tests lasted seconds, not a 24-hour recovery/production campaign. G4/G5/G6, paid/cloud routes, real external effects and owner/D08 acceptance remain outside this result.
+
+
+## Clean-export portability follow-up
+
+Before push, a fresh clone of approved commit `132e315ebf8184c17a8c3a64740ce40ad7360332` exposed a QA-unit dependency on the absent private host descriptor: the descriptor case failed ENOENT while the other 15 model seam cases passed. That unit now uses an explicit immutable public descriptor fixture. Its rejection assertions remain intact; native fixtures still require the real private handoff. No runtime/model/host/contract source changed.
+
+Independent QA materialized only the 550 approved public files, with that single test-file override, into a verified clean export. Both `.private` and `.git` were absent. `node --test --test-concurrency=1 --test-reporter=tap E1/qa2/model-seams.test.mjs E1/qa2/maintenance-oracle.test.mjs` passed **23/23, 0 skip**, exit 0, 2026-11-08T01:38:48.961Z–01:38:50.948Z. No source file changed during tests; `.private` remained absent, with zero native connections/model generations. Broker source pin remains `sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e`.
+
+The 23 cases overlap the recorded 45-test run and are not added as unique tests. `all-final.*` remains the original historical command/pin record. Current portability evidence is `PORTABILITY-TESTS.json`, `PORTABILITY-COMMAND.json` and `PORTABILITY-TESTS.tap`; TAP SHA-256 `38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7`. The correction is a new regular commit and a chained publication delta review, without rewriting the previously approved commit.

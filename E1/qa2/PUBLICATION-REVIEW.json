@@ -1,122 +1,132 @@
 {
-  "schema": "awe.qa2.final-publication-review/1",
-  "reviewed_at": "2026-11-08T01:33:05.863Z",
-  "verdict": "GO_EXACT_549_REVIEWED_STAGED_FILES_PLUS_THIS_REVIEW_ONLY",
-  "publication_scope": "Private clean runtime source/development PR only; no merge, deployment or owner acceptance",
-  "reviewed_index_files": 549,
-  "reviewed_index_bytes": 3891550,
-  "stage2_changed_files": 89,
-  "stage2_source_manifest": {
+  "schema": "awe.qa2.final-publication-review/2",
+  "reviewed_at": "2026-11-08T01:47:39.310Z",
+  "verdict": "GO_EXACT_554_REVIEWED_FILES_PLUS_THIS_CHAINED_REVIEW_555_TOTAL",
+  "previous_approved_commit": "132e315ebf8184c17a8c3a64740ce40ad7360332",
+  "previous_review_sha256": "4425cd9a06bd5575cb7fbc389aff7f6215ff3f4bec188be1fc1078c32429ff6b",
+  "previous_root_commit": "351719536815efcec25a56bc43c21525864f61a4",
+  "reviewed_files_excluding_self": 554,
+  "final_tree_files_including_review": 555,
+  "reviewed_delta_files_excluding_self": 10,
+  "expected_regular_commit_delta_including_review": 11,
+  "source_manifest": {
     "path": "release/E1-SOURCE-MANIFEST.json",
-    "sha256": "b1e7de199d7e8a6261021acecbaba0ffb9f31f75b10f277b874b74e7e4a5866c",
-    "listed_files": 88,
+    "sha256": "972984325760d979583b6cffd365e3768d295d758aea8cd38c1b7ff3a7f137d5",
+    "rows": 93,
     "self_and_review_excluded": true
   },
-  "clean_history": {
-    "only_local_git_commit_object": "351719536815efcec25a56bc43c21525864f61a4",
-    "only_reachable_root_commit": "351719536815efcec25a56bc43c21525864f61a4",
-    "original_e0_commit_history_present": false
+  "finding": "The pure descriptor negative unit read a private host descriptor and failed from a real clean clone; replace only that unit fixture with explicit immutable public data.",
+  "correction": {
+    "only_existing_test_source_changed": "E1/qa2/model-seams.test.mjs",
+    "sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace",
+    "private_file_read_removed": true,
+    "fs_import_removed": true,
+    "existing_rejection_assertions_unchanged": true,
+    "native_fixtures_still_require_actual_host_descriptor": true,
+    "runtime_model_host_coordinator_contract_sources_unchanged_from_parent": true,
+    "broker_source_pin": "sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e"
+  },
+  "validation": {
+    "independent_clean_export": {
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "clean_export_private_directory_before": false,
+    "clean_export_private_directory_after": false,
+    "integrator_clean_export_tests": {
+      "tests": 442,
+      "pass": 442,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "model_generations": 0,
+    "native_connections_by_qa": 0,
+    "all_final_45_record": "UNCHANGED_HISTORICAL_SOURCE_PINS; counts overlap this follow-up and are not additive",
+    "portable_command_sha256": "08363cdb90ef6e9e4add5f25b502b45fc882824154c87169c6cdf8c87158b30d",
+    "portable_report_sha256": "aea65e392f52675724364ca29c2bdcff4e161e2e3fc5e3443cb26e30388cd6f0",
+    "portable_tap_sha256": "38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7"
   },
   "safety": {
-    "all_index_and_worktree_bytes_equal": true,
-    "utf8_text_only": true,
-    "symlinks": false,
-    "hardlinks": false,
-    "non_file_index_modes": false,
-    "pgdata_or_dumps_or_keys_or_private_trees": false,
-    "raw_native_readbacks_or_old_scan_or_failure_taps": false,
-    "original_a1_contract_or_mission_code_changes": false,
-    "real_secret_or_contact_found": false,
-    "report_host_chat_path_redacted_before_publication": true,
-    "json_sensitive_named_scalar_candidates": 0,
-    "unexplained_high_entropy_quoted_candidates": 0
+    "exact_ten_delta_paths_confirmed": true,
+    "unchanged_file_git_blobs_and_modes_match_parent": true,
+    "staged_and_worktree_delta_bytes_match": true,
+    "protected_contract_changes": 0,
+    "unsafe_paths_or_modes_or_binaries_or_private_artifacts": 0,
+    "new_secret_or_pii_findings": 0,
+    "previous_four_synthetic_email_matches_unchanged": true
   },
-  "new_pattern_classifications": [
+  "delta_files": [
+    {
+      "path": "E1/HANDOFF-A2-A3.md",
+      "bytes": 9103,
+      "sha256": "c19a58cc1ca0cb56d79888dabf311e73faa3e5ee289c2a2ec57c04d3454cc176",
+      "mode": "100644"
+    },
+    {
+      "path": "E1/evidence2/CLEAN-EXPORT-TESTS.json",
+      "bytes": 11669,
+      "sha256": "efba241b8743e0c407ba46ea5d57c907d2928a9fd324771f26a052cac4b01dfa",
+      "mode": "100644"
+    },
+    {
+      "path": "E1/qa2/PORTABILITY-COMMAND.json",
+      "bytes": 1707,
+      "sha256": "08363cdb90ef6e9e4add5f25b502b45fc882824154c87169c6cdf8c87158b30d",
+      "mode": "100644"
+    },
+    {
+      "path": "E1/qa2/PORTABILITY-TESTS.json",
+      "bytes": 2203,
+      "sha256": "aea65e392f52675724364ca29c2bdcff4e161e2e3fc5e3443cb26e30388cd6f0",
+      "mode": "100644"
+    },
+    {
+      "path": "E1/qa2/PORTABILITY-TESTS.tap",
+      "bytes": 5601,
+      "sha256": "38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7",
+      "mode": "100644"
+    },
+    {
+      "path": "E1/qa2/REPORT.md",
+      "bytes": 12614,
+      "sha256": "c919edc1c84a1f3ead793a878694c882d40aafb34c54b2751d2c0f27fd742cf1",
+      "mode": "100644"
+    },
+    {
+      "path": "E1/qa2/SUMMARY.json",
+      "bytes": 4976,
+      "sha256": "1cb0855d0b44fe1c30e9cd9c4fd904a30ccfa9c071c9cacaf730c1fe712d8fde",
+      "mode": "100644"
+    },
     {
       "path": "E1/qa2/model-seams.test.mjs",
-      "category": "email_shape",
-      "line": 55,
-      "match_sha256": "faa296d58b7dcae9eec26d1991a5e3cc322ea91f0e668c0a720642817d7b0469",
-      "known_baseline_match": false,
-      "classification": "SYNTHETIC_NEGATIVE_PRIVACY_OR_RECIPIENT_INJECTION_FIXTURE",
-      "real_personal_contact": false
+      "bytes": 13900,
+      "sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace",
+      "mode": "100644"
     },
     {
-      "path": "E1/qa2/model-seams.test.mjs",
-      "category": "email_shape",
-      "line": 75,
-      "match_sha256": "faa296d58b7dcae9eec26d1991a5e3cc322ea91f0e668c0a720642817d7b0469",
-      "known_baseline_match": false,
-      "classification": "SYNTHETIC_NEGATIVE_PRIVACY_OR_RECIPIENT_INJECTION_FIXTURE",
-      "real_personal_contact": false
+      "path": "E1/qa2/verify-portable-offline.mjs",
+      "bytes": 5509,
+      "sha256": "7d5838b36721e2bea10c7141650309a507e315e350aaa94abf0f26dd81d7e1e2",
+      "mode": "100644"
     },
     {
-      "path": "E1/tests/broker/broker.test.mjs",
-      "category": "email_shape",
-      "line": 71,
-      "match_sha256": "78d66dbfbec60c3f74aa150451ce5c0c7d4ad25f09f23a30f2f20dd3eb59ac21",
-      "known_baseline_match": false,
-      "classification": "SYNTHETIC_NEGATIVE_PRIVACY_OR_RECIPIENT_INJECTION_FIXTURE",
-      "real_personal_contact": false
-    },
-    {
-      "path": "E1/tests/executors/coding.test.mjs",
-      "category": "email_shape",
-      "line": 28,
-      "match_sha256": "606cff70a91d65b084b6c192ec34f323a502baaff2642c38a54af892713e46c7",
-      "known_baseline_match": false,
-      "classification": "SYNTHETIC_TEMPORARY_GIT_AUTHOR_FIXTURE",
-      "real_personal_contact": false
+      "path": "release/E1-SOURCE-MANIFEST.json",
+      "bytes": 15794,
+      "sha256": "972984325760d979583b6cffd365e3768d295d758aea8cd38c1b7ff3a7f137d5",
+      "mode": "100644"
     }
   ],
-  "baseline_changes_reviewed": [
-    {
-      "path": ".gitattributes",
-      "sha256": "f61e5662dbddda9901a68f8f5d5523caa3c881d76dde54e62ab2b8d690cef5a7",
-      "reason": "Preserve source bytes and allow Markdown CRLF whitespace"
-    },
-    {
-      "path": ".gitignore",
-      "sha256": "4e022c40436ce48ec5c12072c8f8e5cd46585c2672bfdf1710dd2019551dadf5",
-      "reason": "Ignore all local scratch directories"
-    },
-    {
-      "path": "E1/README.md",
-      "sha256": "b770c612d6bc8d294bf82b75502fba06f218ae349563d0f137c31786e0843072",
-      "reason": "Updated bounded-stage documentation and explicit limits"
-    },
-    {
-      "path": "README.md",
-      "sha256": "1a227d9e5ef6f5af2f1a46aee462ca58fac26d01cb5480e6889c31066bbb0487",
-      "reason": "Updated bounded-stage documentation and explicit limits"
-    },
-    {
-      "path": "package.json",
-      "sha256": "ae4968b3d2914993249b21f758d15dc104fb25d70539efefacd0dab3babaa0c9",
-      "reason": "Add explicit local offline/native verification scripts without installs or model generation"
-    }
-  ],
-  "evidence": {
-    "independent_tests": 45,
-    "pass": 45,
-    "fail": 0,
-    "skip": 0,
-    "source_stable_during_test": true,
-    "final_command_manifest_sha256": "da9157155ddfdadb0a26f5f9fe8b345bd7854209f28934e548d5f0f748f4c6c1",
-    "actual_local_model_cold_review_sha256": "9353a7b1cc6b55f9fb529bb105c38e53af0e5236f8e8c4d3b2960b128fd04075",
-    "old_unknown_retained": true,
-    "actual_new_model_requests_by_qa": 0,
-    "actual_external_effects": 0,
-    "helper_fix_implemented": false,
-    "owner_acceptance": "NOT_ISSUED"
+  "carry_forward_previous_review": {
+    "native_and_real_local_model_evidence_unchanged": true,
+    "old_unknown_and_charged_quota_retained": true,
+    "coding_executor_preparation_not_live": true,
+    "scope": "Bounded private local staging source/PR; no merge/deployment/owner/D08 acceptance or G4/G5/G6"
   },
-  "source_review_notes": [
-    "A2/A3/host source and additive migration chain were independently tested; native function bodies matched frozen source.",
-    "Host/operator quiescence is resource-only and cannot settle, refund, retry or resume the old UNKNOWN attempt.",
-    "Coding Executor is a prepared grant-bound engine; live ports/actual self-development remain unbound and are not accepted by this review.",
-    "Native provision/isolation scripts keep closed E0 identity as an external input; published summaries contain hashes/counts rather than raw original process arguments or E0 metadata.",
-    "C1/source compatibility and author suite summaries are integrator evidence; independent QA counts overlap them and are not additive unique tests."
-  ],
   "mandatory_exclusions": [
     ".private/**",
     ".reference/**",
@@ -127,11 +137,10 @@
     "Early/partial failure TAPs and author full receipts"
   ],
   "limits": [
-    "Exact paths/hashes below only. Additions or byte changes require delta review.",
-    "This JSON is intentionally outside its own file/hash list; it may be staged only as the exact additional E1/qa2/PUBLICATION-REVIEW.json produced here.",
-    "Source/helper guard paths reviewed in the initial baseline remain literal code; no historical helper was executed by QA.",
-    "No global hostile-host/GPU, 24-hour soak, G4/G5/G6, production or owner/D08 acceptance claim.",
-    "Pattern scanning plus manual classification does not prove arbitrary semantic PII absence."
+    "This review chains to the immutable approved parent commit; do not amend or force-rewrite it.",
+    "Only the exact updated review itself may be staged after this audit; all other reviewed bytes must remain unchanged.",
+    "The clean-export correction ran no native PG or real model action; original live/native evidence is retained at its recorded source pins.",
+    "Pattern review is risk reduction, not a proof of arbitrary semantic PII absence."
   ],
   "reviewed_files": [
     {
@@ -311,8 +320,8 @@
     {
       "path": "E1/HANDOFF-A2-A3.md",
       "mode": "100644",
-      "bytes": 8416,
-      "sha256": "c8483ea902c60cfc8422cbcdac30c3d60bbba76f90c78649263f2c87bda3b92c"
+      "bytes": 9103,
+      "sha256": "c19a58cc1ca0cb56d79888dabf311e73faa3e5ee289c2a2ec57c04d3454cc176"
     },
     {
       "path": "E1/README.md",
@@ -505,6 +514,12 @@
       "mode": "100644",
       "bytes": 537,
       "sha256": "d9642f74308434a4870cc234f0318d6459bc61ab5cc21825afcb13408a3668d2"
+    },
+    {
+      "path": "E1/evidence2/CLEAN-EXPORT-TESTS.json",
+      "mode": "100644",
+      "bytes": 11669,
+      "sha256": "efba241b8743e0c407ba46ea5d57c907d2928a9fd324771f26a052cac4b01dfa"
     },
     {
       "path": "E1/evidence2/COLD-READBACK.json",
@@ -867,16 +882,34 @@
       "sha256": "ca427615e0e6bba9f61b66e79340c65370bc6c9b730b249b535f5295e7aede7b"
     },
     {
+      "path": "E1/qa2/PORTABILITY-COMMAND.json",
+      "mode": "100644",
+      "bytes": 1707,
+      "sha256": "08363cdb90ef6e9e4add5f25b502b45fc882824154c87169c6cdf8c87158b30d"
+    },
+    {
+      "path": "E1/qa2/PORTABILITY-TESTS.json",
+      "mode": "100644",
+      "bytes": 2203,
+      "sha256": "aea65e392f52675724364ca29c2bdcff4e161e2e3fc5e3443cb26e30388cd6f0"
+    },
+    {
+      "path": "E1/qa2/PORTABILITY-TESTS.tap",
+      "mode": "100644",
+      "bytes": 5601,
+      "sha256": "38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7"
+    },
+    {
       "path": "E1/qa2/REPORT.md",
       "mode": "100644",
-      "bytes": 11076,
-      "sha256": "924f67c83b0619926ba49c06354d8a53ae87292d71ad05c695f43d9c4574ce0b"
+      "bytes": 12614,
+      "sha256": "c919edc1c84a1f3ead793a878694c882d40aafb34c54b2751d2c0f27fd742cf1"
     },
     {
       "path": "E1/qa2/SUMMARY.json",
       "mode": "100644",
-      "bytes": 3812,
-      "sha256": "c28d14e5482ca86ea5413b220bfcfe2706e3de4881175a546e33b1d3cb7bb85d"
+      "bytes": 4976,
+      "sha256": "1cb0855d0b44fe1c30e9cd9c4fd904a30ccfa9c071c9cacaf730c1fe712d8fde"
     },
     {
       "path": "E1/qa2/actual-contour-review.json",
@@ -929,8 +962,8 @@
     {
       "path": "E1/qa2/model-seams.test.mjs",
       "mode": "100644",
-      "bytes": 13291,
-      "sha256": "0baaed9fcc4a0ae3ed3734fa9c86640662a5e6e9da33464ff5a416489002350e"
+      "bytes": 13900,
+      "sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace"
     },
     {
       "path": "E1/qa2/native-fixture.mjs",
@@ -973,6 +1006,12 @@
       "mode": "100644",
       "bytes": 9273,
       "sha256": "7acba1aa14e7cd2c4111722b044e0510df365f9020341375e99c712cfd5aa482"
+    },
+    {
+      "path": "E1/qa2/verify-portable-offline.mjs",
+      "mode": "100644",
+      "bytes": 5509,
+      "sha256": "7d5838b36721e2bea10c7141650309a507e315e350aaa94abf0f26dd81d7e1e2"
     },
     {
       "path": "E1/qa2/verify-unknown-canary.mjs",
@@ -2705,8 +2744,8 @@
     {
       "path": "release/E1-SOURCE-MANIFEST.json",
       "mode": "100644",
-      "bytes": 14960,
-      "sha256": "b1e7de199d7e8a6261021acecbaba0ffb9f31f75b10f277b874b74e7e4a5866c"
+      "bytes": 15794,
+      "sha256": "972984325760d979583b6cffd365e3768d295d758aea8cd38c1b7ff3a7f137d5"
     },
     {
       "path": "release/EXPORT-PROVENANCE.json",

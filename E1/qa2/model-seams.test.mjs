@@ -1,10 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {digest} from '../contracts/index.mjs';
+import {digest, immutable} from '../contracts/index.mjs';
 import {createMaintenanceMission, selectExecutor, materializeHeadDraft, MODEL_POLICY, createLocalModelBroker, freezeBrokerArtifact} from '../broker/index.mjs';
 import {createOfflineModelBrokerForTests} from '../broker/model.mjs';
 import {validateResourceDescriptor} from '../coordinator/resource.mjs';
-import fs from 'node:fs';
 
 const now='2026-11-08T01:00:00.000Z';
 const clone=x=>structuredClone(x);
@@ -33,7 +32,19 @@ function validDraft(){return {reason:'Inspect then independently review the supp
 function bridge(f){return {spec:f.spec,grant:f.grant,capabilities:f.registry.descriptors,domainManifest:f.domainManifest,authority:f.authority,headContext:f.contexts.head,source:f.source,now,plan_id:'plan_qa2',revision:2,previous_digest:digest(f.bootstrapPlan)};}
 
 test('QA2 resource descriptor denies retarget, hidden fields and unexpected roles before spawning',()=>{
- const descriptor=JSON.parse(fs.readFileSync('.private/e1-resource.json','utf8'));
+ // Pure validation fixture, not a host resource handoff or execution authority.
+ const descriptor=immutable({
+  schema:'awe.e1.pg-resource/1',composition:'AWE_E1',resource_id:'awe_e1_a2a3_20261108',
+  distro:'Ubuntu',port:5433,database:'awe_e1_test',
+  socket_directory:'/var/lib/awe-e1-test/awe_e1_a2a3_20261108/socket',
+  pgdata:'/var/lib/awe-e1-test/awe_e1_a2a3_20261108/pgdata',psql:'/usr/lib/postgresql/18/bin/psql',
+  roles:{
+   admin:{linux_user:'awe_e1_test',database_role:'awe_e1_test'},
+   coordinator:{linux_user:'awe_e1_coord',database_role:'awe_e1_coord'},
+   worker:{linux_user:'awe_e1_worker',database_role:'awe_e1_worker'},
+   qa:{linux_user:'awe_e1_qa',database_role:'awe_e1_qa'}
+  }
+ });
  assert.equal(validateResourceDescriptor(descriptor).port,5433);
  for(const mutate of [x=>x.port=5432,x=>x.port=55582,x=>x.database='awe_e0_master01',x=>x.pgdata+='/../pgdata',x=>x.roles.qa.database_role='postgres',x=>x.roles.extra=x.roles.qa,x=>Object.defineProperty(x,'hidden',{enumerable:false,value:'synthetic'})]){
   const bad=clone(descriptor);mutate(bad);assert.throws(()=>validateResourceDescriptor(bad));

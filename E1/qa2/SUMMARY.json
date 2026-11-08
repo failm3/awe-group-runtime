@@ -101,5 +101,34 @@
       "path": "E1/qa2/export-index-review.json",
       "sha256": "2267000a85d0ce6880c2161c35f6ad4127eb306b7a5c938d8210a217beebcc35"
     }
-  ]
+  ],
+  "clean_export_portability_followup": {
+    "status": "PASS_23_WITHOUT_PRIVATE_CONFIG",
+    "base_approved_commit": "132e315ebf8184c17a8c3a64740ce40ad7360332",
+    "only_test_source_change": "E1/qa2/model-seams.test.mjs",
+    "test_source_sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace",
+    "existing_45_test_record": "UNCHANGED_HISTORICAL_PINS",
+    "overlapping_tests": 23,
+    "additional_unique_tests": 0,
+    "private_directory_before": false,
+    "private_directory_after": false,
+    "native_fixture_remains_host_bound": true,
+    "runtime_model_contract_source_unchanged": true,
+    "new_native_connections": 0,
+    "new_model_generations": 0,
+    "evidence": [
+      {
+        "path": "E1/qa2/PORTABILITY-TESTS.json",
+        "sha256": "aea65e392f52675724364ca29c2bdcff4e161e2e3fc5e3443cb26e30388cd6f0"
+      },
+      {
+        "path": "E1/qa2/PORTABILITY-COMMAND.json",
+        "sha256": "08363cdb90ef6e9e4add5f25b502b45fc882824154c87169c6cdf8c87158b30d"
+      },
+      {
+        "path": "E1/qa2/PORTABILITY-TESTS.tap",
+        "sha256": "38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7"
+      }
+    ]
+  }
 }
