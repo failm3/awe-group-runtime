@@ -1,0 +1,37 @@
+{
+  "schema": "awe.qa2.actual-quiescence-cold-review/1",
+  "status": "PASS_EXECUTION_RELEASE_ONLY_UNKNOWN_AND_QUOTA_RETAINED",
+  "reviewed_at": "2026-11-08T01:15:43.771Z",
+  "reviewer_pid": 42004,
+  "qa_database_role": "awe_e1_qa",
+  "mission_id": "mission_code_live_mw745gdt",
+  "attempt_id": "head_control.attempt",
+  "original_attempt_state": "OUTCOME_UNKNOWN",
+  "original_usage": "UNKNOWN_NO_ACK",
+  "original_request_hash": "sha256:520083959cbdb6d7904a62c103c65e54c26ef9ba973e47a541b9a7d482016753",
+  "original_fence": 98,
+  "new_task_fence": 158,
+  "original_mission_state": "HOLD",
+  "original_task_state": "HOLD",
+  "original_claims": 1,
+  "original_attempts": 1,
+  "original_wire_send_events": 1,
+  "held_execution_lease": false,
+  "charged_quota_unit_preserved": 1,
+  "quiescence_events": 1,
+  "proof_digest": "sha256:8812123a167da4adf0511fd8cb0a4446615c79da6dfe5285b3dc7d108938b733",
+  "operator_observation_commitments_match": true,
+  "before_after_project_counters_equal_in_operation_report": true,
+  "live_project_quota_now": 3,
+  "new_qa_model_calls": 0,
+  "new_qa_mission_mutations": 0,
+  "source_artifact": {
+    "path": "E1/evidence2/ACTUAL-LOCAL-QUIESCENCE.json",
+    "sha256": "8619e92d4c2606148c462d27c8b87b970905173e706139b04c246440ea674396"
+  },
+  "limits": [
+    "Physical observations are historical operator attestations, not recovered model usage or output.",
+    "A separate new experimental mission may consume additional project quota after quiescence; the original unit remains charged.",
+    "This cold review does not approve retry/resume of the held logical request, owner acceptance or G3 success."
+  ]
+}

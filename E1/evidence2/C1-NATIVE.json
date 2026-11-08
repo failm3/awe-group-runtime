@@ -1,0 +1,18 @@
+{
+  "schema": "awe.e1.c1-native-validation/1",
+  "status": "PASS",
+  "port": 5433,
+  "clean_migration": "PASS",
+  "migration_repeat": "PASS",
+  "additive_rollback_strategy": "PASS_NO_DATA_DROP",
+  "restart_readback": "PASS",
+  "pg_dump_restore_readback": "PASS",
+  "test_row_count": 2,
+  "test_dataset_digest": "e6752a0fd6bd335edfe372d2e84d59c3",
+  "backup_bytes": 6202,
+  "preexisting_pg_processes_unchanged": 9,
+  "e0_connections": 0,
+  "runtime_schema_preserved": true,
+  "only_e1_cluster_restarted": true,
+  "scope": "LOCAL_TEST_RESOURCE_NOT_PRODUCTION_DURABILITY"
+}

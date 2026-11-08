@@ -1,0 +1,280 @@
+TAP version 13
+# Subtest: QA2 host commitment rejects frozen digest substitution, correctly rehashed wrong type and permissive stored schema
+ok 1 - QA2 host commitment rejects frozen digest substitution, correctly rehashed wrong type and permissive stored schema
+  ---
+  duration_ms: 3.0512
+  type: 'test'
+  ...
+# Subtest: QA2 host model request IDs are deterministic within a task and distinct across missions
+ok 2 - QA2 host model request IDs are deterministic within a task and distinct across missions
+  ---
+  duration_ms: 0.8601
+  type: 'test'
+  ...
+# Subtest: QA2 native host admits only authenticated published owner scope and counts RUNNING correctly
+ok 3 - QA2 native host admits only authenticated published owner scope and counts RUNNING correctly
+  ---
+  duration_ms: 402.3476
+  type: 'test'
+  ...
+# Subtest: QA2 oracle parses exact frozen source/cases without claiming helper correctness
+ok 4 - QA2 oracle parses exact frozen source/cases without claiming helper correctness
+  ---
+  duration_ms: 44.2302
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects frozen digest substitution and changed source case
+ok 5 - QA2 oracle rejects frozen digest substitution and changed source case
+  ---
+  duration_ms: 37.4534
+  type: 'test'
+  ...
+# Subtest: QA2 oracle accepts a typed two-kind Head proposal with semantic-after-parse dependency
+ok 6 - QA2 oracle accepts a typed two-kind Head proposal with semantic-after-parse dependency
+  ---
+  duration_ms: 75.2723
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects seeded Head dependency defect even when A1 schema accepts it
+ok 7 - QA2 oracle rejects seeded Head dependency defect even when A1 schema accepts it
+  ---
+  duration_ms: 59.3809
+  type: 'test'
+  ...
+# Subtest: QA2 oracle accepts analysis identifying seeded defect and safe unimplemented correction
+ok 8 - QA2 oracle accepts analysis identifying seeded defect and safe unimplemented correction
+  ---
+  duration_ms: 28.4052
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects seeded false-success analysis and reversed comparator
+ok 9 - QA2 oracle rejects seeded false-success analysis and reversed comparator
+  ---
+  duration_ms: 31.6127
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects producer/QA subject collision and wrong task capability phase
+ok 10 - QA2 oracle rejects producer/QA subject collision and wrong task capability phase
+  ---
+  duration_ms: 31.8588
+  type: 'test'
+  ...
+# Subtest: QA2 resource descriptor denies retarget, hidden fields and unexpected roles before spawning
+ok 11 - QA2 resource descriptor denies retarget, hidden fields and unexpected roles before spawning
+  ---
+  duration_ms: 2.7399
+  type: 'test'
+  ...
+# Subtest: QA2 public live broker denies injected wire and nonlocal endpoint
+ok 12 - QA2 public live broker denies injected wire and nonlocal endpoint
+  ---
+  duration_ms: 40.2767
+  type: 'test'
+  ...
+# Subtest: QA2 selector distinguishes deterministic script and bounded semantic model with rejected alternatives
+ok 13 - QA2 selector distinguishes deterministic script and bounded semantic model with rejected alternatives
+  ---
+  duration_ms: 59.1144
+  type: 'test'
+  ...
+# Subtest: QA2 Head raw draft cannot inject budget, owner, recipient or executable tool
+ok 14 - QA2 Head raw draft cannot inject budget, owner, recipient or executable tool
+  ---
+  duration_ms: 48.0922
+  type: 'test'
+  ...
+# Subtest: QA2 forged Head context cannot materialize an otherwise valid plan
+ok 15 - QA2 forged Head context cannot materialize an otherwise valid plan
+  ---
+  duration_ms: 33.1713
+  type: 'test'
+  ...
+# Subtest: QA2 one generation is bracketed by mandatory accounting and carries backend counts
+ok 16 - QA2 one generation is bracketed by mandatory accounting and carries backend counts
+  ---
+  duration_ms: 62.5396
+  type: 'test'
+  ...
+# Subtest: QA2 malformed model JSON settles consumed usage and asks for bounded repair without retry
+ok 17 - QA2 malformed model JSON settles consumed usage and asks for bounded repair without retry
+  ---
+  duration_ms: 33.0631
+  type: 'test'
+  ...
+# Subtest: QA2 personal label or email content blocks before tags, model generation and accounting
+ok 18 - QA2 personal label or email content blocks before tags, model generation and accounting
+  ---
+  duration_ms: 56.8494
+  type: 'test'
+  ...
+# Subtest: QA2 unavailable model or pin mismatch has controlled no-fallback decision and zero generation
+ok 19 - QA2 unavailable model or pin mismatch has controlled no-fallback decision and zero generation
+  ---
+  duration_ms: 54.9918
+  type: 'test'
+  ...
+# Subtest: QA2 generation acknowledgement loss or missing usage enters UNKNOWN with one generation
+ok 20 - QA2 generation acknowledgement loss or missing usage enters UNKNOWN with one generation
+  ---
+  duration_ms: 67.022
+  type: 'test'
+  ...
+# Subtest: QA2 grant expiry or route revocation after reserve releases a proven no-wire reservation
+ok 21 - QA2 grant expiry or route revocation after reserve releases a proven no-wire reservation
+  ---
+  duration_ms: 65.4809
+  type: 'test'
+  ...
+# Subtest: QA2 lost SENDING marker response is UNKNOWN with zero model wire and no blind generation
+ok 22 - QA2 lost SENDING marker response is UNKNOWN with zero model wire and no blind generation
+  ---
+  duration_ms: 31.704
+  type: 'test'
+  ...
+# Subtest: QA2 ambiguous reservation ACK is held UNKNOWN rather than released as a proven no-send
+ok 23 - QA2 ambiguous reservation ACK is held UNKNOWN rather than released as a proven no-send
+  ---
+  duration_ms: 38.7724
+  type: 'test'
+  ...
+# Subtest: QA2 genuine length ACK settles once and requests REPAIR even when output happens to be valid JSON
+ok 24 - QA2 genuine length ACK settles once and requests REPAIR even when output happens to be valid JSON
+  ---
+  duration_ms: 74.1179
+  type: 'test'
+  ...
+# Subtest: QA2 unrecognized backend completion reason remains UNKNOWN with no invented settlement
+ok 25 - QA2 unrecognized backend completion reason remains UNKNOWN with no invented settlement
+  ---
+  duration_ms: 37.5196
+  type: 'test'
+  ...
+# Subtest: QA2 independent frozen proposal checker rejects seeded missing dependency and digest substitution
+ok 26 - QA2 independent frozen proposal checker rejects seeded missing dependency and digest substitution
+  ---
+  duration_ms: 43.3389
+  type: 'test'
+  ...
+# Subtest: QA2 native: independent real worker processes overlap and dependent dispatch waits for persisted QA
+ok 27 - QA2 native: independent real worker processes overlap and dependent dispatch waits for persisted QA
+  ---
+  duration_ms: 1365.9673
+  type: 'test'
+  ...
+# Subtest: QA2 native: force-killed owned worker is fenced after lease takeover and late result is rejected
+ok 28 - QA2 native: force-killed owned worker is fenced after lease takeover and late result is rejected
+  ---
+  duration_ms: 1221.5433
+  type: 'test'
+  ...
+# Subtest: QA2 native: RPC credentials reject worker impersonation, project crossing, QA/owner misuse and revocation
+ok 29 - QA2 native: RPC credentials reject worker impersonation, project crossing, QA/owner misuse and revocation
+  ---
+  duration_ms: 418.39
+  type: 'test'
+  ...
+# Subtest: QA2 native: canonical business key across two missions yields one intent and persisted fake-provider count
+ok 30 - QA2 native: canonical business key across two missions yields one intent and persisted fake-provider count
+  ---
+  duration_ms: 1156.159
+  type: 'test'
+  ...
+# Subtest: QA2 native: malformed output is rejected before persistence; independent seeded-error QA is persisted
+ok 31 - QA2 native: malformed output is rejected before persistence; independent seeded-error QA is persisted
+  ---
+  duration_ms: 377.5458
+  type: 'test'
+  ...
+# Subtest: QA2 native: project wrapper, leaf SQL ACL and QA write role are denied
+ok 32 - QA2 native: project wrapper, leaf SQL ACL and QA write role are denied
+  ---
+  duration_ms: 508.2077
+  type: 'test'
+  ...
+# Subtest: QA2 native: shared project budget race admits one reservation and cancellation releases it
+ok 33 - QA2 native: shared project budget race admits one reservation and cancellation releases it
+  ---
+  duration_ms: 439.4999
+  type: 'test'
+  ...
+# Subtest: QA2 native: concurrent model quota reservation has one winner in the same database
+ok 34 - QA2 native: concurrent model quota reservation has one winner in the same database
+  ---
+  duration_ms: 451.5153
+  type: 'test'
+  ...
+# Subtest: QA2 native: unknown before provider call and after a fake lost ACK remains HOLD without resubmit
+ok 35 - QA2 native: unknown before provider call and after a fake lost ACK remains HOLD without resubmit
+  ---
+  duration_ms: 927.5616
+  type: 'test'
+  ...
+# Subtest: QA2 native: cancellation and grant revocation reject late results and new dispatch
+ok 36 - QA2 native: cancellation and grant revocation reject late results and new dispatch
+  ---
+  duration_ms: 758.247
+  type: 'test'
+  ...
+# Subtest: QA2 native: inbox dedupe, cursor CAS and fresh-session resume persist
+ok 37 - QA2 native: inbox dedupe, cursor CAS and fresh-session resume persist
+  ---
+  duration_ms: 566.5103
+  type: 'test'
+  ...
+# Subtest: QA2 native: post-reserve expiry and route revocation release quota with zero generation wire
+ok 38 - QA2 native: post-reserve expiry and route revocation release quota with zero generation wire
+  ---
+  duration_ms: 939.6628
+  type: 'test'
+  ...
+# Subtest: QA2 native: database function bodies match the exact frozen migration source
+ok 39 - QA2 native: database function bodies match the exact frozen migration source
+  ---
+  duration_ms: 147.3453
+  type: 'test'
+  ...
+# Subtest: QA2 native: length-limited final backend ACK is CONFIRMED accounting with REPAIR and retained usage
+ok 40 - QA2 native: length-limited final backend ACK is CONFIRMED accounting with REPAIR and retained usage
+  ---
+  duration_ms: 400.591
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence releases only one held execution lease and preserves UNKNOWN plus charged quota
+ok 41 - QA2 native quiescence releases only one held execution lease and preserves UNKNOWN plus charged quota
+  ---
+  duration_ms: 1518.2316
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence cannot be called by QA or any worker/broker/QA RPC credential
+ok 42 - QA2 native quiescence cannot be called by QA or any worker/broker/QA RPC credential
+  ---
+  duration_ms: 1485.14
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence rejects stale/future/pin/scope/cancellation/idle/hash proof defects atomically
+ok 43 - QA2 native quiescence rejects stale/future/pin/scope/cancellation/idle/hash proof defects atomically
+  ---
+  duration_ms: 1492.4974
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence rejects positive money and effect intent without changing a held target
+ok 44 - QA2 native quiescence rejects positive money and effect intent without changing a held target
+  ---
+  duration_ms: 2881.1579
+  type: 'test'
+  ...
+# Subtest: QA2 native one-active-attempt guard blocks a second pending model request on the same lease
+ok 45 - QA2 native one-active-attempt guard blocks a second pending model request on the same lease
+  ---
+  duration_ms: 1450.9931
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20995.7996

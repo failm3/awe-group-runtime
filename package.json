@@ -9,6 +9,8 @@
     "npm": "11.19.0"
   },
   "scripts": {
-    "test": "node E1/verification/offline.mjs"
+    "test": "node E1/verification/offline.mjs",
+    "test:e1:offline": "node E1/verification/staging.mjs --offline",
+    "test:e1:native": "node E1/verification/staging.mjs --native"
   }
 }

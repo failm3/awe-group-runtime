@@ -1,0 +1,149 @@
+{
+  "schema": "awe.qa2.actual-contour-review/1",
+  "status": "PASS_REAL_LOCAL_MODEL_AND_NATIVE_COLD_READBACK",
+  "started_at": "2026-11-08T01:17:29.444Z",
+  "finished_at": "2026-11-08T01:17:29.669Z",
+  "reviewer_pid": 32208,
+  "authority_pid": 41440,
+  "integrator_cold_pid": 6924,
+  "independent_qa_database_role": "awe_e1_qa",
+  "resource_id": "awe_e1_a2a3_20261108",
+  "port": 5433,
+  "mission_id": "mission_code_compact_mw7543y4",
+  "project_id": "prj_code_maintenance",
+  "mission_state": "COMPLETE",
+  "revisions": 2,
+  "model_plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9",
+  "fixture_reconstruction": "Exact clean fixture independently reconstructed from persisted timestamp/suffix, concise policy and original registry time; spec/grant digests matched. Actual model outputs read from PostgreSQL.",
+  "checked_tasks": [
+    {
+      "task_id": "head_control",
+      "plan_digest": "sha256:07a9e70548e0602922c915a4042b4318111960a52c9608b3f5d0e9ae9db10a30",
+      "result_hash": "sha256:540fcb98b6bd1ace679aed9d1efb2f83fa74b770901654d44aeb1a940fe4eb16",
+      "artifact_digest": "sha256:ab8bc1890d72a61e26c312e039d5a499ff91f08009f5e30f661e00474eff5e1c",
+      "phase": "head",
+      "oracle_verdict": "PASS",
+      "oracle_evidence_digest": "sha256:d589a176640ebb1239085e762a20ca3ccd4ab6c285f77f75c08cbc7386bad9ea",
+      "oracle_code_digest": "sha256:05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    },
+    {
+      "task_id": "parse_source",
+      "plan_digest": "sha256:07a9e70548e0602922c915a4042b4318111960a52c9608b3f5d0e9ae9db10a30",
+      "result_hash": "sha256:1121eeee6b12282f8fe14e8556fc2fcc8da934ef527b8ce869b754505f7a6dfb",
+      "artifact_digest": "sha256:3f973cf310e935fd91627c16fd8fa91ee177ee90fb52e135e407c9370257e5f5",
+      "phase": "parse",
+      "oracle_verdict": "PASS",
+      "oracle_evidence_digest": "sha256:c544ee83737984ccb468b13f856c9773fcc63bae7a487007f74f7e82d31dc7e5",
+      "oracle_code_digest": "sha256:05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    },
+    {
+      "task_id": "parse-order",
+      "plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9",
+      "result_hash": "sha256:be7ec732d12728b5d5857929a5f8f5b7b015b1a455d2d7b735a0d6092aed876e",
+      "artifact_digest": "sha256:3f973cf310e935fd91627c16fd8fa91ee177ee90fb52e135e407c9370257e5f5",
+      "phase": "parse",
+      "oracle_verdict": "PASS",
+      "oracle_evidence_digest": "sha256:c544ee83737984ccb468b13f856c9773fcc63bae7a487007f74f7e82d31dc7e5",
+      "oracle_code_digest": "sha256:05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    },
+    {
+      "task_id": "review-logic",
+      "plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9",
+      "result_hash": "sha256:04031e124bfd8700f55460509100e92beb4042692c3a3141e04a40f9b4d46757",
+      "artifact_digest": "sha256:13af3f3efae28ac0c2e1bc0161cc12aac7894dd9a4372ffd7667a5b1c40964e8",
+      "phase": "review",
+      "oracle_verdict": "PASS",
+      "oracle_evidence_digest": "sha256:0af77f4b908a1ee32032d9da882b2e97bb6bef9a6882a55432d2b39179f62ef2",
+      "oracle_code_digest": "sha256:05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    }
+  ],
+  "model_attempts": [
+    {
+      "task_id": "head_control",
+      "attempt_id": "attempt_49550e6d2659a2f3bd55549cbaa8e9b965bb6cad1b3642cf81757aaadbe3352c",
+      "state": "CONFIRMED",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 18240,
+        "input_tokens": 623,
+        "output_tokens": 162,
+        "wire_attempts": 1,
+        "eval_duration_ns": 9726171000,
+        "load_duration_ns": 4155247100,
+        "total_duration_ns": 18228662600,
+        "prompt_eval_duration_ns": 4333747000
+      },
+      "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "provider_ref_kind": "OLLAMA_CREATED_AT",
+      "accounting_sequence": [
+        610,
+        611,
+        612
+      ]
+    },
+    {
+      "task_id": "review-logic",
+      "attempt_id": "attempt_bd27c671e174c467547e1ce7632ee2a7251695f4142c2f4d97c2263109536d13",
+      "state": "CONFIRMED",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 13800,
+        "input_tokens": 144,
+        "output_tokens": 235,
+        "wire_attempts": 1,
+        "eval_duration_ns": 12611802000,
+        "load_duration_ns": 4670200,
+        "total_duration_ns": 13795048000,
+        "prompt_eval_duration_ns": 1121892000
+      },
+      "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+      "provider_ref_kind": "OLLAMA_CREATED_AT",
+      "accounting_sequence": [
+        620,
+        621,
+        622
+      ]
+    }
+  ],
+  "previous_unknown_preserved": {
+    "mission_id": "mission_code_live_mw745gdt",
+    "state": "HOLD",
+    "attempt_state": "OUTCOME_UNKNOWN",
+    "usage": "UNKNOWN",
+    "charged_quota_units": 1,
+    "wire_send_events": 1,
+    "held_execution_lease": false
+  },
+  "ledger": {
+    "reserved": 0,
+    "spent": 0,
+    "quota_used": 3
+  },
+  "cursor": {
+    "sequence": 624
+  },
+  "readback_digest": "sha256:04cf8b44af4daa6414bf8b0cb6da17b88b786258d55aba9aa72977eeca09730b",
+  "input_artifacts": [
+    {
+      "path": "E1/evidence2/LOCAL-CONTOUR.json",
+      "sha256": "644635114f8cb1e7e7e9c913e21ef3cee345faefbf20091a862df68fecf8b5e2"
+    },
+    {
+      "path": "E1/evidence2/COLD-READBACK.json",
+      "sha256": "b8be07ff76a8f6e5609bb1e41dc1078e9842cd7be73b85647d413bd45cc0582f"
+    }
+  ],
+  "oracle_sha256": "05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3",
+  "new_model_wire_attempts": 0,
+  "external_effects": 0,
+  "code_fix_implemented": false,
+  "helper_function_tests": "NOT_RUN",
+  "owner_acceptance": "NOT_ISSUED",
+  "limits": [
+    "Synthetic local code-maintenance planning/analysis only.",
+    "Independent QA re-evaluated stored outputs and hashes; no model generation or write/acceptance operation was performed by this cold verifier.",
+    "No G4/G5/G6, production durability, paid/cloud route, or external exactly-once claim."
+  ]
+}

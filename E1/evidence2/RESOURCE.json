@@ -1,0 +1,15 @@
+{
+  "schema": "awe.e1.provision-result/1",
+  "resource_id": "awe_e1_a2a3_20261108",
+  "status": "RUNNING",
+  "port": 5433,
+  "database": "awe_e1_test",
+  "postgres_version": "18.6",
+  "separate_unix_principals": 4,
+  "preexisting_postgres_processes_unchanged": 9,
+  "e0_data_access_denied": true,
+  "e0_connections": 0,
+  "tcp": "LOOPBACK_LISTEN_AUTH_REJECT_ALL",
+  "authentication": "UNIX_PEER_MATCHING_PRINCIPAL",
+  "pgdata_in_git": false
+}

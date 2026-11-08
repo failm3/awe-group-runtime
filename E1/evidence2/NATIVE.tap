@@ -1,0 +1,240 @@
+TAP version 13
+# Subtest: QA2 host commitment rejects frozen digest substitution, correctly rehashed wrong type and permissive stored schema
+ok 1 - QA2 host commitment rejects frozen digest substitution, correctly rehashed wrong type and permissive stored schema
+  ---
+  duration_ms: 3.4378
+  type: 'test'
+  ...
+# Subtest: QA2 host model request IDs are deterministic within a task and distinct across missions
+ok 2 - QA2 host model request IDs are deterministic within a task and distinct across missions
+  ---
+  duration_ms: 0.9844
+  type: 'test'
+  ...
+# Subtest: QA2 native host admits only authenticated published owner scope and counts RUNNING correctly
+ok 3 - QA2 native host admits only authenticated published owner scope and counts RUNNING correctly
+  ---
+  duration_ms: 453.7244
+  type: 'test'
+  ...
+# Subtest: QA2 native: independent real worker processes overlap and dependent dispatch waits for persisted QA
+ok 4 - QA2 native: independent real worker processes overlap and dependent dispatch waits for persisted QA
+  ---
+  duration_ms: 1547.245
+  type: 'test'
+  ...
+# Subtest: QA2 native: force-killed owned worker is fenced after lease takeover and late result is rejected
+ok 5 - QA2 native: force-killed owned worker is fenced after lease takeover and late result is rejected
+  ---
+  duration_ms: 1222.7485
+  type: 'test'
+  ...
+# Subtest: QA2 native: RPC credentials reject worker impersonation, project crossing, QA/owner misuse and revocation
+ok 6 - QA2 native: RPC credentials reject worker impersonation, project crossing, QA/owner misuse and revocation
+  ---
+  duration_ms: 415.5095
+  type: 'test'
+  ...
+# Subtest: QA2 native: canonical business key across two missions yields one intent and persisted fake-provider count
+ok 7 - QA2 native: canonical business key across two missions yields one intent and persisted fake-provider count
+  ---
+  duration_ms: 1296.9875
+  type: 'test'
+  ...
+# Subtest: QA2 native: malformed output is rejected before persistence; independent seeded-error QA is persisted
+ok 8 - QA2 native: malformed output is rejected before persistence; independent seeded-error QA is persisted
+  ---
+  duration_ms: 423.6152
+  type: 'test'
+  ...
+# Subtest: QA2 native: project wrapper, leaf SQL ACL and QA write role are denied
+ok 9 - QA2 native: project wrapper, leaf SQL ACL and QA write role are denied
+  ---
+  duration_ms: 564.6744
+  type: 'test'
+  ...
+# Subtest: QA2 native: shared project budget race admits one reservation and cancellation releases it
+ok 10 - QA2 native: shared project budget race admits one reservation and cancellation releases it
+  ---
+  duration_ms: 510.6044
+  type: 'test'
+  ...
+# Subtest: QA2 native: concurrent model quota reservation has one winner in the same database
+ok 11 - QA2 native: concurrent model quota reservation has one winner in the same database
+  ---
+  duration_ms: 531.2615
+  type: 'test'
+  ...
+# Subtest: QA2 native: unknown before provider call and after a fake lost ACK remains HOLD without resubmit
+ok 12 - QA2 native: unknown before provider call and after a fake lost ACK remains HOLD without resubmit
+  ---
+  duration_ms: 1109.417
+  type: 'test'
+  ...
+# Subtest: QA2 native: cancellation and grant revocation reject late results and new dispatch
+ok 13 - QA2 native: cancellation and grant revocation reject late results and new dispatch
+  ---
+  duration_ms: 817.45
+  type: 'test'
+  ...
+# Subtest: QA2 native: inbox dedupe, cursor CAS and fresh-session resume persist
+ok 14 - QA2 native: inbox dedupe, cursor CAS and fresh-session resume persist
+  ---
+  duration_ms: 571.0718
+  type: 'test'
+  ...
+# Subtest: QA2 native: post-reserve expiry and route revocation release quota with zero generation wire
+ok 15 - QA2 native: post-reserve expiry and route revocation release quota with zero generation wire
+  ---
+  duration_ms: 833.1762
+  type: 'test'
+  ...
+# Subtest: QA2 native: database function bodies match the exact frozen migration source
+ok 16 - QA2 native: database function bodies match the exact frozen migration source
+  ---
+  duration_ms: 154.9891
+  type: 'test'
+  ...
+# Subtest: QA2 native: length-limited final backend ACK is CONFIRMED accounting with REPAIR and retained usage
+ok 17 - QA2 native: length-limited final backend ACK is CONFIRMED accounting with REPAIR and retained usage
+  ---
+  duration_ms: 398.9039
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence releases only one held execution lease and preserves UNKNOWN plus charged quota
+ok 18 - QA2 native quiescence releases only one held execution lease and preserves UNKNOWN plus charged quota
+  ---
+  duration_ms: 1573.9665
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence cannot be called by QA or any worker/broker/QA RPC credential
+ok 19 - QA2 native quiescence cannot be called by QA or any worker/broker/QA RPC credential
+  ---
+  duration_ms: 1611.7738
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence rejects stale/future/pin/scope/cancellation/idle/hash proof defects atomically
+ok 20 - QA2 native quiescence rejects stale/future/pin/scope/cancellation/idle/hash proof defects atomically
+  ---
+  duration_ms: 1571.6958
+  type: 'test'
+  ...
+# Subtest: QA2 native quiescence rejects positive money and effect intent without changing a held target
+ok 21 - QA2 native quiescence rejects positive money and effect intent without changing a held target
+  ---
+  duration_ms: 3105.1128
+  type: 'test'
+  ...
+# Subtest: QA2 native one-active-attempt guard blocks a second pending model request on the same lease
+ok 22 - QA2 native one-active-attempt guard blocks a second pending model request on the same lease
+  ---
+  duration_ms: 1559.3235
+  type: 'test'
+  ...
+# Subtest: A2 native PostgreSQL concurrency, D03/D09 and recovery
+    # Subtest: two real leaf processes overlap; dependencies wait for independent QA
+    ok 1 - two real leaf processes overlap; dependencies wait for independent QA
+      ---
+      duration_ms: 1675.9857
+      type: 'test'
+      ...
+    # Subtest: hard-killed read worker yields lease takeover; old fence is rejected
+    ok 2 - hard-killed read worker yields lease takeover; old fence is rejected
+      ---
+      duration_ms: 1127.2584
+      type: 'test'
+      ...
+    # Subtest: real independent backend contenders respect shared money and source/GPU slots
+    ok 3 - real independent backend contenders respect shared money and source/GPU slots
+      ---
+      duration_ms: 445.7073
+      type: 'test'
+      ...
+    # Subtest: model reservation, one-shot sending, actual settlement and quota survive authority restart
+    ok 4 - model reservation, one-shot sending, actual settlement and quota survive authority restart
+      ---
+      duration_ms: 483.7549
+      type: 'test'
+      ...
+    # Subtest: UNKNOWN before and after fake-provider effect never triggers a second submit
+    ok 5 - UNKNOWN before and after fake-provider effect never triggers a second submit
+      ---
+      duration_ms: 1696.3973
+      type: 'test'
+      ...
+    # Subtest: bounded drained replan preserves ledger/history and rejects late fence/QA
+    ok 6 - bounded drained replan preserves ledger/history and rejects late fence/QA
+      ---
+      duration_ms: 660.7208
+      type: 'test'
+      ...
+    # Subtest: model UNKNOWN retains zero-cost quota and resource hold across restart; inbox dedupes
+    ok 7 - model UNKNOWN retains zero-cost quota and resource hold across restart; inbox dedupes
+      ---
+      duration_ms: 994.4656
+      type: 'test'
+      ...
+    # Subtest: independent budget, slot and model-quota races have one winner
+    ok 8 - independent budget, slot and model-quota races have one winner
+      ---
+      duration_ms: 1142.1979
+      type: 'test'
+      ...
+    # Subtest: proven prewire failure releases quota/reserve/lease exactly once after grant expiry
+    ok 9 - proven prewire failure releases quota/reserve/lease exactly once after grant expiry
+      ---
+      duration_ms: 1756.7927
+      type: 'test'
+      ...
+    # Subtest: real transaction session rollback, wrong output schema and RPC impersonation fail closed
+    ok 10 - real transaction session rollback, wrong output schema and RPC impersonation fail closed
+      ---
+      duration_ms: 319.0868
+      type: 'test'
+      ...
+    # Subtest: cancel/revoke/expiry/current capability and project ACL prevent dispatch
+    ok 11 - cancel/revoke/expiry/current capability and project ACL prevent dispatch
+      ---
+      duration_ms: 2905.8045
+      type: 'test'
+      ...
+    1..11
+ok 23 - A2 native PostgreSQL concurrency, D03/D09 and recovery
+  ---
+  duration_ms: 13355.2897
+  type: 'test'
+  ...
+# Subtest: native execution-only quiescence leaves UNKNOWN, accounting and grant untouched
+    # Subtest: release original execution hold once, preserve full attempt and task/mission HOLD
+    ok 1 - release original execution hold once, preserve full attempt and task/mission HOLD
+      ---
+      duration_ms: 303.8902
+      type: 'test'
+      ...
+    # Subtest: stale/future proof, false scope, effect, nonlocal route, money and linkage reject
+    ok 2 - stale/future proof, false scope, effect, nonlocal route, money and linkage reject
+      ---
+      duration_ms: 1968.5329
+      type: 'test'
+      ...
+    # Subtest: worker/BROKER/QA RPC and native QA/worker access have no quiescence capability
+    ok 3 - worker/BROKER/QA RPC and native QA/worker access have no quiescence capability
+      ---
+      duration_ms: 836.9692
+      type: 'test'
+      ...
+    1..3
+ok 24 - native execution-only quiescence leaves UNKNOWN, accounting and grant untouched
+  ---
+  duration_ms: 3280.5124
+  type: 'test'
+  ...
+1..24
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 38171.9521

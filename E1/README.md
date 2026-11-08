@@ -1,34 +1,39 @@
-# AWE E1: A1 contracts and C1 preparation
+# AWE E1 local integration
 
-This is the `AWE_E1/1` contract and infrastructure preparation slice. It is not an autonomous worker runtime. A1 is `TESTED_OFFLINE` after the named suites pass. C1 live database, identities, vault, model and authority availability remain `BLOCKED` or `UNKNOWN`. The composition exposes no dispatch or acceptance port.
+This branch integrates the accepted offline A1 contracts with a native PostgreSQL coordinator (A2), a pinned local Ollama broker (A3), independent QA and a prepared Coding Executor. It is bounded local staging; E1 Pilot has not been accepted. See [A2](A2-REPORT.md), [A3](A3-REPORT.md), [independent QA](qa2/REPORT.md), [Coding Executor](CODING-EXECUTOR-REPORT.md) and [handoff](HANDOFF-A2-A3.md).
 
-Development branch: `codex/awe-e1-a1-c1-20261108`, separate worktree `51d0`. The original E0 worktree `92ef` is read-only. Evidence base is `3579aeeda379caf78dafe5351704956f1ecc0ea5`; executed E0 runtime source is `c53d1fb3606218a4f3961f37f57ebc41ac6681ef`. See [source provenance](release/source-provenance.json) and [baseline verification](evidence/baseline-verification.json).
+The repository is a new allowlist export with no E0 Git ancestry. [Export provenance](../release/EXPORT-PROVENANCE.json) records original source SHAs, exclusions, disabled runtime locks and one declared compatibility import transformation. Original worktrees and history remain local and untouched. Private metadata, receipts, PGDATA and original author metadata are excluded. Development branch: `codex/e1-a2-a3-20261108`. No merge or release is authorized.
 
-Run with Node 24.21.0, npm 11.19.0, without installing dependencies:
-
-```powershell
-npm --prefix E1 test
-npm --prefix E1 run examples
-npm --prefix E1 run preflight
-node E1/cli.mjs schema MissionSpec
-```
-
-The two fictional examples call the same `createE1Composition` and `prepareMission` path. They have different projects and domain manifests, identical core build digest, independent branches and dependent joins. The result is `PUBLISHED_PREFLIGHT_ONLY`, `accepted=false`, `execution_authorized=false`, zero effects. No task is executed. Their fixed synthetic clock is printed explicitly.
-
-The administrator CLI also accepts supplied mission data, using the current clock:
+Use Node 24.21.0/npm 11.19.0; no dependency install is needed:
 
 ```powershell
-node E1/cli.mjs prepare mission.json trusted-bootstrap.json infra-config.json
+npm test
+npm run test:e1:offline
 ```
 
-`mission.json` contains exactly `spec`, `grant`, `plan`. `trusted-bootstrap.json` contains exactly `principals`, `capabilities`, `domainManifests`, and `actors` (`owner`, `head`, `coordinator`). Bootstrap is a trusted local configuration, not a remote authentication channel. The CLI creates opaque offline contexts; serializing an actor does not authorize it. Config pins the project and declared owner/coordinator/QA identities. A2/SEC must supply real authenticated principals and durable rechecks before any execution. Keep supplied private input files outside Git.
+`npm test` checks the clean-export compatibility baseline. `test:e1:offline` adds resource/proof boundaries, broker negative cases, stored artifact commitments, temporary Git Coding Executor tests and independent model/oracle regressions. All model responses in these tests are explicitly doubles. The final runner rejects any skip; some checks require actual filesystem junction/hardlink permission.
 
-Contract schemas and canonical hashes are owned by [A1](contracts/index.mjs); [mission ingress](mission/ingress.mjs) owns bounded proposals, validation and append-only local history. It reuses the existing canonicalization and DAG validator. It creates no alternate scheduler or budget ledger. Mission revisions invalidate publication; revocation stops further planning; publishing rechecks grant, capabilities, domain manifest, schema bindings and current time. Only D03/D09 in A2 may persist, claim and reserve execution.
+The separately authorized E1 resource must exist before native tests. Host-owned `.private/e1-resource.json` pins database, PGDATA, socket, port 5433 and peer roles. See the [native runbook](infra/native/README.md).
 
-C1 offers strict disabled-resource configuration, path/origin checks, declared identities, scoped handle fixtures, a fixed local fixture process, content-addressed object copy/restore, sanitized health and guarded SQL preparation. See [infrastructure runbook](infra/RUNBOOK.md). The process proves fixture lifecycle/checkpoint behavior only. PostgreSQL migrations and backup restore have not run. JavaScript interception is a regression guard, not an OS sandbox.
+```powershell
+node E1/host/migrate.mjs --authorized-e1-only .private/e1-resource.json
+npm run test:e1:native
+```
 
-Historical E0 profiles and tests remain intact. `AUTO01_MOCK_ONLY` and `LOOPBACK_MOCK` are unchanged. Test evidence is in [TEST-RESULTS.json](evidence/TEST-RESULTS.json), with raw TAP and hashes. [Independent QA](qa/REPORT.md) is a separate Codex developer context, not a D08 signature or owner acceptance.
+Native tests use actual PostgreSQL transactions and separate Windows processes. They check concurrent claims, dependencies gated by QA, force termination/takeover/fences, budget/quota races, ACL/project denials and persistent cursors/inbox. Fake-provider effects are explicitly labelled. These tests send no real external effect or model inference. Windows force termination does not establish Linux kill -9. One D03/D09 domain owns claims, accounting and canonical intents.
 
-Runtime publication is stopped under the owner's prepublication condition. The preserved ancestor history contains E0 private metadata/receipts. No runtime history is pushed or rewritten. Sanitized outcome documentation can be synchronized to Academy. The owner must decide how to handle closed historical evidence before a runtime repository and PR can be populated.
+`createNativeE1Host` composes authenticated published A1 plans with native admission and scoped worker/QA ports. `createE1Composition` retains the A1 preflight-only entrypoint for two domain fixtures. No successful native result is substituted with a mock.
 
-Next parallel work: A2 durable D03/D09 claim/reserve/recovery contracts and A3 registry/model adapter preparation can use these interfaces. Their live integration requires a separately authorized E1 PostgreSQL and measured model endpoint. B1 source/fact preparation can proceed independently; applications and publication still require explicit live scope.
+The manual local-model canary requires an explicit host command:
+
+```powershell
+node E1/host/maintenance-canary.mjs --authorized-local-canary .private/canary-run.json
+```
+
+The private configuration binds a unique suffix, frozen registryTime and fixed local limits. Reuse a still-valid registry binding within one project; changing a timestamp is not permission to lift health TTL or overwrite capability versions. An owner-supplied synthetic bootstrap accounts the Head request. Its model-generated typed revision, script dispatch, model review and separate QA process use normal contracts. The canary never executes generated code, fixes the seeded helper, uses a GitHub task or accepts itself. Actual results are in evidence2, separate from offline tests.
+
+The first actual Head timed out during cold inference. Its HOLD/OUTCOME_UNKNOWN and charged quota remain recorded; approximate server counters are not usage. The manual quiesce-local operation needs completed local cancellation, repeated idle and runner-absence evidence. It releases only execution slots, preserving UNKNOWN, mission/task HOLD and accounting, with a new fence and no worker/BROKER/QA RPC. It cannot retry or resume that logical request. A complete length ACK instead settles genuine usage and returns REPAIR without accepting a truncated plan.
+
+The prepared Coding Executor binds patch proposals, isolated Git worktrees, tests, independent QA and draft intents to an owner grant. Temporary Git red/green and a seeded decimal holdout are real local tests; their model/accounting/sandbox/publisher ports are explicit doubles. Live execution waits for a concrete authorized GitHub issue, accounted patch capability and verified OS sandbox. No autonomous GitHub PR or code fix is proven.
+
+Trusted local bootstrap and loopback credentials do not prove production human AuthN or hostile-process isolation. Global cross-project GPU admission, 24-hour soak, disaster recovery, G4/G5/G6, production release and owner acceptance remain outside these results. Paid/cloud calls, real applications, site publication, auto merge and protected-core autonomous changes are not authorized.

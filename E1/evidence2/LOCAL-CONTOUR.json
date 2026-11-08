@@ -1,0 +1,675 @@
+{
+  "schema": "awe.e1.local-contour/1",
+  "status": "PASS_REAL_LOCAL_CONTOUR",
+  "started_at": "2026-11-08T01:14:58.041Z",
+  "finished_at": "2026-11-08T01:15:31.854Z",
+  "run_policy": {
+    "registry_created_at": "2026-11-08T00:48:01.074Z",
+    "registry_digest": "sha256:69b58e8a1991d6986c42aff02a0bdf3f4fbb7efe719e3c7cd953594f6af0cfa2",
+    "broker_source_pin": "sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e",
+    "capabilities": [
+      {
+        "ref": {
+          "contract_version": "awe.e1.contracts/1",
+          "release": "AWE_E1/1",
+          "capability_id": "e1.code.parse",
+          "version": "1.0.0",
+          "manifest_digest": "sha256:1f1a1bccbdde96d3d2caa4804e8459c8b3a7284b4b975acccb658e5380d0f065",
+          "input_schema": {
+            "schema_id": "e1.instruction",
+            "version": "1.0.0",
+            "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+          },
+          "output_schema": {
+            "schema_id": "e1.text",
+            "version": "1.0.0",
+            "digest": "sha256:b89e686e36867a9603da3bce47d6232c129315ac48bcd717fd7aeab412b5f8e1"
+          }
+        },
+        "health_until": "2026-11-08T01:48:01.074Z"
+      },
+      {
+        "ref": {
+          "contract_version": "awe.e1.contracts/1",
+          "release": "AWE_E1/1",
+          "capability_id": "e1.code.review",
+          "version": "1.0.0",
+          "manifest_digest": "sha256:394cc02277816172ee50062aec6f1250d66a4d1cb700db7e320d6fd814c55c57",
+          "input_schema": {
+            "schema_id": "e1.instruction",
+            "version": "1.0.0",
+            "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+          },
+          "output_schema": {
+            "schema_id": "e1.text",
+            "version": "1.0.0",
+            "digest": "sha256:b89e686e36867a9603da3bce47d6232c129315ac48bcd717fd7aeab412b5f8e1"
+          }
+        },
+        "health_until": "2026-11-08T01:48:01.074Z"
+      },
+      {
+        "ref": {
+          "contract_version": "awe.e1.contracts/1",
+          "release": "AWE_E1/1",
+          "capability_id": "e1.head.plan",
+          "version": "1.0.0",
+          "manifest_digest": "sha256:a217e5d28b7c2f3b2e36c6224fcbbdcea3ecd09a5368b571dff390ac2b0d3d82",
+          "input_schema": {
+            "schema_id": "e1.instruction",
+            "version": "1.0.0",
+            "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+          },
+          "output_schema": {
+            "schema_id": "e1.head.draft",
+            "version": "1.0.0",
+            "digest": "sha256:2920167eb22d8150e255d654a082ac0fff87b0c852fdfe2420e502c28ea707eb"
+          }
+        },
+        "health_until": "2026-11-08T01:48:01.074Z"
+      }
+    ],
+    "concise": true,
+    "context_tokens": 4096,
+    "max_output_tokens": 512,
+    "timeout_ms": 120000,
+    "previous_unknown_mission": "mission_code_live_mw745gdt",
+    "previous_unknown_policy": "RETAIN_HOLD_UNKNOWN_AND_CHARGED_QUOTA; NO_RETRY",
+    "new_mission_spec_digest": "sha256:de7c7c588fa4ab00c1de0f02dc7e799ede819935bb019535f9eb9b7bc1e9e50c",
+    "new_mission_grant_digest": "sha256:e9895e907c5f6c71c4c9984345650a79cbfd21131da8c83a46209e4735f949a7"
+  },
+  "authority_pid": 41440,
+  "project_id": "prj_code_maintenance",
+  "mission_id": "mission_code_compact_mw7543y4",
+  "resource_id": "awe_e1_a2a3_20261108",
+  "model_plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9",
+  "bootstrap_plan_digest": "sha256:07a9e70548e0602922c915a4042b4318111960a52c9608b3f5d0e9ae9db10a30",
+  "plan_revisions": 2,
+  "selectors": {
+    "script": {
+      "decision": "SELECTED",
+      "reason": "DETERMINISTIC_SCRIPT_FIRST",
+      "selected": {
+        "descriptor": {
+          "ref": {
+            "contract_version": "awe.e1.contracts/1",
+            "release": "AWE_E1/1",
+            "capability_id": "e1.code.parse",
+            "version": "1.0.0",
+            "manifest_digest": "sha256:1f1a1bccbdde96d3d2caa4804e8459c8b3a7284b4b975acccb658e5380d0f065",
+            "input_schema": {
+              "schema_id": "e1.instruction",
+              "version": "1.0.0",
+              "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+            },
+            "output_schema": {
+              "schema_id": "e1.text",
+              "version": "1.0.0",
+              "digest": "sha256:b89e686e36867a9603da3bce47d6232c129315ac48bcd717fd7aeab412b5f8e1"
+            }
+          },
+          "executor_kind": "script",
+          "permissions": [
+            "artifact.read",
+            "artifact.write"
+          ],
+          "data_classes": [
+            "PUBLIC",
+            "PROJECT"
+          ],
+          "origins": [
+            "OWNER",
+            "PROJECT"
+          ],
+          "effect_class": "NONE",
+          "health_until": "2026-11-08T01:48:01.074Z",
+          "state": "ACTIVE",
+          "max_attempts": 1,
+          "timeout_ms": 1000,
+          "min_cost_micros": "0",
+          "supports_reconcile": false,
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "instruction": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              }
+            },
+            "required": [
+              "instruction"
+            ],
+            "additionalProperties": false
+          },
+          "output_schema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "registry_version": "awe.e1.capabilities/1",
+        "source_pin": "sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e",
+        "build_pin": "sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e",
+        "schema_pins": [
+          "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8",
+          "sha256:b89e686e36867a9603da3bce47d6232c129315ac48bcd717fd7aeab412b5f8e1"
+        ],
+        "platforms": [
+          "win32"
+        ],
+        "placement": "LOCAL_HOST",
+        "installed": true,
+        "approved_status": "BOUNDED_CANARY",
+        "required_permissions": [
+          "artifact.read",
+          "artifact.write"
+        ],
+        "limits": {
+          "max_parallel": 1,
+          "max_attempts": 1,
+          "timeout_ms": 1000,
+          "context_tokens": [],
+          "output_tokens": []
+        },
+        "data_labels": [
+          "SYNTHETIC",
+          "CLEAN_CODE"
+        ],
+        "cost": {
+          "basis": "API_MICROS",
+          "reserve_micros": 0,
+          "accepted_result_cost": "NOT_MEASURED",
+          "infrastructure_cost": "NOT_MEASURED"
+        },
+        "health": {
+          "checked_at": "2026-11-08T00:48:01.074Z",
+          "until": "2026-11-08T01:48:01.074Z",
+          "installed_code": true,
+          "model_backend": "NOT_APPLICABLE"
+        },
+        "last_canary": {
+          "status": "NOT_RUN",
+          "sample_size": 0
+        },
+        "retry": "NONE",
+        "reconcile": "HOLD_ON_UNKNOWN",
+        "quality_suite": "e1.code-maintenance.frozen-rubric/1",
+        "model_binding": null
+      },
+      "rejected": [
+        {
+          "capability": "e1.code.review@1.0.0",
+          "executor_kind": "llm",
+          "reason": "A3_OPERATION_MISMATCH"
+        },
+        {
+          "capability": "e1.head.plan@1.0.0",
+          "executor_kind": "llm",
+          "reason": "A3_OPERATION_MISMATCH"
+        }
+      ],
+      "worst_reserve_micros": 0,
+      "automatic_retry": false,
+      "accepted": false
+    },
+    "semantic": {
+      "decision": "SELECTED",
+      "reason": "ONE_BOUNDED_SEMANTIC_MODEL",
+      "selected": {
+        "descriptor": {
+          "ref": {
+            "contract_version": "awe.e1.contracts/1",
+            "release": "AWE_E1/1",
+            "capability_id": "e1.head.plan",
+            "version": "1.0.0",
+            "manifest_digest": "sha256:a217e5d28b7c2f3b2e36c6224fcbbdcea3ecd09a5368b571dff390ac2b0d3d82",
+            "input_schema": {
+              "schema_id": "e1.instruction",
+              "version": "1.0.0",
+              "digest": "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8"
+            },
+            "output_schema": {
+              "schema_id": "e1.head.draft",
+              "version": "1.0.0",
+              "digest": "sha256:2920167eb22d8150e255d654a082ac0fff87b0c852fdfe2420e502c28ea707eb"
+            }
+          },
+          "executor_kind": "llm",
+          "permissions": [
+            "artifact.read",
+            "artifact.write"
+          ],
+          "data_classes": [
+            "PUBLIC",
+            "PROJECT"
+          ],
+          "origins": [
+            "OWNER",
+            "PROJECT"
+          ],
+          "effect_class": "NONE",
+          "health_until": "2026-11-08T01:48:01.074Z",
+          "state": "ACTIVE",
+          "max_attempts": 1,
+          "timeout_ms": 120000,
+          "min_cost_micros": "0",
+          "supports_reconcile": false,
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "instruction": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 8192
+              }
+            },
+            "required": [
+              "instruction"
+            ],
+            "additionalProperties": false
+          },
+          "output_schema": {
+            "type": "object",
+            "properties": {
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 512
+              },
+              "tasks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "task_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80,
+                      "pattern": "^[a-z][a-z0-9_.-]{0,79}$"
+                    },
+                    "title": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "capability_id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 80,
+                      "enum": [
+                        "e1.code.parse",
+                        "e1.code.review"
+                      ]
+                    },
+                    "instruction": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1024
+                    },
+                    "depends_on": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80,
+                        "pattern": "^[a-z][a-z0-9_.-]{0,79}$"
+                      },
+                      "minItems": 0,
+                      "maxItems": 5,
+                      "uniqueItems": true
+                    },
+                    "criterion_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80,
+                        "pattern": "^[a-z][a-z0-9_.-]{0,79}$"
+                      },
+                      "minItems": 1,
+                      "maxItems": 8,
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "task_id",
+                    "title",
+                    "capability_id",
+                    "instruction",
+                    "depends_on",
+                    "criterion_ids"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1,
+                "maxItems": 5,
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "reason",
+              "tasks"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "registry_version": "awe.e1.capabilities/1",
+        "source_pin": "sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e",
+        "build_pin": "sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e",
+        "schema_pins": [
+          "sha256:6ef19f1d89d47d97e501a42703bd5e1c68f3ab78cee8c7b5bc7465b99f81d7f8",
+          "sha256:2920167eb22d8150e255d654a082ac0fff87b0c852fdfe2420e502c28ea707eb"
+        ],
+        "platforms": [
+          "win32"
+        ],
+        "placement": "LOCAL_HOST",
+        "installed": true,
+        "approved_status": "BOUNDED_CANARY",
+        "required_permissions": [
+          "artifact.read",
+          "artifact.write"
+        ],
+        "limits": {
+          "max_parallel": 1,
+          "max_attempts": 1,
+          "timeout_ms": 120000,
+          "context_tokens": [
+            4096,
+            8192
+          ],
+          "output_tokens": [
+            512,
+            2048
+          ]
+        },
+        "data_labels": [
+          "SYNTHETIC",
+          "CLEAN_CODE"
+        ],
+        "cost": {
+          "basis": "API_MICROS",
+          "reserve_micros": 0,
+          "accepted_result_cost": "NOT_MEASURED",
+          "infrastructure_cost": "NOT_MEASURED"
+        },
+        "health": {
+          "checked_at": "2026-11-08T00:48:01.074Z",
+          "until": "2026-11-08T01:48:01.074Z",
+          "installed_code": true,
+          "model_backend": "CHECK_BEFORE_EACH_ATTEMPT"
+        },
+        "last_canary": {
+          "status": "NOT_RUN",
+          "sample_size": 0
+        },
+        "retry": "NONE",
+        "reconcile": "HOLD_ON_UNKNOWN",
+        "quality_suite": "e1.code-maintenance.frozen-rubric/1",
+        "model_binding": {
+          "version": "awe.e1.local-model-policy/1",
+          "route_id": "ollama.local.qwen3-4b-instruct",
+          "endpoint": "http://127.0.0.1:11434",
+          "model": "qwen3:4b-instruct",
+          "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+          "provider": "ollama",
+          "region": "LOCAL_HOST",
+          "api_cost_micros": 0,
+          "max_parallel": 1,
+          "max_wire_attempts": 1,
+          "context_tokens": [
+            4096,
+            8192
+          ],
+          "min_output_tokens": 512,
+          "max_output_tokens": 2048,
+          "max_timeout_ms": 120000,
+          "allowed_data_labels": [
+            "SYNTHETIC",
+            "CLEAN_CODE"
+          ],
+          "allowed_data_classes": [
+            "PUBLIC",
+            "PROJECT"
+          ],
+          "cloud_fallback": false,
+          "automatic_retry": false
+        }
+      },
+      "rejected": [
+        {
+          "capability": "e1.code.parse@1.0.0",
+          "executor_kind": "script",
+          "reason": "A3_OPERATION_MISMATCH"
+        },
+        {
+          "capability": "e1.code.review@1.0.0",
+          "executor_kind": "llm",
+          "reason": "A3_OPERATION_MISMATCH"
+        }
+      ],
+      "worst_reserve_micros": 0,
+      "automatic_retry": false,
+      "accepted": false
+    }
+  },
+  "model_attempts": [
+    {
+      "task_id": "head_control",
+      "capability_id": "e1.head.plan",
+      "decision": "PROPOSED",
+      "reason": "A3_MODEL_RESPONSE_VALIDATED",
+      "usage": {
+        "input_tokens": 623,
+        "output_tokens": 162,
+        "total_duration_ns": 18228662600,
+        "eval_duration_ns": 9726171000,
+        "load_duration_ns": 4155247100,
+        "prompt_eval_duration_ns": 4333747000,
+        "latency_ms": 18240,
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "wire_attempts": 1
+      },
+      "model": {
+        "id": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560,
+          "runner": "ggml"
+        }
+      },
+      "wire_attempts": 1,
+      "accounting_status": "CONFIRMED",
+      "response_digest": "sha256:56e49cbc0b32545590f07bae15a192d90f542f367ed598facf57a4aa12287725"
+    },
+    {
+      "task_id": "review-logic",
+      "capability_id": "e1.code.review",
+      "decision": "PROPOSED",
+      "reason": "A3_MODEL_RESPONSE_VALIDATED",
+      "usage": {
+        "input_tokens": 144,
+        "output_tokens": 235,
+        "total_duration_ns": 13795048000,
+        "eval_duration_ns": 12611802000,
+        "load_duration_ns": 4670200,
+        "prompt_eval_duration_ns": 1121892000,
+        "latency_ms": 13800,
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "wire_attempts": 1
+      },
+      "model": {
+        "id": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 2560,
+          "runner": "ggml"
+        }
+      },
+      "wire_attempts": 1,
+      "accounting_status": "CONFIRMED",
+      "response_digest": "sha256:38822cdc35435bf2c7836863f740d7259d25b8c31b7da5393f5423af36b2d0d4"
+    }
+  ],
+  "operations": [
+    {
+      "kind": "SCRIPT_WORKER",
+      "task_id": "parse_source",
+      "pid": 23936,
+      "result_hash": "sha256:1121eeee6b12282f8fe14e8556fc2fcc8da934ef527b8ce869b754505f7a6dfb",
+      "executor_kind": "script"
+    },
+    {
+      "kind": "INDEPENDENT_QA",
+      "task_id": "parse_source",
+      "phase": "parse",
+      "pid": 26844,
+      "verdict": "PASS",
+      "evidence_digest": "sha256:c544ee83737984ccb468b13f856c9773fcc63bae7a487007f74f7e82d31dc7e5",
+      "result_hash": "sha256:1121eeee6b12282f8fe14e8556fc2fcc8da934ef527b8ce869b754505f7a6dfb"
+    },
+    {
+      "kind": "MODEL_TASK",
+      "task_id": "head_control",
+      "executor_kind": "llm",
+      "fence": 160,
+      "result_hash": "sha256:540fcb98b6bd1ace679aed9d1efb2f83fa74b770901654d44aeb1a940fe4eb16"
+    },
+    {
+      "kind": "INDEPENDENT_QA",
+      "task_id": "head_control",
+      "phase": "head",
+      "pid": 40984,
+      "verdict": "PASS",
+      "evidence_digest": "sha256:d589a176640ebb1239085e762a20ca3ccd4ab6c285f77f75c08cbc7386bad9ea",
+      "result_hash": "sha256:540fcb98b6bd1ace679aed9d1efb2f83fa74b770901654d44aeb1a940fe4eb16"
+    },
+    {
+      "kind": "SCRIPT_WORKER",
+      "task_id": "parse-order",
+      "pid": 40520,
+      "result_hash": "sha256:be7ec732d12728b5d5857929a5f8f5b7b015b1a455d2d7b735a0d6092aed876e",
+      "executor_kind": "script"
+    },
+    {
+      "kind": "INDEPENDENT_QA",
+      "task_id": "parse-order",
+      "phase": "parse",
+      "pid": 44384,
+      "verdict": "PASS",
+      "evidence_digest": "sha256:c544ee83737984ccb468b13f856c9773fcc63bae7a487007f74f7e82d31dc7e5",
+      "result_hash": "sha256:be7ec732d12728b5d5857929a5f8f5b7b015b1a455d2d7b735a0d6092aed876e"
+    },
+    {
+      "kind": "MODEL_TASK",
+      "task_id": "review-logic",
+      "executor_kind": "llm",
+      "fence": 162,
+      "result_hash": "sha256:04031e124bfd8700f55460509100e92beb4042692c3a3141e04a40f9b4d46757"
+    },
+    {
+      "kind": "INDEPENDENT_QA",
+      "task_id": "review-logic",
+      "phase": "review",
+      "pid": 27472,
+      "verdict": "PASS",
+      "evidence_digest": "sha256:0af77f4b908a1ee32032d9da882b2e97bb6bef9a6882a55432d2b39179f62ef2",
+      "result_hash": "sha256:04031e124bfd8700f55460509100e92beb4042692c3a3141e04a40f9b4d46757"
+    }
+  ],
+  "current_tasks": [
+    {
+      "task_id": "parse-order",
+      "state": "ACCEPTED",
+      "plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9",
+      "result_hash": "sha256:be7ec732d12728b5d5857929a5f8f5b7b015b1a455d2d7b735a0d6092aed876e"
+    },
+    {
+      "task_id": "review-logic",
+      "state": "ACCEPTED",
+      "plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9",
+      "result_hash": "sha256:04031e124bfd8700f55460509100e92beb4042692c3a3141e04a40f9b4d46757"
+    }
+  ],
+  "ledger": {
+    "reserved": 0,
+    "spent": 0,
+    "quota_used": 3,
+    "attempts": [
+      {
+        "attempt_id": "attempt_49550e6d2659a2f3bd55549cbaa8e9b965bb6cad1b3642cf81757aaadbe3352c",
+        "state": "CONFIRMED",
+        "usage": {
+          "model": "qwen3:4b-instruct",
+          "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+          "latency_ms": 18240,
+          "input_tokens": 623,
+          "output_tokens": 162,
+          "wire_attempts": 1,
+          "eval_duration_ns": 9726171000,
+          "load_duration_ns": 4155247100,
+          "total_duration_ns": 18228662600,
+          "prompt_eval_duration_ns": 4333747000
+        },
+        "request_hash": "sha256:cd2b41aa4df993ba2c12b8cbbd6c6d91193edb4a06bb66054ea2a79615752379"
+      },
+      {
+        "attempt_id": "attempt_bd27c671e174c467547e1ce7632ee2a7251695f4142c2f4d97c2263109536d13",
+        "state": "CONFIRMED",
+        "usage": {
+          "model": "qwen3:4b-instruct",
+          "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+          "latency_ms": 13800,
+          "input_tokens": 144,
+          "output_tokens": 235,
+          "wire_attempts": 1,
+          "eval_duration_ns": 12611802000,
+          "load_duration_ns": 4670200,
+          "total_duration_ns": 13795048000,
+          "prompt_eval_duration_ns": 1121892000
+        },
+        "request_hash": "sha256:35be5c69bb4f04bfacd2b9b06a8232d772064c5d19baa968c552deb8e40185b0"
+      }
+    ]
+  },
+  "cursor": {
+    "consumer_id": "monitor_compact_mw7543y4",
+    "sequence": 624
+  },
+  "accepted": false,
+  "owner_acceptance": "NOT_REQUESTED",
+  "external_effects": 0,
+  "code_changes_applied": 0,
+  "github_tasks_executed": 0,
+  "scope": "Synthetic code-maintenance planning and analysis; original helper intentionally not modified; not E1 Pilot acceptance"
+}

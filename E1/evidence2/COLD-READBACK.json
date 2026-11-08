@@ -1,0 +1,73 @@
+{
+  "schema": "awe.e1.cold-process-readback/1",
+  "pid": 6924,
+  "mission_id": "mission_code_compact_mw7543y4",
+  "mission_state": "COMPLETE",
+  "plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9",
+  "attempts": [
+    {
+      "attempt_id": "attempt_49550e6d2659a2f3bd55549cbaa8e9b965bb6cad1b3642cf81757aaadbe3352c",
+      "state": "CONFIRMED",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 18240,
+        "input_tokens": 623,
+        "output_tokens": 162,
+        "wire_attempts": 1,
+        "eval_duration_ns": 9726171000,
+        "load_duration_ns": 4155247100,
+        "total_duration_ns": 18228662600,
+        "prompt_eval_duration_ns": 4333747000
+      },
+      "request_hash": "sha256:cd2b41aa4df993ba2c12b8cbbd6c6d91193edb4a06bb66054ea2a79615752379"
+    },
+    {
+      "attempt_id": "attempt_bd27c671e174c467547e1ce7632ee2a7251695f4142c2f4d97c2263109536d13",
+      "state": "CONFIRMED",
+      "usage": {
+        "model": "qwen3:4b-instruct",
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "latency_ms": 13800,
+        "input_tokens": 144,
+        "output_tokens": 235,
+        "wire_attempts": 1,
+        "eval_duration_ns": 12611802000,
+        "load_duration_ns": 4670200,
+        "total_duration_ns": 13795048000,
+        "prompt_eval_duration_ns": 1121892000
+      },
+      "request_hash": "sha256:35be5c69bb4f04bfacd2b9b06a8232d772064c5d19baa968c552deb8e40185b0"
+    }
+  ],
+  "project": {
+    "spent": 0,
+    "owner_id": "e1_owner",
+    "reserved": 0,
+    "quota_cap": 6,
+    "budget_cap": 0,
+    "project_id": "prj_code_maintenance",
+    "quota_used": 3,
+    "max_parallel": 2
+  },
+  "cursor": {
+    "sequence": 624
+  },
+  "current_tasks": [
+    {
+      "task_id": "parse-order",
+      "state": "ACCEPTED",
+      "result_hash": "sha256:be7ec732d12728b5d5857929a5f8f5b7b015b1a455d2d7b735a0d6092aed876e",
+      "plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9"
+    },
+    {
+      "task_id": "review-logic",
+      "state": "ACCEPTED",
+      "result_hash": "sha256:04031e124bfd8700f55460509100e92beb4042692c3a3141e04a40f9b4d46757",
+      "plan_digest": "sha256:32f1f440dfd66eebaf3ae7965f21e3ce98092caf858f56d5626362184392f2b9"
+    }
+  ],
+  "archived_tasks": 2,
+  "postgresql": "NATIVE",
+  "new_model_wire_attempts": 0
+}
