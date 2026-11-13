@@ -1,0 +1,353 @@
+{
+  "schema": "awe.qa2.command-result/1",
+  "command": "node --test --test-concurrency=1 --test-reporter=tap E1/qa2/model-seams.test.mjs E1/qa2/maintenance-oracle.test.mjs E1/qa2/native-seams.test.mjs E1/qa2/native-processes.test.mjs E1/qa2/host-seams.test.mjs E1/qa2/quiescence-seams.test.mjs",
+  "node": "v24.21.0",
+  "started_at": "2026-11-08T01:18:25.172Z",
+  "finished_at": "2026-11-08T01:18:46.249Z",
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "implementation_stable_during_run": true,
+  "source_before": [
+    {
+      "path": "E1/broker/benchmark.mjs",
+      "sha256": "f7683c1415511ac23ac460f2edb5a9de5f1af320c8face0221c40582ae97d7b1"
+    },
+    {
+      "path": "E1/broker/canary.mjs",
+      "sha256": "0e65ba971230ecf7acb6761cc0567b95fd03312f615e22b9f379adaed648636a"
+    },
+    {
+      "path": "E1/broker/head.mjs",
+      "sha256": "d70266727d65dde48c512e2e818eb797831e028b7a8b33cea39f05b7c0b4fc13"
+    },
+    {
+      "path": "E1/broker/index.mjs",
+      "sha256": "168ac981514626d8c3fe170dbfe66d932b55fbd8d7c8ae1405be27b89fcb8e91"
+    },
+    {
+      "path": "E1/broker/model.mjs",
+      "sha256": "df1da574e40c89fb4a1da4d16fc54d9ba5b74b05e1dd8da869d3674adb59adc6"
+    },
+    {
+      "path": "E1/broker/registry.mjs",
+      "sha256": "87f6a8cb7b66c8b76f2894ec770c0a20f8387a05fbefd9154ee5ee026e17b5d8"
+    },
+    {
+      "path": "E1/broker/schemas.mjs",
+      "sha256": "f1cc4272ba96c42bdf0c0a94c916bcd24b2d4ab283868ab0a0477a546846aacf"
+    },
+    {
+      "path": "E1/contracts/index.mjs",
+      "sha256": "1e9f18fa5619440b2b2468ecf0817ff1f976e3ab703068f16fc5d4241fa4d6b3"
+    },
+    {
+      "path": "E1/contracts/schemas.mjs",
+      "sha256": "c0ca8de6e70f6d5f2025b74b57fc26736203c33c675f0adb044f57402cba631b"
+    },
+    {
+      "path": "E1/contracts/v1/awe-e1.schema.json",
+      "sha256": "f227034c2db74fccb8e0c01236e52e61386e1e6106970ecc8da75eba899657c0"
+    },
+    {
+      "path": "E1/contracts/v1/catalog.json",
+      "sha256": "32d4a770081fad7c3561cc90489f014e39b2268516a3e304b95d59384191eee3"
+    },
+    {
+      "path": "E1/coordinator/admission.mjs",
+      "sha256": "d4f807d5c631669f8d929c40a9d564ce1e6c572c20c220ddb98f7184900a95c2"
+    },
+    {
+      "path": "E1/coordinator/authority-server.mjs",
+      "sha256": "583d5e1d7f8bacd8862cb9df4e1dde1e326c3f7a3d49fa16d0c581a3e9a87e73"
+    },
+    {
+      "path": "E1/coordinator/coordinator.mjs",
+      "sha256": "94c54a28379fb4efa72004d58370a3b3c1424d613d552fa0391115a1c137dbef"
+    },
+    {
+      "path": "E1/coordinator/errors.mjs",
+      "sha256": "f2911bffd56bd47a737f2d424d6982c0a43fc8825ea9666aacbc1fa91e50e668"
+    },
+    {
+      "path": "E1/coordinator/index.mjs",
+      "sha256": "39967aa6a7b5baa78fec6ccc4ca6592bdf81577cf5f9d98d0867e5ddcd0e28f4"
+    },
+    {
+      "path": "E1/coordinator/leaf-worker.mjs",
+      "sha256": "af5f2ebd4b8bfc4eedaf0273c75b5fab92932d38686f5f8b648ecb89bb2dbebd"
+    },
+    {
+      "path": "E1/coordinator/migrate.mjs",
+      "sha256": "94c9cdc00b384c8dfc8c1c123a07310c0f483d1b2d08ae645bfb0f121caafde9"
+    },
+    {
+      "path": "E1/coordinator/migrations/0001-durable-runtime.sql",
+      "sha256": "d0708161fc480b1489a89a93e1e3d7c508fbf6aeecefb642df380a69e3c78472"
+    },
+    {
+      "path": "E1/coordinator/migrations/0002-local-model-quiescence.sql",
+      "sha256": "379791e981bd5d0b40b28a60add314458c2b3837722aeb3e61fb74a36e1d5ee1"
+    },
+    {
+      "path": "E1/coordinator/psql-session.mjs",
+      "sha256": "87bf88bb3e790414a809ed2809329860205457c84fddfab235a2f94078569a26"
+    },
+    {
+      "path": "E1/coordinator/quiescence.mjs",
+      "sha256": "1df99ac57e04cbdbcdc150d3b1379b1eece187475f6805e6e527aed0a99d17a7"
+    },
+    {
+      "path": "E1/coordinator/resource.mjs",
+      "sha256": "99641f84b411685ed517d1fe092f15975f17134914daf46974748c8a186b5063"
+    },
+    {
+      "path": "E1/host/artifact-binding.mjs",
+      "sha256": "9e03c14e42fc7b5f087ca28de4534ed3b9fc1aab58563079e6c157aefaefd8dd"
+    },
+    {
+      "path": "E1/host/cold-readback.mjs",
+      "sha256": "e14799620d55f58fa99eed435622d6518353ec25ae670ca2cb19359a7a3396b2"
+    },
+    {
+      "path": "E1/host/maintenance-canary.mjs",
+      "sha256": "a8e9156cb0e4561a94a7d6358d4e882e9d54c15dfddce0f777e4849f56480ddd"
+    },
+    {
+      "path": "E1/host/migrate.mjs",
+      "sha256": "89a1b40c98e67e30fb064838284aacc2436caf39452490e40566daa230db6763"
+    },
+    {
+      "path": "E1/host/qa-leaf.mjs",
+      "sha256": "18d8d5033e96a306cb4e7abe04c030be4aa48749400f8d8b929461d372bb54bb"
+    },
+    {
+      "path": "E1/host/quiesce-local.mjs",
+      "sha256": "77de1f8d9955f2f01747af9fae74286ef37e3f2e9b738bd23bceb62d417568a8"
+    },
+    {
+      "path": "E1/host/script-leaf.mjs",
+      "sha256": "eb6c2c0ad3f9248a31b71461eea70c7bffa53c4defb7703bffe3c9d8c5fb5a7b"
+    },
+    {
+      "path": "E1/host/staging.mjs",
+      "sha256": "93b53dada636072b3006280114e3faf6e5088a85014f06d16db236f0fccbcc90"
+    },
+    {
+      "path": "E1/mission/authority.mjs",
+      "sha256": "cc36a4f2fd5e40ee4cb139cee4906f8479ecabc6c4594612b9b7d307216226b8"
+    },
+    {
+      "path": "E1/mission/ingress.mjs",
+      "sha256": "dc99bc7a85e3e86671764502884eda398d82bdf7c0a006f53fc888e532a82d92"
+    },
+    {
+      "path": "E1/qa2/host-seams.test.mjs",
+      "sha256": "2a0f9b6878c055e86eb4744b30064d40e1f9601e60f9c7e57acc80952f631ff3"
+    },
+    {
+      "path": "E1/qa2/maintenance-oracle.mjs",
+      "sha256": "05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    },
+    {
+      "path": "E1/qa2/maintenance-oracle.test.mjs",
+      "sha256": "3bf550487d16ac58d6d7470b30c7b78465d1ed431b28ac620f905be6aa006c2a"
+    },
+    {
+      "path": "E1/qa2/model-seams.test.mjs",
+      "sha256": "0baaed9fcc4a0ae3ed3734fa9c86640662a5e6e9da33464ff5a416489002350e"
+    },
+    {
+      "path": "E1/qa2/native-fixture.mjs",
+      "sha256": "d688b1971262aa2a7e96023c8ac4077fb73f7fe117ddfcb7b2f9a178a07be762"
+    },
+    {
+      "path": "E1/qa2/native-processes.test.mjs",
+      "sha256": "8fd1003252067f76f4f45d26ef2bb269d143fd37c04136896ed203e39bb194a8"
+    },
+    {
+      "path": "E1/qa2/native-seams.test.mjs",
+      "sha256": "f12317c5a1ecd984d0ba6945e3febcb7e76e99a6a90c60b93185fbf04c6c7a86"
+    },
+    {
+      "path": "E1/qa2/quiescence-seams.test.mjs",
+      "sha256": "640cd725d8e7f19737738d5939f4846e9ba343866c6f35c28d0e6f8c9910df60"
+    },
+    {
+      "path": "E1/qa2/run-qa.mjs",
+      "sha256": "c67bf001414d39521729931da01556f88cd334951d54c496b6c467c9a379c03b"
+    }
+  ],
+  "source_after": [
+    {
+      "path": "E1/broker/benchmark.mjs",
+      "sha256": "f7683c1415511ac23ac460f2edb5a9de5f1af320c8face0221c40582ae97d7b1"
+    },
+    {
+      "path": "E1/broker/canary.mjs",
+      "sha256": "0e65ba971230ecf7acb6761cc0567b95fd03312f615e22b9f379adaed648636a"
+    },
+    {
+      "path": "E1/broker/head.mjs",
+      "sha256": "d70266727d65dde48c512e2e818eb797831e028b7a8b33cea39f05b7c0b4fc13"
+    },
+    {
+      "path": "E1/broker/index.mjs",
+      "sha256": "168ac981514626d8c3fe170dbfe66d932b55fbd8d7c8ae1405be27b89fcb8e91"
+    },
+    {
+      "path": "E1/broker/model.mjs",
+      "sha256": "df1da574e40c89fb4a1da4d16fc54d9ba5b74b05e1dd8da869d3674adb59adc6"
+    },
+    {
+      "path": "E1/broker/registry.mjs",
+      "sha256": "87f6a8cb7b66c8b76f2894ec770c0a20f8387a05fbefd9154ee5ee026e17b5d8"
+    },
+    {
+      "path": "E1/broker/schemas.mjs",
+      "sha256": "f1cc4272ba96c42bdf0c0a94c916bcd24b2d4ab283868ab0a0477a546846aacf"
+    },
+    {
+      "path": "E1/contracts/index.mjs",
+      "sha256": "1e9f18fa5619440b2b2468ecf0817ff1f976e3ab703068f16fc5d4241fa4d6b3"
+    },
+    {
+      "path": "E1/contracts/schemas.mjs",
+      "sha256": "c0ca8de6e70f6d5f2025b74b57fc26736203c33c675f0adb044f57402cba631b"
+    },
+    {
+      "path": "E1/contracts/v1/awe-e1.schema.json",
+      "sha256": "f227034c2db74fccb8e0c01236e52e61386e1e6106970ecc8da75eba899657c0"
+    },
+    {
+      "path": "E1/contracts/v1/catalog.json",
+      "sha256": "32d4a770081fad7c3561cc90489f014e39b2268516a3e304b95d59384191eee3"
+    },
+    {
+      "path": "E1/coordinator/admission.mjs",
+      "sha256": "d4f807d5c631669f8d929c40a9d564ce1e6c572c20c220ddb98f7184900a95c2"
+    },
+    {
+      "path": "E1/coordinator/authority-server.mjs",
+      "sha256": "583d5e1d7f8bacd8862cb9df4e1dde1e326c3f7a3d49fa16d0c581a3e9a87e73"
+    },
+    {
+      "path": "E1/coordinator/coordinator.mjs",
+      "sha256": "94c54a28379fb4efa72004d58370a3b3c1424d613d552fa0391115a1c137dbef"
+    },
+    {
+      "path": "E1/coordinator/errors.mjs",
+      "sha256": "f2911bffd56bd47a737f2d424d6982c0a43fc8825ea9666aacbc1fa91e50e668"
+    },
+    {
+      "path": "E1/coordinator/index.mjs",
+      "sha256": "39967aa6a7b5baa78fec6ccc4ca6592bdf81577cf5f9d98d0867e5ddcd0e28f4"
+    },
+    {
+      "path": "E1/coordinator/leaf-worker.mjs",
+      "sha256": "af5f2ebd4b8bfc4eedaf0273c75b5fab92932d38686f5f8b648ecb89bb2dbebd"
+    },
+    {
+      "path": "E1/coordinator/migrate.mjs",
+      "sha256": "94c9cdc00b384c8dfc8c1c123a07310c0f483d1b2d08ae645bfb0f121caafde9"
+    },
+    {
+      "path": "E1/coordinator/migrations/0001-durable-runtime.sql",
+      "sha256": "d0708161fc480b1489a89a93e1e3d7c508fbf6aeecefb642df380a69e3c78472"
+    },
+    {
+      "path": "E1/coordinator/migrations/0002-local-model-quiescence.sql",
+      "sha256": "379791e981bd5d0b40b28a60add314458c2b3837722aeb3e61fb74a36e1d5ee1"
+    },
+    {
+      "path": "E1/coordinator/psql-session.mjs",
+      "sha256": "87bf88bb3e790414a809ed2809329860205457c84fddfab235a2f94078569a26"
+    },
+    {
+      "path": "E1/coordinator/quiescence.mjs",
+      "sha256": "1df99ac57e04cbdbcdc150d3b1379b1eece187475f6805e6e527aed0a99d17a7"
+    },
+    {
+      "path": "E1/coordinator/resource.mjs",
+      "sha256": "99641f84b411685ed517d1fe092f15975f17134914daf46974748c8a186b5063"
+    },
+    {
+      "path": "E1/host/artifact-binding.mjs",
+      "sha256": "9e03c14e42fc7b5f087ca28de4534ed3b9fc1aab58563079e6c157aefaefd8dd"
+    },
+    {
+      "path": "E1/host/cold-readback.mjs",
+      "sha256": "e14799620d55f58fa99eed435622d6518353ec25ae670ca2cb19359a7a3396b2"
+    },
+    {
+      "path": "E1/host/maintenance-canary.mjs",
+      "sha256": "a8e9156cb0e4561a94a7d6358d4e882e9d54c15dfddce0f777e4849f56480ddd"
+    },
+    {
+      "path": "E1/host/migrate.mjs",
+      "sha256": "89a1b40c98e67e30fb064838284aacc2436caf39452490e40566daa230db6763"
+    },
+    {
+      "path": "E1/host/qa-leaf.mjs",
+      "sha256": "18d8d5033e96a306cb4e7abe04c030be4aa48749400f8d8b929461d372bb54bb"
+    },
+    {
+      "path": "E1/host/quiesce-local.mjs",
+      "sha256": "77de1f8d9955f2f01747af9fae74286ef37e3f2e9b738bd23bceb62d417568a8"
+    },
+    {
+      "path": "E1/host/script-leaf.mjs",
+      "sha256": "eb6c2c0ad3f9248a31b71461eea70c7bffa53c4defb7703bffe3c9d8c5fb5a7b"
+    },
+    {
+      "path": "E1/host/staging.mjs",
+      "sha256": "93b53dada636072b3006280114e3faf6e5088a85014f06d16db236f0fccbcc90"
+    },
+    {
+      "path": "E1/mission/authority.mjs",
+      "sha256": "cc36a4f2fd5e40ee4cb139cee4906f8479ecabc6c4594612b9b7d307216226b8"
+    },
+    {
+      "path": "E1/mission/ingress.mjs",
+      "sha256": "dc99bc7a85e3e86671764502884eda398d82bdf7c0a006f53fc888e532a82d92"
+    },
+    {
+      "path": "E1/qa2/host-seams.test.mjs",
+      "sha256": "2a0f9b6878c055e86eb4744b30064d40e1f9601e60f9c7e57acc80952f631ff3"
+    },
+    {
+      "path": "E1/qa2/maintenance-oracle.mjs",
+      "sha256": "05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    },
+    {
+      "path": "E1/qa2/maintenance-oracle.test.mjs",
+      "sha256": "3bf550487d16ac58d6d7470b30c7b78465d1ed431b28ac620f905be6aa006c2a"
+    },
+    {
+      "path": "E1/qa2/model-seams.test.mjs",
+      "sha256": "0baaed9fcc4a0ae3ed3734fa9c86640662a5e6e9da33464ff5a416489002350e"
+    },
+    {
+      "path": "E1/qa2/native-fixture.mjs",
+      "sha256": "d688b1971262aa2a7e96023c8ac4077fb73f7fe117ddfcb7b2f9a178a07be762"
+    },
+    {
+      "path": "E1/qa2/native-processes.test.mjs",
+      "sha256": "8fd1003252067f76f4f45d26ef2bb269d143fd37c04136896ed203e39bb194a8"
+    },
+    {
+      "path": "E1/qa2/native-seams.test.mjs",
+      "sha256": "f12317c5a1ecd984d0ba6945e3febcb7e76e99a6a90c60b93185fbf04c6c7a86"
+    },
+    {
+      "path": "E1/qa2/quiescence-seams.test.mjs",
+      "sha256": "640cd725d8e7f19737738d5939f4846e9ba343866c6f35c28d0e6f8c9910df60"
+    },
+    {
+      "path": "E1/qa2/run-qa.mjs",
+      "sha256": "c67bf001414d39521729931da01556f88cd334951d54c496b6c467c9a379c03b"
+    }
+  ],
+  "output_sha256": "cb559582050f00209ae6f9bd816da9f6a70af95f6156d9d46c92062fa3155c64",
+  "log": "E1/qa2/all-final.tap"
+}

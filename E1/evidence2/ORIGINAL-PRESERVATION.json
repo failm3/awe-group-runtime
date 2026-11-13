@@ -1,0 +1,32 @@
+{
+  "schema": "awe.e1.original-source-preservation/1",
+  "checked_at": "2026-11-08T01:23:44.613Z",
+  "original_repositories_modified_by_this_stage": false,
+  "old_e0_connections": 0,
+  "worktrees": [
+    {
+      "worktree_id": "51d0",
+      "head": "c6c2db24c4648d96fd93c8fe7da63ba98dd9af19",
+      "expected_head": "c6c2db24c4648d96fd93c8fe7da63ba98dd9af19",
+      "head_matches": true,
+      "tracked_changes": 0,
+      "untracked_entries": 0,
+      "status_mode": "porcelain_v1_untracked_normal_trim_final_newline",
+      "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prior_status_matches": null,
+      "operations": "READ_ONLY_GIT_NO_OPTIONAL_LOCKS"
+    },
+    {
+      "worktree_id": "92ef",
+      "head": "3579aeeda379caf78dafe5351704956f1ecc0ea5",
+      "expected_head": "3579aeeda379caf78dafe5351704956f1ecc0ea5",
+      "head_matches": true,
+      "tracked_changes": 0,
+      "untracked_entries": 97,
+      "status_mode": "porcelain_v1_untracked_normal_trim_final_newline",
+      "status_sha256": "ad7c93d9a5064e839231bbd6b8eee6d232347b4fd370b87cb9d018557d106624",
+      "prior_status_matches": true,
+      "operations": "READ_ONLY_GIT_NO_OPTIONAL_LOCKS"
+    }
+  ]
+}

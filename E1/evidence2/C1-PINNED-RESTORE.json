@@ -1,0 +1,15 @@
+{
+  "schema": "awe.e1.c1-pinned-restore/1",
+  "status": "PASS",
+  "checked_at": "2026-11-08T01:00:31.403514+00:00",
+  "migration_digest": "sha256:a1b34a1f082fda04eb707c3640d954f231f51dbe72df8045a17da5027285e8e1",
+  "migration_metadata_matches_source": true,
+  "restored_metadata_matches_source": true,
+  "test_dataset_digest": "e6752a0fd6bd335edfe372d2e84d59c3",
+  "test_rows": 2,
+  "backup_bytes": 6237,
+  "preexisting_pg_processes_unchanged": 9,
+  "cluster_restarts_this_check": 0,
+  "e0_connections": 0,
+  "pgdata_published": false
+}

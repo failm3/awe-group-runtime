@@ -1,0 +1,175 @@
+{
+  "schema": "awe.clean-export-baseline-test/1",
+  "status": "PASS",
+  "commands": [
+    {
+      "id": "legacy-contracts",
+      "command": [
+        "node",
+        "--require",
+        "./baseline/offline-guard.cjs",
+        "--test",
+        "--test-reporter=tap",
+        "--test-isolation=none",
+        "--test-concurrency=1",
+        "tests/contracts/contracts.test.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "duration_ms": 237,
+      "summary": {
+        "tests": 115,
+        "pass": 115,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "stdout_sha256": "23096f442172c907fd10e292b2315bdd6787243e36077d88f869e64ce2c26854",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "auto-compatibility",
+      "command": [
+        "node",
+        "--require",
+        "./baseline/offline-guard.cjs",
+        "--test",
+        "--test-reporter=tap",
+        "--test-isolation=none",
+        "--test-concurrency=1",
+        "AUTO-01/tests/autonomy.test.mjs",
+        "AUTO-01/tests/master.test.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "duration_ms": 19843,
+      "summary": {
+        "tests": 43,
+        "pass": 43,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "stdout_sha256": "291ca85a6da5d182b7473127f76f65d94f59886cf5103e27163b9439ef91077a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "a1-contracts",
+      "command": [
+        "node",
+        "--require",
+        "./baseline/offline-guard.cjs",
+        "--test",
+        "--test-reporter=tap",
+        "--test-isolation=none",
+        "--test-concurrency=1",
+        "E1/tests/contracts/e0-compatibility.test.mjs",
+        "E1/tests/contracts/mission.test.mjs",
+        "E1/tests/contracts/schema-artifact.test.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "duration_ms": 6631,
+      "summary": {
+        "tests": 54,
+        "pass": 54,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "stdout_sha256": "474f938be70b0d3745ed84ef1558bc15a7e1652435c7893fbce0e35cf05e4fd8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "c1-fixtures",
+      "command": [
+        "node",
+        "--require",
+        "./E1/qa/network-guard.cjs",
+        "--test",
+        "--test-reporter=tap",
+        "--test-isolation=none",
+        "--test-concurrency=1",
+        "E1/tests/infra/config.test.mjs",
+        "E1/tests/infra/lifecycle.test.mjs",
+        "E1/tests/infra/storage.test.mjs",
+        "E1/tests/infra/vault.test.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "duration_ms": 5273,
+      "summary": {
+        "tests": 22,
+        "pass": 22,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "stdout_sha256": "c4d096ae82511c67f590a64d8f8d173798582f284c83dba9f01beafa140eb22d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "a1-integration",
+      "command": [
+        "node",
+        "--require",
+        "./baseline/offline-guard.cjs",
+        "--test",
+        "--test-reporter=tap",
+        "--test-isolation=none",
+        "--test-concurrency=1",
+        "E1/tests/integration/composition.test.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "duration_ms": 2214,
+      "summary": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "stdout_sha256": "22d6b5aa08e50644bfae594243bf17995196819f9fd471342daf75df1a3772c4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "qa1",
+      "command": [
+        "node",
+        "--require",
+        "./E1/qa/network-guard.cjs",
+        "--test",
+        "--test-reporter=tap",
+        "--test-isolation=none",
+        "--test-concurrency=1",
+        "E1/qa/infra-adversarial.test.mjs",
+        "E1/qa/lifecycle-adversarial.test.mjs",
+        "E1/qa/mission-adversarial.test.mjs",
+        "E1/qa/vault-adversarial.test.mjs"
+      ],
+      "exit": 0,
+      "error": null,
+      "duration_ms": 8193,
+      "summary": {
+        "tests": 130,
+        "pass": 130,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "stdout_sha256": "614ad3bb1a678088048893e76059cd3c258dbdcdeef84670c6932a8392b53650",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "totals": {
+    "tests": 373,
+    "pass": 373,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "native_postgresql_tests": false,
+  "live_model_calls": 0,
+  "scope": "Reviewed clean export compatibility only; not E1 Pilot acceptance"
+}

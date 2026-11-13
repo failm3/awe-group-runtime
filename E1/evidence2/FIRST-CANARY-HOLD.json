@@ -1,0 +1,42 @@
+{
+  "schema": "awe.e1.local-contour/1",
+  "status": "FAILED_OR_HOLD",
+  "started_at": "2026-11-08T00:48:01.073Z",
+  "finished_at": "2026-11-08T00:50:01.924Z",
+  "mission_id": "mission_code_live_mw745gdt",
+  "project_id": "prj_code_maintenance",
+  "reason": "E1_MODEL_PROPOSAL_REQUIRED:A3_OUTCOME_UNKNOWN",
+  "model_attempts": [
+    {
+      "task_id": "head_control",
+      "capability_id": "e1.head.plan",
+      "decision": "WAIT",
+      "reason": "A3_OUTCOME_UNKNOWN",
+      "usage": null,
+      "model": null,
+      "wire_attempts": 1,
+      "accounting_status": "UNKNOWN",
+      "response_digest": null
+    }
+  ],
+  "operations": [
+    {
+      "kind": "SCRIPT_WORKER",
+      "task_id": "parse_source",
+      "pid": 30968,
+      "result_hash": "sha256:5aa135c760ee99c8bc2d9c54cef24d2994038c2ab403b289c29ad8dd957dd576",
+      "executor_kind": "script"
+    },
+    {
+      "kind": "INDEPENDENT_QA",
+      "task_id": "parse_source",
+      "phase": "parse",
+      "pid": 9980,
+      "verdict": "PASS",
+      "evidence_digest": "sha256:c544ee83737984ccb468b13f856c9773fcc63bae7a487007f74f7e82d31dc7e5",
+      "result_hash": "sha256:5aa135c760ee99c8bc2d9c54cef24d2994038c2ab403b289c29ad8dd957dd576"
+    }
+  ],
+  "external_effects": 0,
+  "accepted": false
+}

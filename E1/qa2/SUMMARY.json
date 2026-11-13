@@ -1,0 +1,134 @@
+{
+  "schema": "awe.qa2.a2a3-summary/2",
+  "updated_at": "2026-11-08T01:22:11.966Z",
+  "status": "VERIFIED_BOUNDED_LOCAL_G2_G3_FULL_E1_PARTIAL",
+  "independent_tests": {
+    "total": 45,
+    "pass": 45,
+    "fail": 0,
+    "skip": 0,
+    "native_pg_process_host_quiescence": 20,
+    "offline_contract_model_oracle": 25,
+    "command": "node --test --test-concurrency=1 --test-reporter=tap E1/qa2/model-seams.test.mjs E1/qa2/maintenance-oracle.test.mjs E1/qa2/native-seams.test.mjs E1/qa2/native-processes.test.mjs E1/qa2/host-seams.test.mjs E1/qa2/quiescence-seams.test.mjs",
+    "started_at": "2026-11-08T01:18:25.172Z",
+    "finished_at": "2026-11-08T01:18:46.249Z",
+    "source_pin_count": 42,
+    "implementation_stable_during_run": true,
+    "log_sha256": "cb559582050f00209ae6f9bd816da9f6a70af95f6156d9d46c92062fa3155c64"
+  },
+  "actual_local_model": {
+    "mission_id": "mission_code_compact_mw7543y4",
+    "status": "PASS_REAL_LOCAL_MODEL_AND_NATIVE_COLD_READBACK",
+    "model": "qwen3:4b-instruct",
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "actual_successful_attempts": 2,
+    "usage": [
+      {
+        "task_id": "head_control",
+        "input_tokens": 623,
+        "output_tokens": 162,
+        "latency_ms": 18240
+      },
+      {
+        "task_id": "review-logic",
+        "input_tokens": 144,
+        "output_tokens": 235,
+        "latency_ms": 13800
+      }
+    ],
+    "independently_checked_frozen_tasks": 4,
+    "plan_revisions": 2,
+    "cursor": {
+      "sequence": 624
+    },
+    "ledger": {
+      "reserved": 0,
+      "spent": 0,
+      "quota_used": 3
+    },
+    "old_unknown": {
+      "mission_id": "mission_code_live_mw745gdt",
+      "state": "HOLD",
+      "attempt_state": "OUTCOME_UNKNOWN",
+      "usage": "UNKNOWN",
+      "charged_quota_units": 1,
+      "wire_send_events": 1,
+      "held_execution_lease": false
+    }
+  },
+  "new_model_generations_by_qa": 0,
+  "actual_external_provider_actions": 0,
+  "helper_function_tests": "NOT_RUN",
+  "code_fix_implemented": false,
+  "owner_acceptance": "NOT_ISSUED",
+  "publication": {
+    "baseline_465": "GO_EXACT_REVIEWED_INDEX",
+    "a2a3_stage2": "SEE_SEPARATE_EXACT_PUBLICATION_REVIEW"
+  },
+  "limits": [
+    "Synthetic maintenance planning/analysis only; seeded helper remains unchanged.",
+    "Old 120-second timeout retains HOLD/UNKNOWN and charged quota; only physical execution lease was quiesced using a host attestation.",
+    "Process-local inference semaphore/project-scoped pools do not prove global cross-project GPU admission or hostile same-host isolation.",
+    "Windows owned-process force termination was tested; Linux kill-9, 24-hour soak and production recovery were not.",
+    "G4/G5/G6 and owner/D08 acceptance remain outside this result."
+  ],
+  "artifacts": [
+    {
+      "path": "E1/qa2/all-final.tap",
+      "sha256": "cb559582050f00209ae6f9bd816da9f6a70af95f6156d9d46c92062fa3155c64"
+    },
+    {
+      "path": "E1/qa2/all-final.command.json",
+      "sha256": "da9157155ddfdadb0a26f5f9fe8b345bd7854209f28934e548d5f0f748f4c6c1"
+    },
+    {
+      "path": "E1/qa2/maintenance-oracle.mjs",
+      "sha256": "05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    },
+    {
+      "path": "E1/qa2/actual-timeout-review.json",
+      "sha256": "4be16b01bdbc4288a16884e7c0e2d0eb2f3c6152fb0e593cd4aa382f8709be26"
+    },
+    {
+      "path": "E1/qa2/actual-quiescence-review.json",
+      "sha256": "6d70cb411ec0fd03845c7be49c84129c487223e31b2a6492e5fd0a1f2ae07690"
+    },
+    {
+      "path": "E1/qa2/actual-contour-review.json",
+      "sha256": "9353a7b1cc6b55f9fb529bb105c38e53af0e5236f8e8c4d3b2960b128fd04075"
+    },
+    {
+      "path": "E1/qa2/export-index-review.json",
+      "sha256": "2267000a85d0ce6880c2161c35f6ad4127eb306b7a5c938d8210a217beebcc35"
+    }
+  ],
+  "clean_export_portability_followup": {
+    "status": "PASS_23_WITHOUT_PRIVATE_CONFIG",
+    "base_approved_commit": "132e315ebf8184c17a8c3a64740ce40ad7360332",
+    "only_test_source_change": "E1/qa2/model-seams.test.mjs",
+    "test_source_sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace",
+    "existing_45_test_record": "UNCHANGED_HISTORICAL_PINS",
+    "overlapping_tests": 23,
+    "additional_unique_tests": 0,
+    "private_directory_before": false,
+    "private_directory_after": false,
+    "native_fixture_remains_host_bound": true,
+    "runtime_model_contract_source_unchanged": true,
+    "new_native_connections": 0,
+    "new_model_generations": 0,
+    "evidence": [
+      {
+        "path": "E1/qa2/PORTABILITY-TESTS.json",
+        "sha256": "aea65e392f52675724364ca29c2bdcff4e161e2e3fc5e3443cb26e30388cd6f0"
+      },
+      {
+        "path": "E1/qa2/PORTABILITY-COMMAND.json",
+        "sha256": "08363cdb90ef6e9e4add5f25b502b45fc882824154c87169c6cdf8c87158b30d"
+      },
+      {
+        "path": "E1/qa2/PORTABILITY-TESTS.tap",
+        "sha256": "38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7"
+      }
+    ]
+  }
+}

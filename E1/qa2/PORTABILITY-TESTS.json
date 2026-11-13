@@ -1,0 +1,57 @@
+{
+  "schema": "awe.qa2.portable-offline-verification/1",
+  "status": "PASS_CLEAN_EXPORT_WITHOUT_PRIVATE_HOST_CONFIG",
+  "command": "node --test --test-concurrency=1 --test-reporter=tap E1/qa2/model-seams.test.mjs E1/qa2/maintenance-oracle.test.mjs",
+  "cwd_kind": "VERIFIED_UNIQUE_QA2_PUBLIC_ONLY_CLEAN_EXPORT",
+  "source_commit": "132e315ebf8184c17a8c3a64740ce40ad7360332",
+  "copied_public_files": 550,
+  "only_source_override": "E1/qa2/model-seams.test.mjs",
+  "override_sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace",
+  "private_directory_before": false,
+  "private_directory_after": false,
+  "git_directory_present": false,
+  "node": "v24.21.0",
+  "started_at": "2026-11-08T01:38:48.961Z",
+  "finished_at": "2026-11-08T01:38:50.948Z",
+  "exit_status": 0,
+  "error": null,
+  "totals": {
+    "tests": 23,
+    "pass": 23,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "source_files_changed_by_tests": [],
+  "output_sha256": "38bb8f94db6006c5e604d96868dc922e68fcfa433e9431959d3a147124debcd7",
+  "native_fixture_source_unchanged": true,
+  "model_core_source_unchanged": true,
+  "new_native_connections": 0,
+  "new_model_generations": 0,
+  "external_effects": 0,
+  "limits": [
+    "Only the existing 23 offline model/oracle cases ran.",
+    "Native fixtures retain the actual private host descriptor requirement.",
+    "This portability correction changes only the QA descriptor fixture, not core/model/host/runtime logic."
+  ],
+  "runtime_core_source_drift": [],
+  "broker_source_pin": "sha256:9e34868ec2bcdbbb7ec3627d5518942a2ec544b78e84fb2561741eee66082b9e",
+  "test_source_pins": [
+    {
+      "path": "E1/qa2/model-seams.test.mjs",
+      "sha256": "1d8db5017fec55ba998ae64549d786ca62f28a950f3ea6b93e1bbbbeff396ace"
+    },
+    {
+      "path": "E1/qa2/maintenance-oracle.test.mjs",
+      "sha256": "3bf550487d16ac58d6d7470b30c7b78465d1ed431b28ac620f905be6aa006c2a"
+    },
+    {
+      "path": "E1/qa2/maintenance-oracle.mjs",
+      "sha256": "05573cd3d05bcd2161f80129c6191d045f6b4d880e4a863fe031eb0808321cf3"
+    },
+    {
+      "path": "E1/qa2/native-fixture.mjs",
+      "sha256": "d688b1971262aa2a7e96023c8ac4077fb73f7fe117ddfcb7b2f9a178a07be762"
+    }
+  ]
+}

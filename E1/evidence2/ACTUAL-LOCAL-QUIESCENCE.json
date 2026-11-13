@@ -1,0 +1,149 @@
+{
+  "schema": "awe.e1.actual-local-quiescence/1",
+  "status": "QUIESCED_EXECUTION_ONLY_UNKNOWN_RETAINED",
+  "mission_id": "mission_code_live_mw745gdt",
+  "project_id": "prj_code_maintenance",
+  "proof": {
+    "schema": "awe.e1.local-model-quiescence/1",
+    "resource_id": "awe_e1_a2a3_20261108",
+    "route_id": "ollama.local.qwen3-4b-instruct",
+    "model_id": "qwen3:4b-instruct",
+    "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "attestor_id": "e1_local_operator",
+    "statement": "PHYSICALLY_QUIESCENT_OUTCOME_STILL_UNKNOWN",
+    "mission_id": "mission_code_live_mw745gdt",
+    "task_id": "head_control",
+    "logical_request_id": "head_control.request",
+    "attempt_id": "head_control.attempt",
+    "worker_id": "e1_worker",
+    "fence": "98",
+    "project_id": "prj_code_maintenance",
+    "effect_class": "NONE",
+    "observed_at": "2026-11-08T01:14:17.083Z",
+    "proof_ref": "artifact:e1-quiescence/live_mw745gdt/operator-attestation",
+    "cancellation": {
+      "schema": "awe.e1.local-cancel-proof-ref/1",
+      "ref": "artifact:e1-quiescence/live_mw745gdt/completed-cancel",
+      "digest": "sha256:e5b481529867eb109e50a301c8468d0559efd43801b36b1110ea70169c0f6c78",
+      "observed_at": "2026-11-08T01:14:15.586Z",
+      "status": "COMPLETED"
+    },
+    "idle_observations": [
+      {
+        "schema": "awe.e1.local-idle-proof-ref/1",
+        "ref": "artifact:e1-quiescence/live_mw745gdt/idle-one",
+        "digest": "sha256:45e21df7e6a17bd5fa8cd78e7eddb3dd02f813f3c56d36d30e0093b730d21bbe",
+        "observed_at": "2026-11-08T01:14:15.605Z",
+        "status": "IDLE"
+      },
+      {
+        "schema": "awe.e1.local-idle-proof-ref/1",
+        "ref": "artifact:e1-quiescence/live_mw745gdt/idle-two",
+        "digest": "sha256:d8ebe1934f11c0e21a8dc9de6dcf120f49dc0361101e7416cb755bdc20cdac23",
+        "observed_at": "2026-11-08T01:14:16.719Z",
+        "status": "IDLE"
+      }
+    ],
+    "runner_absence": {
+      "schema": "awe.e1.local-runner-absence-proof-ref/1",
+      "ref": "artifact:e1-quiescence/live_mw745gdt/runner-absence",
+      "digest": "sha256:3aa31aa4a884266f493eddaf5d348de08dd10b44cf5eb91685363fdb31c461ec",
+      "observed_at": "2026-11-08T01:14:17.082Z",
+      "status": "ABSENT"
+    }
+  },
+  "proof_digest": "sha256:8812123a167da4adf0511fd8cb0a4446615c79da6dfe5285b3dc7d108938b733",
+  "observations": [
+    {
+      "ref": "artifact:e1-quiescence/live_mw745gdt/completed-cancel",
+      "value": {
+        "schema": "awe.e1.observed-ollama-cancel/1",
+        "observed_at": "2026-11-08T01:14:15.586Z",
+        "mission_id": "mission_code_live_mw745gdt",
+        "attempt_id": "head_control.attempt",
+        "request_hash": "sha256:520083959cbdb6d7904a62c103c65e54c26ef9ba973e47a541b9a7d482016753",
+        "http_500_at": "2026-11-08T00:50:01.924Z",
+        "completed_cancel": true,
+        "slot_idle_in_same_log_window": true,
+        "matched_log_lines_digest": "sha256:b04b8d85abace7e87e269605fdc219aeca5981deeadc3f79901335090af20609",
+        "usage": "UNKNOWN_NO_FINAL_ACK",
+        "log_uploaded": false
+      }
+    },
+    {
+      "ref": "artifact:e1-quiescence/live_mw745gdt/idle-one",
+      "value": {
+        "schema": "awe.e1.observed-ollama-idle/1",
+        "observed_at": "2026-11-08T01:14:15.605Z",
+        "model_count": 0,
+        "response_digest": "sha256:a6fe9ec6e26a38d99fca418b69826e0238b7a2bb319ff05eb153a6fcfd1fa28d",
+        "new_generation_requests": 0
+      }
+    },
+    {
+      "ref": "artifact:e1-quiescence/live_mw745gdt/idle-two",
+      "value": {
+        "schema": "awe.e1.observed-ollama-idle/1",
+        "observed_at": "2026-11-08T01:14:16.719Z",
+        "model_count": 0,
+        "response_digest": "sha256:a6fe9ec6e26a38d99fca418b69826e0238b7a2bb319ff05eb153a6fcfd1fa28d",
+        "new_generation_requests": 0
+      }
+    },
+    {
+      "ref": "artifact:e1-quiescence/live_mw745gdt/runner-absence",
+      "value": {
+        "schema": "awe.e1.observed-local-runner/1",
+        "observed_at": "2026-11-08T01:14:17.082Z",
+        "runner_process_count": 0,
+        "method": "WINDOWS_PROCESS_NAME_QUERY",
+        "process_arguments_collected": false
+      }
+    }
+  ],
+  "receipt": {
+    "status": "QUIESCED_EXECUTION_ONLY",
+    "repeated": false,
+    "new_fence": 158,
+    "task_state": "HOLD",
+    "proof_digest": "sha256:8812123a167da4adf0511fd8cb0a4446615c79da6dfe5285b3dc7d108938b733",
+    "attempt_state": "OUTCOME_UNKNOWN",
+    "mission_state": "HOLD",
+    "quota_released": false,
+    "accounting_unchanged": true
+  },
+  "ledger": {
+    "before": {
+      "spent": 0,
+      "owner_id": "e1_owner",
+      "reserved": 0,
+      "quota_cap": 6,
+      "budget_cap": 0,
+      "project_id": "prj_code_maintenance",
+      "quota_used": 1,
+      "max_parallel": 2
+    },
+    "after": {
+      "spent": 0,
+      "owner_id": "e1_owner",
+      "reserved": 0,
+      "quota_cap": 6,
+      "budget_cap": 0,
+      "project_id": "prj_code_maintenance",
+      "quota_used": 1,
+      "max_parallel": 2
+    }
+  },
+  "original_attempt_unchanged": true,
+  "original_mission_unchanged": true,
+  "original_task_state": "HOLD",
+  "usage": "UNKNOWN",
+  "new_model_wire_attempts": 0,
+  "quota_refunded": 0,
+  "external_effects": 0,
+  "accepted": false,
+  "limitations": [
+    "Host/operator attestation over observed local cancellation and repeated physical idle; no provider usage or successful model output was recovered.",
+    "This does not authorize retry/resume of the held logical request."
+  ]
+}

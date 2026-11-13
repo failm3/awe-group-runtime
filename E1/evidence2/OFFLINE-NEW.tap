@@ -1,0 +1,424 @@
+TAP version 13
+# Subtest: QA2 oracle parses exact frozen source/cases without claiming helper correctness
+ok 1 - QA2 oracle parses exact frozen source/cases without claiming helper correctness
+  ---
+  duration_ms: 39.011
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects frozen digest substitution and changed source case
+ok 2 - QA2 oracle rejects frozen digest substitution and changed source case
+  ---
+  duration_ms: 33.0373
+  type: 'test'
+  ...
+# Subtest: QA2 oracle accepts a typed two-kind Head proposal with semantic-after-parse dependency
+ok 3 - QA2 oracle accepts a typed two-kind Head proposal with semantic-after-parse dependency
+  ---
+  duration_ms: 60.8216
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects seeded Head dependency defect even when A1 schema accepts it
+ok 4 - QA2 oracle rejects seeded Head dependency defect even when A1 schema accepts it
+  ---
+  duration_ms: 58.5815
+  type: 'test'
+  ...
+# Subtest: QA2 oracle accepts analysis identifying seeded defect and safe unimplemented correction
+ok 5 - QA2 oracle accepts analysis identifying seeded defect and safe unimplemented correction
+  ---
+  duration_ms: 25.7724
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects seeded false-success analysis and reversed comparator
+ok 6 - QA2 oracle rejects seeded false-success analysis and reversed comparator
+  ---
+  duration_ms: 28.8472
+  type: 'test'
+  ...
+# Subtest: QA2 oracle rejects producer/QA subject collision and wrong task capability phase
+ok 7 - QA2 oracle rejects producer/QA subject collision and wrong task capability phase
+  ---
+  duration_ms: 33.0593
+  type: 'test'
+  ...
+# Subtest: QA2 resource descriptor denies retarget, hidden fields and unexpected roles before spawning
+ok 8 - QA2 resource descriptor denies retarget, hidden fields and unexpected roles before spawning
+  ---
+  duration_ms: 2.5987
+  type: 'test'
+  ...
+# Subtest: QA2 public live broker denies injected wire and nonlocal endpoint
+ok 9 - QA2 public live broker denies injected wire and nonlocal endpoint
+  ---
+  duration_ms: 36.7251
+  type: 'test'
+  ...
+# Subtest: QA2 selector distinguishes deterministic script and bounded semantic model with rejected alternatives
+ok 10 - QA2 selector distinguishes deterministic script and bounded semantic model with rejected alternatives
+  ---
+  duration_ms: 58.1292
+  type: 'test'
+  ...
+# Subtest: QA2 Head raw draft cannot inject budget, owner, recipient or executable tool
+ok 11 - QA2 Head raw draft cannot inject budget, owner, recipient or executable tool
+  ---
+  duration_ms: 47.3387
+  type: 'test'
+  ...
+# Subtest: QA2 forged Head context cannot materialize an otherwise valid plan
+ok 12 - QA2 forged Head context cannot materialize an otherwise valid plan
+  ---
+  duration_ms: 34.3694
+  type: 'test'
+  ...
+# Subtest: QA2 one generation is bracketed by mandatory accounting and carries backend counts
+ok 13 - QA2 one generation is bracketed by mandatory accounting and carries backend counts
+  ---
+  duration_ms: 55.5712
+  type: 'test'
+  ...
+# Subtest: QA2 malformed model JSON settles consumed usage and asks for bounded repair without retry
+ok 14 - QA2 malformed model JSON settles consumed usage and asks for bounded repair without retry
+  ---
+  duration_ms: 35.547
+  type: 'test'
+  ...
+# Subtest: QA2 personal label or email content blocks before tags, model generation and accounting
+ok 15 - QA2 personal label or email content blocks before tags, model generation and accounting
+  ---
+  duration_ms: 51.7909
+  type: 'test'
+  ...
+# Subtest: QA2 unavailable model or pin mismatch has controlled no-fallback decision and zero generation
+ok 16 - QA2 unavailable model or pin mismatch has controlled no-fallback decision and zero generation
+  ---
+  duration_ms: 52.477
+  type: 'test'
+  ...
+# Subtest: QA2 generation acknowledgement loss or missing usage enters UNKNOWN with one generation
+ok 17 - QA2 generation acknowledgement loss or missing usage enters UNKNOWN with one generation
+  ---
+  duration_ms: 62.8747
+  type: 'test'
+  ...
+# Subtest: QA2 grant expiry or route revocation after reserve releases a proven no-wire reservation
+ok 18 - QA2 grant expiry or route revocation after reserve releases a proven no-wire reservation
+  ---
+  duration_ms: 56.2318
+  type: 'test'
+  ...
+# Subtest: QA2 lost SENDING marker response is UNKNOWN with zero model wire and no blind generation
+ok 19 - QA2 lost SENDING marker response is UNKNOWN with zero model wire and no blind generation
+  ---
+  duration_ms: 30.324
+  type: 'test'
+  ...
+# Subtest: QA2 ambiguous reservation ACK is held UNKNOWN rather than released as a proven no-send
+ok 20 - QA2 ambiguous reservation ACK is held UNKNOWN rather than released as a proven no-send
+  ---
+  duration_ms: 26.2098
+  type: 'test'
+  ...
+# Subtest: QA2 genuine length ACK settles once and requests REPAIR even when output happens to be valid JSON
+ok 21 - QA2 genuine length ACK settles once and requests REPAIR even when output happens to be valid JSON
+  ---
+  duration_ms: 71.9023
+  type: 'test'
+  ...
+# Subtest: QA2 unrecognized backend completion reason remains UNKNOWN with no invented settlement
+ok 22 - QA2 unrecognized backend completion reason remains UNKNOWN with no invented settlement
+  ---
+  duration_ms: 31.1625
+  type: 'test'
+  ...
+# Subtest: QA2 independent frozen proposal checker rejects seeded missing dependency and digest substitution
+ok 23 - QA2 independent frozen proposal checker rejects seeded missing dependency and digest substitution
+  ---
+  duration_ms: 43.0732
+  type: 'test'
+  ...
+# Subtest: synthetic staging mission uses frozen A1 and selects two executor kinds with exclusion reasons
+ok 24 - synthetic staging mission uses frozen A1 and selects two executor kinds with exclusion reasons
+  ---
+  duration_ms: 67.4695
+  type: 'test'
+  ...
+# Subtest: model draft actually controls task text and dependency edges, while code owns all protected metadata
+ok 25 - model draft actually controls task text and dependency edges, while code owns all protected metadata
+  ---
+  duration_ms: 88.5329
+  type: 'test'
+  ...
+# Subtest: protected additions, absent tools, cycles and invented criteria cannot materialize
+ok 26 - protected additions, absent tools, cycles and invented criteria cannot materialize
+  ---
+  duration_ms: 67.1285
+  type: 'test'
+  ...
+# Subtest: live factory has mandatory trusted accounting and rejects endpoint/test-transport overrides
+ok 27 - live factory has mandatory trusted accounting and rejects endpoint/test-transport overrides
+  ---
+  duration_ms: 28.1587
+  type: 'test'
+  ...
+# Subtest: one structured wire attempt records backend usage after durable reserve and SENDING
+ok 28 - one structured wire attempt records backend usage after durable reserve and SENDING
+  ---
+  duration_ms: 75.4349
+  type: 'test'
+  ...
+# Subtest: normal Head bridge creates a model-controlled next revision without acceptance
+ok 29 - normal Head bridge creates a model-controlled next revision without acceptance
+  ---
+  duration_ms: 92.5762
+  type: 'test'
+  ...
+# Subtest: forged Head context is blocked before all wire operations
+ok 30 - forged Head context is blocked before all wire operations
+  ---
+  duration_ms: 38.7437
+  type: 'test'
+  ...
+# Subtest: privacy, permission, missing tool, unknown lineage and expired grant deny before metadata/inference
+ok 31 - privacy, permission, missing tool, unknown lineage and expired grant deny before metadata/inference
+  ---
+  duration_ms: 223.8626
+  type: 'test'
+  ...
+# Subtest: backend digest mismatch prevents reservation and inference
+ok 32 - backend digest mismatch prevents reservation and inference
+  ---
+  duration_ms: 36.6816
+  type: 'test'
+  ...
+# Subtest: reservation and markSending failures never send generation
+ok 33 - reservation and markSending failures never send generation
+  ---
+  duration_ms: 77.83
+  type: 'test'
+  ...
+# Subtest: grant expiry immediately after durable reserve proves no wire and releases the SAME A2 reservation/quota
+ok 34 - grant expiry immediately after durable reserve proves no wire and releases the SAME A2 reservation/quota
+  ---
+  duration_ms: 35.1433
+  type: 'test'
+  ...
+# Subtest: uncertain reserve commit never releases blindly and retains UNKNOWN without model wire
+ok 35 - uncertain reserve commit never releases blindly and retains UNKNOWN without model wire
+  ---
+  duration_ms: 32.2606
+  type: 'test'
+  ...
+# Subtest: malformed JSON, tool misuse and budget escalation settle actual consumed usage then request REPAIR
+ok 36 - malformed JSON, tool misuse and budget escalation settle actual consumed usage then request REPAIR
+  ---
+  duration_ms: 166.3024
+  type: 'test'
+  ...
+# Subtest: possible-send timeout goes UNKNOWN/HOLD once without hidden retry or fallback
+ok 37 - possible-send timeout goes UNKNOWN/HOLD once without hidden retry or fallback
+  ---
+  duration_ms: 60.5741
+  type: 'test'
+  ...
+# Subtest: missing backend usage and settlement failure cannot report success
+ok 38 - missing backend usage and settlement failure cannot report success
+  ---
+  duration_ms: 124.992
+  type: 'test'
+  ...
+# Subtest: module-wide semaphore permits only one concurrent inference across broker instances
+ok 39 - module-wide semaphore permits only one concurrent inference across broker instances
+  ---
+  duration_ms: 107.3044
+  type: 'test'
+  ...
+# Subtest: raw JSON schema rejects model-provided acceptance and arbitrary object fields
+ok 40 - raw JSON schema rejects model-provided acceptance and arbitrary object fields
+  ---
+  duration_ms: 1.4583
+  type: 'test'
+  ...
+# Subtest: concise owner mission changes only goal/criteria and fully rebinds new spec, grant and bootstrap
+ok 41 - concise owner mission changes only goal/criteria and fully rebinds new spec, grant and bootstrap
+  ---
+  duration_ms: 76.5015
+  type: 'test'
+  ...
+# Subtest: completed length ACK with valid JSON settles usage once and never proposes a plan
+ok 42 - completed length ACK with valid JSON settles usage once and never proposes a plan
+  ---
+  duration_ms: 46.4277
+  type: 'test'
+  ...
+# Subtest: completed length ACK with truncated JSON settles usage once and never proposes a plan
+ok 43 - completed length ACK with truncated JSON settles usage once and never proposes a plan
+  ---
+  duration_ms: 66.061
+  type: 'test'
+  ...
+# Subtest: unrecognized done reason remains UNKNOWN without usage settlement or proposal
+ok 44 - unrecognized done reason remains UNKNOWN without usage settlement or proposal
+  ---
+  duration_ms: 52.9959
+  type: 'test'
+  ...
+# Subtest: local resource-only proof pins the current model and rejects malformed attestation
+ok 45 - local resource-only proof pins the current model and rejects malformed attestation
+  ---
+  duration_ms: 9.0106
+  type: 'test'
+  ...
+# Subtest: resource spoofing is rejected before any process is spawned
+ok 46 - resource spoofing is rejected before any process is spawned
+  ---
+  duration_ms: 4.5719
+  type: 'test'
+  ...
+# Subtest: A1 publication JSON cannot create an admission authority
+ok 47 - A1 publication JSON cannot create an admission authority
+  ---
+  duration_ms: 0.7552
+  type: 'test'
+  ...
+# Subtest: migration boundary rejects a foreign native identity before sending any DDL
+ok 48 - migration boundary rejects a foreign native identity before sending any DDL
+  ---
+  duration_ms: 0.955
+  type: 'test'
+  ...
+# Subtest: coding schema is compatible with frozen A1 bounded schemas and validates a compact patch
+ok 49 - coding schema is compatible with frozen A1 bounded schemas and validates a compact patch
+  ---
+  duration_ms: 4.5703
+  type: 'test'
+  ...
+# Subtest: exact repository paths reject traversal, ADS, URL encoding, Windows aliases and protected core
+ok 50 - exact repository paths reject traversal, ADS, URL encoding, Windows aliases and protected core
+  ---
+  duration_ms: 2.6527
+  type: 'test'
+  ...
+# Subtest: grant rejects paid route, missing permissions, non-codex branches, arbitrary tests and unbounded steps
+ok 51 - grant rejects paid route, missing permissions, non-codex branches, arbitrary tests and unbounded steps
+  ---
+  duration_ms: 2.2182
+  type: 'test'
+  ...
+# Subtest: patch denies base/digest/path/size/symlink substitution and protected metadata
+ok 52 - patch denies base/digest/path/size/symlink substitution and protected metadata
+  ---
+  duration_ms: 2.1272
+  type: 'test'
+  ...
+# Subtest: missing owner authority or actual issue grant yields WAIT with no execution
+ok 53 - missing owner authority or actual issue grant yields WAIT with no execution
+  ---
+  duration_ms: 0.9792
+  type: 'test'
+  ...
+# Subtest: actual temporary Git fixture is red before, green after, isolated and prepares only a draft intent
+ok 54 - actual temporary Git fixture is red before, green after, isolated and prepares only a draft intent
+  ---
+  duration_ms: 1865.0494
+  type: 'test'
+  ...
+# Subtest: unaccounted model receipt blocks before creating a worktree
+ok 55 - unaccounted model receipt blocks before creating a worktree
+  ---
+  duration_ms: 628.4147
+  type: 'test'
+  ...
+# Subtest: missing scoped publisher or safe runner waits before issue/model/worktree
+ok 56 - missing scoped publisher or safe runner waits before issue/model/worktree
+  ---
+  duration_ms: 450.3802
+  type: 'test'
+  ...
+# Subtest: independent QA holdout catches a seeded decimal bug missed by fixed integer tests
+ok 57 - independent QA holdout catches a seeded decimal bug missed by fixed integer tests
+  ---
+  duration_ms: 1321.997
+  type: 'test'
+  ...
+# Subtest: failed regression never reaches QA or publisher
+ok 58 - failed regression never reaches QA or publisher
+  ---
+  duration_ms: 1135.6473
+  type: 'test'
+  ...
+# Subtest: production factory refuses explicitly offline ports without pretending live evidence
+ok 59 - production factory refuses explicitly offline ports without pretending live evidence
+  ---
+  duration_ms: 388.1905
+  type: 'test'
+  ...
+# Subtest: native Git symlink tree entry is rejected before model/worktree creation
+ok 60 - native Git symlink tree entry is rejected before model/worktree creation
+  ---
+  duration_ms: 799.5932
+  type: 'test'
+  ...
+# Subtest: owner revocation after model response blocks the first worktree mutation
+ok 61 - owner revocation after model response blocks the first worktree mutation
+  ---
+  duration_ms: 557.1471
+  type: 'test'
+  ...
+# Subtest: fixed test timeout must fit the remaining grant before the runner is called
+ok 62 - fixed test timeout must fit the remaining grant before the runner is called
+  ---
+  duration_ms: 1078.9583
+  type: 'test'
+  ...
+# Subtest: stored result and artifact commitment both bind the independent QA input
+ok 63 - stored result and artifact commitment both bind the independent QA input
+  ---
+  duration_ms: 2.0142
+  type: 'test'
+  ...
+# Subtest: persisted output substituted with an unchanged result commitment is rejected
+ok 64 - persisted output substituted with an unchanged result commitment is rejected
+  ---
+  duration_ms: 0.5936
+  type: 'test'
+  ...
+# Subtest: recomputed result cannot conceal a stale artifact commitment
+ok 65 - recomputed result cannot conceal a stale artifact commitment
+  ---
+  duration_ms: 0.2783
+  type: 'test'
+  ...
+# Subtest: schema commitment substitution is rejected independently of result hash
+ok 66 - schema commitment substitution is rejected independently of result hash
+  ---
+  duration_ms: 0.2717
+  type: 'test'
+  ...
+# Subtest: stored schema content must match the frozen capability commitment
+ok 67 - stored schema content must match the frozen capability commitment
+  ---
+  duration_ms: 0.2909
+  type: 'test'
+  ...
+# Subtest: hash-consistent but schema-invalid output is rejected on cold readback
+ok 68 - hash-consistent but schema-invalid output is rejected on cold readback
+  ---
+  duration_ms: 0.4465
+  type: 'test'
+  ...
+# Subtest: model request IDs differ across missions and remain bounded for maximum task IDs
+ok 69 - model request IDs differ across missions and remain bounded for maximum task IDs
+  ---
+  duration_ms: 0.9983
+  type: 'test'
+  ...
+1..69
+# tests 69
+# suites 0
+# pass 69
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11726.0994

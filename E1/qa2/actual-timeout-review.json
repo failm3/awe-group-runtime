@@ -1,0 +1,83 @@
+{
+  "schema": "awe.qa2.unknown-canary-review/1",
+  "status": "VERIFIED_FAIL_CLOSED_ACTUAL_MODEL_TIMEOUT_G3_NOT_PASSED",
+  "started_at": "2026-11-08T00:57:40.072Z",
+  "finished_at": "2026-11-08T00:57:40.136Z",
+  "reviewer_pid": 35548,
+  "database_role": "awe_e1_qa",
+  "resource_id": "awe_e1_a2a3_20261108",
+  "port": 5433,
+  "mission_id": "mission_code_live_mw745gdt",
+  "mission_state": "HOLD",
+  "head_task_state": "HOLD",
+  "attempt": {
+    "attempt_id": "head_control.attempt",
+    "logical_request_id": "head_control.request",
+    "state": "OUTCOME_UNKNOWN",
+    "usage": "UNKNOWN_NO_ACK",
+    "provider_ref": "ABSENT",
+    "route_id": "ollama.local.qwen3-4b-instruct",
+    "request_hash": "sha256:520083959cbdb6d7904a62c103c65e54c26ef9ba973e47a541b9a7d482016753",
+    "quota_units": 1
+  },
+  "ledger": {
+    "quota_used": 1,
+    "reserved": 0,
+    "spent": 0
+  },
+  "lease": {
+    "worker_id": "e1_worker",
+    "fence": 98,
+    "held": true,
+    "resource_keys": [
+      "local_model"
+    ]
+  },
+  "event_counts": {
+    "MODEL_RESERVED": 1,
+    "MODEL_SENDING": 1,
+    "MODEL_OUTCOME_UNKNOWN": 1,
+    "MODEL_SETTLED": 0
+  },
+  "wire_attempts_recorded": 1,
+  "no_second_attempt_or_send_observed": true,
+  "parse_result": {
+    "state": "ACCEPTED",
+    "result_hash": "sha256:5aa135c760ee99c8bc2d9c54cef24d2994038c2ab403b289c29ad8dd957dd576",
+    "oracle_verdict": "PASS",
+    "oracle_evidence_digest": "sha256:c544ee83737984ccb468b13f856c9773fcc63bae7a487007f74f7e82d31dc7e5"
+  },
+  "plan_revisions": 1,
+  "new_model_wire_attempts_by_qa": 0,
+  "mission_mutations_by_qa": 0,
+  "head_model_response": "NOT_RECEIVED",
+  "typed_head_plan": "NOT_PROVEN",
+  "usage_and_successful_settlement": "UNKNOWN",
+  "owner_acceptance": "NOT_ISSUED",
+  "input_artifact_hashes": [
+    {
+      "path": ".private/canary-live_mw745gdt/head_control.model.json",
+      "sha256": "ee51c42b8248cc0265f40494627c2cbac873fea4eba335bb018f354b6289a2d0"
+    },
+    {
+      "path": ".private/canary-live_mw745gdt/failure.json",
+      "sha256": "ef0d5c559278f5c7105d2b79de96156336019187266ab642c2e2238d3a08f779"
+    }
+  ],
+  "safe_reconciliation": {
+    "current_api": "settle can account OUTCOME_UNKNOWN only with genuine backend usage/provider evidence; failBeforeSend rejects uncertain sends. No such acknowledgement exists in this observation.",
+    "resume_gap": "Current settle/confirm paths do not clear HOLD mission/task or held lease; no public audited resume operation is exposed.",
+    "prohibited_shortcuts": [
+      "fabricated usage/provider_ref",
+      "failBeforeSend after SENDING/UNKNOWN",
+      "new mission/project to bypass held model slot",
+      "blind generation retry",
+      "direct table cleanup or cluster/model restart"
+    ]
+  },
+  "limits": [
+    "Real local model wire was attempted once; no actual model response/usage or successful G3 proposal is established.",
+    "The standalone parse worker and independent parse QA succeeded, without executing or fixing the seeded helper.",
+    "QA observed native persisted state through a separate role and performed no write or model call."
+  ]
+}
